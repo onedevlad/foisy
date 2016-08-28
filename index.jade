@@ -10,26 +10,26 @@ html(lang="en")
     .header.container-fluid
       .row
         .nav-open-button
-        .col-md-8.col-md-offset-2.header-main
+        .col-sm-8.col-sm-offset-2.header-main
           .row
             .col-xs-2.col-xs-offset-5
               img(alt='logo', src='images/logo.png')
           .row.studio-name-wrapper
-            .col-md-11.col-md-offset-1.row-inner-wrapper
+            .col-sm-11.col-sm-offset-1.row-inner-wrapper
               span.studio-name Foisy Studio
-          .row
-            .col-md-9.col-md-offset-3.row-inner-wrapper
+          .row.title-wrapper
+            .col-sm-9.col-sm-offset-3.row-inner-wrapper
               span.title Little Big Details
           .row.subtitle-wrapper
-            .col-md-9.col-md-offset-3.row-inner-wrapper
+            .col-sm-9.col-sm-offset-3.row-inner-wrapper
               span.subtitle We are a creative design firm, aiming to give our users what they want;
                 br
                 | an awesome experience.
           .row.work-samples-wrapper
-            .col-md-2.pull-right.row-inner-wrapper
+            .col-xs-4.col-sm-2.pull-right.row-inner-wrapper
               button.work-samples Our work
           .row.scroll-down-wrapper
-            .col-md-9.col-md-offset-3.row-inner-wrapper
+            .col-sm-9.col-sm-offset-3.row-inner-wrapper
               span.scroll-down Scroll down
           .left-line
           .right-line
@@ -70,7 +70,7 @@ html(lang="en")
             span.subtitle Go to meet our extraordinary team
         .col-md-8.right-part
           .row.team-wrapper
-            .col-md-9.col-md-offset-3
+            .col-md-9.col-md-offset-3.team-inner-wrapper
               img.team(alt='team', src='images/team.png')
             .line
             button.learn-more Learn more
@@ -171,18 +171,18 @@ html(lang="en")
                   span Meet out curated collection of projects - of all kinds - to taste our aesthetic.
               .row.take-me-there-wrapper
                 button.take-me-there Take me there!
-            .row
+            .row.blank-space-wrapper
               .col-md-7.pull-right.blank-space
             .line
       .screen-5
         .row.footer-wrapper
-          .col-md-4.left-part
+          .col-xs-4.left-part
             .row.contacts-wrapper
               .row
-                .col-xs-4.col-xs-offset-6.logo-wrapper
+                .col-md-4.col-md-offset-6.logo-wrapper
                   img.logo(alt='Logo', src='images/logo.png')
               .row
-                .col-xs-4.col-xs-offset-6.social-wrapper
+                .col-md-4.col-md-offset-6.social-wrapper
                   .row
                     .col-xs-4.social-icon
                       img(alt='Instagram', src='images/instagram.png')
@@ -190,7 +190,7 @@ html(lang="en")
                       img(alt='Twitter', src='images/twitter.png')
                     .col-xs-4.social-icon
                       img(alt='Dribbble', src='images/dribbble.png')
-          .col-md-8.right-part
+          .col-xs-8.right-part
             .row
               .col-xs-6.nav-wrapper
                 ul
@@ -202,7 +202,7 @@ html(lang="en")
                     a Work
                   li
                     a Contact
-              .col-xs-4.search-box-wrapper
+              .col-xs-6.search-box-wrapper
                   input.search-box(type='text', placeholder='TYPE YOUR EMAIL')
                   button.go Go
             .row
