@@ -1,0 +1,394 @@
+@import 'vars.styl'
+
+body
+  overflow-x hidden
+button
+  border none
+  outline none
+  background blue
+  &:hover
+    background dark-blue
+.row
+  margin 0
+
+.header
+  padding 0
+  position relative
+  background url(../images/header-texture.png)
+  background-size cover
+  position relative
+  .nav-open-button
+    width 1.5em
+    height 1.5em
+    background url(../images/hamburger.png)
+    background-size cover
+    absolute top 2vh right 5%
+    cursor pointer
+  .header-main
+    padding 0
+    padding-top 2vh
+    color white
+    .studio-name-wrapper
+      margin-top 20vh
+      .studio-name
+       letter-spacing 1em
+       text-transform uppercase
+    .title
+      text-transform uppercase
+      font-size 3.75em
+      font-weight bold
+    .subtitle-wrapper
+      margin-top 8vh
+    .work-samples-wrapper
+      margin-top 8vh
+      .work-samples
+        width 100%
+        padding 0.5em 0
+    .scroll-down-wrapper
+      margin-top 8vh
+      margin-bottom 8vh
+      .scroll-down
+        text-transform uppercase
+    .row-inner-wrapper
+      padding 0
+    .left-line
+      absolute left 25% top 0
+      width 1px
+      height 100%
+      background light-black
+    .right-line
+      absolute left 83.33333334% top 0
+      width 1px
+      height 100%
+      background light-black
+.main
+  padding 0
+  .screen-1
+    height 100vh
+    .left-part
+      padding 0
+      margin-top -4vh
+      .blank-box
+        height 40vh
+        background white
+      .quote-box
+        background grey
+        width 150%
+        height 60vh
+        padding-top 25vh
+        .quote
+          font-style italic
+    .right-part
+      border-left 1px solid dark-grey
+      position relative
+      padding-left 0
+      padding-right 0
+      .lower-part
+        height 100%
+        .article-wrapper
+          height 100%
+          border-right 1px solid dark-grey
+          padding-left 0
+          padding-right 0
+          .article-inner-wrapper
+            padding-top 10vh
+            padding-left 0
+            padding-right 0
+            .heading
+              font-size 4em
+              font-weight bold
+              text-transform uppercase
+            .article
+              margin-top 4vh
+      .upper-part
+        absolute top 10vh
+        width 70%
+        margin-left 20%
+        .images-wrapper
+          position relative
+          height 90vh
+          .desk
+            width 70%
+            height 60%
+            absolute right 0
+          .building
+            width 40%
+            z-index 3
+            absolute right 15% top 40%
+          .sand
+            width 75%
+            height 30%
+            z-index 2
+            absolute left 0 top 55%
+          .keep-reading
+            width 25%
+            padding 0.5em 0
+            color white
+            z-index 4
+            box-shadow 0 20px 20px dark-grey
+            absolute bottom 12% right 20.333334%
+  .screen-2
+    height 60vh
+    color white
+    .left-part
+      border-right 1px solid light-black
+      padding 0
+      margin-top -4vh
+      height 60vh
+      background black
+      position relative
+      .title-wrapper
+        width 100%
+        z-index 2
+        absolute top 30% left 65%
+        .title
+          text-transform uppercase
+          font-weight bold
+          font-size 4em
+    .right-part
+      height 60vh
+      background black
+      .team
+        position relative
+        z-index 2
+        height 40vh
+        margin-top 10vh
+      .line
+        width 1px
+        height 100%
+        absolute left 58.333333334%
+        background light-black
+      .learn-more
+        absolute left 58.333333334% top 70%
+        z-index 3
+        padding 0.5em 2em
+  .screen-3
+    height 100vh
+    position relative
+    .lower-part
+      height 100%
+      .left-part
+        border-right 1px solid grey
+        padding 0
+        margin-top -4vh
+        height 100%
+        background white
+        position relative
+      .right-part
+        height 100%
+        padding 0
+        position relative
+        .title-wrapper
+          padding 0
+          margin-top 10vh
+          .title
+            font-size 2em
+            font-weight bold
+            text-transform uppercase
+        .slider-controls-wrapper
+          padding 0
+          absolute bottom 0
+          .slider-controls
+            padding 0
+            .slider-control-box
+              cursor pointer
+              display inline-block
+              margin-right 0.5em
+              width 1em
+              height 1em
+              background dark-grey
+              &.active
+                background blue
+            .page-num
+              margin-left 0.5em
+        .blank-space
+          height 100%
+          background grey
+        .line
+          width 1px
+          height 100%
+          absolute left 58.3333334% top
+          background dark-grey
+        .view-blog
+          color dark-grey
+          text-transform uppercase
+          font-weight bold
+          absolute left 58.3333334% top 15%
+    .upper-part
+      z-index 2
+      absolute top 30vh
+      width 100%
+      height 60%
+      .slider
+        height 100%
+        .slide-wrapper
+          height 100%
+          .slide
+            height 100%
+            position relative
+            &>img
+              absolute top
+              width 100%
+            .desc-wrapper
+              border 1px solid dark-grey
+              absolute bottom
+              background white
+              height 60%
+              padding 1em
+              .heading-wrapper
+                padding 0
+                .heading
+                  text-overflow ellipsis
+                  font-size 1.5em
+                  font-weight bold
+                  text-transform uppercase
+              .desc-text-wrapper
+                padding 0
+                margin-top 5%
+                height 65%
+                overflow hidden
+              .social-wrapper
+                height 15%
+                padding 0
+                .icon-wrapper
+                  height 100%
+                  padding 0
+                  img
+                    height 100%
+                    cursor pointer
+                .date-wrapper
+                  height 100%
+                  padding 0
+                  cursor pointer
+                  position relative
+                  img
+                    absolute top 25%
+                    height 50%
+                    display inline-block
+                  span
+                    absolute top 25% left 15%
+  .screen-4
+    .left-part
+      border-right 1px solid grey
+      padding 0
+      margin-top -4vh
+      height 100%
+      background white
+      position relative
+    .right-part
+      padding 0
+      position relative
+      .next-step-wrapper
+        padding 0
+        absolute top
+        z-index 2
+        .title
+          margin-top 40vh
+          font-weight bold
+          font-size 2em
+          text-transform uppercase
+        .subtitle-wrapper
+          margin-top 8vh
+        .take-me-there-wrapper
+          margin-top 8vh
+          .take-me-there
+            padding 0.5em 2em
+            color white
+            text-transform uppercase
+            box-shadow 0 20px 20px dark-grey
+      .blank-space
+        height 100%
+        background grey
+      .line
+        width 1px
+        height 100%
+        absolute left 58.3333334% top
+        background dark-grey
+  .screen-5
+    .footer-wrapper
+      background black
+      height 40vh
+      .left-part
+        border-right 1px solid light-black
+        padding 0
+        height 100%
+        position relative
+        .contacts-wrapper
+          .logo-wrapper
+            margin-top 10vh
+          .social-wrapper
+            padding 0
+            margin-top 1em
+            img
+              cursor pointer
+      .right-part
+        padding 0
+        position relative
+        height 100%
+        font-size 0.75em
+        .nav-wrapper
+          margin-top 15vh
+          padding 0
+          ul
+            padding 0
+            list-style none
+            li
+              float left
+              padding 0.5em 2em
+              &:first-child
+                padding-left 0
+              a
+                cursor pointer
+                color white
+                text-transform uppercase
+        .search-box-wrapper
+          margin-top 13vh
+          height 8vh
+          background black
+          background black
+          z-index 2
+          color white
+          .search-box
+            width 70%
+            height 100%
+            background url(../images/email-pointer.png) no-repeat scroll 5px 16px
+            padding 0 30px
+            border 1px solid light-black
+            outline none
+          .go
+            width 20%
+            absolute right 20%
+            height 6vh
+            margin-top 1vh
+        .copyright-wrapper
+          padding-left 0.75em
+          padding-bottom 0.5em
+          absolute bottom
+          text-transform uppercase
+          color light-black
+        .line
+          width 1px
+          height 100%
+          absolute left 58.3333334% top
+          background light-black
+.nav
+  background black
+  width 25%
+  height 100%
+  fixed top right -25%
+  z-index 5
+  transition right 0.5s ease
+  &.active
+    fixed top right
+  .nav-close-button
+    absolute top 0.5em left 0.5em
+    cursor pointer
+    width 1.5em
+  .nav-wrapper
+    margin-top 15vh
+    list-style none
+    font-weight bold
+    text-transform uppercase
+    a
+      color white
+      line-height 4em
