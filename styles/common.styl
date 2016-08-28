@@ -1,4 +1,7 @@
-@import 'vars.styl'
+@import 'vars'
+@import 'mobile'
+@import 'tablet'
+@import 'desktop'
 
 body
   overflow-x hidden
@@ -83,14 +86,10 @@ button
       padding-right 0
       .lower-part
         .article-wrapper
-          height 100%
           border-right 1px solid dark-grey
           padding-left 0
           padding-right 0
           .article-inner-wrapper
-            padding-top 10vh
-            padding-left 0
-            padding-right 0
             .heading
               font-size 4em
               font-weight bold
@@ -98,59 +97,39 @@ button
             .article
               margin-top 4vh
       .upper-part
-        absolute top 10vh
-        width 70%
-        margin-left 20%
         .images-wrapper
           position relative
-          height 90vh
-          .desk
-            width 70%
-            height 60%
-            absolute right 0
           .building
-            width 40%
             z-index 3
-            absolute right 15% top 40%
           .sand
-            width 75%
-            height 30%
             z-index 2
-            absolute left 0 top 55%
           .keep-reading
             width 25%
             padding 0.5em 0
             color white
             z-index 4
             box-shadow 0 20px 20px dark-grey
-            absolute bottom 12% right 20.333334%
   .screen-2
-    height 60vh
     color white
     .left-part
       border-right 1px solid light-black
       padding 0
-      margin-top -4vh
-      height 60vh
       background black
       position relative
       .title-wrapper
         width 100%
         z-index 2
-        absolute top 30% left 65%
         .title
           text-transform uppercase
           font-weight bold
           font-size 4em
     .right-part
-      height 60vh
       background black
       .team-inner-wrapper
         padding 0
         .team
           position relative
           z-index 2
-          height 40vh
           margin-top 10vh
         .line
           width 1px
@@ -158,14 +137,11 @@ button
           absolute left 58.333333334%
           background light-black
       .learn-more
-        absolute left 58.333333334% top 70%
         z-index 3
         padding 0.5em 2em
   .screen-3
-    height 100vh
     position relative
     .lower-part
-      height 100%
       .left-part
         border-right 1px solid grey
         padding 0
@@ -174,7 +150,6 @@ button
         background white
         position relative
       .right-part
-        height 100%
         padding 0
         position relative
         .title-wrapper
@@ -186,7 +161,6 @@ button
             text-transform uppercase
         .slider-controls-wrapper
           padding 0
-          absolute bottom 0
           .slider-controls
             padding 0
             .slider-control-box
@@ -212,17 +186,12 @@ button
           color dark-grey
           text-transform uppercase
           font-weight bold
-          absolute left 58.3333334% top 15%
     .upper-part
       z-index 2
-      absolute top 35vh
       width 100%
-      height 60%
       .slider
         padding 0
-        height 100%
         .slide-wrapper
-          height 100%
           .slide
             height 100%
             position relative
@@ -234,7 +203,6 @@ button
               absolute bottom
               background white
               height 60%
-              padding 1em
               .heading-wrapper
                 padding 0
                 .heading
@@ -282,10 +250,8 @@ button
       position relative
       .next-step-wrapper
         padding 0
-        absolute top
         z-index 2
         .title
-          margin-top 40vh
           font-weight bold
           font-size 2em
           text-transform uppercase
@@ -336,7 +302,6 @@ button
             list-style none
             li
               float left
-              padding 0.5em 2em
               &:first-child
                 padding-left 0
               a
@@ -394,143 +359,3 @@ button
     a
       color white
       line-height 4em
-
-
-@media(min-width $screen-sm) // Desktop
-  .screen-1
-    height 100vh
-    .left-part
-      .quote-box
-        width 150%
-    .right-part
-      .lower-part
-        height 100%
-
-@media(max-width $screen-md) // Tablet
-  .screen-1
-    height auto
-    .left-part
-      .blank-box
-       display none
-      .quote-box
-        width 100%
-        text-align center
-    .right-part
-      .lower-part
-        height auto
-        .article-wrapper
-          height auto !important
-        .article-inner-wrapper
-          padding 5% !important
-          .heading
-            text-align center
-          .article
-            text-align justify
-      .upper-part
-        width 90% !important
-        margin 0 5% !important
-        position static !important
-        .images-wrapper
-          height auto !important
-          width 100% !important
-          img
-          .keep-reading
-            margin-top 5% !important
-            position static !important
-          img
-            width 100% !important
-            height auto !important
-          .keep-reading
-            margin-left 37.5%
-  .screen-2
-    background black !important
-    padding 5% !important
-    margin-top 5% !important
-    height auto !important
-    .left-part
-      height auto !important
-      margin-top 5% !important
-      .title-wrapper
-        position static !important
-        text-align center
-    .right-part
-      height auto !important
-      .line
-        display none
-      .learn-more
-        position static !important
-        margin 5% auto
-      .team-wrapper
-        img
-          width 100%
-          height auto !important
-  .screen-3
-    height auto !important
-    padding 5% !important
-    .lower-part
-      height auto !important
-      .left-part
-        display none
-      .right-part
-        height auto !important
-        .blank-space
-          display none
-        .title-wrapper
-          text-align center
-        .slider-controls-wrapper
-          margin-top 5vh !important
-          position static !important
-        .line
-          display none
-        .view-blog
-          position static !important
-          display block
-          margin 5vh 0 !important
-    .upper-part
-      height auto !important
-      position static !important
-      .slider
-        height auto !important
-        .slide-wrapper
-          overflow hidden
-          margin-top 5% !important
-          padding 0 !important
-          height auto !important
-          .slide
-            .desc-wrapper
-              padding-bottom 0 !important
-              .desc-text-wrapper
-                margin-top 2% !important
-  .screen-4
-    .left-part
-      display none
-    .right-part
-      .title
-        margin-top 10vh !important
-      .next-step-wrapper
-        text-align center !important
-        position static !important
-      .blank-space-wrapper
-      .line
-        display none
-  .screen-5
-    margin-top 5% !important
-    .left-part
-      .logo-wrapper
-        text-align center !important
-    .right-part
-      .line
-        display none
-      ul
-        li
-          padding 0.5em !important
-
-@media(max-width $screen-sm) // Mobile
-  .header
-    padding 5%
-    .studio-name-wrapper
-    .title-wrapper
-      text-align center
-    .left-line
-    .right-line
-      display none
