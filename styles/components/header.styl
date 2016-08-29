@@ -1,0 +1,60 @@
+.header
+  padding 0
+  position relative
+  background url(../images/header-texture.png)
+  background-size cover
+  position relative
+  .nav-open-button
+    width 1.5em
+    height 1.5em
+    background url(../images/hamburger.png)
+    background-size cover
+    absolute top 2vh right 5%
+    cursor pointer
+  .header-main
+    padding 0
+    padding-top 2vh
+    color white
+    .studio-name-wrapper
+      margin-top 20vh
+      .studio-name
+       letter-spacing 1em
+       text-transform uppercase
+    .title
+      text-transform uppercase
+      font-size 3.75em
+      font-weight bold
+    .subtitle-wrapper
+      margin-top 8vh
+    .work-samples-wrapper
+      margin-top 8vh
+      .work-samples
+        width 100%
+        padding 0.5em 0
+    .scroll-down-wrapper
+      margin-top 8vh
+      margin-bottom 8vh
+      .scroll-down
+        text-transform uppercase
+    .row-inner-wrapper
+      padding 0
+    .left-line
+      absolute left 25% top 0
+      width 1px
+      height 100%
+      background light-black
+    .right-line
+      absolute left 83.33333334% top 0
+      width 1px
+      height 100%
+      background light-black
+
+@media(max-width $screen-sm) // Mobile
+  .header
+    padding 5%
+    .studio-name-wrapper
+    .title-wrapper
+      text-align center
+    .left-line
+    .right-line
+      display none
