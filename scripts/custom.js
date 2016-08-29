@@ -18,10 +18,20 @@ $(document).ready(function(){ // Slick config module
     autoplay: true,
     infinite: true,
     slidesToShow: 3,
-    slidesToScroll: 3
+    slidesToScroll: 3,
+    responsive: [{
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true,
+      },
+    }],
   })
   .on('afterChange', function(slick, currentSlideObj){
     var activeCheckbox = currentSlideObj.currentSlide < 3 ? 0 : 1
+    console.log(currentSlideObj)
     $('.slider-control-box.active').removeClass('active')
     $('.slider-control-box:eq(' + activeCheckbox + ')').addClass('active')
     $('.current-slide').html('0' + (activeCheckbox + 1))

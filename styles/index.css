@@ -2452,7 +2452,6 @@ button:hover {
   position: relative;
 }
 .main .screen-3 .lower-part .right-part {
-  border-left: 1px solid #dcdcdc;
   padding: 0;
   position: relative;
 }
@@ -2545,8 +2544,10 @@ button:hover {
   overflow: hidden;
 }
 .main .screen-3 .upper-part .slider .slide-wrapper .slide .desc-wrapper .social-wrapper {
-  height: 15%;
+  height: 30px;
   padding: 0;
+  position: absolute;
+  bottom: 5px;
 }
 .main .screen-3 .upper-part .slider .slide-wrapper .slide .desc-wrapper .social-wrapper .icon-wrapper {
   height: 100%;
@@ -2772,6 +2773,7 @@ button:hover {
   .screen-3 .lower-part .right-part .slider-controls-wrapper {
     margin-top: 5vh;
     position: static;
+    display: none;
   }
   .screen-3 .lower-part .right-part .line {
     display: none;
@@ -2790,7 +2792,6 @@ button:hover {
   }
   .screen-3 .upper-part .slider .slide-wrapper {
     overflow: hidden;
-    margin-top: 5%;
     padding: 0;
     height: auto;
   }
@@ -2908,6 +2909,7 @@ button:hover {
     height: 100%;
   }
   .screen-3 .lower-part .right-part {
+    border-left: 1px solid #dcdcdc;
     height: 100%;
   }
   .screen-3 .lower-part .right-part .slider-controls-wrapper {
