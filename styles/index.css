@@ -2022,6 +2022,13 @@ table th[class*="col-"] {
   font-style: normal;
   font-weight: normal;
 }
+@font-face {
+  font-family: 'SourceSansProBlack';
+  src: url("../fonts/SourceSansPro-Black.eot");
+  src: url("../fonts/SourceSansPro-Black.eot?#iefix") format('embedded-opentype'), url("../fonts/SourceSansPro-Black.woff") format('woff'), url("../fonts/SourceSansPro-Black.ttf") format('truetype'), url("../fonts/SourceSansPro-Black.svg#SourceSansPro-Black") format('svg');
+  font-style: normal;
+  font-weight: normal;
+}
 body {
   overflow-x: hidden;
 }
@@ -2035,6 +2042,47 @@ button:hover {
 }
 .row {
   margin: 0;
+}
+.img-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background: rgba(249,249,249,0.75);
+  cursor: pointer;
+}
+.img-overlay:hover {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+.img-overlay .plus-sign {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  color: #262626;
+  display: block;
+  font-weight: bold;
+  line-height: 100px;
+  width: 100px;
+  height: 100px;
+  font-size: 100px;
+  text-align: center;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  border: 10px solid #262626;
+  position: absolute;
+  left: calc(50% - 55px);
+  top: calc(50% - 55px);
 }
 .nav {
   background: #262626;
@@ -2225,6 +2273,7 @@ button:hover {
   right: 20%;
   height: 6vh;
   margin-top: 1vh;
+  text-transform: uppercase;
 }
 .footer .footer-wrapper .right-part .copyright-wrapper {
   padding-left: 0.75em;
@@ -2280,7 +2329,7 @@ button:hover {
 }
 .main .screen-1 .left-part .quote-box {
   background: #f9f9f9;
-  height: 60vh;
+  height: 64vh;
   padding-top: 25vh;
 }
 .main .screen-1 .left-part .quote-box .quote {
@@ -2308,11 +2357,29 @@ button:hover {
 .main .screen-1 .right-part .upper-part .images-wrapper {
   position: relative;
 }
-.main .screen-1 .right-part .upper-part .images-wrapper .building {
+.main .screen-1 .right-part .upper-part .images-wrapper .img-wrapper.desk-wrapper {
+  z-index: 1;
+}
+.main .screen-1 .right-part .upper-part .images-wrapper .img-wrapper.desk-wrapper .img-overlay {
+  z-index: 2;
+}
+.main .screen-1 .right-part .upper-part .images-wrapper .img-wrapper.building-wrapper {
   z-index: 3;
 }
-.main .screen-1 .right-part .upper-part .images-wrapper .sand {
+.main .screen-1 .right-part .upper-part .images-wrapper .img-wrapper.building-wrapper .img-overlay {
+  z-index: 4;
+}
+.main .screen-1 .right-part .upper-part .images-wrapper .img-wrapper.sand-wrapper {
   z-index: 2;
+}
+.main .screen-1 .right-part .upper-part .images-wrapper .img-wrapper.sand-wrapper .img-overlay {
+  z-index: 3;
+}
+.main .screen-1 .right-part .upper-part .images-wrapper .img-wrapper a,
+.main .screen-1 .right-part .upper-part .images-wrapper .img-wrapper img {
+  position: relative;
+  display: block;
+  width: 100%;
 }
 .main .screen-1 .right-part .upper-part .images-wrapper .keep-reading {
   width: 25%;
@@ -2344,11 +2411,24 @@ button:hover {
   background: #262626;
 }
 .main .screen-2 .right-part .team-inner-wrapper {
-  padding: 0;
-}
-.main .screen-2 .right-part .team-inner-wrapper .team {
   position: relative;
+  padding: 0;
   z-index: 2;
+}
+.main .screen-2 .right-part .team-inner-wrapper .team-img-wrapper {
+  position: relative;
+}
+.main .screen-2 .right-part .team-inner-wrapper .team-img-wrapper a,
+.main .screen-2 .right-part .team-inner-wrapper .team-img-wrapper img {
+  display: block;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+.main .screen-2 .right-part .team-inner-wrapper .team-img-wrapper .img-overlay {
+  z-index: 3;
+  width: 100%;
+  height: 100%;
 }
 .main .screen-2 .right-part .line {
   width: 1px;
@@ -2372,7 +2452,7 @@ button:hover {
   position: relative;
 }
 .main .screen-3 .lower-part .right-part {
-  border-left: 1px solid #f9f9f9;
+  border-left: 1px solid #dcdcdc;
   padding: 0;
   position: relative;
 }
@@ -2493,15 +2573,42 @@ button:hover {
   top: 25%;
   left: 15%;
 }
+.main .screen-4 .letter {
+  font-weight: bold;
+  color: #f00;
+  font-size: 30vh;
+  font-family: SourceSansProBlack;
+  position: absolute;
+}
+.main .screen-4 .letter.f-letter {
+  color: #f9f9f9;
+  top: 30%;
+  left: 30%;
+}
+.main .screen-4 .letter.o-letter {
+  color: #f9f9f9;
+  bottom: 0;
+  right: 10%;
+}
+.main .screen-4 .letter.i-letter {
+  color: #f9f9f9;
+  top: 30%;
+  left: 30%;
+}
+.main .screen-4 .letter.y-letter {
+  color: #fff;
+  bottom: 0;
+  right: 10%;
+}
 .main .screen-4 .left-part {
   padding: 0;
   margin-top: -4vh;
-  height: 100%;
+  height: calc(100% + 4vh);
   background: #fff;
   position: relative;
 }
 .main .screen-4 .right-part {
-  border-left: 1px solid #f9f9f9;
+  border-left: 1px solid #dcdcdc;
   padding: 0;
   position: relative;
 }
@@ -2512,7 +2619,6 @@ button:hover {
 .main .screen-4 .right-part .next-step-wrapper .title {
   font-weight: bold;
   font-size: 2em;
-  text-transform: uppercase;
 }
 .main .screen-4 .right-part .next-step-wrapper .subtitle-wrapper {
   margin-top: 8vh;
@@ -2527,9 +2633,27 @@ button:hover {
   -webkit-box-shadow: 0 20px 20px #dcdcdc;
   box-shadow: 0 20px 20px #dcdcdc;
 }
-.main .screen-4 .right-part .blank-space {
-  height: 100%;
+.main .screen-4 .right-part .blank-space-grey,
+.main .screen-4 .right-part .blank-space-white {
+  position: relative;
+}
+.main .screen-4 .right-part .blank-space-grey {
   background: #f9f9f9;
+  height: 80%;
+}
+.main .screen-4 .right-part .blank-space-white {
+  height: 100%;
+  background: #fff;
+}
+.main .screen-4 .right-part .blank-space-white .studio-name {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1em;
+  color: #f9f9f9;
+  display: inline-block;
+  width: 100%;
 }
 .main .screen-4 .right-part .line {
   width: 1px;
@@ -2574,14 +2698,21 @@ button:hover {
     height: auto;
     width: 100%;
   }
-  .screen-1 .right-part .upper-part .images-wrapper img,
+  .screen-1 .right-part .upper-part .images-wrapper .img-wrapper,
   .screen-1 .right-part .upper-part .images-wrapper .keep-reading {
     margin-top: 5%;
     position: static;
   }
-  .screen-1 .right-part .upper-part .images-wrapper img {
+  .screen-1 .right-part .upper-part .images-wrapper .img-wrapper {
     width: 100%;
     height: auto;
+  }
+  .screen-1 .right-part .upper-part .images-wrapper .img-wrapper a,
+  .screen-1 .right-part .upper-part .images-wrapper .img-wrapper img {
+    height: auto;
+  }
+  .screen-1 .right-part .upper-part .images-wrapper .img-wrapper .img-overlay {
+    display: none;
   }
   .screen-1 .right-part .upper-part .images-wrapper .keep-reading {
     margin-left: 37.5%;
@@ -2610,10 +2741,14 @@ button:hover {
     position: static;
     margin: 5% auto;
   }
-  .screen-2 .right-part .team-wrapper .team {
+  .screen-2 .right-part .team-wrapper .team-img-wrapper {
     width: 100%;
     height: auto;
     margin-top: 10vh;
+  }
+  .screen-2 .right-part .team-wrapper .team-img-wrapper a,
+  .screen-2 .right-part .team-wrapper .team-img-wrapper img {
+    height: auto;
   }
   .screen-3 {
     height: auto;
@@ -2665,6 +2800,9 @@ button:hover {
   .screen-3 .upper-part .slider .slide-wrapper .slide .desc-wrapper .desc-text-wrapper {
     margin-top: 2%;
   }
+  .screen-4 .letter {
+    display: none;
+  }
   .screen-4 .left-part {
     display: none;
   }
@@ -2705,19 +2843,24 @@ button:hover {
   .screen-1 .right-part .upper-part .images-wrapper {
     height: 90vh;
   }
-  .screen-1 .right-part .upper-part .images-wrapper .desk {
+  .screen-1 .right-part .upper-part .images-wrapper .img-wrapper a,
+  .screen-1 .right-part .upper-part .images-wrapper .img-wrapper img {
+    height: 100%;
+  }
+  .screen-1 .right-part .upper-part .images-wrapper .desk-wrapper {
     width: 70%;
     height: 60%;
     position: absolute;
     right: 0;
   }
-  .screen-1 .right-part .upper-part .images-wrapper .building {
+  .screen-1 .right-part .upper-part .images-wrapper .building-wrapper {
     width: 40%;
+    height: 30%;
     position: absolute;
     right: 15%;
     top: 40%;
   }
-  .screen-1 .right-part .upper-part .images-wrapper .sand {
+  .screen-1 .right-part .upper-part .images-wrapper .sand-wrapper {
     width: 75%;
     height: 30%;
     position: absolute;
@@ -2747,11 +2890,16 @@ button:hover {
   .screen-2 .right-part .learn-more {
     position: absolute;
     left: 58.333333334%;
-    top: 70%;
+    top: 75%;
   }
-  .screen-2 .right-part .team-wrapper .team {
-    margin-top: 5vh;
-    height: 50vh;
+  .screen-2 .right-part .team-wrapper .team-img-wrapper {
+    margin-top: 7.5vh;
+    height: 45vh;
+    width: 55%;
+  }
+  .screen-2 .right-part .team-wrapper .team-img-wrapper a,
+  .screen-2 .right-part .team-wrapper .team-img-wrapper img {
+    height: 100%;
   }
   .screen-3 {
     height: 100vh;
