@@ -1,3 +1,7 @@
+include templates/mixins/header.jade
+include templates/mixins/slide.jade
+
+doctype html
 html(lang="en")
   head
     meta(charset="UTF-8")
@@ -7,12 +11,12 @@ html(lang="en")
     link(rel='stylesheet', type='text/css', href='lib/slick/slick-theme.css')
     link(rel='stylesheet', type='text/css', href='lib/lightbox/css/lightbox.min.css')
     script(type='text/javascript', src='scripts/jquery.js')
-    script(type='text/javascript', src='scripts/custom.js', defer)
+    script(type='text/javascript', src='scripts/index.js', defer)
     script(type='text/javascript', src='lib/slick/slick.min.js', defer)
     script(type='text/javascript', src='lib/lightbox/js/lightbox.min.js', defer)
     meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
   body
-    include templates/header.jade
+    +header('Foisy studio', 'Little Big Details', 'We are a creative design firm, aiming to give our users what they want;', 'an awesome experience.', 'Our work', true)
     .main.container-fluid
       .screen-1
         .row
@@ -93,132 +97,24 @@ html(lang="en")
         .row.upper-part
           .slider.col-md-10.col-md-offset-1
             .row.slick-slider
-              .slide-wrapper.col-md-4
-                .slide
-                  img(alt='Slider Image', src='images/wave.jpg')
-                  .row
-                    .col-xs-11.desc-wrapper
-                      .row
-                        .col-xs-12.heading-wrapper
-                          span.heading Deep water
-                      .row
-                        .col-xs-12.desc-text-wrapper
-                          span.desc-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas ipsam aut doloribus quas, ullam accusantium perspiciatis ipsum odit sint odio.
-                      .row
-                        .col-xs-12.social-wrapper
-                          .row
-                            .col-xs-2.icon-wrapper
-                              img(alt='like', src='images/like.png')
-                            .col-xs-2.icon-wrapper
-                              img(alt='share', src='images/share.png')
-                            .col-xs-7.col-xs-offset-1.date-wrapper
-                              img(alt='date', src='images/date.png')
-                              span 2 July 2016
-              .slide-wrapper.col-md-4
-                .slide
-                  img(alt='Slider Image', src='images/landscape.jpg')
-                  .row
-                    .col-xs-11.desc-wrapper
-                      .row
-                        .col-xs-12.heading-wrapper
-                          span.heading Art is like a mountain
-                      .row
-                        .col-xs-12.desc-text-wrapper
-                          span.desc-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas ipsam aut doloribus quas, ullam accusantium perspiciatis ipsum odit sint odio.
-                      .row
-                        .col-xs-12.social-wrapper
-                          .row
-                            .col-xs-2.icon-wrapper
-                              img(alt='like', src='images/like.png')
-                            .col-xs-2.icon-wrapper
-                              img(alt='share', src='images/share.png')
-                            .col-xs-7.col-xs-offset-1.date-wrapper
-                              img(alt='date', src='images/date.png')
-                              span 2 July 2016
-              .slide-wrapper.col-md-4
-                .slide
-                  img(alt='Slider Image', src='images/bussiness.jpg')
-                  .row
-                    .col-xs-11.desc-wrapper
-                      .row
-                        .col-xs-12.heading-wrapper
-                          span.heading "Bussiness design"
-                      .row
-                        .col-xs-12.desc-text-wrapper
-                          span.desc-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas ipsam aut doloribus quas, ullam accusantium perspiciatis ipsum odit sint odio.
-                      .row
-                        .col-xs-12.social-wrapper
-                          .row
-                            .col-xs-2.icon-wrapper
-                              img(alt='like', src='images/like.png')
-                            .col-xs-2.icon-wrapper
-                              img(alt='share', src='images/share.png')
-                            .col-xs-7.col-xs-offset-1.date-wrapper
-                              img(alt='date', src='images/date.png')
-                              span 2 July 2016
-              .slide-wrapper.col-md-4
-                .slide
-                  img(alt='Slider Image', src='images/wave.jpg')
-                  .row
-                    .col-xs-11.desc-wrapper
-                      .row
-                        .col-xs-12.heading-wrapper
-                          span.heading Deep water
-                      .row
-                        .col-xs-12.desc-text-wrapper
-                          span.desc-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas ipsam aut doloribus quas, ullam accusantium perspiciatis ipsum odit sint odio.
-                      .row
-                        .col-xs-12.social-wrapper
-                          .row
-                            .col-xs-2.icon-wrapper
-                              img(alt='like', src='images/like.png')
-                            .col-xs-2.icon-wrapper
-                              img(alt='share', src='images/share.png')
-                            .col-xs-7.col-xs-offset-1.date-wrapper
-                              img(alt='date', src='images/date.png')
-                              span 2 July 2016
-              .slide-wrapper.col-md-4
-                .slide
-                  img(alt='Slider Image', src='images/landscape.jpg')
-                  .row
-                    .col-xs-11.desc-wrapper
-                      .row
-                        .col-xs-12.heading-wrapper
-                          span.heading Art is like a mountain
-                      .row
-                        .col-xs-12.desc-text-wrapper
-                          span.desc-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas ipsam aut doloribus quas, ullam accusantium perspiciatis ipsum odit sint odio.
-                      .row
-                        .col-xs-12.social-wrapper
-                          .row
-                            .col-xs-2.icon-wrapper
-                              img(alt='like', src='images/like.png')
-                            .col-xs-2.icon-wrapper
-                              img(alt='share', src='images/share.png')
-                            .col-xs-7.col-xs-offset-1.date-wrapper
-                              img(alt='date', src='images/date.png')
-                              span 2 July 2016
-              .slide-wrapper.col-md-4
-                .slide
-                  img(alt='Slider Image', src='images/bussiness.jpg')
-                  .row
-                    .col-xs-11.desc-wrapper
-                      .row
-                        .col-xs-12.heading-wrapper
-                          span.heading "Bussiness design"
-                      .row
-                        .col-xs-12.desc-text-wrapper
-                          span.desc-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas ipsam aut doloribus quas, ullam accusantium perspiciatis ipsum odit sint odio.
-                      .row
-                        .col-xs-12.social-wrapper
-                          .row
-                            .col-xs-2.icon-wrapper
-                              img(alt='like', src='images/like.png')
-                            .col-xs-2.icon-wrapper
-                              img(alt='share', src='images/share.png')
-                            .col-xs-7.col-xs-offset-1.date-wrapper
-                              img(alt='date', src='images/date.png')
-                              span 2 July 2016
+              +slide('images/wave.jpg', 'Deep water',
+                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
+                '2 July 2016')
+              +slide('images/landscape.jpg', 'Art is like a mountain',
+                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
+                '2 July 2016')
+              +slide('images/bussiness.jpg', '"Bussiness design"',
+                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
+                '2 July 2016')
+              +slide('images/wave.jpg', 'Deep water',
+                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
+                '2 July 2016')
+              +slide('images/landscape.jpg', 'Art is like a mountain',
+                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
+                '2 July 2016')
+              +slide('images/bussiness.jpg', '"Bussiness design"',
+                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
+                '2 July 2016')
       .screen-4
         .row
           .col-md-4.left-part

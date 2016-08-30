@@ -1,0 +1,28 @@
+mixin header(studio, title, subtitle, subtitle2, button, scrollDown)
+  .header.container-fluid
+    .row
+      .nav-open-button
+      .col-sm-8.col-sm-offset-2.header-main
+        .row
+          .col-xs-2.col-xs-offset-5
+            img(alt='logo', src='images/logo.png')
+        .row.studio-name-wrapper
+          .col-sm-11.col-sm-offset-1.row-inner-wrapper
+            span.studio-name= studio
+        .row.title-wrapper
+          .col-sm-9.col-sm-offset-3.row-inner-wrapper
+            span.title= title
+        .row.subtitle-wrapper
+          .col-sm-9.col-sm-offset-3.row-inner-wrapper
+            span.subtitle= subtitle
+              br
+              span.subtitle-line-2= subtitle2
+        .row.work-samples-wrapper
+          .col-xs-4.col-sm-2.pull-right.row-inner-wrapper
+            button.work-samples= button
+        if(scrollDown)
+          .row.scroll-down-wrapper
+            .col-sm-9.col-sm-offset-3.row-inner-wrapper
+              span.scroll-down Scroll down
+        .left-line
+        .right-line

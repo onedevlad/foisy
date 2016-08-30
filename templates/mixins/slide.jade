@@ -1,0 +1,22 @@
+mixin slide(imgSrc, heading, descText, date)
+  .slide-wrapper.col-md-4
+    .slide
+      img(alt='Slider Image', src= imgSrc)
+      .row
+        .col-xs-11.desc-wrapper
+          .row
+            .col-xs-12.heading-wrapper
+              span.heading= heading
+          .row
+            .col-xs-12.desc-text-wrapper
+              span.desc-text= descText
+          .row
+            .col-xs-12.social-wrapper
+              .row
+                .col-xs-2.icon-wrapper
+                  img(alt='like', src='images/like.png')
+                .col-xs-2.icon-wrapper
+                  img(alt='share', src='images/share.png')
+                .col-xs-7.col-xs-offset-1.date-wrapper
+                  img(alt='date', src='images/date.png')
+                  span= date
