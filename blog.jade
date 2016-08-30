@@ -1,4 +1,5 @@
 include templates/mixins/header.jade
+include templates/mixins/slide.jade
 
 doctype traditional
 html(lang="en")
@@ -19,11 +20,67 @@ html(lang="en")
           .col-md-8.right-part
             .row
               .col-md-7.blank-space
-              .col-md-3.filters-wrapper
-                a.filters-link(href='#') Filters
               .grey-space
           .grey-space-small
-          .featured-wrapper
-            span.featured Featured
         .row.upper-part
           .row
+            .col-md-4.person-wrapper
+              .row
+                .col-md-6.col-md-push-6.person-inner-wrapper
+                  img.person-photo(alt='Joshua Atkins', src='images/avatar.png')
+                  .person-data
+                    .person-name Joshua Atkins
+                    .person-position Foisy CEO
+            .col-md-8.post-wrapper
+              .row
+                .col-md-7.title-wrapper
+                  span.title Marketing experts
+                  span.subtitle Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur odio pariatur iusto a ab dolores voluptatum debitis ullam ea iure.
+                .col-md-5.date-wrapper
+                    img(alt='date', src='images/date.png')
+                    span.date 2 July 2016
+              .row
+                .col-md-9.post-img-wrapper
+                  img(alt='A photographer', src='images/photographer.png')
+          .row.post-text-wrapper
+            .col-md-4.quote-wrapper
+              .quote-inner-wrapper
+                span.quote When they thought "These people were crazy,
+                  br
+                  | for sure"
+            .col-md-8.post-text-inner-wrapper
+              .col-md-7.post-text
+                span Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt vero aliquam sapiente quia illum eos, ratione ex quibusdam, ut aspernatur cupiditate velit nesciunt minima sequi! Aliquid impedit nemo rem iusto quo. Consequatur fugit odio illum distinctio rem quo numquam similique, beatae. Debitis blanditiis harum soluta asperiores. Cum at nulla sapiente corporis consequuntur, necessitatibus, soluta esse repellendus neque ab vel, placeat aliquid expedita fugit harum quos similique eius aut accusantium hic ipsam dolorum corrupti laboriosam molestias? Beatae quasi, sapiente repellat totam magnam fuga voluptatem unde similique quisquam id suscipit enim tempore sit, minima fugiat molestiae modi voluptate. Tempore sed, temporibus esse.
+                span Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga et ducimus alias vitae dolore error numquam reiciendis ratione veritatis blanditiis laudantium, porro velit. Optio nihil maiores eveniet quod harum voluptatum.
+                span.subtitle But it's important to keep going
+                span Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt vero aliquam sapiente quia illum eos, ratione ex quibusdam, ut aspernatur cupiditate velit nesciunt minima sequi! Aliquid impedit nemo rem iusto quo. Consequatur fugit odio illum distinctio rem quo numquam similique, beatae. Debitis blanditiis harum soluta asperiores. Cum at nulla sapiente corporis consequuntur, necessitatibus, soluta esse repellendus neque ab vel, placeat aliquid expedita fugit harum quos similique eius aut accusantium hic ipsam dolorum corrupti laboriosam molestias? Beatae quasi, sapiente repellat totam magnam fuga voluptatem unde similique quisquam id suscipit enim tempore sit, minima fugiat molestiae modi voluptate. Tempore sed, temporibus esse.
+                .share-wrapper
+                  span.share Share this story
+                  img.share-icon(alt='Share', src='images/share.png')
+      .screen-2
+        .row
+          .lower-part
+            .col-md-4.left-part
+            .col-md-8.right-part
+              .row
+                .col-md-7.blank-space
+          .upper-part
+            .row
+              .col-md-8.col-md-push-4.title-wrapper
+                span.title Related views
+            .row
+              .slider.col-md-10.col-md-offset-1
+                .row
+                  +slide('images/wave.jpg', 'Deep water',
+                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
+                    '2 July 2016')
+                  +slide('images/landscape.jpg', 'Art is like a mountain',
+                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
+                    '2 July 2016')
+                  +slide('images/bussiness.jpg', '"Bussiness design"',
+                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
+                    '2 July 2016')
+            .row
+              .col-md-8.col-md-push-4.more-wrapper
+                button.more More views
+      include templates/footer.jade

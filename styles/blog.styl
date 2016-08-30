@@ -2,6 +2,7 @@
 
 @import 'components/nav'
 @import 'components/header'
+@import 'components/slider'
 @import 'components/footer'
 @import 'components/next-step'
 
@@ -14,103 +15,165 @@
       absolute left top
       height 100%
       width 100%
-      .featured-wrapper
-        absolute left 2% top 27%
-        .featured
-          color grey
-          font-size 12em
-          font-weight bold
-          font-family SourceSansProBlack
-          text-transform uppercase
-      .grey-space-small
-        background grey
-        width 25%
-        height 20%
-        absolute top 60% left 10%
       .left-part
       .right-part
+        height 100%
         padding 0
+      .left-part
+        background white
+        margin-top -4vh
       .right-part
         height 100%
         border-left 1px solid dark-grey
-        .row
+        .blank-space
+          padding 0
           height 100%
-          .blank-space
-            z-index 2
-            padding 0
-            height 100%
-            box-sizing content-box
-            border-right 1px solid dark-grey
-          .filters-wrapper
-            z-index 4
-            padding 0
-            margin-top 24vh
-            a
-              color dark-grey
-              text-transform uppercase
-          .grey-space
-            width 50%
-            height 40%
-            absolute right 10% top 4vh
-            background grey
+          border-right 1px solid dark-grey
     .upper-part
       z-index 3
       position relative
-      .row
-        height auto
-        position relative
-        .related-wrapper
+      .person-wrapper
+        padding 0
+        .person-inner-wrapper
           padding 0
+          height 3em
+          position relative
+          .person-photo
+            height 100%
+          .person-data
+            absolute bottom left 4em
+            display inline-block
+            .person-name
+              font-weight bold
+              text-transform uppercase
+            .person-position
+              color dark-grey
+      .post-wrapper
+        padding 0
+        .title-wrapper
+          padding 0
+          margin 12vh 0 0 0
           .title
-            font-weight bold
             font-family SourceSansProBlack
-            font-size 2em
+            font-weight bold
+            font-size 2.5em
             text-transform uppercase
           .subtitle
+            width 95%
+            text-align justify
             display block
-            margin-top 4vh
-      .images-wrapper
-        .img-wrapper
+            margin-top 2vh
+            margin-bottom 4vh
+        .date-wrapper
           padding 0
-          a
+          img
+            width 1em
+            height 1em
+          .date
+            margin-left 1em
+        .post-img-wrapper
+          padding 0
           img
             width 100%
-          a
-            .img-desc
-              absolute bottom 10% right 5%
+      .post-text-wrapper
+        .quote-wrapper
+          padding 0
+          .quote-inner-wrapper
+            margin 10vh 2em 0 0
+            float right
+            .quote
+              font-style italic
+        .post-text-inner-wrapper
+          padding 0
+          .post-text
+            padding 0
+            &>span
+              padding 8vh 0 0 0
+              text-align justify
+              display block
+              width 95%
+            .subtitle
               font-weight bold
-              color white
+              font-size 1.5em
               font-family SourceSansProBlack
               text-transform uppercase
-              font-size 1.5em
-              text-shadow 1px 1px 1px black
-      .more-wrapper
+            .share-wrapper
+              margin-top 8vh
+              cursor pointer
+              .share
+                font-family SourceSansProBlack
+                text-transform uppercase
+                font-weight bold
+              .share-icon
+                margin-left 1em
+  .screen-2
+    position relative
+    .lower-part
+      absolute left top
+      height 100%
+      width 100%
+      .left-part
+      .right-part
+        height 100%
         padding 0
-        margin-top 10vh
+      .right-part
+        border-left 1px solid dark-grey
+        .blank-space
+          padding 0
+          height 100%
+          border-right 1px solid dark-grey
+    .upper-part
+      .title-wrapper
+        padding 0
+        .title
+          font-family SourceSansProBlack
+          font-weight bold
+          text-transform uppercase
+          font-size 3em
+      .slider
+        margin-top 12vh
+      .more-wrapper
+        margin 12vh 0 8vh 0
         .more
-          color white
           padding 0.5em 1em
+          color white
           box-shadow 0 20px 20px dark-grey
-
 
 @media(max-width $screen-md) // Tablet
   .screen-1
     padding 5%
     .lower-part
+      .left-part
+        display none
+    .upper-part
+      .person-wrapper
+        margin-top 0
+      .date-wrapper
+        margin-top 8vh
+      .quote-wrapper
+        display none
+  .screen-2
+    padding 20vh 5% 5% 5%
+    .lower-part
       display none
     .upper-part
-      .related-wrapper
-        margin-top 10vh
-      .images-wrapper
-        margin-top 0
-        .img-wrapper
+      .slider
+        height auto
+        .slide-wrapper
           margin-top 10vh
-          padding 0
+      .more-wrapper
+        padding 5%
 
 @media(min-width $screen-md) // Desktop
   .screen-1
     .upper-part
-      .related-wrapper
-        margin-top 20vh
-      .images-wrapper
-        margin-top 15vh
+      .person-wrapper
+        margin-top 16vh
+      .date-wrapper
+        margin-top 16vh
+  .screen-2
+    padding 20vh 0 0 0
+    .slider
+      height 60vh
+    .more-wrapper
+      padding 0
