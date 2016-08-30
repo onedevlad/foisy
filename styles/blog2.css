@@ -2407,8 +2407,126 @@ button:hover {
     margin-top: 13vh;
   }
 }
+.next-step .letter {
+  font-weight: bold;
+  color: #f00;
+  font-size: 30vh;
+  font-family: SourceSansProBlack;
+  position: absolute;
+}
+.next-step .letter.f-letter {
+  color: #f9f9f9;
+  top: 30%;
+  left: 30%;
+}
+.next-step .letter.o-letter {
+  color: #f9f9f9;
+  bottom: 0;
+  right: 10%;
+}
+.next-step .letter.i-letter {
+  color: #f9f9f9;
+  top: 30%;
+  left: 30%;
+}
+.next-step .letter.y-letter {
+  color: #fff;
+  bottom: 0;
+  right: 10%;
+}
+.next-step .left-part {
+  padding: 0;
+  margin-top: -4vh;
+  height: calc(100% + 4vh);
+  background: #fff;
+  position: relative;
+}
+.next-step .right-part {
+  border-left: 1px solid #dcdcdc;
+  padding: 0;
+  position: relative;
+}
+.next-step .right-part .next-step-wrapper {
+  padding: 0;
+  z-index: 2;
+}
+.next-step .right-part .next-step-wrapper .title {
+  font-weight: bold;
+  font-size: 2em;
+}
+.next-step .right-part .next-step-wrapper .subtitle-wrapper {
+  margin-top: 8vh;
+}
+.next-step .right-part .next-step-wrapper .take-me-there-wrapper {
+  margin-top: 8vh;
+}
+.next-step .right-part .next-step-wrapper .take-me-there-wrapper .take-me-there {
+  padding: 0.5em 2em;
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-box-shadow: 0 20px 20px #dcdcdc;
+  box-shadow: 0 20px 20px #dcdcdc;
+}
+.next-step .right-part .blank-space-grey,
+.next-step .right-part .blank-space-white {
+  position: relative;
+}
+.next-step .right-part .blank-space-grey {
+  background: #f9f9f9;
+  height: 80%;
+}
+.next-step .right-part .blank-space-white {
+  height: 100%;
+  background: #fff;
+}
+.next-step .right-part .blank-space-white .studio-name {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1em;
+  color: #f9f9f9;
+  display: inline-block;
+  width: 100%;
+}
+.next-step .right-part .line {
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  left: 58.3333334%;
+  top: 0;
+  background: #dcdcdc;
+}
+@media (max-width: 992px) {
+  .next-step .letter {
+    display: none;
+  }
+  .next-step .left-part {
+    display: none;
+  }
+  .next-step .right-part .next-step-wrapper {
+    text-align: center;
+    position: static;
+  }
+  .next-step .right-part .next-step-wrapper .title {
+    margin-top: 10vh;
+  }
+  .next-step .right-part .blank-space-wrapper,
+  .next-step .right-part .line {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .next-step .right-part .next-step-wrapper {
+    position: absolute;
+    top: 0;
+  }
+  .next-step .right-part .next-step-wrapper .title {
+    margin-top: 40vh;
+  }
+}
 .header {
-  background-image: url("../images/header-city.png");
+  background-image: url("../images/header-buttons.png");
 }
 .main .screen-1 {
   position: relative;
@@ -2442,105 +2560,27 @@ button:hover {
   z-index: 3;
   position: relative;
 }
-.main .screen-1 .upper-part .person-wrapper {
+.main .screen-1 .upper-part .featured-wrapper {
   padding: 0;
 }
-.main .screen-1 .upper-part .person-wrapper .person-inner-wrapper {
+.main .screen-1 .upper-part .featured-wrapper .title-wrapper {
   padding: 0;
-  height: 3em;
-  position: relative;
+  margin-top: 12vh;
 }
-.main .screen-1 .upper-part .person-wrapper .person-inner-wrapper .person-photo {
-  height: 100%;
-}
-.main .screen-1 .upper-part .person-wrapper .person-inner-wrapper .person-data {
-  position: absolute;
-  bottom: 0;
-  left: 4em;
-  display: inline-block;
-}
-.main .screen-1 .upper-part .person-wrapper .person-inner-wrapper .person-data .person-name {
-  font-weight: bold;
-  text-transform: uppercase;
-}
-.main .screen-1 .upper-part .person-wrapper .person-inner-wrapper .person-data .person-position {
-  color: #dcdcdc;
-}
-.main .screen-1 .upper-part .post-wrapper {
-  padding: 0;
-}
-.main .screen-1 .upper-part .post-wrapper .title-wrapper {
-  padding: 0;
-  margin: 12vh 0 0 0;
-}
-.main .screen-1 .upper-part .post-wrapper .title-wrapper .title {
+.main .screen-1 .upper-part .featured-wrapper .title-wrapper .title {
+  font-size: 3em;
   font-family: SourceSansProBlack;
   font-weight: bold;
-  font-size: 2.5em;
   text-transform: uppercase;
 }
-.main .screen-1 .upper-part .post-wrapper .title-wrapper .subtitle {
-  width: 95%;
-  text-align: justify;
-  display: block;
-  margin-top: 2vh;
-  margin-bottom: 4vh;
-}
-.main .screen-1 .upper-part .post-wrapper .date-wrapper {
-  padding: 0;
-}
-.main .screen-1 .upper-part .post-wrapper .date-wrapper img {
-  width: 1em;
-  height: 1em;
-}
-.main .screen-1 .upper-part .post-wrapper .date-wrapper .date {
-  margin-left: 1em;
-}
-.main .screen-1 .upper-part .post-wrapper .post-img-wrapper {
-  padding: 0;
-}
-.main .screen-1 .upper-part .post-wrapper .post-img-wrapper img {
-  width: 100%;
-}
-.main .screen-1 .upper-part .post-text-wrapper .quote-wrapper {
-  padding: 0;
-}
-.main .screen-1 .upper-part .post-text-wrapper .quote-wrapper .quote-inner-wrapper {
-  margin: 10vh 2em 0 0;
-  float: right;
-}
-.main .screen-1 .upper-part .post-text-wrapper .quote-wrapper .quote-inner-wrapper .quote {
-  font-style: italic;
-}
-.main .screen-1 .upper-part .post-text-wrapper .post-text-inner-wrapper {
-  padding: 0;
-}
-.main .screen-1 .upper-part .post-text-wrapper .post-text-inner-wrapper .post-text {
-  padding: 0;
-}
-.main .screen-1 .upper-part .post-text-wrapper .post-text-inner-wrapper .post-text>span {
-  padding: 8vh 0 0 0;
-  text-align: justify;
-  display: block;
-  width: 95%;
-}
-.main .screen-1 .upper-part .post-text-wrapper .post-text-inner-wrapper .post-text .subtitle {
-  font-weight: bold;
-  font-size: 1.5em;
-  font-family: SourceSansProBlack;
-  text-transform: uppercase;
-}
-.main .screen-1 .upper-part .post-text-wrapper .post-text-inner-wrapper .post-text .share-wrapper {
+.main .screen-1 .upper-part .featured-wrapper .featured-slide {
   margin-top: 8vh;
-  cursor: pointer;
+  padding: 0;
+  height: 80vh;
 }
-.main .screen-1 .upper-part .post-text-wrapper .post-text-inner-wrapper .post-text .share-wrapper .share {
-  font-family: SourceSansProBlack;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-.main .screen-1 .upper-part .post-text-wrapper .post-text-inner-wrapper .post-text .share-wrapper .share-icon {
-  margin-left: 1em;
+.main .screen-1 .upper-part .featured-wrapper .featured-slide .slide-wrapper {
+  padding: 0;
+  width: 100%;
 }
 .main .screen-2 {
   position: relative;
@@ -2557,7 +2597,12 @@ button:hover {
   height: 100%;
   padding: 0;
 }
+.main .screen-2 .lower-part .left-part {
+  background: #fff;
+  margin-top: -4vh;
+}
 .main .screen-2 .lower-part .right-part {
+  height: 100%;
   border-left: 1px solid #dcdcdc;
 }
 .main .screen-2 .lower-part .right-part .blank-space {
@@ -2565,47 +2610,22 @@ button:hover {
   height: 100%;
   border-right: 1px solid #dcdcdc;
 }
-.main .screen-2 .upper-part .title-wrapper {
-  padding: 0;
-}
-.main .screen-2 .upper-part .title-wrapper .title {
-  font-family: SourceSansProBlack;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 3em;
-}
 .main .screen-2 .upper-part .slider {
   margin-top: 12vh;
 }
 .main .screen-2 .upper-part .more-wrapper {
-  margin: 12vh 0 8vh 0;
+  margin-top: 12vh;
 }
 .main .screen-2 .upper-part .more-wrapper .more {
-  padding: 0.5em 1em;
   color: #fff;
-  -webkit-box-shadow: 0 20px 20px #dcdcdc;
-  box-shadow: 0 20px 20px #dcdcdc;
+  padding: 0.5em 1em;
+  text-transform: uppercase;
 }
 @media (max-width: 992px) {
-  .screen-1 {
+  .screen-2 {
     padding: 5%;
   }
-  .screen-1 .lower-part .left-part {
-    display: none;
-  }
-  .screen-1 .upper-part .person-wrapper {
-    margin-top: 0;
-  }
-  .screen-1 .upper-part .date-wrapper {
-    margin-top: 8vh;
-  }
-  .screen-1 .upper-part .quote-wrapper {
-    display: none;
-  }
-  .screen-2 {
-    padding: 20vh 5% 5% 5%;
-  }
-  .screen-2 .lower-part {
+  .screen-2 .lower-part .left-part {
     display: none;
   }
   .screen-2 .upper-part .slider {
@@ -2619,19 +2639,13 @@ button:hover {
   }
 }
 @media (min-width: 992px) {
-  .screen-1 .upper-part .person-wrapper {
-    margin-top: 16vh;
-  }
-  .screen-1 .upper-part .date-wrapper {
-    margin-top: 16vh;
-  }
-  .screen-2 {
+  .screen-2 .upper-part .slider {
     padding: 20vh 0 0 0;
   }
-  .screen-2 .slider {
+  .screen-2 .upper-part .slider .slider {
     height: 60vh;
   }
-  .screen-2 .more-wrapper {
+  .screen-2 .upper-part .slider .more-wrapper {
     padding: 0;
   }
 }

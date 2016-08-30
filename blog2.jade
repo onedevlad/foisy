@@ -1,0 +1,73 @@
+include templates/mixins/header
+include templates/mixins/slide
+include templates/mixins/next-step
+
+doctype traditional
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title Foisy
+    link(rel='stylesheet', type='text/css', href='styles/blog2.css')
+    link(rel='stylesheet', type='text/css', href='lib/lightbox/css/lightbox.min.css')
+    script(type='text/javascript', src='scripts/jquery.js')
+    script(type='text/javascript', src='scripts/blog.js', defer)
+    script(type='text/javascript', src='lib/lightbox/js/lightbox.min.js', defer)
+    meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
+  body
+    +header('Foisy blog', 'Views', 'We support our vision with a great variety of views.', '', 'Take me there', false)
+    .main
+      .screen-1
+        .row.lower-part
+          .col-md-4.left-part
+          .col-md-8.right-part
+            .row
+              .col-md-7.blank-space
+              .grey-space
+          .grey-space-small
+        .row.upper-part
+          .row
+            .col-md-8.col-md-push-4.featured-wrapper
+              .row
+                .title-wrapper
+                  span.title Featured view
+              .row
+                .col-md-8.featured-slide
+                  +slide('images/wave.jpg', 'Deep water',
+                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
+                    '2 July 2016')
+      .screen-2
+        .row.lower-part
+          .col-md-4.left-part
+          .col-md-8.right-part
+            .row
+              .col-md-7.blank-space
+              .grey-space
+          .grey-space-small
+        .row.upper-part
+          .row
+            .col-md-10.col-md-offset-1.slider
+              +slide('images/wave.jpg', 'Deep water',
+                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
+                '2 July 2016')
+              +slide('images/landscape.jpg', 'Art is like a mountain',
+                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
+                '2 July 2016')
+              +slide('images/bussiness.jpg', '"Bussiness design"',
+                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
+                '2 July 2016')
+            .col-md-10.col-md-offset-1.slider
+              +slide('images/wave.jpg', 'Deep water',
+                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
+                '2 July 2016')
+              +slide('images/landscape.jpg', 'Art is like a mountain',
+                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
+                '2 July 2016')
+              +slide('images/bussiness.jpg', '"Bussiness design"',
+                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
+                '2 July 2016')
+          .row
+            .col-md-2.col-md-push-4.more-wrapper
+              button.more Load more
+      +nextStep('Drop us a line about any bussiness inquiry or just say "hello".', 'Reach out')
+      include templates/footer
+    include templates/nav

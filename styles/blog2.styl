@@ -1,0 +1,103 @@
+@import 'vars'
+
+@import 'components/nav'
+@import 'components/header'
+@import 'components/slider'
+@import 'components/footer'
+@import 'components/next-step'
+
+.header
+  background-image url(../images/header-buttons.png)
+.main
+  .screen-1
+    position relative
+    .lower-part
+      absolute left top
+      height 100%
+      width 100%
+      .left-part
+      .right-part
+        height 100%
+        padding 0
+      .left-part
+        background white
+        margin-top -4vh
+      .right-part
+        height 100%
+        border-left 1px solid dark-grey
+        .blank-space
+          padding 0
+          height 100%
+          border-right 1px solid dark-grey
+    .upper-part
+      z-index 3
+      position relative
+      .featured-wrapper
+        padding 0
+        .title-wrapper
+          padding 0
+          margin-top 12vh
+          .title
+            font-size 3em
+            font-family SourceSansProBlack
+            font-weight bold
+            text-transform uppercase
+        .featured-slide
+          margin-top 8vh
+          padding 0
+          height 80vh
+          .slide-wrapper
+            padding 0
+            width 100%
+  .screen-2
+    position relative
+    .lower-part
+      absolute left top
+      height 100%
+      width 100%
+      .left-part
+      .right-part
+        height 100%
+        padding 0
+      .left-part
+        background white
+        margin-top -4vh
+      .right-part
+        height 100%
+        border-left 1px solid dark-grey
+        .blank-space
+          padding 0
+          height 100%
+          border-right 1px solid dark-grey
+    .upper-part
+      .slider
+        margin-top 12vh
+      .more-wrapper
+        margin-top 12vh
+        .more
+          color white
+          padding 0.5em 1em
+          text-transform uppercase
+@media(max-width $screen-md) // Tablet
+  .screen-2
+    padding 5%
+    .lower-part
+      .left-part
+        display none
+    .upper-part
+      .slider
+        height auto
+        .slide-wrapper
+          margin-top 10vh
+      .more-wrapper
+        padding 5%
+
+@media(min-width $screen-md) // Desktop
+  .screen-2
+    .upper-part
+      .slider
+        padding 20vh 0 0 0
+        .slider
+          height 60vh
+        .more-wrapper
+          padding 0
