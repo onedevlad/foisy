@@ -1,0 +1,94 @@
+.next-step
+  .letter
+    font-weight bold
+    color red
+    font-size 30vh
+    font-family SourceSansProBlack
+    position absolute
+    &.f-letter
+      color grey
+      top 30%
+      left 30%
+    &.o-letter
+      color grey
+      bottom 0
+      right 10%
+    &.i-letter
+      color grey
+      top 30%
+      left 30%
+    &.y-letter
+      color white
+      bottom 0
+      right 10%
+  .left-part
+    padding 0
+    margin-top -4vh
+    height calc(100% + 4vh)
+    background white
+    position relative
+  .right-part
+    border-left 1px solid dark-grey
+    padding 0
+    position relative
+    .next-step-wrapper
+      padding 0
+      z-index 2
+      .title
+        font-weight bold
+        font-size 2em
+      .subtitle-wrapper
+        margin-top 8vh
+      .take-me-there-wrapper
+        margin-top 8vh
+        .take-me-there
+          padding 0.5em 2em
+          color white
+          text-transform uppercase
+          box-shadow 0 20px 20px dark-grey
+    .blank-space-grey
+    .blank-space-white
+      position relative
+    .blank-space-grey
+      background grey
+      height 80%
+    .blank-space-white
+      height 100%
+      background white
+      .studio-name
+        absolute bottom
+        text-align center
+        text-transform uppercase
+        letter-spacing 1em
+        color grey
+        display inline-block
+        width 100%
+    .line
+      width 1px
+      height 100%
+      absolute left 58.3333334% top
+      background dark-grey
+
+@media(max-width $screen-md) // Tablet
+  .next-step
+    .letter
+      display none
+    .left-part
+      display none
+    .right-part
+      .next-step-wrapper
+        text-align center
+        position static
+        .title
+          margin-top 10vh
+      .blank-space-wrapper
+      .line
+        display none
+
+@media(min-width $screen-md) // Desktop
+  .next-step
+    .right-part
+      .next-step-wrapper
+        absolute top
+        .title
+          margin-top 40vh
