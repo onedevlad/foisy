@@ -17,9 +17,10 @@ mixin header(studio, title, subtitle, subtitle2, button, scrollDown)
             span.subtitle= subtitle
               br
               span.subtitle-line-2= subtitle2
-        .row.work-samples-wrapper
-          .col-xs-4.col-sm-2.pull-right.row-inner-wrapper
-            button.work-samples= button
+        if(button)
+          .row.work-samples-wrapper
+            .col-xs-4.col-sm-2.pull-right.row-inner-wrapper
+              button.work-samples= button
         if(scrollDown)
           .row.scroll-down-wrapper
             .col-sm-9.col-sm-offset-3.row-inner-wrapper

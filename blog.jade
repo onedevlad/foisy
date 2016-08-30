@@ -1,0 +1,29 @@
+include templates/mixins/header.jade
+
+doctype traditional
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title Foisy
+    link(rel='stylesheet', type='text/css', href='styles/blog.css')
+    link(rel='stylesheet', type='text/css', href='lib/lightbox/css/lightbox.min.css')
+    script(type='text/javascript', src='scripts/jquery.js')
+    script(type='text/javascript', src='lib/lightbox/js/lightbox.min.js', defer)
+    meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
+  body
+    +header('', 'Marketing experts', 'We support our vision with a great variety of views.', '', 'Take me there', false)
+    .main
+      .screen-1
+        .row.lower-part
+          .col-md-4.left-part
+          .col-md-8.right-part
+            .row
+              .col-md-7.blank-space
+              .col-md-3.filters-wrapper
+                a.filters-link(href='#') Filters
+              .grey-space
+          .grey-space-small
+          .featured-wrapper
+            span.featured Featured
+        .row.upper-part
+          .row
