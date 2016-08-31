@@ -1,15 +1,15 @@
 .slide-wrapper
   .slide
+    height 100%
     position relative
     &>img
+      absolute top
       width 100%
     .desc-wrapper
       border 1px solid dark-grey
-      width 90%
-      margin-top -15%
-      position relative
-      z-index 2
+      absolute bottom
       background white
+      height 60%
       .heading-wrapper
         padding 0
         .heading
@@ -22,11 +22,12 @@
       .desc-text-wrapper
         padding 0
         margin-top 5%
+        height 65%
         overflow hidden
       .social-wrapper
         height 30px
         padding 0
-        margin-top 2em
+        absolute bottom 5px
         .icon-wrapper
           height 100%
           padding 0
@@ -58,6 +59,7 @@
 
 @media(min-width $screen-md) // Desktop
   .slide-wrapper
+    height 100%
     .slide
       .desc-wrapper
         padding 1em

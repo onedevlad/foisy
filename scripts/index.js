@@ -15,7 +15,7 @@ $(document).ready(function(){ // Lightbox config module
 $(document).ready(function(){ // Slick config module
   $('.slick-slider').slick({
     autoPlaySpeed: 3000,
-    autoplay: true,
+    // autoplay: true,
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 3,

@@ -2209,20 +2209,18 @@ button:hover {
   }
 }
 .slide-wrapper .slide {
-  height: 100%;
   position: relative;
 }
 .slide-wrapper .slide>img {
-  position: absolute;
-  top: 0;
   width: 100%;
 }
 .slide-wrapper .slide .desc-wrapper {
   border: 1px solid #dcdcdc;
-  position: absolute;
-  bottom: 0;
+  width: 90%;
+  margin-top: -15%;
+  position: relative;
+  z-index: 2;
   background: #fff;
-  height: 60%;
 }
 .slide-wrapper .slide .desc-wrapper .heading-wrapper {
   padding: 0;
@@ -2240,14 +2238,12 @@ button:hover {
 .slide-wrapper .slide .desc-wrapper .desc-text-wrapper {
   padding: 0;
   margin-top: 5%;
-  height: 65%;
   overflow: hidden;
 }
 .slide-wrapper .slide .desc-wrapper .social-wrapper {
   height: 30px;
   padding: 0;
-  position: absolute;
-  bottom: 5px;
+  margin-top: 2em;
 }
 .slide-wrapper .slide .desc-wrapper .social-wrapper .icon-wrapper {
   height: 100%;
@@ -2288,9 +2284,6 @@ button:hover {
   }
 }
 @media (min-width: 992px) {
-  .slide-wrapper {
-    height: 100%;
-  }
   .slide-wrapper .slide .desc-wrapper {
     padding: 1em;
   }
