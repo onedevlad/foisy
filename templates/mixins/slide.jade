@@ -1,7 +1,11 @@
 mixin slide(imgSrc, heading, descText, date)
   .slide-wrapper.col-md-4
     .slide
-      img(alt='Slider Image', src= imgSrc)
+      .img-wrapper
+        a(href= imgSrc, data-lightbox='slider', data-title= heading)
+          img(alt= heading, src= imgSrc)
+          .img-overlay
+            img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'images/plus.png')
       .row
         .col-xs-11.desc-wrapper
           .row
@@ -14,9 +18,9 @@ mixin slide(imgSrc, heading, descText, date)
             .col-xs-12.social-wrapper
               .row
                 .col-xs-2.icon-wrapper
-                  img(alt='like', src='images/like.png')
+                  .icon.like-icon
                 .col-xs-2.icon-wrapper
-                  img(alt='share', src='images/share.png')
+                  .icon.share-icon
                 .col-xs-7.col-xs-offset-1.date-wrapper
-                  img(alt='date', src='images/date.png')
+                  .icon.date-icon
                   span= date

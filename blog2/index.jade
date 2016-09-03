@@ -1,17 +1,19 @@
-include templates/mixins/header
-include templates/mixins/slide
-include templates/mixins/next-step
+include ../templates/mixins/header
+include ../templates/mixins/slide
+include ../templates/mixins/next-step
+
+- var mediaUrlPrefix = '../'
 
 doctype traditional
 html(lang="en")
   head
     meta(charset="UTF-8")
     title Foisy
-    link(rel='stylesheet', type='text/css', href='styles/blog2.css')
-    link(rel='stylesheet', type='text/css', href='lib/lightbox/css/lightbox.min.css')
-    script(type='text/javascript', src='scripts/jquery.js')
-    script(type='text/javascript', src='scripts/blog.js', defer)
-    script(type='text/javascript', src='lib/lightbox/js/lightbox.min.js', defer)
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'styles/blog2.css')
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'lib/lightbox/css/lightbox.min.css')
+    script(type='text/javascript', src= mediaUrlPrefix + 'scripts/jquery.js')
+    script(type='text/javascript', src= mediaUrlPrefix + 'scripts/blog.js', defer)
+    script(type='text/javascript', src= mediaUrlPrefix + 'lib/lightbox/js/lightbox.min.js', defer)
     meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
   body
     +header('Foisy blog', 'Views', 'We support our vision with a great variety of views.', '', 'Take me there', false)
@@ -32,7 +34,7 @@ html(lang="en")
                   span.title Featured view
               .row
                 .col-md-8.featured-slide
-                  +slide('images/wave.jpg', 'Deep water',
+                  +slide( mediaUrlPrefix + 'images/wave.jpg', 'Deep water',
                     'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
                     '2 July 2016')
       .screen-2
@@ -46,28 +48,28 @@ html(lang="en")
         .row.upper-part
           .row
             .col-md-10.col-md-offset-1.slider
-              +slide('images/wave.jpg', 'Deep water',
+              +slide( mediaUrlPrefix + 'images/wave.jpg', 'Deep water',
                 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
                 '2 July 2016')
-              +slide('images/landscape.jpg', 'Art is like a mountain',
+              +slide( mediaUrlPrefix + 'images/landscape.jpg', 'Art is like a mountain',
                 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
                 '2 July 2016')
-              +slide('images/bussiness.jpg', '"Bussiness design"',
+              +slide( mediaUrlPrefix + 'images/bussiness.jpg', '"Bussiness design"',
                 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
                 '2 July 2016')
             .col-md-10.col-md-offset-1.slider
-              +slide('images/wave.jpg', 'Deep water',
+              +slide( mediaUrlPrefix + 'images/wave.jpg', 'Deep water',
                 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
                 '2 July 2016')
-              +slide('images/landscape.jpg', 'Art is like a mountain',
+              +slide( mediaUrlPrefix + 'images/landscape.jpg', 'Art is like a mountain',
                 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
                 '2 July 2016')
-              +slide('images/bussiness.jpg', '"Bussiness design"',
+              +slide( mediaUrlPrefix + 'images/bussiness.jpg', '"Bussiness design"',
                 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
                 '2 July 2016')
           .row
             .col-md-2.col-md-push-4.more-wrapper
               button.more Load more
       +nextStep('Drop us a line about any bussiness inquiry or just say "hello".', 'Reach out')
-      include templates/footer
-    include templates/nav
+      include ../templates/footer
+    include ../templates/nav

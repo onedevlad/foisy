@@ -1,0 +1,70 @@
+include ../templates/mixins/header
+include ../templates/mixins/next-step
+
+- var mediaUrlPrefix = '../'
+
+doctype traditional
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title Foisy
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'styles/portfolio2.css')
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'lib/lightbox/css/lightbox.min.css')
+    script(type='text/javascript', src= mediaUrlPrefix + 'scripts/jquery.js')
+    script(type='text/javascript', src= mediaUrlPrefix + 'scripts/portfolio.js', defer)
+    script(type='text/javascript', src= mediaUrlPrefix + 'lib/lightbox/js/lightbox.min.js', defer)
+    meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
+  body
+    +header('Foisy work', 'Projects', 'We support our vision with a great variety of work.', '', 'Take me there', false)
+    .main
+      .screen-1
+        .row.lower-part
+          .col-md-4.left-part
+          .col-md-8.right-part
+            .row
+              .col-md-7.blank-space
+              .col-md-3.filters-wrapper
+                a.filters-link(href='#') Filters
+              .grey-space
+          .grey-space-small
+          .featured-wrapper
+            span.featured Featured
+        .row.upper-part
+          .row
+            .col-md-3.col-md-offset-4.related-wrapper
+              span.title Featured projects
+              span.subtitle Selected projects
+          .row.images-wrapper
+            .col-md-5.col-md-offset-3.img-wrapper
+              a(href= mediaUrlPrefix + 'images/related-2.png', data-lightbox='screen-1', data-title='Related 2')
+                img(alt='Related 2', src= mediaUrlPrefix + 'images/related-2.png')
+                span.img-desc Visual identity
+                .img-overlay
+                  img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'images/plus.png')
+          .row.images-wrapper
+            .col-md-5.col-md-offset-3.img-wrapper
+              a(href= mediaUrlPrefix + 'images/related-3.png', data-lightbox='screen-1', data-title='Related 3')
+                img(alt='Related 3', src= mediaUrlPrefix + 'images/related-3.png')
+                span.img-desc Festival
+                .img-overlay
+                  img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'images/plus.png')
+          .row.images-wrapper
+            .col-md-5.col-md-offset-3.img-wrapper
+              a(href= mediaUrlPrefix + 'images/related-4.png', data-lightbox='screen-1', data-title='Related 4')
+                img(alt='Related 4', src= mediaUrlPrefix + 'images/related-4.png')
+                span.img-desc Concert
+                .img-overlay
+                  img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'images/plus.png')
+          .row.images-wrapper
+            .col-md-5.col-md-offset-3.img-wrapper
+              a(href= mediaUrlPrefix + 'images/related-1.png', data-lightbox='screen-1', data-title='Related 1')
+                img(alt='Related 1', src= mediaUrlPrefix + 'images/related-1.png')
+                span.img-desc Illustration
+                .img-overlay
+                  img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'images/plus.png')
+          .row
+            .col-md-3.col-md-offset-4.more-wrapper
+              button.more Learn more
+      +nextStep('Drop us a line about any bussiness inquiry or just say "hello".', 'Take me there')
+      include ../templates/footer
+    include ../templates/nav

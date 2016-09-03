@@ -3,20 +3,28 @@
   <head>
     <meta charset="UTF-8"/>
     <title>Foisy</title>
-    <link rel="stylesheet" type="text/css" href="styles/blog.css"/>
-    <link rel="stylesheet" type="text/css" href="lib/lightbox/css/lightbox.min.css"/>
-    <script type="text/javascript" src="scripts/jquery.js"></script>
-    <script type="text/javascript" src="scripts/blog.js" defer="defer"></script>
-    <script type="text/javascript" src="lib/lightbox/js/lightbox.min.js" defer="defer"></script>
+    <link rel="stylesheet" type="text/css" href="../styles/blog.css"/>
+    <link rel="stylesheet" type="text/css" href="../lib/lightbox/css/lightbox.min.css"/>
+    <script type="text/javascript" src="../scripts/jquery.js"></script>
+    <script type="text/javascript" src="../scripts/blog.js" defer="defer"></script>
+    <script type="text/javascript" src="../lib/lightbox/js/lightbox.min.js" defer="defer"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
   </head>
   <body>
     <div class="header container-fluid">
       <div class="row">
         <div class="nav-open-button"></div>
+        <div class="header-slider-controls">
+          <div class="header-slider-control-box active"></div>
+          <div class="header-slider-control-box"></div>
+          <div class="header-slider-control-box"></div>
+          <div class="header-slider-control-box"></div><span class="header-page-num"><span class="header-current-slide">01</span>/04</span>
+        </div>
         <div class="col-sm-8 col-sm-offset-2 header-main">
           <div class="row">
-            <div class="col-xs-2 col-xs-offset-5"><img alt="logo" src="images/logo.png"/></div>
+            <div class="col-xs-4 col-xs-offset-4 col-md-2 col-md-offset-5">
+              <div class="logo"></div>
+            </div>
           </div>
           <div class="row studio-name-wrapper">
             <div class="col-sm-11 col-sm-offset-1 row-inner-wrapper"><span class="studio-name"></span></div>
@@ -53,7 +61,7 @@
           <div class="row">
             <div class="col-md-4 person-wrapper">
               <div class="row">
-                <div class="col-md-6 col-md-push-6 person-inner-wrapper"><img alt="Joshua Atkins" src="images/avatar.png" class="person-photo"/>
+                <div class="col-md-6 col-md-push-6 person-inner-wrapper"><img alt="Joshua Atkins" src="../images/avatar.png" class="person-photo"/>
                   <div class="person-data">
                     <div class="person-name">Joshua Atkins</div>
                     <div class="person-position">Foisy CEO</div>
@@ -64,10 +72,13 @@
             <div class="col-md-8 post-wrapper">
               <div class="row">
                 <div class="col-md-7 title-wrapper"><span class="title">Marketing experts</span><span class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur odio pariatur iusto a ab dolores voluptatum debitis ullam ea iure.</span></div>
-                <div class="col-md-5 date-wrapper"><img alt="date" src="images/date.png"/><span class="date">2 July 2016</span></div>
+                <div class="col-md-5 date-wrapper"><img alt="date" src="../images/date.png"/><span class="date">2 July 2016</span></div>
               </div>
               <div class="row">
-                <div class="col-md-9 post-img-wrapper"><img alt="A photographer" src="images/photographer.png"/></div>
+                <div class="col-md-9 post-img-wrapper">
+                  <div class="img-wrapper"><a href="../images/photographer.png" data-lightbox="screen-1" data-title="A photographer"><img alt="A photographer" src="../images/photographer.png" class="team"/>
+                      <div class="img-overlay"><img alt="Show in a popup" src="../images/plus.png" class="plus-sign"/></div></a></div>
+                </div>
               </div>
             </div>
           </div>
@@ -77,7 +88,7 @@
             </div>
             <div class="col-md-8 post-text-inner-wrapper">
               <div class="col-md-7 post-text"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt vero aliquam sapiente quia illum eos, ratione ex quibusdam, ut aspernatur cupiditate velit nesciunt minima sequi! Aliquid impedit nemo rem iusto quo. Consequatur fugit odio illum distinctio rem quo numquam similique, beatae. Debitis blanditiis harum soluta asperiores. Cum at nulla sapiente corporis consequuntur, necessitatibus, soluta esse repellendus neque ab vel, placeat aliquid expedita fugit harum quos similique eius aut accusantium hic ipsam dolorum corrupti laboriosam molestias? Beatae quasi, sapiente repellat totam magnam fuga voluptatem unde similique quisquam id suscipit enim tempore sit, minima fugiat molestiae modi voluptate. Tempore sed, temporibus esse.</span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga et ducimus alias vitae dolore error numquam reiciendis ratione veritatis blanditiis laudantium, porro velit. Optio nihil maiores eveniet quod harum voluptatum.</span><span class="subtitle">But it's important to keep going</span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt vero aliquam sapiente quia illum eos, ratione ex quibusdam, ut aspernatur cupiditate velit nesciunt minima sequi! Aliquid impedit nemo rem iusto quo. Consequatur fugit odio illum distinctio rem quo numquam similique, beatae. Debitis blanditiis harum soluta asperiores. Cum at nulla sapiente corporis consequuntur, necessitatibus, soluta esse repellendus neque ab vel, placeat aliquid expedita fugit harum quos similique eius aut accusantium hic ipsam dolorum corrupti laboriosam molestias? Beatae quasi, sapiente repellat totam magnam fuga voluptatem unde similique quisquam id suscipit enim tempore sit, minima fugiat molestiae modi voluptate. Tempore sed, temporibus esse.</span>
-                <div class="share-wrapper"><span class="share">Share this story</span><img alt="Share" src="images/share.png" class="share-icon"/></div>
+                <div class="share-wrapper"><span class="share">Share this story</span><img alt="Share" src="../images/share.png" class="share-icon"/></div>
               </div>
             </div>
           </div>
@@ -101,7 +112,9 @@
               <div class="slider col-md-10 col-md-offset-1">
                 <div class="row">
                   <div class="slide-wrapper col-md-4">
-                    <div class="slide"><img alt="Slider Image" src="images/wave.jpg"/>
+                    <div class="slide">
+                      <div class="img-wrapper"><a href="../images/wave.jpg" data-lightbox="slider" data-title="Deep water"><img alt="Deep water" src="../images/wave.jpg"/>
+                          <div class="img-overlay"><img alt="Show in a popup" src="../images/plus.png" class="plus-sign"/></div></a></div>
                       <div class="row">
                         <div class="col-xs-11 desc-wrapper">
                           <div class="row">
@@ -113,9 +126,15 @@
                           <div class="row">
                             <div class="col-xs-12 social-wrapper">
                               <div class="row">
-                                <div class="col-xs-2 icon-wrapper"><img alt="like" src="images/like.png"/></div>
-                                <div class="col-xs-2 icon-wrapper"><img alt="share" src="images/share.png"/></div>
-                                <div class="col-xs-7 col-xs-offset-1 date-wrapper"><img alt="date" src="images/date.png"/><span>2 July 2016</span></div>
+                                <div class="col-xs-2 icon-wrapper">
+                                  <div class="icon like-icon"></div>
+                                </div>
+                                <div class="col-xs-2 icon-wrapper">
+                                  <div class="icon share-icon"></div>
+                                </div>
+                                <div class="col-xs-7 col-xs-offset-1 date-wrapper">
+                                  <div class="icon date-icon"></div><span>2 July 2016</span>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -124,7 +143,9 @@
                     </div>
                   </div>
                   <div class="slide-wrapper col-md-4">
-                    <div class="slide"><img alt="Slider Image" src="images/landscape.jpg"/>
+                    <div class="slide">
+                      <div class="img-wrapper"><a href="../images/landscape.jpg" data-lightbox="slider" data-title="Art is like a mountain"><img alt="Art is like a mountain" src="../images/landscape.jpg"/>
+                          <div class="img-overlay"><img alt="Show in a popup" src="../images/plus.png" class="plus-sign"/></div></a></div>
                       <div class="row">
                         <div class="col-xs-11 desc-wrapper">
                           <div class="row">
@@ -136,9 +157,15 @@
                           <div class="row">
                             <div class="col-xs-12 social-wrapper">
                               <div class="row">
-                                <div class="col-xs-2 icon-wrapper"><img alt="like" src="images/like.png"/></div>
-                                <div class="col-xs-2 icon-wrapper"><img alt="share" src="images/share.png"/></div>
-                                <div class="col-xs-7 col-xs-offset-1 date-wrapper"><img alt="date" src="images/date.png"/><span>2 July 2016</span></div>
+                                <div class="col-xs-2 icon-wrapper">
+                                  <div class="icon like-icon"></div>
+                                </div>
+                                <div class="col-xs-2 icon-wrapper">
+                                  <div class="icon share-icon"></div>
+                                </div>
+                                <div class="col-xs-7 col-xs-offset-1 date-wrapper">
+                                  <div class="icon date-icon"></div><span>2 July 2016</span>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -147,7 +174,9 @@
                     </div>
                   </div>
                   <div class="slide-wrapper col-md-4">
-                    <div class="slide"><img alt="Slider Image" src="images/bussiness.jpg"/>
+                    <div class="slide">
+                      <div class="img-wrapper"><a href="../images/bussiness.jpg" data-lightbox="slider" data-title="&quot;Bussiness design&quot;"><img alt="&quot;Bussiness design&quot;" src="../images/bussiness.jpg"/>
+                          <div class="img-overlay"><img alt="Show in a popup" src="../images/plus.png" class="plus-sign"/></div></a></div>
                       <div class="row">
                         <div class="col-xs-11 desc-wrapper">
                           <div class="row">
@@ -159,9 +188,15 @@
                           <div class="row">
                             <div class="col-xs-12 social-wrapper">
                               <div class="row">
-                                <div class="col-xs-2 icon-wrapper"><img alt="like" src="images/like.png"/></div>
-                                <div class="col-xs-2 icon-wrapper"><img alt="share" src="images/share.png"/></div>
-                                <div class="col-xs-7 col-xs-offset-1 date-wrapper"><img alt="date" src="images/date.png"/><span>2 July 2016</span></div>
+                                <div class="col-xs-2 icon-wrapper">
+                                  <div class="icon like-icon"></div>
+                                </div>
+                                <div class="col-xs-2 icon-wrapper">
+                                  <div class="icon share-icon"></div>
+                                </div>
+                                <div class="col-xs-7 col-xs-offset-1 date-wrapper">
+                                  <div class="icon date-icon"></div><span>2 July 2016</span>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -185,14 +220,22 @@
           <div class="col-xs-4 left-part">
             <div class="row contacts-wrapper">
               <div class="row">
-                <div class="col-md-4 col-md-offset-6 logo-wrapper"><img alt="Logo" src="images/logo.png" class="logo"/></div>
+                <div class="col-md-4 col-md-offset-6 logo-wrapper">
+                  <div class="logo"></div>
+                </div>
               </div>
               <div class="row">
                 <div class="col-md-4 col-md-offset-6 social-wrapper">
                   <div class="row">
-                    <div class="col-xs-4 social-icon"><img alt="Instagram" src="images/instagram.png"/></div>
-                    <div class="col-xs-4 social-icon"><img alt="Twitter" src="images/twitter.png"/></div>
-                    <div class="col-xs-4 social-icon"><img alt="Dribbble" src="images/dribbble.png"/></div>
+                    <div class="col-xs-4 social-icon">
+                      <div class="icon instagram-icon"></div>
+                    </div>
+                    <div class="col-xs-4 social-icon">
+                      <div class="icon twitter-icon"></div>
+                    </div>
+                    <div class="col-xs-4 social-icon">
+                      <div class="icon dribbble-icon"></div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -221,7 +264,8 @@
         </div>
       </div>
     </div>
-    <div class="nav"><img alt="close" src="images/close.png" class="nav-close-button"/>
+    <div class="nav">
+      <div class="nav-close-button"></div>
       <ul class="nav-wrapper">
         <li><a>Home</a></li>
         <li><a>About</a></li>

@@ -3,28 +3,34 @@
 grey = #f9f9f9
 blue = #00aff0
 dark-blue = darken(#00aff0, 10)
-dark-grey = #dcdcdc
+dark-grey = #bbb
 light-black = #3c3c3c
 black = #262626
 
+
 @font-face
-  font-family 'SourceSansPro'
-  src url('../fonts/SourceSansPro-Regular.eot')
+  font-family 'SourceSansProRegular'
+  src url('../fonts/SourceSansPro-Regular/font.eot')
+  src url('../fonts/SourceSansPro-Regular/font.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/SourceSansPro-Regular/font.woff') format('woff'),
+      url('../fonts/SourceSansPro-Regular/font.ttf') format('truetype'),
+      url('../fonts/SourceSansPro-Regular/font.svg#SourceSansPro-Black') format('svg')
   font-style normal
   font-weight normal
 
-@font-face 
+@font-face
   font-family 'SourceSansProBlack'
-  src url('../fonts/SourceSansPro-Black.eot')
-  src url('../fonts/SourceSansPro-Black.eot?#iefix') format('embedded-opentype'),
-     url('../fonts/SourceSansPro-Black.woff') format('woff'),
-     url('../fonts/SourceSansPro-Black.ttf') format('truetype'),
-     url('../fonts/SourceSansPro-Black.svg#SourceSansPro-Black') format('svg')
+  src url('../fonts/SourceSansPro-Black/font.eot')
+  src url('../fonts/SourceSansPro-Black/font.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/SourceSansPro-Black/font.woff') format('woff'),
+      url('../fonts/SourceSansPro-Black/font.ttf') format('truetype'),
+      url('../fonts/SourceSansPro-Black/font.svg#SourceSansPro-Black') format('svg')
   font-style normal
   font-weight normal
 
 
 body
+  font-family SourceSansProRegular
   overflow-x hidden
 
 button
@@ -48,17 +54,7 @@ button
   &:hover
     opacity 1
   .plus-sign
-    box-sizing content-box
-    color black
-    display block
-    font-weight bold
-    line-height 100px
-    width 100px
-    height 100px
-    font-size 100px
-    text-align center
-    border-radius 50%
-    border 10px solid black
-    position absolute
-    left calc(50% - 55px)
-    top calc(50% - 55px)
+    width 25% !important
+    height auto !important
+    absolute top 50% left 50%
+    transform translate(-50%, -50%)

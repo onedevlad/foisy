@@ -1,16 +1,18 @@
-include templates/mixins/header
-include templates/mixins/slide
+include ../templates/mixins/header
+include ../templates/mixins/slide
+
+- var mediaUrlPrefix = '../'
 
 doctype traditional
 html(lang="en")
   head
     meta(charset="UTF-8")
     title Foisy
-    link(rel='stylesheet', type='text/css', href='styles/blog.css')
-    link(rel='stylesheet', type='text/css', href='lib/lightbox/css/lightbox.min.css')
-    script(type='text/javascript', src='scripts/jquery.js')
-    script(type='text/javascript', src='scripts/blog.js', defer)
-    script(type='text/javascript', src='lib/lightbox/js/lightbox.min.js', defer)
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'styles/blog.css')
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'lib/lightbox/css/lightbox.min.css')
+    script(type='text/javascript', src= mediaUrlPrefix + 'scripts/jquery.js')
+    script(type='text/javascript', src= mediaUrlPrefix + 'scripts/blog.js', defer)
+    script(type='text/javascript', src= mediaUrlPrefix + 'lib/lightbox/js/lightbox.min.js', defer)
     meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
   body
     +header('', 'Marketing experts', 'We support our vision with a great variety of views.', '', 'Take me there', false)
@@ -28,7 +30,7 @@ html(lang="en")
             .col-md-4.person-wrapper
               .row
                 .col-md-6.col-md-push-6.person-inner-wrapper
-                  img.person-photo(alt='Joshua Atkins', src='images/avatar.png')
+                  img.person-photo(alt='Joshua Atkins', src= mediaUrlPrefix + 'images/avatar.png')
                   .person-data
                     .person-name Joshua Atkins
                     .person-position Foisy CEO
@@ -38,11 +40,15 @@ html(lang="en")
                   span.title Marketing experts
                   span.subtitle Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur odio pariatur iusto a ab dolores voluptatum debitis ullam ea iure.
                 .col-md-5.date-wrapper
-                    img(alt='date', src='images/date.png')
+                    img(alt='date', src= mediaUrlPrefix + 'images/date.png')
                     span.date 2 July 2016
               .row
                 .col-md-9.post-img-wrapper
-                  img(alt='A photographer', src='images/photographer.png')
+                  .img-wrapper
+                    a(href= mediaUrlPrefix + 'images/photographer.png', data-lightbox='screen-1', data-title='A photographer')
+                      img.team(alt='A photographer', src= mediaUrlPrefix + 'images/photographer.png')
+                      .img-overlay
+                        img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'images/plus.png')
           .row.post-text-wrapper
             .col-md-4.quote-wrapper
               .quote-inner-wrapper
@@ -57,7 +63,7 @@ html(lang="en")
                 span Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt vero aliquam sapiente quia illum eos, ratione ex quibusdam, ut aspernatur cupiditate velit nesciunt minima sequi! Aliquid impedit nemo rem iusto quo. Consequatur fugit odio illum distinctio rem quo numquam similique, beatae. Debitis blanditiis harum soluta asperiores. Cum at nulla sapiente corporis consequuntur, necessitatibus, soluta esse repellendus neque ab vel, placeat aliquid expedita fugit harum quos similique eius aut accusantium hic ipsam dolorum corrupti laboriosam molestias? Beatae quasi, sapiente repellat totam magnam fuga voluptatem unde similique quisquam id suscipit enim tempore sit, minima fugiat molestiae modi voluptate. Tempore sed, temporibus esse.
                 .share-wrapper
                   span.share Share this story
-                  img.share-icon(alt='Share', src='images/share.png')
+                  img.share-icon(alt='Share', src= mediaUrlPrefix + 'images/share.png')
       .screen-2
         .row
           .lower-part
@@ -72,17 +78,17 @@ html(lang="en")
             .row
               .slider.col-md-10.col-md-offset-1
                 .row
-                  +slide('images/wave.jpg', 'Deep water',
+                  +slide( mediaUrlPrefix + 'images/wave.jpg', 'Deep water',
                     'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
                     '2 July 2016')
-                  +slide('images/landscape.jpg', 'Art is like a mountain',
+                  +slide( mediaUrlPrefix + 'images/landscape.jpg', 'Art is like a mountain',
                     'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
                     '2 July 2016')
-                  +slide('images/bussiness.jpg', '"Bussiness design"',
+                  +slide( mediaUrlPrefix + 'images/bussiness.jpg', '"Bussiness design"',
                     'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
                     '2 July 2016')
             .row
               .col-md-8.col-md-push-4.more-wrapper
                 button.more More views
-      include templates/footer
-    include templates/nav
+      include ../templates/footer
+    include ../templates/nav

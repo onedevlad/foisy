@@ -12,31 +12,63 @@
     background-size cover
     absolute top 2vh right 5%
     cursor pointer
+  .header-slider-controls
+    absolute top 2vh left 5%
+    .header-slider-control-box
+      cursor pointer
+      display block
+      margin-bottom 0.5em
+      width 0.5em
+      height 0.5em
+      background dark-grey
+      &.active
+        background blue
+    .header-page-num
+      display block
+      margin-top 1em
+      transform-origin 40% 100%
+      transform rotateZ(-90deg)
+      .header-current-slide
+        color white
   .header-main
     padding 0
     padding-top 2vh
     color white
+    .logo
+      width 100%
+      height 3em
+      background-image url(../images/logo.png)
+      background-size 100%
+      background-repeat no-repeat
+      background-position 50% 50%
     .studio-name-wrapper
       margin-top 20vh
       .studio-name
-       letter-spacing 1em
-       text-transform uppercase
+        color dark-grey
+        letter-spacing 1em
+        text-transform uppercase
     .title
       text-transform uppercase
-      font-size 3.75em
+      font-size 4em
       font-weight bold
+      font-family SourceSansProBlack
     .subtitle-wrapper
       margin-top 8vh
+      color dark-grey
+      line-height 2em
     .work-samples-wrapper
       margin-top 8vh
       margin-bottom 8vh
       .work-samples
         width 100%
         padding 0.5em 0
+        text-transform uppercase
     .scroll-down-wrapper
       margin-bottom 8vh
       .scroll-down
         text-transform uppercase
+        color dark-grey
+        letter-spacing 0.25em
     .row-inner-wrapper
       padding 0
     .left-line
