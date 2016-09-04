@@ -2175,6 +2175,13 @@ table th[class*="col-"] {
   font-style: normal;
   font-weight: normal;
 }
+@font-face {
+  font-family: 'MontserratBold';
+  src: url("../fonts/Montserrat-Bold/font.eot");
+  src: url("../fonts/Montserrat-Bold/font.eot?#iefix") format('embedded-opentype'), url("../fonts/Montserrat-Bold/font.woff") format('woff'), url("../fonts/Montserrat-Bold/font.ttf") format('truetype'), url("../fonts/Montserrat-Bold/font.svg#SourceSansPro-Black") format('svg');
+  font-style: normal;
+  font-weight: normal;
+}
 body {
   font-family: SourceSansProRegular;
   font-size: 14px;
@@ -2281,13 +2288,16 @@ button a:hover {
   text-transform: uppercase;
 }
 .nav .nav-wrapper a {
-  color: #bbb;
+  color: #fff;
   line-height: 4em;
   cursor: pointer;
   text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: MontserratBold;
 }
 .nav .nav-wrapper a:hover {
-  color: #fff;
+  color: #00aff0;
 }
 .header {
   padding: 0;
@@ -2386,13 +2396,6 @@ button a:hover {
 }
 .header .header-main .logo {
   width: 100%;
-  height: 3em;
-  background-image: url("../images/logo.png");
-  -webkit-background-size: 100%;
-  -moz-background-size: 100%;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
 }
 .header .header-main .studio-name-wrapper {
   margin-top: 20vh;
@@ -2473,19 +2476,15 @@ button a:hover {
 }
 .footer .footer-wrapper .left-part .contacts-wrapper .logo-wrapper {
   margin-top: 10vh;
+  padding: 0;
 }
 .footer .footer-wrapper .left-part .contacts-wrapper .logo-wrapper .logo {
   width: 100%;
-  height: 2em;
-  background-image: url("../images/logo.png");
-  -webkit-background-size: 100% 100%;
-  -moz-background-size: 100% 100%;
-  background-size: 100% 100%;
-  background-position: 50% 50%;
 }
 .footer .footer-wrapper .left-part .contacts-wrapper .social-wrapper {
   padding: 0;
-  margin-top: 1em;
+  margin-top: 2em;
+  text-align: center;
 }
 .footer .footer-wrapper .left-part .contacts-wrapper .social-wrapper .icon {
   cursor: pointer;
@@ -2529,10 +2528,16 @@ button a:hover {
 .footer .footer-wrapper .right-part .nav-wrapper>ul>li a,
 .footer .footer-wrapper .right-part .nav-wrapper>ul>li span {
   font-size: 14px;
+  font-family: MontserratBold;
   color: #fff;
   cursor: pointer;
   text-transform: uppercase;
   text-decoration: none;
+  font-weight: bold;
+}
+.footer .footer-wrapper .right-part .nav-wrapper>ul>li a:hover,
+.footer .footer-wrapper .right-part .nav-wrapper>ul>li span:hover {
+  color: #00aff0;
 }
 .footer .footer-wrapper .right-part .nav-wrapper>ul>li .dropdown-menu {
   background: #3c3c3c;
