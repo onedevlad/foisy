@@ -28,7 +28,6 @@
     background white
     position relative
   .right-part
-    border-left 1px solid dark-grey
     padding 0
     position relative
     .next-step-wrapper
@@ -40,11 +39,9 @@
         font-size 2em
         text-transform uppercase
       .subtitle-wrapper
-        margin-top 8vh
+        margin-bottom 48px
       .take-me-there-wrapper
-        margin-top 8vh
         .take-me-there
-          padding 0.5em 2em
           color white
           text-transform uppercase
           box-shadow 0 20px 20px dark-grey
@@ -90,7 +87,9 @@
 @media(min-width $screen-md) // Desktop
   .next-step
     .right-part
+      border-left 1px solid dark-grey
       .next-step-wrapper
         absolute top
         .title
           margin-top 40vh
+          margin-bottom 48px

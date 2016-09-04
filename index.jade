@@ -8,18 +8,20 @@ doctype traditional
 html(lang="en")
   head
     meta(charset="UTF-8")
-    title Foisy
-    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'styles/index.css')
-    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'lib/slick/slick.css')
-    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'lib/slick/slick-theme.css')
-    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'lib/lightbox/css/lightbox.min.css')
-    script(type='text/javascript', src= mediaUrlPrefix + 'scripts/jquery.js')
-    script(type='text/javascript', src= mediaUrlPrefix + 'scripts/index.js', defer)
-    script(type='text/javascript', src= mediaUrlPrefix + 'lib/slick/slick.min.js', defer)
-    script(type='text/javascript', src= mediaUrlPrefix + 'lib/lightbox/js/lightbox.min.js', defer)
+    title Home
+    link(rel='stylesheet', type='text/css', href='styles/index.css')
+    link(rel='stylesheet', type='text/css', href='lib/slick/slick.css')
+    link(rel='stylesheet', type='text/css', href='lib/slick/slick-theme.css')
+    link(rel='stylesheet', type='text/css', href='lib/lightbox/css/lightbox.min.css')
+    link(rel='stylesheet', type='text/css', href='lib/themify-icons/styles.css')
+    script(type='text/javascript', src='scripts/jquery.js')
+    script(type='text/javascript', src='scripts/index-dist.js', defer)
+    script(type='text/javascript', src='lib/slick/slick.min.js', defer)
+    script(type='text/javascript', src='lib/lightbox/js/lightbox.min.js', defer)
+    script(type='text/javascript', src='lib/bootstrap/js/dropdown.js', defer)
     meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
   body
-    +header('Foisy studio', 'Little Big Details', 'We are a creative design firm, aiming to give our users what they want;', 'an awesome experience.', 'Our work', true)
+    +header('Foisy studio', 'Little Big Details', 'We are a creative design firm, aiming to give our users what they want;', 'an awesome experience.', 'Our work', true, mediaUrlPrefix + 'portfolio')
     .main.container-fluid
       .screen-1
         .row
@@ -60,7 +62,8 @@ html(lang="en")
                     img.sand(alt='Sand', src= mediaUrlPrefix + 'images/sand.jpg')
                     .img-overlay
                       img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'images/plus.png')
-                button.keep-reading Keep reading
+                button.keep-reading
+                  a(href= mediaUrlPrefix + 'portfolio-with-images') Keep reading
       .screen-2
         .col-md-4.left-part
           .title-wrapper
@@ -76,7 +79,8 @@ html(lang="en")
                   .img-overlay
                     img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'images/plus.png')
             .line
-            button.learn-more Learn more
+            button.learn-more
+              a(href='blog') Learn more
       .screen-3
         .row.lower-part
           .col-md-4.left-part
@@ -87,37 +91,38 @@ html(lang="en")
                 br
                 br
                 span.subtitle Views from the Foisy.
-              .row.slider-controls-wrapper
-                .col-xs-12.slider-controls
-                  .slider-control-box.active
-                  .slider-control-box
-                  span.page-num
-                    span.current-slide 01
-                    | /02
-              .col-md-7.blank-space
+              .col-md-7.col-md-offset-5.blank-space
             .line
-            a.view-blog(href='#') View blog
+            a.view-blog(href='blog') View blog
         .row.upper-part
-          .slider.col-md-10.col-md-offset-1
-            .row.slick-slider
-              +slide( mediaUrlPrefix + 'images/wave.jpg', 'Deep water',
-                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
-                '2 July 2016')
-              +slide( mediaUrlPrefix + 'images/landscape.jpg', 'Art is like a mountain',
-                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
-                '2 July 2016')
-              +slide( mediaUrlPrefix + 'images/bussiness.jpg', '"Bussiness design"',
-                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
-                '2 July 2016')
-              +slide( mediaUrlPrefix + 'images/wave.jpg', 'Deep water',
-                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
-                '2 July 2016')
-              +slide( mediaUrlPrefix + 'images/landscape.jpg', 'Art is like a mountain',
-                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
-                '2 July 2016')
-              +slide( mediaUrlPrefix + 'images/bussiness.jpg', '"Bussiness design"',
-                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
-                '2 July 2016')
-      +nextStep('Meet out curated collection of projects - of all kinds - to taste our aesthetic.', 'Take me there!')
+          .row
+            .slider.col-md-10.col-md-offset-1
+              .row.slick-slider
+                +slide( mediaUrlPrefix + 'images/wave.jpg', 'Deep water',
+                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
+                  '2 July 2016')
+                +slide( mediaUrlPrefix + 'images/landscape.jpg', 'Art is like a mountain',
+                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
+                  '2 July 2016')
+                +slide( mediaUrlPrefix + 'images/bussiness.jpg', '"Bussiness design"',
+                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
+                  '2 July 2016')
+                +slide( mediaUrlPrefix + 'images/wave.jpg', 'Deep water',
+                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
+                  '2 July 2016')
+                +slide( mediaUrlPrefix + 'images/landscape.jpg', 'Art is like a mountain',
+                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
+                  '2 July 2016')
+                +slide( mediaUrlPrefix + 'images/bussiness.jpg', '"Bussiness design"',
+                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
+                  '2 July 2016')
+          .row.slider-controls-wrapper
+            .col-xs-8.col-xs-offset-4.slider-controls
+              .slider-control-box.active
+              .slider-control-box
+              span.page-num
+                span.current-slide 01
+                | /02
+      +nextStep('Meet out curated collection of projects - of all kinds - to taste our aesthetic.', 'Take me there!', mediaUrlPrefix + 'portfolio')
       include templates/footer
     include templates/nav

@@ -6,15 +6,16 @@ doctype traditional
 html(lang="en")
   head
     meta(charset="UTF-8")
-    title Foisy
+    title Portfolio
     link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'styles/portfolio.css')
     link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'lib/lightbox/css/lightbox.min.css')
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'lib/themify-icons/styles.css')
     script(type='text/javascript', src= mediaUrlPrefix + 'scripts/jquery.js')
-    script(type='text/javascript', src= mediaUrlPrefix + 'scripts/portfolio.js', defer)
+    script(type='text/javascript', src= mediaUrlPrefix + 'scripts/portfolio-dist.js', defer)
     script(type='text/javascript', src= mediaUrlPrefix + 'lib/lightbox/js/lightbox.min.js', defer)
     meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
   body
-    +header('Foisy work', 'Festival', 'A challenging and fun project', '', 'Take me there', false)
+    +header('Foisy work', 'Festival', 'A challenging and fun project', '', 'Take me there', false, mediaUrlPrefix + 'blog', 1)
     .main
       .screen-1
         .row.lower-part
@@ -106,6 +107,7 @@ html(lang="en")
                   img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'images/plus.png')
           .row
             .col-md-3.col-md-offset-4.more-wrapper
-              button.more More projects
+              button.more
+                a(href= mediaUrlPrefix + 'portfolio-with-images') More projects
       include ../templates/footer
     include ../templates/nav

@@ -2,11 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8"/>
-    <title>Foisy</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" type="text/css" href="../styles/portfolio.css"/>
     <link rel="stylesheet" type="text/css" href="../lib/lightbox/css/lightbox.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../lib/themify-icons/styles.css"/>
     <script type="text/javascript" src="../scripts/jquery.js"></script>
-    <script type="text/javascript" src="../scripts/portfolio.js" defer="defer"></script>
+    <script type="text/javascript" src="../scripts/portfolio-dist.js" defer="defer"></script>
     <script type="text/javascript" src="../lib/lightbox/js/lightbox.min.js" defer="defer"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
   </head>
@@ -14,11 +15,17 @@
     <div class="header container-fluid">
       <div class="row">
         <div class="nav-open-button"></div>
+        <div class="header-background header-background-1"></div>
+        <div class="header-background header-background-2"></div>
+        <div class="header-background header-background-3"></div>
+        <div class="header-background header-background-4"></div>
+        <div class="header-background header-background-5"></div>
         <div class="header-slider-controls">
+          <div class="header-slider-control-box"></div>
           <div class="header-slider-control-box active"></div>
           <div class="header-slider-control-box"></div>
           <div class="header-slider-control-box"></div>
-          <div class="header-slider-control-box"></div><span class="header-page-num"><span class="header-current-slide">01</span>/04</span>
+          <div class="header-slider-control-box"></div><span class="header-page-num"><span class="header-current-slide">01</span>/05</span>
         </div>
         <div class="col-sm-8 col-sm-offset-2 header-main">
           <div class="row">
@@ -37,7 +44,7 @@
           </div>
           <div class="row work-samples-wrapper">
             <div class="col-xs-4 col-sm-2 pull-right row-inner-wrapper">
-              <button class="work-samples">Take me there</button>
+              <button class="work-samples"><a href="../blog">Take me there</a></button>
             </div>
           </div>
           <div class="left-line"></div>
@@ -123,7 +130,7 @@
           </div>
           <div class="row">
             <div class="col-md-3 col-md-offset-4 more-wrapper">
-              <button class="more">More projects</button>
+              <button class="more"><a href="../portfolio-with-images">More projects</a></button>
             </div>
           </div>
         </div>
@@ -140,15 +147,9 @@
               <div class="row">
                 <div class="col-md-4 col-md-offset-6 social-wrapper">
                   <div class="row">
-                    <div class="col-xs-4 social-icon">
-                      <div class="icon instagram-icon"></div>
-                    </div>
-                    <div class="col-xs-4 social-icon">
-                      <div class="icon twitter-icon"></div>
-                    </div>
-                    <div class="col-xs-4 social-icon">
-                      <div class="icon dribbble-icon"></div>
-                    </div>
+                    <div class="col-xs-4 social-icon"><span class="icon ti-instagram"></span></div>
+                    <div class="col-xs-4 social-icon"><span class="icon ti-twitter"></span></div>
+                    <div class="col-xs-4 social-icon"><span class="icon ti-dribbble"></span></div>
                   </div>
                 </div>
               </div>
@@ -156,17 +157,28 @@
           </div>
           <div class="col-xs-8 right-part">
             <div class="row">
-              <div class="col-sm-6 nav-wrapper">
+              <div class="col-xs-11 col-xs-offset-1 col-sm-6 col-sm-offset-0 nav-wrapper">
                 <ul>
-                  <li><a>About</a></li>
-                  <li><a>Services</a></li>
-                  <li><a>Work</a></li>
-                  <li><a>Contact</a></li>
+                  <li><a href="../">Home</a></li>
+                  <li class="dropdown"><span data-toggle="dropdown" class="dropdown-toggle">Portfolio
+                      <div class="caret"></div></span>
+                    <ul class="dropdown-menu">
+                      <li><a href="../portfolio">Portfolio</a></li>
+                      <li><a href="../portfolio-with-images">Portfolio w/ images</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown"><span data-toggle="dropdown" class="dropdown-toggle">Blog
+                      <div class="caret"></div></span>
+                    <ul class="dropdown-menu">
+                      <li><a href="../blog">Blog</a></li>
+                      <li><a href="../blog-with-images">Blog w/ images</a></li>
+                    </ul>
+                  </li>
                 </ul>
               </div>
-              <div class="col-sm-6 search-box-wrapper">
+              <div class="col-xs-11 col-xs-offset-1 col-sm-6 col-sm-offset-0 search-box-wrapper">
                 <input type="text" placeholder="TYPE YOUR EMAIL" class="search-box"/>
-                <button class="go">Go</button>
+                <button class="go"><a>Go</a></button>
               </div>
             </div>
             <div class="row">
@@ -180,12 +192,11 @@
     <div class="nav">
       <div class="nav-close-button"></div>
       <ul class="nav-wrapper">
-        <li><a>Home</a></li>
-        <li><a>About</a></li>
-        <li><a>Services</a></li>
-        <li><a>Blog</a></li>
-        <li><a>Shop</a></li>
-        <li><a>Contact</a></li>
+        <li><a href="../">Home</a></li>
+        <li><a href="../blog">Blog</a></li>
+        <li><a href="../portfolio">Portfolio</a></li>
+        <li><a href="../blog-with-images">Blog with images</a></li>
+        <li><a href="../portfolio-with-images">Portfolio with images</a></li>
       </ul>
     </div>
   </body>

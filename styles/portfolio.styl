@@ -4,9 +4,9 @@
 @import 'components/header'
 @import 'components/footer'
 
-.header
-  background-image url(../images/header-poster.png)
 .main
+  z-index 6
+  position relative
   .screen-1
     position relative
     .lower-part
@@ -45,7 +45,7 @@
         .row
           height 100%
           .concept-wrapper
-            padding 16vh 0 0 0
+            padding screen-margin 0 0 0
             .heading
               font-size 3em
               font-weight bold
@@ -54,7 +54,7 @@
             .concept-desc
               display block
               width 90%
-              margin-top 4vh
+              margin-top 48px
           .saying-wrapper
             height 100%
             padding 16vh 0 0 0
@@ -148,7 +148,8 @@
             text-transform uppercase
           .subtitle
             display block
-            margin-top 4vh
+            margin-top 48px
+            margin-bottom 48px
       .images-wrapper
         a
         img
@@ -167,7 +168,6 @@
         margin-top 10vh
         .more
           color white
-          padding 0.5em 1em
           box-shadow 0 20px 20px dark-grey
 
 
@@ -185,6 +185,7 @@
     .upper-part
       .images-wrapper
         .img-wrapper
+          height 30vh
           margin-top 10vh
           a
           img
@@ -266,7 +267,5 @@
     .upper-part
       .related-wrapper
         margin-top 40vh
-      .images-wrapper
-        margin-top 10vh
       .more-wrapper
         margin-bottom 20vh

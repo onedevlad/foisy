@@ -1,4 +1,4 @@
-mixin nextStep(subtitle, button)
+mixin nextStep(subtitle, button, src)
   .next-step
     .row
       .col-md-4.left-part
@@ -13,7 +13,8 @@ mixin nextStep(subtitle, button)
             .subtitle
               span= subtitle
           .row.take-me-there-wrapper
-            button.take-me-there= button
+            button.take-me-there
+              a(href= src)= button
         .row.blank-space-wrapper
           .col-md-5.blank-space.blank-space-white
             span.letter.i-letter i

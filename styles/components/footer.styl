@@ -20,38 +20,48 @@
           padding 0
           margin-top 1em
           .icon
-            width 2em
-            height 2em
-            display block
             cursor pointer
-          .instagram-icon
-            background url('../images/instagram.png')
-          .twitter-icon
-            background url('../images/twitter.png')
-          .dribbble-icon
-            background url('../images/dribbble.png')
+            color white
+            font-size 14px
+            border 1px solid white
+            border-radius 50%
+            padding 0.5em
+            text-align center
+            &.ti-instagram:hover
+              background #6fa8d4
+            &.ti-twitter:hover
+              background #31c7f2
+            &.ti-dribbble:hover
+              background #e679f6
     .right-part
       padding 0
       position relative
       height 100%
       font-size 0.75em
       .nav-wrapper
-        margin-top 15vh
         padding 0
-        ul
+        &>ul
           padding 0
+          margin 0
           list-style none
-          li
+          &>li
             float left
             &:first-child
               padding-left 0
             a
+            span
+              font-size 14px
+              color white
               cursor pointer
-              color dark-grey
               text-transform uppercase
               text-decoration none
-              &:hover
-                color white
+            .dropdown-menu
+              background light-black
+              li
+                padding 0
+                cursor pointer
+                a
+                  background transparent
       .search-box-wrapper
         height 8vh
         background black
@@ -87,22 +97,25 @@
   .footer
     margin-top 5%
     .left-part
-      .logo-wrapper
-        text-align center
+      .contacts-wrapper
+        .logo-wrapper
+          text-align center
     .right-part
       .line
         display none
-      ul
-        li
-          padding 0.5em
-      .search-box-wrapper
-        margin-top 7vh
+      .nav-wrapper
+        margin-top 10vh
+        ul
+          li
+            padding 0.5em
 
 @media(min-width $screen-md) // Desktop
   .footer
     .right-part
-      ul
-        li
-          padding 0.5em 2em
+      .nav-wrapper
+        margin-top 15vh
+        ul
+          li
+            padding 0 2em
     .search-box-wrapper
       margin-top 13vh

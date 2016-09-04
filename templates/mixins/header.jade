@@ -1,15 +1,21 @@
-mixin header(studio, title, subtitle, subtitle2, button, scrollDown)
+mixin header(studio, title, subtitle, subtitle2, button, scrollDown, buttonUrl, activeBg)
   .header.container-fluid
     .row
       .nav-open-button
+      .header-background.header-background-1
+      .header-background.header-background-2
+      .header-background.header-background-3
+      .header-background.header-background-4
+      .header-background.header-background-5
       .header-slider-controls
-        .header-slider-control-box.active
-        .header-slider-control-box
-        .header-slider-control-box
-        .header-slider-control-box
+        .header-slider-control-box(class= activeBg === 0 ? 'active' : '')
+        .header-slider-control-box(class= activeBg === 1 ? 'active' : '')
+        .header-slider-control-box(class= activeBg === 2 ? 'active' : '')
+        .header-slider-control-box(class= activeBg === 3 ? 'active' : '')
+        .header-slider-control-box(class= activeBg === 4 ? 'active' : '')
         span.header-page-num
           span.header-current-slide 01
-          | /04
+          | /05
       .col-sm-8.col-sm-offset-2.header-main
         .row
           .col-xs-4.col-xs-offset-4.col-md-2.col-md-offset-5
@@ -28,7 +34,8 @@ mixin header(studio, title, subtitle, subtitle2, button, scrollDown)
         if(button)
           .row.work-samples-wrapper
             .col-xs-4.col-sm-2.pull-right.row-inner-wrapper
-              button.work-samples= button
+              button.work-samples
+                a(href= buttonUrl)= button
         if(scrollDown)
           .row.scroll-down-wrapper
             .col-sm-9.col-sm-offset-3.row-inner-wrapper
