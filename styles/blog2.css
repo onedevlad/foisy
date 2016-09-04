@@ -2194,6 +2194,7 @@ button a {
   height: 100%;
   color: #fff;
   font-weight: bold;
+  text-transform: uppercase;
 }
 button a:hover {
   color: #fff;
