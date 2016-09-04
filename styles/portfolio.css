@@ -2227,7 +2227,7 @@ button a:hover {
   filter: none;
 }
 .img-overlay .plus-sign {
-  width: 25% !important;
+  width: 10% !important;
   height: auto !important;
   position: absolute;
   top: 50%;
