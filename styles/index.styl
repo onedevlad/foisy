@@ -25,11 +25,9 @@
           font-style italic
     .right-part
       position relative
-      padding-left 0
-      padding-right 0
       .lower-part
         .article-wrapper
-          border-right 1px solid dark-grey
+          padding 0
           .article-inner-wrapper
             padding 0
             .heading
@@ -108,45 +106,54 @@
   .screen-3
     position relative
     .lower-part
+      absolute left top
+      width 100%
+      height 100%
       .left-part
-        padding 0
         margin-top -4vh
+        height calc(100% + 4vh)
+        border-right 1px solid dark-grey
+      .right-part
+        padding 0
         height 100%
-        background white
-        position relative
+        .line-wrapper
+          position relative
+          z-index 2
+          height 100%
+          border-left 1px solid dark-grey
+      .blank-space-wrapper
+        background grey
+        height 100%
+        absolute top right
+    .upper-part
+      position relative
+      z-index 2
       .right-part
         padding 0
         position relative
         .title-wrapper
-          padding 0
-          margin-top screen-margin
-          margin-bottom 48px
+          padding screen-margin 0 0 0
           .title
             font-size 2em
             font-weight bold
             font-family SourceSansProBlack
             text-transform uppercase
-        .blank-space
-          height 100%
-          background grey
-        .line
-          width 1px
-          height 100%
-          absolute left 58.3333334% top
-          background dark-grey
-        .view-blog
-          color dark-grey
-          text-transform uppercase
-          font-weight bold
-          font-family SourceSansProBlack
-          text-decoration none
-          &:hover
-            color light-black
-    .upper-part
-      z-index 2
-      width 100%
-      .slider
-        padding 0
+          .subtitle
+            display block
+            margin 48px 0
+        .view-blog-wrapper
+          .view-blog
+            color dark-grey
+            cursor pointer
+            text-transform uppercase
+            font-weight bold
+            font-family SourceSansProBlack
+            text-decoration none
+            &:hover
+              color light-black
+      .slider-wrapper
+        .slider
+          padding 0
       .slider-controls-wrapper
         margin-top 24px
         padding 0
@@ -174,17 +181,18 @@
         width 100%
         text-align center
     .right-part
+      padding 0 5%
       .lower-part
         height auto
         .article-wrapper
           height auto
         .article-inner-wrapper
-          padding 5%
           .heading
+            margin screen-margin 0 0 0
             text-align center
+          .article
+            margin 48px 0
       .upper-part
-        width 90%
-        margin 0 5%
         position static
         .images-wrapper
           height auto
@@ -202,11 +210,13 @@
             .img-overlay
               display none
           .keep-reading
-            margin-left 37%
+            relative left 50%
+            margin-top 48px
+            transform translate(-50%, 0)
   .screen-2
     background black
-    padding 5%
-    margin-top 5%
+    padding 0 5%
+    margin-top screen-margin
     height auto
     .left-part
       height auto
@@ -219,8 +229,9 @@
       .line
         display none
       .learn-more
-        position static
-        margin 5% auto
+        relative left 50%
+        margin 48px 0
+        transform translate(-50%, 0)
       .team-wrapper
         .team-img-wrapper
           width 100%
@@ -229,30 +240,21 @@
           a
           img
             height auto
-  .screen-3
-    height auto
-    padding 5%
-    .lower-part
-      height auto
-      .left-part
-        display none
-      .right-part
-        height auto
-        .blank-space
-          display none
-        .title-wrapper
-          text-align center
-        .line
-          display none
-        .view-blog
-          position static
-          display block
-          margin 5vh 0
     .upper-part
       height auto
       position static
       .slider
         height auto
+  .screen-3
+    .lower-part
+      display none
+    .upper-part
+      padding 5%
+      text-align center
+      .view-blog-wrapper
+        padding 0
+    .slider-wrapper
+      margin 48px 0
 
 @media(min-width $screen-md) // Desktop
   .screen-1
@@ -260,12 +262,15 @@
       .quote-box
         width 150%
     .right-part
+      padding-left 0
+      padding-right 0
       border-left 1px solid dark-grey
       .lower-part
         height 100%
         .article-wrapper
           padding screen-margin 0 0 0
           height 100%
+          border-right 1px solid dark-grey
           .article-inner-wrapper
             height 60%
             overflow hidden
@@ -289,7 +294,7 @@
             height 30%
             absolute right 15% top 45%
           .sand-wrapper
-            width 50%
+            width 45%
             height 30%
             absolute right 25% top 60%
           .keep-reading
@@ -302,7 +307,7 @@
       border-right 1px solid light-black
       margin-top -4vh
       .title-wrapper
-       absolute top 30% left 60%
+        absolute top 30% left 60%
     .right-part
       .learn-more
         absolute left 58.333333334% top 70%
@@ -313,15 +318,6 @@
           width 55%
           height auto
   .screen-3
-    height 100vh
-    .lower-part
-      height 100%
-      .right-part
-        border-left 1px solid dark-grey
-        height 100%
-        .view-blog
-          absolute left 58.3333334% top 15%
     .upper-part
-      absolute top 35vh
-      .slider
-        height 100%
+      .view-blog-wrapper
+          padding screen-margin 0 0 0

@@ -23,8 +23,7 @@
       right 10%
   .left-part
     padding 0
-    margin-top -4vh
-    height calc(100% + 4vh)
+    height 100%
     background white
     position relative
   .right-part
@@ -38,9 +37,8 @@
         font-family SourceSansProBlack
         font-size 2em
         text-transform uppercase
-      .subtitle-wrapper
-        margin-bottom 48px
       .take-me-there-wrapper
+        margin 48px 0
         .take-me-there
           color white
           text-transform uppercase
@@ -79,15 +77,16 @@
         text-align center
         position static
         .title
-          margin-top 10vh
+          margin screen-margin 0 48px 0
       .blank-space-wrapper
       .line
         display none
 
 @media(min-width $screen-md) // Desktop
   .next-step
+    .left-part
+      border-right 1px solid dark-grey
     .right-part
-      border-left 1px solid dark-grey
       .next-step-wrapper
         absolute top
         .title

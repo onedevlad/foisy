@@ -44,7 +44,6 @@
         .featured-slide
           margin-top 48px
           padding 0
-          height 80vh
           .slide-wrapper
             padding 0
             width 100%
@@ -80,9 +79,9 @@
   .screen-1
     .upper-part
       .featured-wrapper
-        padding 5%
+        padding 0 5%
   .screen-2
-    padding 5%
+    padding 0 5%
     .lower-part
       .left-part
         display none
@@ -90,9 +89,11 @@
       .slider
         height auto
         .slide-wrapper
-          margin-top 10vh
+          margin-top screen-margin
       .more-wrapper
-        padding 5%
+        .more
+          relative left 50%
+          transform translate(-50%, 0)
 
 @media(min-width $screen-md) // Desktop
   .screen-1

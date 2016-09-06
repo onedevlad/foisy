@@ -2298,16 +2298,11 @@ button a:hover {
   top: 0;
   right: -25%;
   z-index: 7;
-  -webkit-transition: right 0.5s ease;
-  -moz-transition: right 0.5s ease;
-  -o-transition: right 0.5s ease;
-  -ms-transition: right 0.5s ease;
-  transition: right 0.5s ease;
-}
-.nav.active {
-  position: fixed;
-  top: 0;
-  right: 0;
+  -webkit-transition: right 0.2s ease;
+  -moz-transition: right 0.2s ease;
+  -o-transition: right 0.2s ease;
+  -ms-transition: right 0.2s ease;
+  transition: right 0.2s ease;
 }
 .nav .nav-close-button {
   position: absolute;
@@ -2327,7 +2322,14 @@ button a:hover {
   font-weight: bold;
   text-transform: uppercase;
 }
-.nav .nav-wrapper a {
+.nav .nav-wrapper .nav-link {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  position: relative;
+  left: 50%;
+}
+.nav .nav-wrapper .nav-link a {
   color: #fff;
   line-height: 4em;
   cursor: pointer;
@@ -2336,7 +2338,7 @@ button a:hover {
   font-weight: bold;
   font-family: MontserratBold;
 }
-.nav .nav-wrapper a:hover {
+.nav .nav-wrapper .nav-link a:hover {
   color: #00aff0;
 }
 .header {
@@ -2447,7 +2449,7 @@ button a:hover {
 }
 .header .header-main .title {
   text-transform: uppercase;
-  font-size: 4.4vw;
+  font-size: 3.75em;
   font-weight: bold;
   font-family: SourceSansProBlack;
 }
@@ -2635,9 +2637,6 @@ button a:hover {
   background: #3c3c3c;
 }
 @media (max-width: 992px) {
-  .footer {
-    margin-top: 5%;
-  }
   .footer .left-part .contacts-wrapper .logo-wrapper {
     text-align: center;
   }
@@ -2649,6 +2648,9 @@ button a:hover {
   }
   .footer .right-part .nav-wrapper ul li {
     padding: 0.5em;
+  }
+  .footer .search-box-wrapper {
+    margin-top: 2vh;
   }
 }
 @media (min-width: 992px) {
@@ -2691,8 +2693,7 @@ button a:hover {
 }
 .next-step .left-part {
   padding: 0;
-  margin-top: -4vh;
-  height: calc(100% + 4vh);
+  height: 100%;
   background: #fff;
   position: relative;
 }
@@ -2710,8 +2711,8 @@ button a:hover {
   font-size: 2em;
   text-transform: uppercase;
 }
-.next-step .right-part .next-step-wrapper .subtitle-wrapper {
-  margin-bottom: 48px;
+.next-step .right-part .next-step-wrapper .take-me-there-wrapper {
+  margin: 48px 0;
 }
 .next-step .right-part .next-step-wrapper .take-me-there-wrapper .take-me-there {
   color: #fff;
@@ -2761,7 +2762,7 @@ button a:hover {
     position: static;
   }
   .next-step .right-part .next-step-wrapper .title {
-    margin-top: 10vh;
+    margin: 100px 0 48px 0;
   }
   .next-step .right-part .blank-space-wrapper,
   .next-step .right-part .line {
@@ -2769,8 +2770,8 @@ button a:hover {
   }
 }
 @media (min-width: 992px) {
-  .next-step .right-part {
-    border-left: 1px solid #bbb;
+  .next-step .left-part {
+    border-right: 1px solid #bbb;
   }
   .next-step .right-part .next-step-wrapper {
     position: absolute;

@@ -31,19 +31,13 @@
         height 140%
         background grey
     .upper-part
-      height 100%
-      .left-part
-      .right-part
-        height 100%
       .left-part
         margin-top -4vh
         background white
       .right-part
         position relative
         z-index 2
-        height 100%
         .row
-          height 100%
           .concept-wrapper
             padding screen-margin 0 0 0
             .heading
@@ -56,15 +50,13 @@
               width 90%
               margin-top 48px
           .saying-wrapper
-            height 100%
-            padding 16vh 0 0 0
             .person-wrapper
               margin-top 5vh
-              height 3em
               width 100%
               position relative
               .person-photo
-                height 100%
+                width 45px
+                height 45px
               .person-data
                 absolute bottom left 4em
                 display inline-block
@@ -104,6 +96,7 @@
       .images-wrapper
         position relative
         .img-wrapper
+          position relative
           a
           img
             display block
@@ -148,8 +141,6 @@
             text-transform uppercase
           .subtitle
             display block
-            margin-top 48px
-            margin-bottom 48px
       .images-wrapper
         a
         img
@@ -164,7 +155,7 @@
             font-size 1.5em
       .more-wrapper
         padding 0
-        margin-top 10vh
+        margin-top screen-margin
         .more
           color white
           box-shadow 0 20px 20px dark-grey
@@ -179,7 +170,9 @@
       .left-part
         display none
       .right-part
-        padding 5%
+        padding 0 5%
+        .saying-wrapper
+          padding 48px 0
   .screen-2
     .upper-part
       .images-wrapper
@@ -212,29 +205,39 @@
             width 80%
             margin-left 10%
   .screen-3
-    padding 5%
+    padding 0 5%
     .lower-part
       display none
     .upper-part
       .related-wrapper
-        margin-top 10vh
+        margin-top screen-margin
       .images-wrapper
         margin-top 0
         .img-wrapper
-          margin-top 10vh
+          margin-top screen-margin
           padding 0
+      .more-wrapper
+        margin-bottom 48px
+        .more
+          relative left 50%
+          transform translate(-50%, 0)
 
 @media(min-width $screen-md) // Desktop
   .screen-1
     height 80vh
     .upper-part
+      height 100%
       .left-part
       .right-part
         padding 0
-      .right-part
+        height 100%
         border-left 1px solid dark-grey
         .saying-wrapper
+          height 100%
+          padding 16vh 0 0 0
           border-left 1px solid dark-grey
+        .row
+          height 100%
   .screen-2
     .upper-part
       .images-wrapper
@@ -266,5 +269,7 @@
     .upper-part
       .related-wrapper
         margin-top 40vh
+        .subtitle
+          margin 48px 0
       .more-wrapper
-        margin-bottom 20vh
+        margin-bottom screen-margin

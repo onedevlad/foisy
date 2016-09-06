@@ -2298,16 +2298,11 @@ button a:hover {
   top: 0;
   right: -25%;
   z-index: 7;
-  -webkit-transition: right 0.5s ease;
-  -moz-transition: right 0.5s ease;
-  -o-transition: right 0.5s ease;
-  -ms-transition: right 0.5s ease;
-  transition: right 0.5s ease;
-}
-.nav.active {
-  position: fixed;
-  top: 0;
-  right: 0;
+  -webkit-transition: right 0.2s ease;
+  -moz-transition: right 0.2s ease;
+  -o-transition: right 0.2s ease;
+  -ms-transition: right 0.2s ease;
+  transition: right 0.2s ease;
 }
 .nav .nav-close-button {
   position: absolute;
@@ -2327,7 +2322,14 @@ button a:hover {
   font-weight: bold;
   text-transform: uppercase;
 }
-.nav .nav-wrapper a {
+.nav .nav-wrapper .nav-link {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  position: relative;
+  left: 50%;
+}
+.nav .nav-wrapper .nav-link a {
   color: #fff;
   line-height: 4em;
   cursor: pointer;
@@ -2336,7 +2338,7 @@ button a:hover {
   font-weight: bold;
   font-family: MontserratBold;
 }
-.nav .nav-wrapper a:hover {
+.nav .nav-wrapper .nav-link a:hover {
   color: #00aff0;
 }
 .header {
@@ -2447,7 +2449,7 @@ button a:hover {
 }
 .header .header-main .title {
   text-transform: uppercase;
-  font-size: 4.4vw;
+  font-size: 3.75em;
   font-weight: bold;
   font-family: SourceSansProBlack;
 }
@@ -2635,9 +2637,6 @@ button a:hover {
   background: #3c3c3c;
 }
 @media (max-width: 992px) {
-  .footer {
-    margin-top: 5%;
-  }
   .footer .left-part .contacts-wrapper .logo-wrapper {
     text-align: center;
   }
@@ -2649,6 +2648,9 @@ button a:hover {
   }
   .footer .right-part .nav-wrapper ul li {
     padding: 0.5em;
+  }
+  .footer .search-box-wrapper {
+    margin-top: 2vh;
   }
 }
 @media (min-width: 992px) {
@@ -2699,13 +2701,6 @@ button a:hover {
   height: 140%;
   background: #f9f9f9;
 }
-.main .screen-1 .upper-part {
-  height: 100%;
-}
-.main .screen-1 .upper-part .left-part,
-.main .screen-1 .upper-part .right-part {
-  height: 100%;
-}
 .main .screen-1 .upper-part .left-part {
   margin-top: -4vh;
   background: #fff;
@@ -2713,10 +2708,6 @@ button a:hover {
 .main .screen-1 .upper-part .right-part {
   position: relative;
   z-index: 2;
-  height: 100%;
-}
-.main .screen-1 .upper-part .right-part .row {
-  height: 100%;
 }
 .main .screen-1 .upper-part .right-part .row .concept-wrapper {
   padding: 100px 0 0 0;
@@ -2732,18 +2723,14 @@ button a:hover {
   width: 90%;
   margin-top: 48px;
 }
-.main .screen-1 .upper-part .right-part .row .saying-wrapper {
-  height: 100%;
-  padding: 16vh 0 0 0;
-}
 .main .screen-1 .upper-part .right-part .row .saying-wrapper .person-wrapper {
   margin-top: 5vh;
-  height: 3em;
   width: 100%;
   position: relative;
 }
 .main .screen-1 .upper-part .right-part .row .saying-wrapper .person-wrapper .person-photo {
-  height: 100%;
+  width: 45px;
+  height: 45px;
 }
 .main .screen-1 .upper-part .right-part .row .saying-wrapper .person-wrapper .person-data {
   position: absolute;
@@ -2800,6 +2787,9 @@ button a:hover {
   position: relative;
 }
 .main .screen-2 .upper-part .images-wrapper {
+  position: relative;
+}
+.main .screen-2 .upper-part .images-wrapper .img-wrapper {
   position: relative;
 }
 .main .screen-2 .upper-part .images-wrapper .img-wrapper a,
@@ -2864,8 +2854,6 @@ button a:hover {
 }
 .main .screen-3 .upper-part .row .related-wrapper .subtitle {
   display: block;
-  margin-top: 48px;
-  margin-bottom: 48px;
 }
 .main .screen-3 .upper-part .images-wrapper a,
 .main .screen-3 .upper-part .images-wrapper img {
@@ -2883,7 +2871,7 @@ button a:hover {
 }
 .main .screen-3 .upper-part .more-wrapper {
   padding: 0;
-  margin-top: 10vh;
+  margin-top: 100px;
 }
 .main .screen-3 .upper-part .more-wrapper .more {
   color: #fff;
@@ -2901,7 +2889,10 @@ button a:hover {
     display: none;
   }
   .screen-1 .upper-part .right-part {
-    padding: 5%;
+    padding: 0 5%;
+  }
+  .screen-1 .upper-part .right-part .saying-wrapper {
+    padding: 48px 0;
   }
   .screen-2 .upper-part .images-wrapper .img-wrapper {
     height: 30vh;
@@ -2936,35 +2927,56 @@ button a:hover {
     margin-left: 10%;
   }
   .screen-3 {
-    padding: 5%;
+    padding: 0 5%;
   }
   .screen-3 .lower-part {
     display: none;
   }
   .screen-3 .upper-part .related-wrapper {
-    margin-top: 10vh;
+    margin-top: 100px;
   }
   .screen-3 .upper-part .images-wrapper {
     margin-top: 0;
   }
   .screen-3 .upper-part .images-wrapper .img-wrapper {
-    margin-top: 10vh;
+    margin-top: 100px;
     padding: 0;
+  }
+  .screen-3 .upper-part .more-wrapper {
+    margin-bottom: 48px;
+  }
+  .screen-3 .upper-part .more-wrapper .more {
+    position: relative;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
   }
 }
 @media (min-width: 992px) {
   .screen-1 {
     height: 80vh;
   }
+  .screen-1 .upper-part {
+    height: 100%;
+  }
   .screen-1 .upper-part .left-part,
   .screen-1 .upper-part .right-part {
     padding: 0;
-  }
-  .screen-1 .upper-part .right-part {
+    height: 100%;
     border-left: 1px solid #bbb;
   }
+  .screen-1 .upper-part .left-part .saying-wrapper,
   .screen-1 .upper-part .right-part .saying-wrapper {
+    height: 100%;
+    padding: 16vh 0 0 0;
     border-left: 1px solid #bbb;
+  }
+  .screen-1 .upper-part .left-part .row,
+  .screen-1 .upper-part .right-part .row {
+    height: 100%;
   }
   .screen-2 .upper-part .images-wrapper {
     margin-top: 10vh;
@@ -3012,7 +3024,10 @@ button a:hover {
   .screen-3 .upper-part .related-wrapper {
     margin-top: 40vh;
   }
+  .screen-3 .upper-part .related-wrapper .subtitle {
+    margin: 48px 0;
+  }
   .screen-3 .upper-part .more-wrapper {
-    margin-bottom: 20vh;
+    margin-bottom: 100px;
   }
 }

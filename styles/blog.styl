@@ -35,10 +35,10 @@
         padding 0
         .person-inner-wrapper
           padding 0
-          height 3em
           position relative
           .person-photo
-            height 100%
+            width 45px
+            height 45px
           .person-data
             absolute bottom left 4em
             display inline-block
@@ -104,8 +104,16 @@
                 font-family SourceSansProBlack
                 text-transform uppercase
                 font-weight bold
-              .share-icon
-                margin-left 1em
+              .icon
+                font-size 12px
+                padding 0.5em
+                margin 0 0 0 1em
+                border 1px solid light-black
+                border-radius 50%
+                text-align center
+                cursor pointer
+                &:hover
+                  background blue
   .screen-2
     position relative
     .lower-part
@@ -133,7 +141,6 @@
       .slider
         margin-top 48px
       .more-wrapper
-        margin 48px 0
         .more
           color white
           box-shadow 0 20px 20px dark-grey
@@ -156,12 +163,12 @@
     .lower-part
       display none
     .upper-part
+      text-align center
       .slider
-        height auto
         .slide-wrapper
-          margin-top 10vh
+          margin-bottom screen-margin
       .more-wrapper
-        padding 5%
+        margin 0 0 48px 0
 
 @media(min-width $screen-md) // Desktop
   .screen-1
@@ -171,8 +178,7 @@
       .date-wrapper
         margin-top 16vh
   .screen-2
-    padding 15vh 0 0 0
-    .slider
-      height 60vh
+    padding screen-margin 0 0 0
     .more-wrapper
       padding 0
+      margin 48px 0

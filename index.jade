@@ -18,6 +18,8 @@ html(lang="en")
     script(type='text/javascript', src='scripts/index-dist.js', defer)
     script(type='text/javascript', src='lib/slick/slick.min.js', defer)
     script(type='text/javascript', src='lib/lightbox/js/lightbox.min.js', defer)
+    script(type='text/javascript', src='lib/gsap/TweenLite.min.js', defer)
+    script(type='text/javascript', src='lib/gsap/CSSPlugin.min.js', defer)
     script(type='text/javascript', src='lib/bootstrap/js/dropdown.js', defer)
     meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
   body
@@ -86,16 +88,18 @@ html(lang="en")
           .col-md-4.left-part
           .col-md-8.right-part
             .row
-              .col-md-5.title-wrapper
-                span.title Featured stories
-                br
-                br
-                span.subtitle Views from the Foisy.
-              .col-md-7.col-md-offset-5.blank-space
-            .line
-            a.view-blog(href='blog') View blog
+              .col-md-5.col-md-offset-7.line-wrapper
+              .col-md-7.blank-space-wrapper
         .row.upper-part
           .row
+            .col-md-8.col-md-offset-4.right-part
+              .row
+                .col-md-7.title-wrapper
+                  span.title Featured stories
+                  span.subtitle Views from the Foisy.
+                .col-md-5.view-blog-wrapper
+                  a.view-blog(href='blog') View blog
+          .row.slider-wrapper
             .slider.col-md-10.col-md-offset-1
               .row.slick-slider
                 +slide( mediaUrlPrefix + 'images/wave.jpg', 'Deep water',
@@ -117,7 +121,7 @@ html(lang="en")
                   'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
                   '2 July 2016')
           .row.slider-controls-wrapper
-            .col-xs-8.col-xs-offset-4.slider-controls
+            .col-md-8.col-md-offset-4.slider-controls
               .slider-control-box.active
               .slider-control-box
               span.page-num

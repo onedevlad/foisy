@@ -1,21 +1,41 @@
 $(document).ready(function(){ // Nav module
-  var toggleNav = function(){
-    $('.nav').toggleClass('active')
+  var openNav = function() {
+    TweenLite.to($('.nav'), 0.2, { right: 0, onComplete: function(){
+      function anim(cur) {
+        TweenLite.delayedCall(0.1, function() {
+          TweenLite.to($('.nav-link-'+cur), 0.2, { left: 0, opacity: 1 })
+          if(cur <= 4) anim(++cur)
+        })
+      }
+      anim(0)
+    }})
   }
-  $('.nav-close-button').click(toggleNav)
-  $('.nav-open-button').click(toggleNav)
+
+  var closeNav = function() {
+    function anim(cur) {
+      TweenLite.delayedCall(0.1, function() {
+        TweenLite.to($('.nav-link-'+cur), 0.2, { left: '50%', opacity: 0 })
+        if(cur > 0) anim(--cur)
+        if(cur === 0)
+          TweenLite.to($('.nav'), 0.2, { right: '-25%'})
+      })
+    }
+    anim(4)
+  }
+  $('.nav-close-button').click(closeNav)
+  $('.nav-open-button').click(openNav)
 })
 
-$(document).ready(function(){ // Lightbox config module
+$(document).ready(function() { // Lightbox config module
   lightbox.option({
     maxWidth: $(window).width() / 2.5
   })
 })
 
-$(document).ready(function(){ // Slick config module
+$(document).ready(function() { // Slick config module
   $('.slick-slider').slick({
     autoPlaySpeed: 3000,
-    autoplay: true,
+    // autoplay: true,
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 3,
@@ -41,7 +61,7 @@ $(document).ready(function(){ // Slick config module
   })
 })
 
-$(document).ready(function(){ // Header slider module
+$(document).ready(function() { // Header slider module
   var $activeBox = $('.header-slider-control-box.active')
   var currentHeaderSlide = $activeBox.index()
   $('.header-slider-control-box').click(function(){
