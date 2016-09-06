@@ -2,10 +2,7 @@ mixin slide(imgSrc, heading, descText, date)
   .slide-wrapper.col-md-4
     .slide
       .img-wrapper
-        a(href= imgSrc, data-lightbox='slider', data-title= heading)
-          img(alt= heading, src= imgSrc)
-          .img-overlay
-            img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'images/plus.png')
+        img(alt= heading, src= imgSrc)
       .row
         .col-xs-11.desc-wrapper
           .row
@@ -21,6 +18,6 @@ mixin slide(imgSrc, heading, descText, date)
                   span.icon.ti-heart
                 .col-xs-2.icon-wrapper
                   span.icon.ti-new-window
-                .col-xs-7.col-xs-offset-1.date-wrapper
+                .col-xs-8.date-wrapper
                   span.icon.ti-calendar
                   span.date= date

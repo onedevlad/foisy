@@ -21,7 +21,7 @@ html(lang="en")
     script(type='text/javascript', src='lib/bootstrap/js/dropdown.js', defer)
     meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
   body
-    +header('Foisy studio', 'Little Big Details', 'We are a creative design firm, aiming to give our users what they want;', 'an awesome experience.', 'Our work', true, mediaUrlPrefix + 'portfolio')
+    +header('Foisy studio', 'Little Big Details', 'We are a creative design firm, aiming to give our users what they want;', 'an awesome experience.', 'Our work', true, mediaUrlPrefix + 'portfolio', 0)
     .main.container-fluid
       .screen-1
         .row
@@ -29,7 +29,7 @@ html(lang="en")
             .blank-box
             .quote-box
               .row
-                .col-md-10.col-md-offset-2
+                .col-md-7.col-md-offset-1
                   span.quote "Our vision is to make the biggest and more
                     br
                     | effective design firm"
@@ -65,22 +65,22 @@ html(lang="en")
                 button.keep-reading
                   a(href= mediaUrlPrefix + 'portfolio-with-images') Keep reading
       .screen-2
-        .col-md-4.left-part
-          .title-wrapper
-            span.title The team
-            br
-            span.subtitle Go to meet our extraordinary team
-        .col-md-8.right-part
-          .row.team-wrapper
-            .col-md-9.col-md-offset-3.team-inner-wrapper
-              .team-img-wrapper
-                a(href= mediaUrlPrefix + 'images/team.png', data-lightbox='screen-2', data-title='Our team')
-                  img.team(alt='Our team', src= mediaUrlPrefix + 'images/team.png')
-                  .img-overlay
-                    img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'images/plus.png')
-            .line
-            button.learn-more
-              a(href='blog') Learn more
+        .row
+          .col-md-4.left-part
+            .row.title-wrapper
+              span.title The team
+              span.subtitle Go to meet our extraordinary team
+          .col-md-8.col-md-offset-4.right-part
+            .row.team-wrapper
+              .col-md-9.col-md-offset-3.team-inner-wrapper
+                .team-img-wrapper
+                  a(href= mediaUrlPrefix + 'images/team.png', data-lightbox='screen-2', data-title='Our team')
+                    img.team(alt='Our team', src= mediaUrlPrefix + 'images/team.png')
+                    .img-overlay
+                      img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'images/plus.png')
+              .line
+              button.learn-more
+                a(href='blog') Learn more
       .screen-3
         .row.lower-part
           .col-md-4.left-part
