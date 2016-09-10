@@ -2302,7 +2302,7 @@ button a:hover {
     transform: rotateY(0deg);
   }
 }
-@media (mon-width: 992px) {
+@media (min-width: 992px) {
   .desc-img-wrapper .img-float-desc {
     -webkit-transform: rotateY(-90deg);
     -moz-transform: rotateY(-90deg);
