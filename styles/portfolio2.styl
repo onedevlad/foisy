@@ -10,15 +10,18 @@
 .main
   .screen-1
     position relative
+    .screen-num
+      top "calc(%s + 4vh)" % screen-margin
     .lower-part
       absolute left top
       height 100%
       width 100%
+      z-index 6
       .featured-wrapper
         absolute left 2% top 28%
         .featured
           color grey
-          font-size 12em
+          font-size 10em
           font-weight bold
           font-family SourceSansProBlack
           text-transform uppercase
@@ -30,8 +33,11 @@
       .left-part
       .right-part
         padding 0
-      .right-part
         height 100%
+      .left-part
+        margin-top -4vh
+        background white
+      .right-part
         border-left 1px solid dark-grey
         .row
           height 100%
@@ -59,7 +65,7 @@
             absolute right 10% top 4vh
             background grey
     .upper-part
-      z-index 3
+      z-index 7
       position relative
       .row
         height auto

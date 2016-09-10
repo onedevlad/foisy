@@ -28,6 +28,9 @@ html(lang="en")
       .screen-1
         .row
           .col-md-4.left-part
+            .screen-num
+              .dash
+              span 01
             .blank-box
             .quote-box
               .row
@@ -44,9 +47,8 @@ html(lang="en")
                       span Vision
                     .article
                       span Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora eveniet delectus, magnam dignissimos consequuntur aut autem nobis deleniti. Illo a animi sed consectetur iusto vel voluptate dignissimos repellendus error molestiae mollitia repudiandae hic quasi, excepturi, fugiat eaque ratione quisquam cum quas.
-                        br
-                        br
-                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, minima.
+                    .article
+                      span Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui numquam facilis ipsum recusandae dolores necessitatibus est earum fuga, rerum illo!
             .row.upper-part
               .images-wrapper
                 .img-wrapper.desk-wrapper
@@ -69,6 +71,9 @@ html(lang="en")
       .screen-2
         .row
           .col-md-4.left-part
+            .screen-num
+              .dash
+              span 02
             .row.title-wrapper
               span.title The team
               span.subtitle Go to meet our extraordinary team
@@ -86,6 +91,9 @@ html(lang="en")
       .screen-3
         .row.lower-part
           .col-md-4.left-part
+            .screen-num
+              .dash
+              span 03
           .col-md-8.right-part
             .row
               .col-md-5.col-md-offset-7.line-wrapper
@@ -100,33 +108,34 @@ html(lang="en")
                 .col-md-5.view-blog-wrapper
                   a.view-blog(href='blog') View blog
           .row.slider-wrapper
-            .slider.col-md-10.col-md-offset-1
+            .slider.col-md-8.col-md-offset-2
               .row.slick-slider
                 +slide( mediaUrlPrefix + 'images/wave.jpg', 'Deep water',
-                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
+                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore',
                   '2 July 2016')
                 +slide( mediaUrlPrefix + 'images/landscape.jpg', 'Art is like a mountain',
-                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
+                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore',
                   '2 July 2016')
                 +slide( mediaUrlPrefix + 'images/bussiness.jpg', '"Bussiness design"',
-                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
+                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore',
                   '2 July 2016')
                 +slide( mediaUrlPrefix + 'images/wave.jpg', 'Deep water',
-                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
+                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore',
                   '2 July 2016')
                 +slide( mediaUrlPrefix + 'images/landscape.jpg', 'Art is like a mountain',
-                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
+                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore',
                   '2 July 2016')
                 +slide( mediaUrlPrefix + 'images/bussiness.jpg', '"Bussiness design"',
-                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
+                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore',
                   '2 July 2016')
           .row.slider-controls-wrapper
             .col-md-8.col-md-offset-4.slider-controls
               .slider-control-box.active
               .slider-control-box
+              span.middle-dots ···
               span.page-num
                 span.current-slide 01
-                | /02
+                |  / 02
       +nextStep('Meet out curated collection of projects - of all kinds - to taste our aesthetic.', 'Take me there!', mediaUrlPrefix + 'portfolio')
       include templates/footer
     include templates/nav

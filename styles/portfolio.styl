@@ -9,6 +9,8 @@
   position relative
   .screen-1
     position relative
+    .screen-num
+      top "calc(%s + 4vh)" % screen-margin
     .lower-part
       height 100%
       width 100%
@@ -97,7 +99,8 @@
         position relative
         .img-wrapper
           position relative
-          a
+          .inner-wrapper
+          .img-link
           img
             display block
             height 100%
@@ -142,10 +145,11 @@
           .subtitle
             display block
       .images-wrapper
-        a
+        .inner-wrapper
+        .img-link
         img
           width 100%
-        a
+        .img-link
           .img-desc
             absolute bottom 10% right 5%
             font-weight bold
@@ -179,7 +183,8 @@
         .img-wrapper
           height 30vh
           margin-top 10vh
-          a
+          .inner-wrapper
+          .img-link
           img
             width 100%
         &.images-row-1

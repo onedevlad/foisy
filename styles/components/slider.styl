@@ -1,5 +1,7 @@
 .slide-wrapper
+  outline none !important
   height auto !important
+  padding-bottom 1px // Is vital for bottom border
   .slide
     position relative
     .img-wrapper
@@ -8,8 +10,8 @@
       img
         width 100%
     .desc-wrapper
-      border 1px solid dark-grey
-      width 90%
+      border 1px solid light-grey
+      width 95%
       margin-top -15%
       position relative
       z-index 2
@@ -20,7 +22,6 @@
           width 100%
           display inline-block
           text-overflow ellipsis
-          font-size 1.5em
           font-weight bold
           font-family SourceSansProBlack
           text-transform uppercase
@@ -28,6 +29,7 @@
         padding 0
         margin-top 5%
         overflow hidden
+        color light-black
         text-align justify
       .social-wrapper
         padding 0
@@ -38,14 +40,16 @@
           .icon
             font-size 12px
             padding 0.5em
-            border 1px solid light-black
+            border 1px solid light-grey
             border-radius 50%
             text-align center
             cursor pointer
             &.ti-heart:hover
-              background #fe4042
+              background #fc8dad
+              border-color #fc8dad
             &.ti-new-window:hover
               background blue
+              border-color blue
         .date-wrapper
           line-height 12px
           cursor pointer
@@ -69,5 +73,7 @@
     .slide
       .desc-wrapper
         padding 1em
+        .heading
+          font-size 1.4vw
       .desc-text-wrapper
         margin-top 5%

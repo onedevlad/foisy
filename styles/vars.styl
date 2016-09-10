@@ -1,6 +1,7 @@
 @import '../lib/bootstrap/bootstrap/index.styl'
 
 grey = #f9f9f9
+light-grey = #eee
 blue = #00aff0
 dark-blue = darken(#00aff0, 10)
 dark-grey = #bbb
@@ -67,6 +68,62 @@ button
 .row
   margin 0
 
+.desc-img-wrapper
+  transform-style preserve-3d
+  perspective 900px
+  perspective-origin 0 50%
+  .inner-wrapper
+    position relative
+    overflow-x hidden
+    .img-link
+    .img-overlay
+      transition all 0.4s ease
+  &:hover .img-float-desc
+    transform rotateY(0deg)
+  &:hover .img-link
+  &:hover .img-overlay
+    margin-left 30%
+  .img-float-desc
+    width 60%
+    height 100%
+    absolute top left
+    background rgba(blue, 0.75)
+    z-index 2
+    transition transform 0.4s, opacity 0.1s 0.3s
+    transform-origin 0 0 0
+    padding 5%
+    .heading
+      color white
+      text-align center
+      display inline-block
+      width 100%
+      font-size 1.25em
+      text-transform uppercase
+      font-weight bold
+    .link
+      absolute bottom 5% left 5%
+      display inline-block
+      width 90%
+      text-align center
+      color blue
+      background grey
+      padding 0.5em 0
+      text-transform uppercase
+      text-decoration none
+      font-weight bold
+      &:hover
+        background white
+
+@media(max-width $screen-md) // Tablet
+  .desc-img-wrapper
+    .img-float-desc
+      transform rotateY(0deg)
+
+@media(min-width $screen-md) // Desktop
+  .desc-img-wrapper
+    .img-float-desc
+      transform rotateY(-90deg)
+
 .img-overlay
   absolute left top
   width 100%
@@ -83,13 +140,30 @@ button
     absolute top 50% left 50%
     transform translate(-50%, -50%)
 
+.screen-num
+  absolute left 50%
+  transform translate(-50%, 0)
+  font-weight bold
+  z-index 5
+  .dash
+    display inline-block
+    width 3em
+    height 2px
+    background light-black
+    margin 0 1.5em 0 0
+    vertical-align middle
+
+@media(max-width $screen-md)
+  .screen-num
+    display none
+
 @media(min-width $screen-sm) // Show BS dropdown on hover
   .dropdown:hover .dropdown-menu
     display block
 
 @media(min-width $screen-md) // Desktop headers sizes
   h1
-    font-size 82px
+    font-size 4.3vw
   h2
     font-size 40px
   h3

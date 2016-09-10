@@ -13,13 +13,16 @@
   .screen-1
     .left-part
       padding 0
+      text-align center
       margin-top -4vh
+      .screen-num
+        top "calc(%s + 4vh)" % screen-margin
       .blank-box
-        height 40vh
+        height 45vh
         background white
       .quote-box
         background grey
-        height 64vh
+        height calc(100% - 41vh)
         padding-top 25vh
         .quote
           font-style italic
@@ -27,7 +30,6 @@
       position relative
       .lower-part
         .article-wrapper
-          padding 0
           .article-inner-wrapper
             padding 0
             .heading
@@ -36,8 +38,7 @@
               text-transform uppercase
               font-family SourceSansProBlack
             .article
-              text-align justify
-              margin-top 4vh
+              margin-top 48px
       .upper-part
         .images-wrapper
           position relative
@@ -68,6 +69,10 @@
     .left-part
       padding 0
       background black
+      .screen-num
+        top 11.5vh
+        .dash
+          background white
       .title-wrapper
         width 100%
         z-index 2
@@ -104,6 +109,8 @@
       .learn-more
         z-index 3
   .screen-3
+    .screen-num
+      top "calc(%s + 4vh)" % screen-margin
     position relative
     .lower-part
       absolute left top
@@ -162,14 +169,23 @@
           .slider-control-box
             cursor pointer
             display inline-block
-            margin-right 0.5em
-            width 1em
-            height 1em
+            margin-right 0.8em
+            width 0.8em
+            height 0.8em
+            margin-top 0.1em
             background dark-grey
             &.active
               background blue
+          .middle-dots
+            color dark-grey
+            font-weight bold
+            margin 0 1em
+            letter-spacing 0.25em
           .page-num
-            margin-left 0.5em
+            font-weight bold
+            color dark-grey
+            .current-slide
+              color black
 
 @media(max-width $screen-md) // Tablet
   .screen-1
@@ -272,7 +288,7 @@
           height 100%
           border-right 1px solid dark-grey
           .article-inner-wrapper
-            height 60%
+            z-index 5
             overflow hidden
       .upper-part
         width 100%
@@ -286,7 +302,7 @@
             img
               height 100%
           .desk-wrapper
-            width 50%
+            width 45%
             height 60%
             absolute right 5%
           .building-wrapper
@@ -294,7 +310,7 @@
             height 30%
             absolute right 15% top 45%
           .sand-wrapper
-            width 45%
+            width 35%
             height 30%
             absolute right 25% top 60%
           .keep-reading

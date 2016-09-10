@@ -26,6 +26,9 @@ html(lang="en")
           .col-md-4.grey-space
         .row.upper-part
           .col-md-4.left-part
+            .screen-num
+              .dash
+              span 01
           .col-md-8.right-part
             .row
               .col-md-7.concept-wrapper
@@ -49,39 +52,63 @@ html(lang="en")
               .col-md-7.blank-space
         .row.upper-part
           .row.images-wrapper.images-row-1
-            .img-wrapper.poster-1
-              a(href= mediaUrlPrefix + 'images/poster-1.png', data-lightbox='screen-2', data-title='Poster 1')
-                img(alt='Poster 1', src= mediaUrlPrefix + 'images/poster-1.png')
-                .img-overlay
-                  img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'images/plus.png')
-            .img-wrapper.poster-2
-              a(href= mediaUrlPrefix + 'images/poster-2.png', data-lightbox='screen-2', data-title='Poster 2')
-                img(alt='Poster 2', src= mediaUrlPrefix + 'images/poster-2.png')
-                .img-overlay
-                  img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'images/plus.png')
+            .img-wrapper.desc-img-wrapper.poster-1
+              .img-float-desc
+                span.heading Project Title
+                a.link(href='#') Learn more
+              .inner-wrapper
+                a.img-link(href= mediaUrlPrefix + 'images/poster-1.png', data-lightbox='screen-2', data-title='Poster 1')
+                  img(alt='Poster 1', src= mediaUrlPrefix + 'images/poster-1.png')
+                  .img-overlay
+                    img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'images/plus.png')
+            .img-wrapper.desc-img-wrapper.poster-2
+              .img-float-desc
+                span.heading Project Title
+                a.link(href='#') Learn more
+              .inner-wrapper
+                a.img-link(href= mediaUrlPrefix + 'images/poster-2.png', data-lightbox='screen-2', data-title='Poster 2')
+                  img(alt='Poster 2', src= mediaUrlPrefix + 'images/poster-2.png')
+                  .img-overlay
+                    img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'images/plus.png')
           .row.images-wrapper.images-row-2
-            .img-wrapper.poster-1
-              a(href= mediaUrlPrefix + 'images/poster-3.png', data-lightbox='screen-2', data-title='Poster 3')
-                img(alt='Poster 3', src= mediaUrlPrefix + 'images/poster-3.png')
-                .img-overlay
-                  img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'images/plus.png')
+            .img-wrapper.desc-img-wrapper.poster-1
+              .img-float-desc
+                span.heading Project Title
+                a.link(href='#') Learn more
+              .inner-wrapper
+                a.img-link(href= mediaUrlPrefix + 'images/poster-3.png', data-lightbox='screen-2', data-title='Poster 3')
+                  img(alt='Poster 3', src= mediaUrlPrefix + 'images/poster-3.png')
+                  .img-overlay
+                    img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'images/plus.png')
           .row.images-wrapper.images-row-3
-            .img-wrapper.poster-1
-              a(href= mediaUrlPrefix + 'images/poster-4.png', data-lightbox='screen-2', data-title='Poster 4')
-                img(alt='Poster 4', src= mediaUrlPrefix + 'images/poster-4.png')
-                .img-overlay
-                  img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'images/plus.png')
+            .img-wrapper.desc-img-wrapper.poster-1
+              .img-float-desc
+                span.heading Project Title
+                a.link(href='#') Learn more
+              .inner-wrapper
+                a.img-link(href= mediaUrlPrefix + 'images/poster-4.png', data-lightbox='screen-2', data-title='Poster 4')
+                  img(alt='Poster 4', src= mediaUrlPrefix + 'images/poster-4.png')
+                  .img-overlay
+                    img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'images/plus.png')
           .row.images-wrapper.images-row-4
-            .img-wrapper.poster-1
-              a(href= mediaUrlPrefix + 'images/poster-5.png', data-lightbox='screen-2', data-title='Poster 5')
-                img(alt='Poster 5', src= mediaUrlPrefix + 'images/poster-5.png')
-                .img-overlay
-                  img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'images/plus.png')
-            .img-wrapper.poster-2
-              a(href= mediaUrlPrefix + 'images/poster-6.png', data-lightbox='screen-2', data-title='Poster 6')
-                img(alt='Poster 6', src= mediaUrlPrefix + 'images/poster-6.png')
-                .img-overlay
-                  img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'images/plus.png')
+            .img-wrapper.desc-img-wrapper.poster-1
+              .img-float-desc
+                span.heading Project Title
+                a.link(href='#') Learn more
+              .inner-wrapper
+                a.img-link(href= mediaUrlPrefix + 'images/poster-5.png', data-lightbox='screen-2', data-title='Poster 5')
+                  img(alt='Poster 5', src= mediaUrlPrefix + 'images/poster-5.png')
+                  .img-overlay
+                    img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'images/plus.png')
+            .img-wrapper.desc-img-wrapper.poster-2
+              .img-float-desc
+                span.heading Project Title
+                a.link(href='#') Learn more
+              .inner-wrapper
+                a.img-link(href= mediaUrlPrefix + 'images/poster-6.png', data-lightbox='screen-2', data-title='Poster 6')
+                  img(alt='Poster 6', src= mediaUrlPrefix + 'images/poster-6.png')
+                  .img-overlay
+                    img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'images/plus.png')
       .screen-3
         .row.lower-part
           .col-md-4.left-part
@@ -96,13 +123,13 @@ html(lang="en")
               span.subtitle More of the same
           .row.images-wrapper
             .col-md-4.col-md-offset-2.img-wrapper
-              a(href= mediaUrlPrefix + 'images/related-1.png', data-lightbox='screen-3', data-title='Related 1')
+              a.img-link(href= mediaUrlPrefix + 'images/related-1.png', data-lightbox='screen-3', data-title='Related 1')
                 img(alt='Related 1', src= mediaUrlPrefix + 'images/related-1.png')
                 span.img-desc Illustration
                 .img-overlay
                   img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'images/plus.png')
             .col-md-4.img-wrapper
-              a(href= mediaUrlPrefix + 'images/related-2.png', data-lightbox='screen-3', data-title='Related 2')
+              a.img-link(href= mediaUrlPrefix + 'images/related-2.png', data-lightbox='screen-3', data-title='Related 2')
                 img(alt='Related 2', src= mediaUrlPrefix + 'images/related-2.png')
                 span.img-desc Visual identity
                 .img-overlay

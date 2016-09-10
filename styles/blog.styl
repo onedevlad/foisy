@@ -10,10 +10,13 @@
 .main
   .screen-1
     position relative
+    .screen-num
+      top 70px
     .lower-part
       absolute left top
       height 100%
       width 100%
+      z-index 5
       .left-part
       .right-part
         height 100%
@@ -29,7 +32,7 @@
           height 100%
           border-right 1px solid dark-grey
     .upper-part
-      z-index 3
+      z-index 6
       position relative
       .person-wrapper
         padding 0
@@ -108,12 +111,13 @@
                 font-size 12px
                 padding 0.5em
                 margin 0 0 0 1em
-                border 1px solid light-black
+                border 1px solid light-grey
                 border-radius 50%
                 text-align center
                 cursor pointer
                 &:hover
                   background blue
+                  border-color blue
   .screen-2
     position relative
     .lower-part

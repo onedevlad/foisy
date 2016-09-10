@@ -16,21 +16,30 @@
         .social-wrapper
           padding 0
           margin-top 2em
-          text-align center
-          .icon
-            cursor pointer
-            color white
-            font-size 14px
-            border 1px solid white
-            border-radius 50%
-            padding 0.5em
-            text-align center
-            &.ti-instagram:hover
-              background #6fa8d4
-            &.ti-twitter:hover
-              background #31c7f2
-            &.ti-dribbble:hover
-              background #e679f6
+          .social-icon
+            padding 0
+            &.icon-wrapper-0
+              text-align left
+            &.icon-wrapper-1
+              text-align center
+            &.icon-wrapper-2
+              text-align right
+            .icon
+              cursor pointer
+              color white
+              font-size 14px
+              border 1px solid light-black
+              border-radius 50%
+              padding 0.5em
+              &.ti-instagram:hover
+                background #6fa8d4
+                border-color #6fa8d4
+              &.ti-twitter:hover
+                background #31c7f2
+                border-color #31c7f2
+              &.ti-dribbble:hover
+                background #e679f6
+                border-color #e679f6
     .right-part
       padding 0
       position relative
@@ -74,7 +83,7 @@
           font-size 12px
           width 70%
           height 100%
-          background url(../images/email-pointer.png) no-repeat scroll 5px 16px
+          background url(../images/email-pointer.png) no-repeat scroll 5px 50%
           padding 0 30px
           border 1px solid light-black
           outline none

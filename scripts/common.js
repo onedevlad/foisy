@@ -34,8 +34,8 @@ $(document).ready(function() { // Lightbox config module
 
 $(document).ready(function() { // Slick config module
   $('.slick-slider').slick({
-    autoPlaySpeed: 3000,
-    // autoplay: true,
+    autoPlaySpeed: 5000,
+    autoplay: true,
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 3,
@@ -63,10 +63,12 @@ $(document).ready(function() { // Slick config module
 
 $(document).ready(function() { // Header slider module
   var $activeBox = $('.header-slider-control-box.active')
-  var currentHeaderSlide = $activeBox.index()
+  var currentHeaderSlide = $activeBox.index() - 1
   $('.header-slider-control-box').click(function(){
     var $this = $(this)
-    var index = $this.index() + 1
+    var index = $this.index()
+
+    currentHeaderSlide = index - 1
 
     $('.header-slider-control-box.active').removeClass('active')
     $this.addClass('active')
@@ -79,8 +81,8 @@ $(document).ready(function() { // Header slider module
   $activeBox.click()
 
   setInterval(function(){
+    currentHeaderSlide += 1
     if(currentHeaderSlide > 4) currentHeaderSlide = 0
     $('.header-slider-control-box').eq(currentHeaderSlide).click()
-    currentHeaderSlide += 1
   }, 5000)
 })
