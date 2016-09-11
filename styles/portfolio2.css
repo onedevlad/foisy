@@ -2599,6 +2599,7 @@ button a:hover {
   margin-bottom: 8vh;
 }
 .header .header-main .scroll-down-wrapper .scroll-down {
+  cursor: pointer;
   text-transform: uppercase;
   color: #bbb;
   letter-spacing: 0.25em;

@@ -86,3 +86,9 @@ $(document).ready(function() { // Header slider module
     $('.header-slider-control-box').eq(currentHeaderSlide).click()
   }, 5000)
 })
+
+$(document).ready(function(){ // Scrolldown module
+  $('.scroll-down').click(function(){
+    $('html, body').animate({ scrollTop: $('.header').height() }, 400)
+  })
+})
