@@ -2374,6 +2374,14 @@ button a:hover {
     display: block;
   }
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
 @media (min-width: 992px) {
   h1 {
     font-size: 4.3vw;
@@ -2508,17 +2516,71 @@ button a:hover {
   background-image: url("../images/header-wave.png");
 }
 .header .nav-open-button {
-  width: 1.5em;
-  height: 1.5em;
-  background: url("../images/hamburger.png");
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
+  width: 24px;
+  height: 24px;
   position: absolute;
   top: 2vh;
   right: 5%;
+  z-index: 9;
   cursor: pointer;
-  z-index: 6;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  -moz-transition: -moz-transform 0.2s ease;
+  -o-transition: -o-transform 0.2s ease;
+  -ms-transition: -ms-transform 0.2s ease;
+  transition: transform 0.2s ease;
+}
+.header .nav-open-button span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  -moz-transition: -moz-transform 0.2s ease;
+  -o-transition: -o-transform 0.2s ease;
+  -ms-transition: -ms-transform 0.2s ease;
+  transition: transform 0.2s ease;
+}
+.header .nav-open-button span.line-0 {
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+.header .nav-open-button span.line-1 {
+  margin: 9px 0;
+}
+.header .nav-open-button span.line-2 {
+  -webkit-transform-origin: 0 100%;
+  -moz-transform-origin: 0 100%;
+  -o-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+}
+.header .nav-open-button:hover .line-0 {
+  -webkit-transform: rotateZ(90deg) translate(0, -12px);
+  -moz-transform: rotateZ(90deg) translate(0, -12px);
+  -o-transform: rotateZ(90deg) translate(0, -12px);
+  -ms-transform: rotateZ(90deg) translate(0, -12px);
+  transform: rotateZ(90deg) translate(0, -12px);
+}
+.header .nav-open-button:hover .line-2 {
+  -webkit-transform: rotateZ(-90deg) translate(0, 12px);
+  -moz-transform: rotateZ(-90deg) translate(0, 12px);
+  -o-transform: rotateZ(-90deg) translate(0, 12px);
+  -ms-transform: rotateZ(-90deg) translate(0, 12px);
+  transform: rotateZ(-90deg) translate(0, 12px);
+}
+.header .nav-open-button.nav-open-button-active {
+  -webkit-transform: rotateZ(180deg);
+  -moz-transform: rotateZ(180deg);
+  -o-transform: rotateZ(180deg);
+  -ms-transform: rotateZ(180deg);
+  transform: rotateZ(180deg);
+}
+.header .nav-open-button.nav-open-button-active .line-0,
+.header .nav-open-button.nav-open-button-active .line-2 {
+  display: none;
 }
 .header .header-slider-controls {
   position: absolute;
@@ -2677,7 +2739,6 @@ button a:hover {
   margin-top: 5%;
   overflow: hidden;
   color: #3c3c3c;
-  text-align: justify;
 }
 .slide-wrapper .slide .desc-wrapper .social-wrapper {
   padding: 0;
@@ -2706,6 +2767,7 @@ button a:hover {
 }
 .slide-wrapper .slide .desc-wrapper .social-wrapper .date-wrapper {
   line-height: 12px;
+  font-size: 12px;
   cursor: pointer;
   position: relative;
 }
@@ -3057,7 +3119,7 @@ button a:hover {
   padding: 0;
 }
 .main .screen-1 .right-part .lower-part .article-wrapper .article-inner-wrapper .heading {
-  font-size: 4em;
+  margin-top: 40px;
   font-weight: bold;
   text-transform: uppercase;
   font-family: SourceSansProBlack;
@@ -3122,6 +3184,7 @@ button a:hover {
   font-family: SourceSansProBlack;
 }
 .main .screen-2 .left-part .title-wrapper .subtitle {
+  margin-top: 32px;
   display: block;
 }
 .main .screen-2 .right-part {
@@ -3201,10 +3264,9 @@ button a:hover {
   position: relative;
 }
 .main .screen-3 .upper-part .right-part .title-wrapper {
-  padding: 100px 0 0 0;
+  padding: 150px 0 0 0;
 }
 .main .screen-3 .upper-part .right-part .title-wrapper .title {
-  font-size: 2em;
   font-weight: bold;
   font-family: SourceSansProBlack;
   text-transform: uppercase;
@@ -3218,7 +3280,6 @@ button a:hover {
   cursor: pointer;
   text-transform: uppercase;
   font-weight: bold;
-  font-family: SourceSansProBlack;
   text-decoration: none;
 }
 .main .screen-3 .upper-part .right-part .view-blog-wrapper .view-blog:hover {
@@ -3452,22 +3513,22 @@ button a:hover {
     margin-top: -4vh;
   }
   .screen-2 .left-part .title-wrapper {
-    position: absolute;
-    top: 30%;
+    position: relative;
+    top: 200px;
     left: 60%;
   }
   .screen-2 .right-part .learn-more {
     position: absolute;
     left: 58.333333334%;
-    top: 70%;
+    top: 60%;
   }
   .screen-2 .right-part .team-wrapper .team-img-wrapper {
-    margin-top: 7.5vh;
-    margin-bottom: 7.5vh;
+    margin-top: 100px;
+    margin-bottom: 150px;
     width: 55%;
     height: auto;
   }
   .screen-3 .upper-part .view-blog-wrapper {
-    padding: 100px 0 0 0;
+    padding: 200px 0 0 0;
   }
 }

@@ -1,5 +1,6 @@
 $(document).ready(function(){ // Nav module
   var openNav = function() {
+    $('.nav-open-button').addClass('nav-open-button-active').unbind('click').click(closeNav)
     TweenLite.to($('.nav'), 0.2, { right: 0, onComplete: function(){
       function anim(cur) {
         TweenLite.delayedCall(0.1, function() {
@@ -12,6 +13,7 @@ $(document).ready(function(){ // Nav module
   }
 
   var closeNav = function() {
+    $('.nav-open-button').removeClass('nav-open-button-active').unbind('click').click(openNav)
     function anim(cur) {
       TweenLite.delayedCall(0.1, function() {
         TweenLite.to($('.nav-link-'+cur), 0.2, { left: '50%', opacity: 0 })
@@ -22,7 +24,6 @@ $(document).ready(function(){ // Nav module
     }
     anim(4)
   }
-  $('.nav-close-button').click(closeNav)
   $('.nav-open-button').click(openNav)
 })
 
@@ -62,8 +63,19 @@ $(document).ready(function() { // Slick config module
 })
 
 $(document).ready(function() { // Header slider module
+  var timeout = null
+  var timeoutDelay = 5000
+
   var $activeBox = $('.header-slider-control-box.active')
   var currentHeaderSlide = $activeBox.index() - 1
+
+  var timeoutFunction = function(){
+    currentHeaderSlide += 1
+    if(currentHeaderSlide > 4) currentHeaderSlide = 0
+
+    $('.header-slider-control-box').eq(currentHeaderSlide).click()
+  }
+
   $('.header-slider-control-box').click(function(){
     var $this = $(this)
     var index = $this.index()
@@ -77,14 +89,12 @@ $(document).ready(function() { // Header slider module
 
     $('.header-background').css('opacity', '0')
     $('.header-background-' + index).css('opacity', '1')
-  })
-  $activeBox.click()
 
-  setInterval(function(){
-    currentHeaderSlide += 1
-    if(currentHeaderSlide > 4) currentHeaderSlide = 0
-    $('.header-slider-control-box').eq(currentHeaderSlide).click()
-  }, 5000)
+    clearTimeout(timeout)
+    timeout = setTimeout(timeoutFunction, timeoutDelay)
+  })
+
+  $activeBox.click()
 })
 
 $(document).ready(function(){ // Scrolldown module

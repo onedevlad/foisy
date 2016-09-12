@@ -2374,6 +2374,14 @@ button a:hover {
     display: block;
   }
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
 @media (min-width: 992px) {
   h1 {
     font-size: 4.3vw;
@@ -2508,17 +2516,71 @@ button a:hover {
   background-image: url("../images/header-wave.png");
 }
 .header .nav-open-button {
-  width: 1.5em;
-  height: 1.5em;
-  background: url("../images/hamburger.png");
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
+  width: 24px;
+  height: 24px;
   position: absolute;
   top: 2vh;
   right: 5%;
+  z-index: 9;
   cursor: pointer;
-  z-index: 6;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  -moz-transition: -moz-transform 0.2s ease;
+  -o-transition: -o-transform 0.2s ease;
+  -ms-transition: -ms-transform 0.2s ease;
+  transition: transform 0.2s ease;
+}
+.header .nav-open-button span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  -moz-transition: -moz-transform 0.2s ease;
+  -o-transition: -o-transform 0.2s ease;
+  -ms-transition: -ms-transform 0.2s ease;
+  transition: transform 0.2s ease;
+}
+.header .nav-open-button span.line-0 {
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+.header .nav-open-button span.line-1 {
+  margin: 9px 0;
+}
+.header .nav-open-button span.line-2 {
+  -webkit-transform-origin: 0 100%;
+  -moz-transform-origin: 0 100%;
+  -o-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+}
+.header .nav-open-button:hover .line-0 {
+  -webkit-transform: rotateZ(90deg) translate(0, -12px);
+  -moz-transform: rotateZ(90deg) translate(0, -12px);
+  -o-transform: rotateZ(90deg) translate(0, -12px);
+  -ms-transform: rotateZ(90deg) translate(0, -12px);
+  transform: rotateZ(90deg) translate(0, -12px);
+}
+.header .nav-open-button:hover .line-2 {
+  -webkit-transform: rotateZ(-90deg) translate(0, 12px);
+  -moz-transform: rotateZ(-90deg) translate(0, 12px);
+  -o-transform: rotateZ(-90deg) translate(0, 12px);
+  -ms-transform: rotateZ(-90deg) translate(0, 12px);
+  transform: rotateZ(-90deg) translate(0, 12px);
+}
+.header .nav-open-button.nav-open-button-active {
+  -webkit-transform: rotateZ(180deg);
+  -moz-transform: rotateZ(180deg);
+  -o-transform: rotateZ(180deg);
+  -ms-transform: rotateZ(180deg);
+  transform: rotateZ(180deg);
+}
+.header .nav-open-button.nav-open-button-active .line-0,
+.header .nav-open-button.nav-open-button-active .line-2 {
+  display: none;
 }
 .header .header-slider-controls {
   position: absolute;
@@ -2677,7 +2739,6 @@ button a:hover {
   margin-top: 5%;
   overflow: hidden;
   color: #3c3c3c;
-  text-align: justify;
 }
 .slide-wrapper .slide .desc-wrapper .social-wrapper {
   padding: 0;
@@ -2706,6 +2767,7 @@ button a:hover {
 }
 .slide-wrapper .slide .desc-wrapper .social-wrapper .date-wrapper {
   line-height: 12px;
+  font-size: 12px;
   cursor: pointer;
   position: relative;
 }
