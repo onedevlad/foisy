@@ -1,0 +1,284 @@
+@import 'common'
+
+@import 'components/nav'
+@import 'components/header'
+@import 'components/footer'
+
+.main
+  z-index 6
+  position relative
+  .screen-1
+    position relative
+    .screen-num
+      top "calc(%s + %s)" % (screen-margin block-top-offset)
+    .lower-part
+      height 100%
+      width 100%
+      absolute left top
+      .blank-space
+      .grey-space
+        padding 0
+      .blank-space
+        height 100%
+        .visual
+          z-index 2
+          line-height 1
+          font-weight bold
+          absolute left 10% bottom
+          font-size 10em
+          text-transform uppercase
+          color grey
+          font-family SourceSansProBlack
+      .grey-space
+        height 140%
+        background grey
+    .upper-part
+      .left-part
+        margin-top - block-top-offset
+        background white
+      .right-part
+        position relative
+        z-index 2
+        .row
+          .concept-wrapper
+            padding screen-margin 0 0 0
+            .heading
+              font-size 3em
+              font-weight bold
+              text-transform uppercase
+              font-family SourceSansProBlack
+            .concept-desc
+              display block
+              width 90%
+              margin-top screen-sub-margin
+          .saying-wrapper
+            .person-wrapper
+              margin-top 5vh
+              width 100%
+              position relative
+              .person-photo
+                width 45px
+                height 45px
+              .person-data
+                absolute bottom left 4em
+                display inline-block
+                .person-name
+                  font-weight bold
+                  text-transform uppercase
+                  font-family SourceSansProBlack
+                .person-position
+                  color dark-grey
+            .quote-wrapper
+              margin-top block-top-offset
+              .quote
+                font-style italic
+                font-size 0.9em
+  .screen-2
+    position relative
+    .lower-part
+      absolute left top
+      height 100%
+      width 100%
+      .left-part
+      .right-part
+        padding 0
+      .right-part
+        height 100%
+        border-left 1px solid dark-grey
+        .row
+          height 100%
+          .blank-space
+            padding 0
+            height 100%
+            box-sizing content-box
+            border-right 1px solid dark-grey
+    .upper-part
+      z-index 2
+      position relative
+      .images-wrapper
+        position relative
+        .img-wrapper
+          position relative
+          .inner-wrapper
+          .img-link
+          img
+            display block
+            height 100%
+  .screen-3
+    position relative
+    .lower-part
+      absolute left top
+      height 100%
+      width 100%
+      .left-part
+      .right-part
+        padding 0
+      .right-part
+        height 100%
+        border-left 1px solid dark-grey
+        .row
+          height 100%
+          .blank-space
+            z-index 2
+            padding 0
+            height 100%
+            box-sizing content-box
+            border-right 1px solid dark-grey
+          .grey-space
+            width 50%
+            height 50%
+            absolute right 10% top 20vh
+            background grey
+    .upper-part
+      z-index 3
+      position relative
+      .row
+        height auto
+        position relative
+        .related-wrapper
+          padding 0
+          .title
+            font-weight bold
+            font-family SourceSansProBlack
+            font-size 2em
+            text-transform uppercase
+          .subtitle
+            display block
+      .images-wrapper
+        .inner-wrapper
+        .img-link
+        img
+          width 100%
+        .img-link
+          .img-desc
+            absolute bottom 10% right 5%
+            font-weight bold
+            color white
+            font-family SourceSansProBlack
+            text-transform uppercase
+            font-size 1.5em
+      .more-wrapper
+        padding 0
+        margin-top screen-margin
+        .more
+          color white
+          box-shadow 0 20px 20px dark-grey
+
+
+@media(max-width $screen-md) // Tablet
+  .screen-1
+    height auto
+    .lower-part
+      display none
+    .upper-part
+      .left-part
+        display none
+      .right-part
+        padding 0 5%
+        .saying-wrapper
+          padding screen-sub-margin 0
+  .screen-2
+    .upper-part
+      .images-wrapper
+        .img-wrapper
+          height 30vh
+          margin-top 10vh
+          .inner-wrapper
+          .img-link
+          img
+            width 100%
+        &.images-row-1
+          .poster-1
+            width 50%
+            margin-left 25%
+          .poster-2
+            width 80%
+            margin-left 10%
+        &.images-row-2
+          .poster-1
+            width 80%
+            margin-left 10%
+        &.images-row-3
+          .poster-1
+            width 80%
+            margin-left 10%
+        &.images-row-4
+          .poster-1
+            width 80%
+            margin-left 10%
+          .poster-2
+            width 80%
+            margin-left 10%
+  .screen-3
+    padding 0 5%
+    .lower-part
+      display none
+    .upper-part
+      .related-wrapper
+        margin-top screen-margin
+      .images-wrapper
+        margin-top 0
+        .img-wrapper
+          margin-top screen-margin
+          padding 0
+      .more-wrapper
+        margin-bottom screen-sub-margin
+        .more
+          relative left 50%
+          transform translate(-50%, 0)
+
+@media(min-width $screen-md) // Desktop
+  .screen-1
+    height 80vh
+    .upper-part
+      height 100%
+      .left-part
+      .right-part
+        padding 0
+        height 100%
+        border-left 1px solid dark-grey
+        .saying-wrapper
+          height 100%
+          padding 16vh 0 0 0
+          border-left 1px solid dark-grey
+        .row
+          height 100%
+  .screen-2
+    .upper-part
+      .images-wrapper
+        margin-top 10vh
+        .img-wrapper
+          float left
+          height 100%
+        &.images-row-1
+          height 30vh
+          .poster-1
+            max-width 45%
+            absolute left 20%
+          .poster-2
+            max-width 45%
+            absolute right 20%
+        &.images-row-2
+          height 60vh
+          .poster-1
+            absolute left 20%
+        &.images-row-3
+          height 30vh
+          .poster-1
+            absolute right 20%
+        &.images-row-4
+          height 30vh
+          .poster-1
+            max-width 45%
+            absolute left 20%
+          .poster-2
+            max-width 45%
+            absolute right 20%
+  .screen-3
+    .upper-part
+      .related-wrapper
+        margin-top 40vh
+        .subtitle
+          margin screen-sub-margin 0
+      .more-wrapper
+        margin-bottom screen-margin

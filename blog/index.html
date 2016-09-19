@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8"/>
     <title>Blog</title>
-    <link rel="stylesheet" type="text/css" href="../styles/blog.css"/>
-    <link rel="stylesheet" type="text/css" href="../lib/lightbox/css/lightbox.min.css"/>
-    <link rel="stylesheet" type="text/css" href="../lib/themify-icons/styles.css"/>
-    <script type="text/javascript" src="../scripts/jquery.js"></script>
-    <script type="text/javascript" src="../scripts/blog-dist.js" defer="defer"></script>
-    <script type="text/javascript" src="../lib/gsap/TweenLite.min.js" defer="defer"></script>
-    <script type="text/javascript" src="../lib/gsap/CSSPlugin.min.js" defer="defer"></script>
-    <script type="text/javascript" src="../lib/lightbox/js/lightbox.min.js" defer="defer"></script>
+    <link rel="stylesheet" type="text/css" href="../assets/styles/blog.css"/>
+    <link rel="stylesheet" type="text/css" href="../assets/lib/lightbox/css/lightbox.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../assets/lib/themify-icons/styles.css"/>
+    <script type="text/javascript" src="../assets/lib/jquery/jquery.js"></script>
+    <script type="text/javascript" src="../assets/scripts/common.js" defer="defer"></script>
+    <script type="text/javascript" src="../assets/lib/gsap/TweenLite.min.js" defer="defer"></script>
+    <script type="text/javascript" src="../assets/lib/gsap/CSSPlugin.min.js" defer="defer"></script>
+    <script type="text/javascript" src="../assets/lib/lightbox/js/lightbox.min.js" defer="defer"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
   </head>
   <body>
@@ -30,7 +30,7 @@
         </div>
         <div class="col-md-8 col-md-offset-2 header-main">
           <div class="row">
-            <div class="col-xs-4 col-xs-offset-4 col-md-2 col-md-offset-5"><img alt="Logo" src="../images/logo.png" class="logo"/></div>
+            <div class="col-xs-4 col-xs-offset-4 col-md-2 col-md-offset-5"><img alt="Logo" src="../assets/images/icons/logo.png" class="logo"/></div>
           </div>
           <div class="row studio-name-wrapper">
             <div class="col-md-11 col-md-offset-1 row-inner-wrapper"><span class="studio-name"></span></div>
@@ -73,7 +73,7 @@
           <div class="row">
             <div class="col-md-4 person-wrapper">
               <div class="row">
-                <div class="col-md-6 col-md-push-6 person-inner-wrapper"><img alt="Joshua Atkins" src="../images/avatar.png" class="person-photo"/>
+                <div class="col-md-6 col-md-push-6 person-inner-wrapper"><img alt="Joshua Atkins" src="../assets/images/icons/avatar.png" class="person-photo"/>
                   <div class="person-data">
                     <div class="person-name">Joshua Atkins</div>
                     <div class="person-position">Foisy CEO</div>
@@ -83,13 +83,15 @@
             </div>
             <div class="col-md-8 post-wrapper">
               <div class="row">
-                <div class="col-md-7 title-wrapper"><span class="title">Marketing experts</span><span class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur odio pariatur iusto a ab dolores voluptatum debitis ullam ea iure.</span></div>
-                <div class="col-md-5 date-wrapper"><img alt="date" src="../images/date.png"/><span class="date">2 July 2016</span></div>
+                <div class="col-md-7 title-wrapper">
+                  <h2 class="title">Marketing experts</h2><span class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur odio pariatur iusto a ab dolores voluptatum debitis ullam ea iure.</span>
+                </div>
+                <div class="col-md-5 date-wrapper"><span class="icon ti-calendar"></span><span class="date">2 July 2016</span></div>
               </div>
               <div class="row">
                 <div class="col-md-9 post-img-wrapper">
-                  <div class="img-wrapper"><a href="../images/photographer.png" data-lightbox="screen-1" data-title="A photographer"><img alt="A photographer" src="../images/photographer.png" class="team"/>
-                      <div class="img-overlay"><img alt="Show in a popup" src="../images/plus.png" class="plus-sign"/></div></a></div>
+                  <div class="img-wrapper"><a href="../assets/images/photographer.png" data-lightbox="screen-1" data-title="A photographer"><img alt="A photographer" src="../assets/images/photographer.png" class="team"/>
+                      <div class="img-overlay"><img alt="Show in a popup" src="../assets/images/plus.png" class="plus-sign"/></div></a></div>
                 </div>
               </div>
             </div>
@@ -118,14 +120,16 @@
           </div>
           <div class="upper-part">
             <div class="row">
-              <div class="col-md-8 col-md-push-4 title-wrapper"><span class="title">Related views</span></div>
+              <div class="col-md-8 col-md-push-4 title-wrapper">
+                <h2 class="title">Related views</h2>
+              </div>
             </div>
             <div class="row">
               <div class="slider col-md-8 col-md-offset-2">
                 <div class="row">
                   <div class="slide-wrapper col-md-4">
                     <div class="slide">
-                      <div class="img-wrapper"><img alt="Deep water" src="../images/wave.jpg"/></div>
+                      <div class="img-wrapper"><img alt="Deep water" src="../assets/images/wave.jpg"/></div>
                       <div class="row">
                         <div class="col-xs-12 desc-wrapper">
                           <div class="row">
@@ -149,7 +153,7 @@
                   </div>
                   <div class="slide-wrapper col-md-4">
                     <div class="slide">
-                      <div class="img-wrapper"><img alt="Art is like a mountain" src="../images/landscape.jpg"/></div>
+                      <div class="img-wrapper"><img alt="Art is like a mountain" src="../assets/images/landscape.jpg"/></div>
                       <div class="row">
                         <div class="col-xs-12 desc-wrapper">
                           <div class="row">
@@ -173,7 +177,7 @@
                   </div>
                   <div class="slide-wrapper col-md-4">
                     <div class="slide">
-                      <div class="img-wrapper"><img alt="&quot;Bussiness design&quot;" src="../images/bussiness.jpg"/></div>
+                      <div class="img-wrapper"><img alt="&quot;Bussiness design&quot;" src="../assets/images/bussiness.jpg"/></div>
                       <div class="row">
                         <div class="col-xs-12 desc-wrapper">
                           <div class="row">
@@ -211,7 +215,7 @@
           <div class="col-xs-4 left-part">
             <div class="row contacts-wrapper">
               <div class="row">
-                <div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-7 logo-wrapper"><img alt="logo" src="../images/logo.png" class="logo"/></div>
+                <div class="col-xs-10 col-xs-offset-1 col-md-3 col-md-offset-7 logo-wrapper"><img alt="logo" src="../assets/images/icons/logo.png" class="logo"/></div>
               </div>
               <div class="row">
                 <div class="col-md-3 col-md-offset-7 social-wrapper">

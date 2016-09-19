@@ -1,0 +1,125 @@
+@import 'common'
+
+@import 'components/nav'
+@import 'components/header'
+@import 'components/footer'
+@import 'components/next-step'
+
+.header
+  background-image url(../images/header-wave.png)
+.main
+  .screen-1
+    position relative
+    .screen-num
+      top "calc(%s + %s)" % (screen-margin block-top-offset)
+    .lower-part
+      absolute left top
+      height 100%
+      width 100%
+      z-index 6
+      .featured-wrapper
+        absolute left 2% top 28%
+        .featured
+          color grey
+          font-size 10em
+          font-weight bold
+          font-family SourceSansProBlack
+          text-transform uppercase
+      .grey-space-small
+        background grey
+        width 25%
+        height 20%
+        absolute top 60% left 10%
+      .left-part
+      .right-part
+        padding 0
+        height 100%
+      .left-part
+        margin-top - block-top-offset
+        background white
+      .right-part
+        border-left 1px solid dark-grey
+        .row
+          height 100%
+          .blank-space
+            z-index 2
+            padding 0
+            height 100%
+            box-sizing content-box
+            border-right 1px solid dark-grey
+          .filters-wrapper
+            z-index 4
+            padding 0
+            margin-top screen-margin
+            a
+              color dark-grey
+              cursor pointer
+              font-family SourceSansProBlack
+              text-transform uppercase
+              text-decoration none
+              &:hover
+                color light-black
+          .grey-space
+            width 50%
+            height 40%
+            absolute right 10% top block-top-offset
+            background grey
+    .upper-part
+      z-index 7
+      position relative
+      .row
+        height auto
+        position relative
+        .related-wrapper
+          padding 0
+          .title
+            font-weight bold
+            font-family SourceSansProBlack
+            font-size 2em
+            text-transform uppercase
+          .subtitle
+            display block
+            margin-top block-top-offset
+      .images-wrapper
+        .img-wrapper
+          padding 0
+          a
+          img
+            width 100%
+          a
+            .img-desc
+              absolute bottom 10% right 5%
+              font-weight bold
+              color white
+              font-family SourceSansProBlack
+              text-transform uppercase
+              font-size 1.5em
+      .more-wrapper
+        padding 0
+        margin-top 10vh
+        .more
+          color white
+          box-shadow 0 20px 20px dark-grey
+
+
+@media(max-width $screen-md) // Tablet
+  .screen-1
+    padding 5%
+    .lower-part
+      display none
+    .upper-part
+      .related-wrapper
+        margin-top 10vh
+      .images-wrapper
+        margin-top 0
+        .img-wrapper
+          margin-top 10vh
+          padding 0
+
+@media(min-width $screen-md) // Desktop
+  .screen-1
+    .upper-part
+      .related-wrapper
+        margin-top screen-margin
+      .images-wrapper
+        margin-top 96px

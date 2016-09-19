@@ -1,0 +1,24 @@
+mixin nextStep(subtitle, button, src)
+  .next-step
+    .row
+      .col-md-4.left-part
+        span.letter.f-letter F
+        span.letter.o-letter o
+      .col-md-8.right-part
+        .row.next-step-wrapper
+          .row
+            .title
+              h2 Next step
+          .row.subtitle-wrapper
+            .subtitle
+              span= subtitle
+          .row.take-me-there-wrapper
+            button.take-me-there
+              a(href= src)= button
+        .row.blank-space-wrapper
+          .col-md-5.blank-space.blank-space-white
+            span.letter.i-letter i
+            span.studio-name Foisy Studio
+          .col-md-7.pull-right.blank-space-grey
+            span.letter.y-letter y
+        .line

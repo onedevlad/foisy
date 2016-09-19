@@ -1,0 +1,188 @@
+@import 'common'
+
+@import 'components/nav'
+@import 'components/header'
+@import 'components/slider'
+@import 'components/footer'
+
+.header
+  background-image url(../images/header-city.png)
+.main
+  .screen-1
+    position relative
+    .screen-num
+      top 70px
+    .lower-part
+      absolute left top
+      height 100%
+      width 100%
+      z-index 5
+      .left-part
+      .right-part
+        height 100%
+        padding 0
+      .left-part
+        background white
+        margin-top - block-top-offset
+      .right-part
+        height 100%
+        border-left 1px solid dark-grey
+        .blank-space
+          padding 0
+          height 100%
+          border-right 1px solid dark-grey
+    .upper-part
+      z-index 6
+      position relative
+      .person-wrapper
+        padding 0
+        .person-inner-wrapper
+          padding 0
+          position relative
+          .person-photo
+            width 45px
+            height 45px
+          .person-data
+            absolute bottom left 4em
+            display inline-block
+            .person-name
+              font-family SourceSansProBlack
+              font-weight bold
+              text-transform uppercase
+            .person-position
+              color dark-grey
+      .post-wrapper
+        padding 0
+        .title-wrapper
+          padding 0
+          margin screen-margin 0 0 0
+          .title
+            font-family SourceSansProBlack
+            font-weight bold
+            font-size 2.5em
+            text-transform uppercase
+          .subtitle
+            width 95%
+            text-align justify
+            display block
+            margin screen-sub-margin 0
+        .date-wrapper
+          padding 0
+          img
+            width 1em
+            height 1em
+          .date
+            margin-left 1em
+        .post-img-wrapper
+          padding 0
+          img
+            width 100%
+      .post-text-wrapper
+        .quote-wrapper
+          padding 0
+          .quote-inner-wrapper
+            margin 10vh 2em 0 0
+            float right
+            .quote
+              font-style italic
+        .post-text-inner-wrapper
+          padding 0
+          .post-text
+            padding 0
+            &>span
+              text-align justify
+              display block
+              width 95%
+              margin-top screen-sub-margin
+            .subtitle
+              font-weight bold
+              font-size 1.5em
+              font-family SourceSansProBlack
+              text-transform uppercase
+              padding 0
+            .share-wrapper
+              margin-top 8vh
+              cursor pointer
+              .share
+                font-family SourceSansProBlack
+                text-transform uppercase
+                font-weight bold
+              .icon
+                font-size 12px
+                padding 0.5em
+                margin 0 0 0 1em
+                border 1px solid light-grey
+                border-radius 50%
+                text-align center
+                cursor pointer
+                &:hover
+                  background blue
+                  border-color blue
+  .screen-2
+    position relative
+    .lower-part
+      absolute left top
+      height 100%
+      width 100%
+      .left-part
+      .right-part
+        height 100%
+        padding 0
+      .right-part
+        border-left 1px solid dark-grey
+        .blank-space
+          padding 0
+          height 100%
+          border-right 1px solid dark-grey
+    .upper-part
+      .title-wrapper
+        padding 0
+        .title
+          font-family SourceSansProBlack
+          font-weight bold
+          text-transform uppercase
+          font-size 3em
+      .slider
+        margin-top screen-sub-margin
+      .more-wrapper
+        .more
+          color white
+          box-shadow 0 20px 20px dark-grey
+
+@media(max-width $screen-md) // Tablet
+  .screen-1
+    padding 5%
+    .lower-part
+      .left-part
+        display none
+    .upper-part
+      .person-wrapper
+        margin-top 0
+      .date-wrapper
+        margin-top 8vh
+      .quote-wrapper
+        display none
+  .screen-2
+    padding 20vh 5% 5% 5%
+    .lower-part
+      display none
+    .upper-part
+      text-align center
+      .slider
+        .slide-wrapper
+          margin-bottom screen-margin
+      .more-wrapper
+        margin 0 0 screen-sub-margin 0
+
+@media(min-width $screen-md) // Desktop
+  .screen-1
+    .upper-part
+      .person-wrapper
+        margin-top 16vh
+      .date-wrapper
+        margin-top 16vh
+  .screen-2
+    padding screen-margin 0 0 0
+    .more-wrapper
+      padding 0
+      margin screen-sub-margin 0

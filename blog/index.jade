@@ -1,5 +1,5 @@
-include ../templates/mixins/header
-include ../templates/mixins/slide
+include ../assets/templates/mixins/header
+include ../assets/templates/mixins/slide
 
 - var mediaUrlPrefix = '../'
 
@@ -8,14 +8,14 @@ html(lang="en")
   head
     meta(charset="UTF-8")
     title Blog
-    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'styles/blog.css')
-    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'lib/lightbox/css/lightbox.min.css')
-    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'lib/themify-icons/styles.css')
-    script(type='text/javascript', src= mediaUrlPrefix + 'scripts/jquery.js')
-    script(type='text/javascript', src= mediaUrlPrefix + 'scripts/blog-dist.js', defer)
-    script(type='text/javascript', src= mediaUrlPrefix + 'lib/gsap/TweenLite.min.js', defer)
-    script(type='text/javascript', src= mediaUrlPrefix + 'lib/gsap/CSSPlugin.min.js', defer)
-    script(type='text/javascript', src= mediaUrlPrefix + 'lib/lightbox/js/lightbox.min.js', defer)
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/styles/blog.css')
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/lib/lightbox/css/lightbox.min.css')
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/lib/themify-icons/styles.css')
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/jquery/jquery.js')
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/scripts/common.js', defer)
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/gsap/TweenLite.min.js', defer)
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/gsap/CSSPlugin.min.js', defer)
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/lightbox/js/lightbox.min.js', defer)
     meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
   body
     +header('', 'Marketing experts', 'We support our vision with a great variety of views.', '', 'Take me there', false, mediaUrlPrefix + 'portfolio-with-images', 2)
@@ -36,25 +36,25 @@ html(lang="en")
             .col-md-4.person-wrapper
               .row
                 .col-md-6.col-md-push-6.person-inner-wrapper
-                  img.person-photo(alt='Joshua Atkins', src= mediaUrlPrefix + 'images/avatar.png')
+                  img.person-photo(alt='Joshua Atkins', src= mediaUrlPrefix + 'assets/images/icons/avatar.png')
                   .person-data
                     .person-name Joshua Atkins
                     .person-position Foisy CEO
             .col-md-8.post-wrapper
               .row
                 .col-md-7.title-wrapper
-                  span.title Marketing experts
+                  h2.title Marketing experts
                   span.subtitle Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur odio pariatur iusto a ab dolores voluptatum debitis ullam ea iure.
                 .col-md-5.date-wrapper
-                    img(alt='date', src= mediaUrlPrefix + 'images/date.png')
+                    span.icon.ti-calendar
                     span.date 2 July 2016
               .row
                 .col-md-9.post-img-wrapper
                   .img-wrapper
-                    a(href= mediaUrlPrefix + 'images/photographer.png', data-lightbox='screen-1', data-title='A photographer')
-                      img.team(alt='A photographer', src= mediaUrlPrefix + 'images/photographer.png')
+                    a(href= mediaUrlPrefix + 'assets/images/photographer.png', data-lightbox='screen-1', data-title='A photographer')
+                      img.team(alt='A photographer', src= mediaUrlPrefix + 'assets/images/photographer.png')
                       .img-overlay
-                        img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'images/plus.png')
+                        img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
           .row.post-text-wrapper
             .col-md-4.quote-wrapper
               .quote-inner-wrapper
@@ -80,22 +80,22 @@ html(lang="en")
           .upper-part
             .row
               .col-md-8.col-md-push-4.title-wrapper
-                span.title Related views
+                h2.title Related views
             .row
               .slider.col-md-8.col-md-offset-2
                 .row
-                  +slide( mediaUrlPrefix + 'images/wave.jpg', 'Deep water',
+                  +slide( mediaUrlPrefix + 'assets/images/wave.jpg', 'Deep water',
                     'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat.',
                     '2 July 2016')
-                  +slide( mediaUrlPrefix + 'images/landscape.jpg', 'Art is like a mountain',
+                  +slide( mediaUrlPrefix + 'assets/images/landscape.jpg', 'Art is like a mountain',
                     'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat.',
                     '2 July 2016')
-                  +slide( mediaUrlPrefix + 'images/bussiness.jpg', '"Bussiness design"',
+                  +slide( mediaUrlPrefix + 'assets/images/bussiness.jpg', '"Bussiness design"',
                     'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat.',
                     '2 July 2016')
             .row
               .col-md-8.col-md-push-4.more-wrapper
                 button.more
                   a(href= mediaUrlPrefix + 'blog-with-images') More views
-      include ../templates/footer
-    include ../templates/nav
+      include ../assets/templates/footer
+    include ../assets/templates/nav

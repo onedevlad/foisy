@@ -1,0 +1,110 @@
+@import 'common'
+
+@import 'components/nav'
+@import 'components/header'
+@import 'components/slider'
+@import 'components/footer'
+@import 'components/next-step'
+
+.header
+  background-image url(../images/header-buttons.png)
+.main
+  .screen-1
+    position relative
+    .lower-part
+      absolute left top
+      height 100%
+      width 100%
+      z-index 6
+      .screen-num
+        top "calc(%s + %s)" % (screen-margin block-top-offset)
+      .left-part
+      .right-part
+        height 100%
+        padding 0
+      .left-part
+        background white
+        margin-top - block-top-offset
+      .right-part
+        height 100%
+        border-left 1px solid dark-grey
+        .blank-space
+          padding 0
+          height 100%
+          border-right 1px solid dark-grey
+    .upper-part
+      z-index 3
+      position relative
+      z-index 7
+      .featured-wrapper
+        .title-wrapper
+          padding 0
+          margin-top screen-margin
+          .title
+            font-size 3em
+            font-family SourceSansProBlack
+            font-weight bold
+            text-transform uppercase
+        .featured-slide
+          margin-top screen-sub-margin
+          padding 0
+          .slide-wrapper
+            padding 0
+            width 100%
+  .screen-2
+    position relative
+    .lower-part
+      absolute left top
+      height 100%
+      width 100%
+      .left-part
+      .right-part
+        height 100%
+        padding 0
+      .left-part
+        background white
+        margin-top - block-top-offset
+      .right-part
+        height 100%
+        border-left 1px solid dark-grey
+        .blank-space
+          padding 0
+          height 100%
+          border-right 1px solid dark-grey
+    .upper-part
+      .slider
+        margin-top screen-sub-margin
+      .more-wrapper
+        margin-top screen-sub-margin
+        .more
+          color white
+          text-transform uppercase
+@media(max-width $screen-md) // Tablet
+  .screen-1
+    .upper-part
+      .featured-wrapper
+        padding 0 5%
+  .screen-2
+    padding 0 5%
+    .lower-part
+      .left-part
+        display none
+    .upper-part
+      .slider
+        height auto
+        .slide-wrapper
+          margin-top screen-margin
+      .more-wrapper
+        .more
+          relative left 50%
+          transform translate(-50%, 0)
+
+@media(min-width $screen-md) // Desktop
+  .screen-1
+    .upper-part
+      .featured-wrapper
+        padding 0
+  .screen-2
+    .upper-part
+      .more-wrapper
+        padding 0

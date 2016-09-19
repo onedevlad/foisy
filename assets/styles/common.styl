@@ -1,0 +1,201 @@
+@import '../lib/bootstrap/bootstrap/index.styl'
+
+// VARIABLES BLOCK
+
+grey = #f9f9f9
+light-grey = #eee
+blue = #00aff0
+dark-blue = darken(#00aff0, 10)
+dark-grey = #bbb
+light-black = #3c3c3c
+black = #262626
+
+animationSpeed = 0.4s
+screen-margin = 100px
+screen-sub-margin = 48px
+block-top-offset = 4vh
+
+// FONTS BLOCK
+
+@font-face
+  font-family 'SourceSansProRegular'
+  src url('../fonts/SourceSansPro-Regular/font.eot')
+  src url('../fonts/SourceSansPro-Regular/font.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/SourceSansPro-Regular/font.woff') format('woff'),
+      url('../fonts/SourceSansPro-Regular/font.ttf') format('truetype'),
+      url('../fonts/SourceSansPro-Regular/font.svg#SourceSansPro-Black') format('svg')
+  font-style normal
+  font-weight normal
+
+@font-face
+  font-family 'SourceSansProBlack'
+  src url('../fonts/SourceSansPro-Black/font.eot')
+  src url('../fonts/SourceSansPro-Black/font.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/SourceSansPro-Black/font.woff') format('woff'),
+      url('../fonts/SourceSansPro-Black/font.ttf') format('truetype'),
+      url('../fonts/SourceSansPro-Black/font.svg#SourceSansPro-Black') format('svg')
+  font-style normal
+  font-weight normal
+
+@font-face
+  font-family 'MontserratBold'
+  src url('../fonts/Montserrat-Bold/font.eot')
+  src url('../fonts/Montserrat-Bold/font.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Montserrat-Bold/font.woff') format('woff'),
+      url('../fonts/Montserrat-Bold/font.ttf') format('truetype'),
+      url('../fonts/Montserrat-Bold/font.svg#SourceSansPro-Black') format('svg')
+  font-style normal
+  font-weight normal
+
+// STYLES BLOCK
+
+body
+  font-family SourceSansProRegular
+  font-size 16px
+  overflow-x hidden
+
+button
+  border none
+  outline none
+  padding 0
+  a
+    background blue
+    padding 18px 24px
+    font-size 14px
+    display inline-block
+    width 100%
+    color white
+    font-weight bold
+    white-space nowrap
+    text-transform uppercase
+    &:hover
+      color white
+      text-decoration none
+      background dark-blue
+
+.row
+  margin 0
+
+.desc-img-wrapper
+  transform-style preserve-3d
+  perspective 900px
+  perspective-origin 0 50%
+  .inner-wrapper
+    position relative
+    overflow-x hidden
+    .img-link
+    .img-overlay
+      transition all animationSpeed ease
+  &:hover .img-float-desc
+    transform rotateY(0deg)
+  &:hover .img-link
+  &:hover .img-overlay
+    margin-left 30%
+  .img-float-desc
+    width 60%
+    height 100%
+    absolute top left
+    background rgba(blue, 0.75)
+    z-index 2
+    transition transform animationSpeed, opacity 0.1s 0.3s
+    transform-origin 0 0 0
+    padding 5%
+    .heading
+      color white
+      text-align center
+      display inline-block
+      width 100%
+      font-size 1.25em
+      text-transform uppercase
+      font-weight bold
+    .link
+      absolute bottom 5% left 5%
+      display inline-block
+      width 90%
+      text-align center
+      color blue
+      background grey
+      padding 0.5em 0
+      text-transform uppercase
+      text-decoration none
+      font-weight bold
+      &:hover
+        background white
+
+@media(max-width $screen-md) // Tablet
+  .desc-img-wrapper
+    .img-float-desc
+      transform rotateY(0deg)
+
+@media(min-width $screen-md) // Desktop
+  .desc-img-wrapper
+    .img-float-desc
+      transform rotateY(-90deg)
+
+.img-overlay
+  absolute left top
+  width 100%
+  height 100%
+  opacity 0
+  transition all animationSpeed ease
+  background rgba(grey, 0.75)
+  cursor pointer
+  &:hover
+    opacity 1
+  .plus-sign
+    width 10% !important
+    height auto !important
+    absolute top 50% left 50%
+    transform translate(-50%, -50%)
+
+.screen-num
+  absolute left 50%
+  transform translate(-50%, 0)
+  font-weight bold
+  z-index 5
+  .dash
+    display inline-block
+    width 3em
+    height 2px
+    background light-black
+    margin 0 1.5em 0 0
+    vertical-align middle
+
+@media(max-width $screen-md)
+  .screen-num
+    display none
+
+@media(min-width $screen-sm) // Show BS dropdown on hover
+  .dropdown:hover .dropdown-menu
+    display block
+
+h1, h2, h3, h4, h5, h6
+  margin 0
+
+@media(min-width $screen-md) // Desktop headers sizes
+  h1
+    font-size 4.3vw
+  h2
+    font-size 40px
+  h3
+    font-size 32px
+  h4
+    font-size 24px
+  h5
+    font-size 20px
+  h6
+    font-size 18px
+
+@media(max-width $screen-md) // Tablet headers sizes
+  h1
+    font-size 62px
+  h2
+    font-size 32px
+  h3
+    font-size 26px
+  h4
+    font-size 22px
+  h5
+    font-size 20px
+  h6
+    font-size 18px
