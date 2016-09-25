@@ -1,48 +1,83 @@
-mixin header(studio, title, subtitle, subtitle2, button, scrollDown, buttonUrl, activeBg)
+mixin header(studio, title, subtitle, subtitle2, button, scrollDown, buttonUrl, activeBg, simpleNav)
   .header.container-fluid
-    .row
+    .row.main-row
       a.nav-open-button
         span.line-0
         span.line-1
         span.line-2
-      .header-background.header-background-1
-      .header-background.header-background-2
-      .header-background.header-background-3
-      .header-background.header-background-4
-      .header-background.header-background-5
-      .header-slider-controls
-        span.header-page-num
-          span.middle-dots ···
-          span.header-current-slide 01
-          |  / 05
-        .header-slider-control-box(class= activeBg === 0 ? 'active' : '')
-        .header-slider-control-box(class= activeBg === 1 ? 'active' : '')
-        .header-slider-control-box(class= activeBg === 2 ? 'active' : '')
-        .header-slider-control-box(class= activeBg === 3 ? 'active' : '')
-        .header-slider-control-box(class= activeBg === 4 ? 'active' : '')
-      .col-md-8.col-md-offset-2.header-main
+      .header-background.header-background-1(class= activeBg === 0 ? 'active' : '')
+      .header-background.header-background-2(class= activeBg === 1 ? 'active' : '')
+      .header-background.header-background-3(class= activeBg === 2 ? 'active' : '')
+      .header-background.header-background-4(class= activeBg === 3 ? 'active' : '')
+      .header-background.header-background-5(class= activeBg === 4 ? 'active' : '')
+      .header-background.header-background-6(class= activeBg === 5 ? 'active' : '')
+      if(!simpleNav)
+        .header-slider-controls
+          span.header-page-num
+            span.middle-dots ···
+            span.header-current-slide 01
+            |  / 05
+          .header-slider-control-box(class= activeBg === 0 ? 'active' : '')
+          .header-slider-control-box(class= activeBg === 1 ? 'active' : '')
+          .header-slider-control-box(class= activeBg === 2 ? 'active' : '')
+          .header-slider-control-box(class= activeBg === 3 ? 'active' : '')
+          .header-slider-control-box(class= activeBg === 4 ? 'active' : '')
+      .header-simple-nav.col-md-4.hidden-sm.hidden-xs
+        if(simpleNav)
+          .simple-nav-item-wrapper.active
+            .simple-nav-active-bar
+            .simple-nav-item
+              .item-subtitle
+                h6 Design
+              .item-title
+                h5 Dieter Rams Documentary
+              .item-desc
+                span The world's first feature documentary...
+          .item-line
+          .simple-nav-item-wrapper
+            .simple-nav-active-bar
+            .simple-nav-item
+              .item-subtitle
+                 h6 Design
+              .item-title
+                h5 What's about living
+              .item-desc
+                span 10 researches explaining which are the best...
+          .item-line
+          .simple-nav-item-wrapper
+            .simple-nav-active-bar
+            .simple-nav-item
+              .item-subtitle
+                 h6 Music
+              .item-title
+                h5 90120
+              .item-desc
+                span Making hit music since forever...
+          a(href='blog').more More stories
+      .col-md-8.header-main
         .row
-          .col-xs-4.col-xs-offset-4.col-md-2.col-md-offset-5
-            img.logo(alt='Logo', src= mediaUrlPrefix + 'assets/images/icons/logo.png')
-        .row.studio-name-wrapper
-          .col-md-11.col-md-offset-1.row-inner-wrapper
-            span.studio-name= studio
+          .col-xs-4.col-xs-offset-4.col-md-2.col-md-offset-2.logo-wrapper
+            .logo-inner-wrapper
+              img.logo(alt='Logo', src= mediaUrlPrefix + 'assets/images/icons/logo.png')
+        if(studio)
+          .row.studio-name-wrapper
+            .col-md-7.row-inner-wrapper
+              span.studio-name= studio
         .row.title-wrapper
-          .col-md-9.col-md-offset-3.row-inner-wrapper
-            h1.title= title
+          .col-md-7.row-inner-wrapper
+            h1.title!= title
         .row.subtitle-wrapper
-          .col-md-9.col-md-offset-3.row-inner-wrapper
+          .col-md-7.row-inner-wrapper
             span.subtitle= subtitle
               br
               span.subtitle-line-2= subtitle2
         if(button)
           .row.work-samples-wrapper
-            .col-xs-4.col-md-2.pull-right.row-inner-wrapper
+            .col-xs-4.col-md-2.col-md-offset-7.row-inner-wrapper
               button.work-samples
                 a(href= buttonUrl)= button
         if(scrollDown)
           .row.scroll-down-wrapper
-            .col-md-9.col-md-offset-3.row-inner-wrapper
+            .col-md-7.row-inner-wrapper
               span.scroll-down Scroll down
-        .left-line
         .right-line

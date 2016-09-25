@@ -98,8 +98,8 @@ $(document).ready(function() { // Header slider module
 
     $('.header-current-slide').html('0' + index)
 
-    $('.header-background').css('opacity', '0')
-    $('.header-background-' + index).css('opacity', '1')
+    $('.header-background').removeClass('active')
+    $('.header-background-' + index).addClass('active')
 
     clearTimeout(timeout)
     timeout = setTimeout(timeoutFunction, headerSliderTimeout)

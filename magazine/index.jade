@@ -1,0 +1,196 @@
+include ../assets/templates/mixins/header
+include ../assets/templates/mixins/slide
+include ../assets/templates/mixins/next-step
+
+- var mediaUrlPrefix = '../'
+
+doctype traditional
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title Home
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/styles/magazine.css')
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/lib/slick/slick.css')
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/lib/slick/slick-theme.css')
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/lib/lightbox/css/lightbox.min.css')
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/lib/themify-icons/styles.css')
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/jquery/jquery.js')
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/scripts/common.js', defer)
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/slick/slick.min.js', defer)
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/lightbox/js/lightbox.min.js', defer)
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/gsap/TweenLite.min.js', defer)
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/gsap/CSSPlugin.min.js', defer)
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/bootstrap/js/dropdown.js', defer)
+    meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
+  body
+    +header(false, 'Dieter Rams <br/> Documentary', 'The world\'s first documentary on legendary designer Dieter Rams, and in', 'helping preserve his design archive.', 'Read more', true, mediaUrlPrefix + 'portfolio', 5, true)
+    .main.container-fluid
+      .screen-1
+        .row
+          .col-md-4.left-part
+            .screen-num
+              .dash
+              span 01
+            .row.posts-wrapper
+              .col-md-8.pull-right.post-wrapper
+                h4.title Latest posts
+                img.post-img(alt='post 1', src=mediaUrlPrefix + 'assets/images/post-1.jpg')
+                .post-nav
+                  .post-nav-item
+                    span.item-cat Design
+                    span.item-title Summer mood
+                    span.item-date 20 August 2016
+                  .post-nav-line
+                  .post-nav-item
+                    span.item-cat Cars
+                    span.item-title All about cars
+                    span.item-date 20 August 2016
+                  .post-nav-line
+                  .post-nav-item
+                    span.item-cat Lifestyle
+                    span.item-title Making right choises
+                    span.item-date 20 August 2016
+                  .post-nav-line
+            .row.picks-wrapper
+              .col-md-8.pull-right.picks-inner-wrapper
+                .video-wrapper
+                  img.video-preview(alt='Drone', src=mediaUrlPrefix + 'assets/images/drone.jpg')
+                  .overlay
+                    span.play-btn-wrapper
+                      span.play-btn.ti-control-play
+                    br
+                    span.video-desc Drone experience
+                h4.title Editors' picks
+                .row.pick-wrapper
+                  .col-xs-2.editor-avatar-wrapper
+                    img.editor-avatar(alt='John Doe', src=mediaUrlPrefix + 'assets/images/icons/avatar-1.png')
+                  .col-xs-10.desc-wrapper
+                    span.pick-title How to design an app
+                    span.editor-name John Doe
+                .row.pick-wrapper
+                  .col-xs-2.editor-avatar-wrapper
+                    img.editor-avatar(alt='Ricky Martinez', src=mediaUrlPrefix + 'assets/images/icons/avatar-2.png')
+                  .col-xs-10.desc-wrapper
+                    span.pick-title Let's pray for Earth
+                    span.editor-name Ricky Martinez
+                .row.pick-wrapper
+                  .col-xs-2.editor-avatar-wrapper
+                    img.editor-avatar(alt='Sean Dolla', src=mediaUrlPrefix + 'assets/images/icons/avatar-3.png')
+                  .col-xs-10.desc-wrapper
+                    span.pick-title Best of the best
+                    span.editor-name Sean Dolla
+                .row.pick-wrapper
+                  .col-xs-2.editor-avatar-wrapper
+                    img.editor-avatar(alt='Samantha West', src=mediaUrlPrefix + 'assets/images/icons/avatar-4.png')
+                  .col-xs-10.desc-wrapper
+                    span.pick-title No fear, no fear!
+                    span.editor-name Samantha West
+            .row
+              .col-md-8.col-md-offset-4.categories-wrapper
+                h4.title Categories
+                .cat
+                  span.ti-medall
+                  span.cat-name Design
+                .cat
+                  span.ti-medall
+                  span.cat-name Life
+                .cat
+                  span.ti-medall
+                  span.cat-name Sports
+                .cat
+                  span.ti-medall
+                  span.cat-name Luxury
+          .col-md-8.right-part
+            .right-line
+            .row
+              h2.title Stories
+              span.subtitle Featured piece of content
+              .row
+                .col-md-8.big-slide-wrapper
+                  +slide(mediaUrlPrefix + 'assets/images/japan.jpg', 'Japanese culture',
+                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
+                    '3 September 2016', 'Lifestyle', true)
+              .row
+                .col-md-8.big-slide-wrapper
+                  +slide(mediaUrlPrefix + 'assets/images/fitness.jpg', 'The power of fitness',
+                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
+                    '3 September 2016', 'Lifestyle', true)
+                .col-md-8.big-slide-wrapper
+                  +slide(mediaUrlPrefix + 'assets/images/smart-watch.jpg', 'Smart-watch apps',
+                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
+                    '3 September 2016', 'Technology', true)
+              .row
+                button.keep-reading
+                  a(href='blog') Keep reading
+      .screen-2
+        .row
+          .col-md-4.left-part
+            .screen-num
+              .dash
+              span 02
+            .row.title-wrapper
+              span.stats-icon.ti-stats-up
+              h2.title Trending
+              span.subtitle Content that caught our attention
+          .col-md-8.col-md-offset-4.right-part
+            .row.team-wrapper
+              .col-md-8.col-md-offset-4.team-inner-wrapper
+                .team-img-wrapper
+                  a(href= mediaUrlPrefix + 'assets/images/team.png', data-lightbox='screen-2', data-title='Our team')
+                    img.team(alt='Our team', src= mediaUrlPrefix + 'assets/images/team.png')
+                    .img-overlay
+                      img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
+              .line
+              button.learn-more
+                a(href='blog') Learn more
+      .screen-3
+        .row.lower-part
+          .col-md-4.left-part
+            .screen-num
+              .dash
+              span 03
+          .col-md-8.right-part
+            .row
+              .col-md-5.col-md-offset-7.line-wrapper
+              .col-md-7.blank-space-wrapper
+        .row.upper-part
+          .row
+            .col-md-8.col-md-offset-4.right-part
+              .row
+                .col-md-7.title-wrapper
+                  h2.title Featured stories
+                  span.subtitle Views from the Foisy.
+                .col-md-5.view-blog-wrapper
+                  a.view-blog(href='blog') View blog
+          .row.slider-wrapper
+            .slider.col-md-8.col-md-offset-2
+              .row.slick-slider
+                +slide( mediaUrlPrefix + 'assets/images/wave.jpg', 'Deep water',
+                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore',
+                  '2 July 2016')
+                +slide( mediaUrlPrefix + 'assets/images/landscape.jpg', 'Art is like a mountain',
+                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore',
+                  '2 July 2016')
+                +slide( mediaUrlPrefix + 'assets/images/bussiness.jpg', '"Bussiness design"',
+                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore',
+                  '2 July 2016')
+                +slide( mediaUrlPrefix + 'assets/images/wave.jpg', 'Deep water',
+                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore',
+                  '2 July 2016')
+                +slide( mediaUrlPrefix + 'assets/images/landscape.jpg', 'Art is like a mountain',
+                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore',
+                  '2 July 2016')
+                +slide( mediaUrlPrefix + 'assets/images/bussiness.jpg', '"Bussiness design"',
+                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore',
+                  '2 July 2016')
+          .row.slider-controls-wrapper
+            .col-md-8.col-md-offset-4.slider-controls
+              .slider-control-box.active
+              .slider-control-box
+              span.middle-dots ···
+              span.page-num
+                span.current-slide 01
+                |  / 02
+      +nextStep('Meet out curated collection of projects - of all kinds - to taste our aesthetic.', 'Take me there!', mediaUrlPrefix + 'portfolio')
+      include ../assets/templates/footer
+    include ../assets/templates/nav

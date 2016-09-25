@@ -10,21 +10,21 @@
     background-repeat no-repeat
     background-position 50% 50%
     transition all 0.4s ease
+    opacity 0
+    &.active
+      opacity 1
     &.header-background-1
-      z-index 5
       background-image url(../images/header-texture.png)
     &.header-background-2
-      z-index 4
       background-image url(../images/header-poster.png)
     &.header-background-3
-      z-index 3
       background-image url(../images/header-city.png)
     &.header-background-4
-      z-index 2
       background-image url(../images/header-buttons.png)
     &.header-background-5
-      z-index 1
       background-image url(../images/header-wave.png)
+    &.header-background-6
+      background-image url(../images/header-book.png)
   .nav-open-button
     width 24px
     height 24px
@@ -77,15 +77,59 @@
         font-weight bold
       .header-current-slide
         color white
+  .header-simple-nav
+    padding 20vh 0 0 0
+    z-index 7
+    .simple-nav-item-wrapper
+      position relative
+      .simple-nav-active-bar
+        width 6px
+        height 100%
+        background blue
+        display none
+        absolute left top
+      .simple-nav-item
+        margin-left 10%
+        color grey-1
+        .item-subtitle
+          text-transform uppercase
+          font-weight bold
+        .item-title
+          margin-top 24px
+          margin-bottom 12px
+          text-transform uppercase
+      &.active
+        .simple-nav-active-bar
+          display block
+        .item-title
+        .item-desc
+          color dark-white
+    .item-line
+      height 1px
+      width 60%
+      background dark-white
+      margin 48px 10%
+    .more
+      color grey-1
+      font-weight bold
+      font-family SourceSansProBlack
+      text-transform uppercase
+      display inline-block
+      text-decoration none
+      margin 48px 0 96px 10%
+      &:hover
+        color grey
   .header-main
     padding 0
     padding-top 2vh
     color white
     z-index 6
-    .logo
-      width 100%
+    border-left 1px solid rgba(grey, 0.2)
+    .logo-wrapper
+      margin-bottom 20vh
+      .logo
+        width 100%
     .studio-name-wrapper
-      margin-top 20vh
       .studio-name
         color dark-grey
         letter-spacing 1em
@@ -113,22 +157,34 @@
         letter-spacing 0.25em
     .row-inner-wrapper
       padding 0
-    .left-line
     .right-line
       background rgba(grey, 0.2)
       width 1px
       height 100%
-    .left-line
-      absolute left 25% top 0
     .right-line
-      absolute left 83.33333334% top 0
+      absolute left 58.33333333336% top 0
 
 @media(max-width $screen-md) // Tablet
   .header
     padding 5%
-    .studio-name-wrapper
-    .title-wrapper
-      text-align center
-    .left-line
-    .right-line
-      display none
+    .header-main
+      border none
+      .studio-name-wrapper
+      .title-wrapper
+        text-align center
+      .left-line
+      .right-line
+        display none
+
+@media(min-width $screen-md) // Desktop
+  .header
+    .header-main
+      .studio-name-wrapper
+        margin-left -15%
+    .main-row
+      width 100%
+      display table
+      & > [class*="col-"]
+        float none
+        display table-cell
+        vertical-align top
