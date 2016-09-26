@@ -163,13 +163,21 @@ button
     margin 0 1.5em 0 0
     vertical-align middle
 
-@media(max-width $screen-md)
+@media(max-width $screen-md) // Tablet
   .screen-num
     display none
 
-@media(min-width $screen-sm) // Show BS dropdown on hover
+@media(min-width $screen-sm) // Desktop
+  // Show BS dropdown on hover
   .dropdown:hover .dropdown-menu
     display block
+  .md-same-height-row
+    width 100%
+    display table
+    & > [class*="col-"]
+      float none
+      display table-cell
+      vertical-align top
 
 h1, h2, h3, h4, h5, h6
   margin 0

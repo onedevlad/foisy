@@ -1,0 +1,21 @@
+mixin tile-slide(imgSrc, title, date, cat, condenseIcons)
+  .tile-slide-wrapper.col-md-4
+    .tile-slide
+      .img-wrapper
+        img(alt= heading, src= imgSrc)
+      .row.desc-wrapper
+        .col-xs-12.desc
+          .row.cat-wrapper
+            span.cat= cat
+          .row.title-wrapper
+            span.title= title
+          .row
+            .col-xs-12.social-wrapper
+              .row
+                .icon-wrapper(class= condenseIcons ? 'col-xs-1' : 'col-xs-2')
+                  span.icon.ti-heart
+                .icon-wrapper(class= condenseIcons ? 'col-xs-1' : 'col-xs-2')
+                  span.icon.ti-new-window
+                .col-xs-8.date-wrapper
+                  span.icon.ti-calendar
+                  span.date= date

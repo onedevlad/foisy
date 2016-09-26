@@ -1,6 +1,8 @@
 include ../assets/templates/mixins/header
 include ../assets/templates/mixins/slide
+include ../assets/templates/mixins/tile-slide
 include ../assets/templates/mixins/next-step
+include ../assets/templates/mixins/footer
 
 - var mediaUrlPrefix = '../'
 
@@ -130,19 +132,49 @@ html(lang="en")
               span 02
             .row.title-wrapper
               span.stats-icon.ti-stats-up
-              h2.title Trending
+              h3.title Trending
               span.subtitle Content that caught our attention
           .col-md-8.col-md-offset-4.right-part
-            .row.team-wrapper
-              .col-md-8.col-md-offset-4.team-inner-wrapper
-                .team-img-wrapper
-                  a(href= mediaUrlPrefix + 'assets/images/team.png', data-lightbox='screen-2', data-title='Our team')
-                    img.team(alt='Our team', src= mediaUrlPrefix + 'assets/images/team.png')
-                    .img-overlay
-                      img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
-              .line
-              button.learn-more
-                a(href='blog') Learn more
+            .line
+            .row.tile-slider-wrapper
+              .row.slick-slider
+                +tile-slide(mediaUrlPrefix + 'assets/images/yee-zy-360x.jpg', 'Yee-zy 360x',
+                  '3 September 2016', 'Fashion', false)
+                +tile-slide(mediaUrlPrefix + 'assets/images/experiment.jpg', 'National experiment',
+                  '3 September 2016', 'Earth', false)
+                +tile-slide(mediaUrlPrefix + 'assets/images/car.jpg', 'Majestic cars',
+                  '3 September 2016', 'Design', false)
+                +tile-slide(mediaUrlPrefix + 'assets/images/yee-zy-360x.jpg', 'Yee-zy 360x',
+                  '3 September 2016', 'Fashion', false)
+                +tile-slide(mediaUrlPrefix + 'assets/images/experiment.jpg', 'National experiment',
+                  '3 September 2016', 'Earth', false)
+                +tile-slide(mediaUrlPrefix + 'assets/images/car.jpg', 'Majestic cars',
+                  '3 September 2016', 'Design', false)
+                +tile-slide(mediaUrlPrefix + 'assets/images/yee-zy-360x.jpg', 'Yee-zy 360x',
+                  '3 September 2016', 'Fashion', false)
+                +tile-slide(mediaUrlPrefix + 'assets/images/experiment.jpg', 'National experiment',
+                  '3 September 2016', 'Earth', false)
+                +tile-slide(mediaUrlPrefix + 'assets/images/car.jpg', 'Majestic cars',
+                  '3 September 2016', 'Design', false)
+                +tile-slide(mediaUrlPrefix + 'assets/images/yee-zy-360x.jpg', 'Yee-zy 360x',
+                  '3 September 2016', 'Fashion', false)
+                +tile-slide(mediaUrlPrefix + 'assets/images/experiment.jpg', 'National experiment',
+                  '3 September 2016', 'Earth', false)
+                +tile-slide(mediaUrlPrefix + 'assets/images/car.jpg', 'Majestic cars',
+                  '3 September 2016', 'Design', false)
+            .row.slider-data-wrapper
+              .col-md-7.slider-controls-wrapper
+                .slider-controls
+                  .slider-control-box.active
+                  .slider-control-box
+                  .slider-control-box
+                  .slider-control-box
+                  span.middle-dots ···
+                  span.page-num
+                    span.current-slide 01
+                    |  / 04
+              .col-md-5.more-wrapper
+                a(href= mediaUrlPrefix + 'blog').more More trending stories
       .screen-3
         .row.lower-part
           .col-md-4.left-part
@@ -158,13 +190,11 @@ html(lang="en")
             .col-md-8.col-md-offset-4.right-part
               .row
                 .col-md-7.title-wrapper
-                  h2.title Featured stories
-                  span.subtitle Views from the Foisy.
-                .col-md-5.view-blog-wrapper
-                  a.view-blog(href='blog') View blog
+                  h2.title More stories
+                  span.subtitle More pieces of content.
           .row.slider-wrapper
             .slider.col-md-8.col-md-offset-2
-              .row.slick-slider
+              .row
                 +slide( mediaUrlPrefix + 'assets/images/wave.jpg', 'Deep water',
                   'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore',
                   '2 July 2016')
@@ -174,6 +204,7 @@ html(lang="en")
                 +slide( mediaUrlPrefix + 'assets/images/bussiness.jpg', '"Bussiness design"',
                   'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore',
                   '2 July 2016')
+              .row
                 +slide( mediaUrlPrefix + 'assets/images/wave.jpg', 'Deep water',
                   'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore',
                   '2 July 2016')
@@ -183,14 +214,9 @@ html(lang="en")
                 +slide( mediaUrlPrefix + 'assets/images/bussiness.jpg', '"Bussiness design"',
                   'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore',
                   '2 July 2016')
-          .row.slider-controls-wrapper
-            .col-md-8.col-md-offset-4.slider-controls
-              .slider-control-box.active
-              .slider-control-box
-              span.middle-dots ···
-              span.page-num
-                span.current-slide 01
-                |  / 02
-      +nextStep('Meet out curated collection of projects - of all kinds - to taste our aesthetic.', 'Take me there!', mediaUrlPrefix + 'portfolio')
-      include ../assets/templates/footer
+          .row
+            .col-md-8.col-md-offset-4.keep-reading-wrapper
+              a(href= mediaUrlPrefix + 'portfolio').keep-reading Keep reading
+      +footer('Follow along', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, numquam.')
+      //- +footer('Follow along', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, numquam.')
     include ../assets/templates/nav
