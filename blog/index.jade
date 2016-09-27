@@ -1,5 +1,6 @@
 include ../assets/templates/mixins/header
 include ../assets/templates/mixins/slide
+include ../assets/templates/mixins/footer
 
 - var mediaUrlPrefix = '../'
 
@@ -18,7 +19,7 @@ html(lang="en")
     script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/lightbox/js/lightbox.min.js', defer)
     meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
   body
-    +header('', 'Marketing experts', 'We support our vision with a great variety of views.', '', 'Take me there', false, mediaUrlPrefix + 'portfolio-with-images', 2)
+    +header('Marketing experts', 'We support our vision with a great variety of views.', '', 1, [0, 1, 2, 3, 4], null, false, 'Take me there', mediaUrlPrefix + 'portfolio-with-images', false, false, false, null)
     .main
       .screen-1
         .row.lower-part
@@ -97,5 +98,5 @@ html(lang="en")
               .col-md-8.col-md-push-4.more-wrapper
                 button.more
                   a(href= mediaUrlPrefix + 'blog-with-images') More views
-      include ../assets/templates/footer
+      +footer()
     include ../assets/templates/nav

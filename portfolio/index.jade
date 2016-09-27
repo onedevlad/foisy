@@ -1,4 +1,5 @@
 include ../assets/templates/mixins/header
+include ../assets/templates/mixins/footer
 
 - var mediaUrlPrefix = '../'
 
@@ -17,7 +18,7 @@ html(lang="en")
     script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/lightbox/js/lightbox.min.js', defer)
     meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
   body
-    +header('Foisy work', 'Festival', 'A challenging and fun project', '', 'Take me there', false, mediaUrlPrefix + 'blog', 1)
+    +header('Festival', 'A challenging and fun project', '', 2, [0, 1, 2, 3, 4], 'Foisy work', true, 'Take me there', mediaUrlPrefix + 'blog', false, false, null, null)
     .main
       .screen-1
         .row.lower-part
@@ -138,5 +139,5 @@ html(lang="en")
             .col-md-3.col-md-offset-4.more-wrapper
               button.more
                 a(href= mediaUrlPrefix + 'portfolio-with-images') More projects
-      include ../assets/templates/footer
+      +footer()
     include ../assets/templates/nav

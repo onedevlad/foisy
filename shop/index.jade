@@ -1,0 +1,165 @@
+include ../assets/templates/mixins/header
+include ../assets/templates/mixins/slide
+include ../assets/templates/mixins/tile-slide
+include ../assets/templates/mixins/next-step
+include ../assets/templates/mixins/footer
+
+- var mediaUrlPrefix = '../'
+
+doctype traditional
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title Home
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/styles/shop.css')
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/lib/slick/slick.css')
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/lib/slick/slick-theme.css')
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/lib/lightbox/css/lightbox.min.css')
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/lib/themify-icons/styles.css')
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/jquery/jquery.js')
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/scripts/common.js', defer)
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/slick/slick.min.js', defer)
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/lightbox/js/lightbox.min.js', defer)
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/gsap/TweenLite.min.js', defer)
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/gsap/CSSPlugin.min.js', defer)
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/bootstrap/js/dropdown.js', defer)
+    meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
+  body
+    +header('Fashion week', 'We had a comfortable stay at this year\'s New York\'s Fashion Week.', 'Here is what we have obtained.', 6, [6], 'Chapter:', false, 'Read more', mediaUrlPrefix + 'blog', false, false, 'Fashion week\'s review', mediaUrlPrefix + 'blog')
+    .main.container-fluid
+      .screen-1
+        .row
+          .col-md-4.left-part
+            .screen-num
+              .dash
+              span 01
+            .row
+              .col-md-7.col-md-push-5.best-sellers-title-wrapper
+                span.ti-heart.like-icon
+                h3.title Best-sellers
+                span.subtitle Sorted by popularity
+          .col-md-8.right-part
+            .right-line
+            .row.goods-wrapper
+              .col-md-4.goods
+                .img-wrapper
+                  a(href= mediaUrlPrefix + 'assets/images/coat-1.jpg', data-lightbox='screen-1', data-title='A coat')
+                    img.goods-img(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-1.jpg')
+                    .img-overlay
+                      img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
+                .desc-wrapper
+                  h4.goods-title Coat
+                  span.goods-price $  2499.00
+              .col-md-4.col-md-offset-1.goods
+                .img-wrapper
+                  a(href= mediaUrlPrefix + 'assets/images/jacket-1.jpg', data-lightbox='screen-1', data-title='A jacket')
+                    img.goods-img(alt='A jacket', src= mediaUrlPrefix + 'assets/images/jacket-1.jpg')
+                    .img-overlay
+                      img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
+                .desc-wrapper
+                  h4.goods-title Jacket
+                  span.goods-price $  1999.00
+            .row.more-wrapper
+              a(href='portfolio').more Show more
+      .screen-2
+        .row.lower-part
+          .row
+            .col-md-4.left-part
+              .row
+                .col-xs-12.grey-block
+              .row
+                .col-xs-5.women-sign-wrapper
+                  span.women-sign Women
+            .col-md-8.right-part
+              .row
+                .col-xs-3.grey-block
+                .col-xs-4.white-block
+                .col-xs-5.men-sign-wrapper
+                  span.men-sign Men
+        .row.upper-part
+          .row
+            .col-md-12.men-wrapper
+              .img-wrapper
+                .img-inner-wrapper
+                  a(href= mediaUrlPrefix + 'assets/images/men.png', data-lightbox='screen-2', data-title='Men')
+                    img.img(alt='Men', src= mediaUrlPrefix + 'assets/images/men.png')
+                    .img-overlay
+                      img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
+                .subimg-wrapper
+                  a(href= mediaUrlPrefix + 'assets/images/men-1.jpg', data-lightbox='screen-2', data-title='Men')
+                    img.subimg(alt='Men', src= mediaUrlPrefix + 'assets/images/men-1.jpg')
+                    .img-overlay
+                      img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
+              .desc-wrapper
+                h1.title Men
+                span.subtitle Fall 2016
+          .row
+            .col-md-12.women-wrapper
+              .img-wrapper
+                .img-inner-wrapper
+                  a(href= mediaUrlPrefix + 'assets/images/women.png', data-lightbox='screen-2', data-title='Women')
+                    img.img(alt='Women', src= mediaUrlPrefix + 'assets/images/women.png')
+                    .img-overlay
+                      img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
+                .subimg-wrapper
+                  a(href= mediaUrlPrefix + 'assets/images/women-1.jpg', data-lightbox='screen-2', data-title='Women')
+                    img.subimg(alt='Women', src= mediaUrlPrefix + 'assets/images/women-1.jpg')
+                    .img-overlay
+                      img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
+              .desc-wrapper
+                h1.title Women
+                span.subtitle Fall 2016
+          .row
+            .col-md-8.col-md-offset-4.more-wrapper
+              button
+                a.more(href=mediaUrlPrefix + 'blog') Full collection
+      .screen-3
+        .row
+          .col-md-4.left-part
+            .screen-num
+              .dash
+              span 02
+            .row.designer-wrapper
+              .col-md-7.col-md-offset-5.person-wrapper
+                img.avatar(alt='Joshua Carl', src=mediaUrlPrefix + 'assets/images/icons/avatar-5.png')
+                .person-data
+                  span.person-name Joshua Carl
+                  span.person-position Fashion Designer
+            .row
+              .col-md-7.col-md-offset-5.title-wrapper
+                h2.title Geometric
+                  br
+                  |  trench
+                span.price $ 1499.00
+                .buy-wrapper
+                  button
+                    a.buy Buy it now
+          .col-md-8.col-md-offset-4.right-part
+            .line
+            .row.lower-part
+              .grey-block
+              .col-xs-5.pull-right.white-block
+            .row.upper-part
+              .slider-wrapper
+                .slider
+                  .row.one-slide-slick-slider
+                    .slide-wrapper
+                      a(href= mediaUrlPrefix + 'assets/images/coat-2.jpg', data-lightbox='screen-3', data-title='Coat')
+                        img.img(alt='Coat', src= mediaUrlPrefix + 'assets/images/coat-2.jpg')
+                        .img-overlay
+                          img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
+                    .slide-wrapper
+                      a(href= mediaUrlPrefix + 'assets/images/coat-3.jpg', data-lightbox='screen-3', data-title='Coat')
+                        img.img(alt='Coat', src= mediaUrlPrefix + 'assets/images/coat-3.jpg')
+                        .img-overlay
+                          img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
+              .row.slider-controls-wrapper
+                .col-md-8.slider-controls
+                  .slider-control-box.active
+                  .slider-control-box
+                  span.middle-dots ···
+                  span.page-num
+                    span.current-slide 01
+                    |  / 02
+      +footer('Fall \'16 collection', 'We strived. We worked. We created. Meet our long-awaited 2016\'s Fall Collection.')
+    include ../assets/templates/nav

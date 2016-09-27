@@ -1,9 +1,10 @@
 var headerSliderTimeout = 5000
 var scrollDownSpeed = 400
 var lightboxMaxWidth = 2.5
+
 var sliderConfig = {
-  autoPlaySpeed: true,
-  autoplay: 500,
+  autoplay: true,
+  autoplaySpeed: 5000,
   infinite: true,
   slidesToShow: 3,
   slidesToScroll: 3,
@@ -18,6 +19,21 @@ var sliderConfig = {
     },
   }],
 }
+
+var oneSlideSliderConfig = {
+  autoplay: true,
+  autoplaySpeed: 5000,
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+}
+var lightboxConfig = {
+  maxWidth: outerWidth / 2.5,
+  maxHeight: outerHeight / 1.5
+}
+
+
 
 // DO NOT EDIT BELOW THIS POINT
 
@@ -50,9 +66,7 @@ $(document).ready(function(){ // Nav module
 })
 
 $(document).ready(function() { // Lightbox config module
-  lightbox.option({
-    maxWidth: $(window).width() / lightboxMaxWidth
-  })
+  lightbox.option(lightboxConfig)
 })
 
 
@@ -60,6 +74,7 @@ $(document).ready(function() { // Slick config module
   if(jQuery().slick) {
     $('.slick-slider').slick(sliderConfig)
     .on('afterChange', function(slick, currentSlideObj){
+      var activeCheckbox = 0
       if(currentSlideObj.currentSlide >= 0) activeCheckbox = 0
       if(currentSlideObj.currentSlide >= 2) activeCheckbox = 1
       if(currentSlideObj.currentSlide >= 5) activeCheckbox = 2
@@ -79,6 +94,20 @@ $(document).ready(function() { // Slick config module
       }
       $('.slick-slider').slick('slickGoTo', indexToGo)
     })
+
+    $('.one-slide-slick-slider').slick(oneSlideSliderConfig)
+    .on('afterChange', function(slick, currentSlideObj){
+      var activeCheckbox = 0
+      if(currentSlideObj.currentSlide) activeCheckbox = 1
+      $('.slider-control-box.active').removeClass('active')
+      $('.slider-control-box:eq(' + activeCheckbox + ')').addClass('active')
+      $('.current-slide').html('0' + (activeCheckbox + 1))
+    })
+    $('.slider-control-box').click(function(){
+      var index = $(this).index()
+      $('.one-slide-slick-slider').slick('slickGoTo', index)
+    })
+
   }
 })
 
@@ -87,12 +116,13 @@ $(document).ready(function() { // Header slider module
 
   var $activeBox = $('.header-slider-control-box.active')
   var currentHeaderSlide = $activeBox.index() - 1
+  var headerSlidesCount = $('.header-background').length -1
 
   var timeoutFunction = function(){
-    currentHeaderSlide += 1
-    if(currentHeaderSlide > 4) currentHeaderSlide = 0
-
+    if(currentHeaderSlide >= headerSlidesCount) currentHeaderSlide = 0
     $('.header-slider-control-box').eq(currentHeaderSlide).click()
+
+    currentHeaderSlide += 1
   }
 
   $('.header-slider-control-box').click(function(){
@@ -107,7 +137,7 @@ $(document).ready(function() { // Header slider module
     $('.header-current-slide').html('0' + index)
 
     $('.header-background').removeClass('active')
-    $('.header-background-' + index).addClass('active')
+    $('.header-background').eq(currentHeaderSlide).addClass('active')
 
     clearTimeout(timeout)
     timeout = setTimeout(timeoutFunction, headerSliderTimeout)

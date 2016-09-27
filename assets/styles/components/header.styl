@@ -13,18 +13,20 @@
     opacity 0
     &.active
       opacity 1
-    &.header-background-1
+    &.header-background-0
       background-image url(../images/header-texture.png)
-    &.header-background-2
+    &.header-background-1
       background-image url(../images/header-poster.png)
-    &.header-background-3
+    &.header-background-2
       background-image url(../images/header-city.png)
-    &.header-background-4
+    &.header-background-3
       background-image url(../images/header-buttons.png)
-    &.header-background-5
+    &.header-background-4
       background-image url(../images/header-wave.png)
-    &.header-background-6
+    &.header-background-5
       background-image url(../images/header-book.png)
+    &.header-background-6
+      background-image url(../images/header-fashion.png)
   .nav-open-button
     width 24px
     height 24px
@@ -55,7 +57,7 @@
         display none
   .header-slider-controls
     absolute top 2vh left 5%
-    z-index 6
+    z-index 8
     display block
     .header-slider-control-box
       cursor pointer
@@ -126,7 +128,7 @@
     z-index 6
     border-left 1px solid rgba(grey, 0.2)
     .logo-wrapper
-      margin-bottom 20vh
+      margin-bottom 200px
       .logo
         width 100%
     .studio-name-wrapper
@@ -138,23 +140,35 @@
       text-transform uppercase
       font-weight bold
       font-family SourceSansProBlack
+      margin-bottom 48px
     .subtitle-wrapper
-      margin-top 8vh
+      margin-bottom 48px
       color dark-grey
       line-height 2em
     .work-samples-wrapper
-      margin-top 8vh
-      margin-bottom 8vh
+      margin-bottom 48px
       .work-samples
         width 100%
         text-transform uppercase
     .scroll-down-wrapper
-      margin-bottom 8vh
+      margin-bottom 96px
       .scroll-down
         cursor pointer
         text-transform uppercase
         color dark-grey
         letter-spacing 0.25em
+    .left-link-wrapper
+      margin-bottom 96px
+      .left-link
+        cursor pointer
+        text-decoration none
+        font-weight bold
+        font-family SourceSansProBlack
+        text-transform uppercase
+        color dark-grey
+        letter-spacing 0.25em
+        &:hover
+          color white
     .row-inner-wrapper
       padding 0
     .right-line
@@ -179,5 +193,5 @@
 @media(min-width $screen-md) // Desktop
   .header
     .header-main
-      .studio-name-wrapper
+      .studio-name-wrapper.move-left
         margin-left -15%

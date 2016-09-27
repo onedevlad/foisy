@@ -1,27 +1,22 @@
-mixin header(studio, title, subtitle, subtitle2, button, scrollDown, buttonUrl, activeBg, simpleNav)
+mixin header(title, subtitle, subtitle2, activeBg, bgArray, studio, studioMoveLeft, buttonText, buttonUrl, simpleNav, scrollDown, leftLinkText, leftLinkUrl)
   .header.container-fluid
     .row.main-row.md-same-height-row
       a.nav-open-button
         span.line-0
         span.line-1
         span.line-2
-      .header-background.header-background-1(class= activeBg === 0 ? 'active' : '')
-      .header-background.header-background-2(class= activeBg === 1 ? 'active' : '')
-      .header-background.header-background-3(class= activeBg === 2 ? 'active' : '')
-      .header-background.header-background-4(class= activeBg === 3 ? 'active' : '')
-      .header-background.header-background-5(class= activeBg === 4 ? 'active' : '')
-      .header-background.header-background-6(class= activeBg === 5 ? 'active' : '')
+      if(bgArray)
+        -for(var i=0; i < bgArray.length; i++)
+          .header-background(class='header-background-' + bgArray[i], class= activeBg === bgArray[i] ? 'active' : '')
       if(!simpleNav)
         .header-slider-controls
           span.header-page-num
             span.middle-dots ···
             span.header-current-slide 01
-            |  / 05
-          .header-slider-control-box(class= activeBg === 0 ? 'active' : '')
-          .header-slider-control-box(class= activeBg === 1 ? 'active' : '')
-          .header-slider-control-box(class= activeBg === 2 ? 'active' : '')
-          .header-slider-control-box(class= activeBg === 3 ? 'active' : '')
-          .header-slider-control-box(class= activeBg === 4 ? 'active' : '')
+            |  / 0#{bgArray ? bgArray.length : ''}
+          if(bgArray)
+            -for(var i=0; i < bgArray.length; i++)
+              .header-slider-control-box(class= activeBg === bgArray[i] ? 'active' : '')
       .header-simple-nav.col-md-4.hidden-sm.hidden-xs
         if(simpleNav)
           .simple-nav-item-wrapper.active
@@ -60,7 +55,7 @@ mixin header(studio, title, subtitle, subtitle2, button, scrollDown, buttonUrl, 
             .logo-inner-wrapper
               img.logo(alt='Logo', src= mediaUrlPrefix + 'assets/images/icons/logo.png')
         if(studio)
-          .row.studio-name-wrapper
+          .row.studio-name-wrapper(class=  studioMoveLeft ? 'move-left' : '')
             .col-md-7.row-inner-wrapper
               span.studio-name= studio
         .row.title-wrapper
@@ -71,11 +66,15 @@ mixin header(studio, title, subtitle, subtitle2, button, scrollDown, buttonUrl, 
             span.subtitle= subtitle
               br
               span.subtitle-line-2= subtitle2
-        if(button)
+        if(buttonText)
           .row.work-samples-wrapper
             .col-xs-4.col-md-2.col-md-offset-7.row-inner-wrapper
               button.work-samples
-                a(href= buttonUrl)= button
+                a(href= buttonUrl)= buttonText
+        if(leftLinkText)
+          .row.left-link-wrapper
+            .col-md-7.row-inner-wrapper
+              a(href=leftLinkUrl).left-link= leftLinkText
         if(scrollDown)
           .row.scroll-down-wrapper
             .col-md-7.row-inner-wrapper

@@ -1,6 +1,7 @@
 include assets/templates/mixins/header
 include assets/templates/mixins/slide
 include assets/templates/mixins/next-step
+include assets/templates/mixins/footer
 
 - var mediaUrlPrefix = ''
 
@@ -23,7 +24,7 @@ html(lang="en")
     script(type='text/javascript', src='assets/lib/bootstrap/js/dropdown.js', defer)
     meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
   body
-    +header('Foisy studio', 'Little Big Details', 'We are a creative design firm, aiming to give our users what they want;', 'an awesome experience.', 'Our work', true, mediaUrlPrefix + 'portfolio', 0)
+    +header('Little Big Details', 'We are a creative design firm, aiming to give our users what they want;', 'an awesome experience.', 0, [0, 1, 2, 3, 4], 'Foisy studio', true, 'Our work', mediaUrlPrefix + 'portfolio', false, true, false, null)
     .main.container-fluid
       .screen-1
         .row
@@ -137,5 +138,5 @@ html(lang="en")
                 span.current-slide 01
                 |  / 02
       +nextStep('Meet out curated collection of projects - of all kinds - to taste our aesthetic.', 'Take me there!', mediaUrlPrefix + 'portfolio')
-      include assets/templates/footer
+    +footer()
     include assets/templates/nav
