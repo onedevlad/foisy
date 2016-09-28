@@ -1,0 +1,306 @@
+@import 'common'
+
+@import 'components/nav'
+@import 'components/header'
+@import 'components/slider'
+@import 'components/footer'
+@import 'components/travel-post'
+
+
+.main
+  z-index 6
+  position relative
+  padding 0
+  .screen-1
+    position relative
+    .lower-part
+      width 100%
+      height 100%
+      absolute top left
+      .left-part
+        margin-top - block-top-offset
+        background white
+        padding-top block-top-offset + 144px
+        .screen-num
+          top "calc(%s + %s)" % (screen-margin block-top-offset)
+      .right-part
+        height 100%
+        border-left 1px solid dark-grey
+        position relative
+        .white-block
+          border-left 1px solid dark-grey
+    .upper-part
+      position relative
+      z-index 2
+      .images-wrapper
+        position relative
+        .img-wrapper
+          float left
+          position relative
+          &:after
+          &::after
+            content ""
+            width 80%
+            absolute bottom 2px left 10%
+            height 50px
+            background transparent
+            z-index -1
+            border-radius 100%
+            box-shadow 0 0 48px rgba(black, 0.8)
+          .img
+            width 100%
+  .screen-2
+    position relative
+    .lower-part
+      absolute top left
+      width 100%
+      height 100%
+      .left-part
+      .right-part
+        height 100%
+        padding 0
+        .grey-block
+          padding 0
+          height 70vw
+          background grey
+          margin 350px 0 0 0
+        .white-block
+          padding 350px 0 0 0
+          height 100%
+          border-left 1px solid dark-grey
+      .right-part
+        border-left 1px solid dark-grey
+    .upper-part
+      .right-part
+        padding 0
+        .title-wrapper
+          margin 150px 0 0 0
+          .title
+            text-transform uppercase
+          .subtitle
+            margin 24px 0 48px 0
+            display inline-block
+      .posts-wrapper
+        padding 0
+      .more-wrapper
+        padding 0
+  .screen-3
+    position relative
+    .lower-part
+      absolute left top
+      width 100%
+      height 100%
+      .left-part
+        height 100%
+        padding 0
+        .screen-num
+          top "calc(%s + %s)" % (screen-margin block-top-offset)
+      .right-part
+        height 100%
+        padding 0
+        border-left 1px solid dark-grey
+        .grey-block
+          height 100%
+          background grey
+        .line-block
+          border-left 1px solid dark-grey
+    .upper-part
+      .right-part
+        .title-wrapper
+          padding 0
+          .camera-icon
+            color light-black
+            border 1px solid light-grey
+            border-radius 50%
+            padding 0.5em
+          .title
+            margin 48px 0 0 0
+            text-transform uppercase
+        .img-wrapper-1
+          z-index 2
+          padding 0
+          height 250px
+          position relative
+          &.left-img-wrapper
+            padding 0 30px 0 0
+          .img
+            height 100%
+            width 100%
+      .images-wrapper-2
+        margin 48px 0 0 0
+        .img-wrapper-2
+          z-index 2
+          padding 0
+          &.center-img-wrapper
+            padding 0 30px
+          position relative
+          .img
+            width 100%
+      .more-wrapper
+        padding 0
+        display block
+  .screen-4
+    position relative
+    .screen-num
+      top "calc(%s + %s)" % (screen-margin block-top-offset)
+    .lower-part
+      absolute left top
+      width 100%
+      height 100%
+      .left-part
+        height 100%
+      .right-part
+        border-left 1px solid dark-grey
+        padding 0
+        height 100%
+        .grey-block
+          height 100%
+          background grey
+        .line-block
+          border-left 1px solid dark-grey
+    .upper-part
+      position relative
+      z-index 2
+      .right-part
+        padding 0
+        position relative
+        .title-wrapper
+          padding 150px 0 0 0
+          .title
+            font-weight bold
+            font-family SourceSansProBlack
+            text-transform uppercase
+          .subtitle
+            display block
+            margin screen-sub-margin 0
+        .view-blog-wrapper
+          .view-blog
+            color dark-grey
+            cursor pointer
+            text-transform uppercase
+            font-weight bold
+            text-decoration none
+            &:hover
+              color light-black
+      .slider-wrapper
+        margin 0 0 48px 0
+        .slider
+          padding 0
+
+@media(max-width $screen-md) // Tablet
+  .screen-1
+    .lower-part
+      display none
+    .upper-part
+      padding 0 5%
+      .images-wrapper
+        margin 0
+        .img-wrapper
+          margin 48px 0 0 0
+  .screen-2
+    padding 0 5%
+    height auto
+    .lower-part
+      display none
+    .upper-part
+      .men-wrapper
+      .women-wrapper
+        .img-wrapper
+          width 100%
+          margin 0
+          .subimg-wrapper
+            margin 10% 0 0 0
+      .men-wrapper
+        .desc-wrapper
+          right 0
+      .women-wrapper
+        .desc-wrapper
+          left 0
+  .screen-3
+    .lower-part
+      display none
+    .upper-part
+      .right-part
+        padding 150px 5% 0 5%
+        text-align center
+        .img-wrapper-1
+          margin-top 48px
+    .images-wrapper-2
+      padding 0 5%
+      .img-wrapper-2
+        margin-top 48px
+        &.left-img-wrapper
+          margin 0
+    .more-wrapper
+      margin 48px 0 0 5%
+  .screen-4
+    .lower-part
+      display none
+    .upper-part
+      padding 5%
+      text-align center
+      .view-blog-wrapper
+        padding 0
+    .slider-wrapper
+      margin screen-sub-margin 0
+      .slide-wrapper
+        margin-top 48px
+
+@media(min-width $screen-md) // Desktop
+  .screen-1
+    .upper-part
+      .images-wrapper
+        margin-top -300px
+      .img-1
+        margin 10% 0 0 25%
+        width 20%
+        z-index 8
+      .img-2
+        margin 0 0 0 -5%
+        width 25%
+        z-index 9
+      .img-3
+        margin 15% 0 0 -5%
+        width 20%
+        z-index 8
+    .left-part
+      padding 312px 0 screen-sub-margin 0
+    .right-part
+      padding-left 0
+      padding-right 0
+      border-left 1px solid dark-grey
+  .screen-2
+    position relative
+    .upper-part
+      .men-wrapper
+      .women-wrapper
+        .img-wrapper
+          width 55%
+      .men-wrapper
+        .img-wrapper
+          margin-left 17.333334%
+          .subimg-wrapper
+            margin -10% -10% 0 0
+            float right
+        .desc-wrapper
+          left 70%
+      .women-wrapper
+        .img-wrapper
+          margin 0 0 0 33.33334%
+          .subimg-wrapper
+            margin -10% 0 0 -10%
+        .desc-wrapper
+          left 22%
+  .screen-3
+    .upper-part
+      .right-part
+        padding 150px 0 0 0
+      .images-wrapper-2
+        .left-img-wrapper
+          margin -7.5vw 0 0 0
+      .more-wrapper
+        margin-top - 7.5vw
+  .screen-4
+    .upper-part
+      .view-blog-wrapper
+          padding 200px 0 0 0

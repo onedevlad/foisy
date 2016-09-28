@@ -27,6 +27,8 @@
       background-image url(../images/header-book.png)
     &.header-background-6
       background-image url(../images/header-fashion.png)
+    &.header-background-7
+      background-image url(../images/header-downtown.png)
   .nav-open-button
     width 24px
     height 24px
@@ -81,7 +83,7 @@
         color white
   .header-simple-nav
     padding 20vh 0 0 0
-    z-index 7
+    z-index 2
     .simple-nav-item-wrapper
       position relative
       .simple-nav-active-bar
@@ -122,11 +124,13 @@
       &:hover
         color grey
   .header-main
-    padding 0
-    padding-top 2vh
+    padding 2vh 0 0 0
     color white
     z-index 6
     border-left 1px solid rgba(grey, 0.2)
+    &.paddingBottom
+      .logo-wrapper
+        margin-bottom 100px
     .logo-wrapper
       margin-bottom 200px
       .logo
@@ -193,5 +197,7 @@
 @media(min-width $screen-md) // Desktop
   .header
     .header-main
+      &.paddingBottom
+        padding 2vh 0 300px 0
       .studio-name-wrapper.move-left
         margin-left -15%

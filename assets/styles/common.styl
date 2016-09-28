@@ -5,6 +5,7 @@
 grey = #f9f9f9
 light-grey = #eee
 grey-1 = #929292
+grey-2 = #f3f3f3
 blue = #00aff0
 dark-blue = darken(#00aff0, 10)
 dark-grey = #bbb
@@ -162,6 +163,18 @@ button
     background light-black
     margin 0 1.5em 0 0
     vertical-align middle
+
+.block-rounded-shadow
+  &:after
+  &::after
+    content ""
+    width 80%
+    absolute bottom 2px left 10%
+    height 50px
+    background transparent
+    z-index -1
+    border-radius 100%
+    box-shadow 0 0 48px rgba(black, 0.8)
 
 @media(max-width $screen-md) // Tablet
   .screen-num

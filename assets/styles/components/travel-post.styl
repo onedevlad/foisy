@@ -1,0 +1,59 @@
+.post
+  margin 0 0 96px 0
+  .day-wrapper
+    padding 0
+    .day
+      color grey-2
+      font-weight bold
+      white-space nowrap
+      text-transform uppercase
+      font-family SourceSansProBlack
+      font-size 13vw
+  .post-wrapper
+    padding 0
+    .post-img
+      padding 0
+      .img-wrapper
+        z-index 2
+        position relative
+        .img
+          width 100%
+      .img-desc-wrapper
+        padding 0
+        margin-top 24px
+        .img-desc
+          font-family SourceSansProBlack
+          font-weight bold
+          text-transform uppercase
+          color grey-1
+    .post-text
+      padding 48px 0 0 30px
+      .title
+        text-transform uppercase
+      .text
+        display inline-block
+        color grey-1
+        margin 24px 0 24px 0
+        text-align justify
+      .more
+        cursor pointer
+        color grey-1
+        font-weight bold
+        text-transform uppercase
+        text-decoration none
+        font-family SourceSansProBlack
+        &:hover
+          color light-black
+
+@media(max-width $screen-md) // Tablet
+  .post
+    .post-wrapper
+      .post-text
+        padding 48px 0 0 0
+@media(min-width $screen-md) // Desktop
+  .post
+    .day-wrapper
+      margin 48px 0 0 0
+    .post-wrapper
+      .post-text
+        padding 48px 0 0 30px

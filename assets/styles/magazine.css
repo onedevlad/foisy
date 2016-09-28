@@ -2124,6 +2124,21 @@ button a:hover {
   margin: 0 1.5em 0 0;
   vertical-align: middle;
 }
+.block-rounded-shadow:after,
+.block-rounded-shadow::after {
+  content: "";
+  width: 80%;
+  position: absolute;
+  bottom: 2px;
+  left: 10%;
+  height: 50px;
+  background: transparent;
+  z-index: -1;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  -webkit-box-shadow: 0 0 48px rgba(38,38,38,0.8);
+  box-shadow: 0 0 48px rgba(38,38,38,0.8);
+}
 @media (max-width: 992px) {
   .screen-num {
     display: none;
@@ -2307,6 +2322,9 @@ h6 {
 .header .header-background.header-background-6 {
   background-image: url("../images/header-fashion.png");
 }
+.header .header-background.header-background-7 {
+  background-image: url("../images/header-downtown.png");
+}
 .header .nav-open-button {
   width: 24px;
   height: 24px;
@@ -2416,7 +2434,7 @@ h6 {
 }
 .header .header-simple-nav {
   padding: 20vh 0 0 0;
-  z-index: 7;
+  z-index: 2;
 }
 .header .header-simple-nav .simple-nav-item-wrapper {
   position: relative;
@@ -2469,11 +2487,13 @@ h6 {
   color: #f9f9f9;
 }
 .header .header-main {
-  padding: 0;
-  padding-top: 2vh;
+  padding: 2vh 0 0 0;
   color: #fff;
   z-index: 6;
   border-left: 1px solid rgba(249,249,249,0.2);
+}
+.header .header-main.paddingBottom .logo-wrapper {
+  margin-bottom: 100px;
 }
 .header .header-main .logo-wrapper {
   margin-bottom: 200px;
@@ -2558,6 +2578,9 @@ h6 {
   }
 }
 @media (min-width: 992px) {
+  .header .header-main.paddingBottom {
+    padding: 2vh 0 300px 0;
+  }
   .header .header-main .studio-name-wrapper.move-left {
     margin-left: -15%;
   }
@@ -2834,9 +2857,6 @@ h6 {
 .footer .footer-wrapper .right-part .nav-wrapper>ul>li .dropdown-menu li a {
   background: transparent;
 }
-.footer .footer-wrapper .right-part .subheader-wrapper {
-  padding: 0 15px 0 0;
-}
 .footer .footer-wrapper .right-part .subheader-wrapper .subheader {
   color: #f9f9f9;
   text-transform: uppercase;
@@ -2923,7 +2943,7 @@ h6 {
     padding: 0 2em;
   }
   .footer .right-part .subheader-wrapper {
-    padding: 0 15px 0 0;
+    padding: 0 30px 0 0;
     margin: 0 0 96px 0;
   }
   .footer .right-part .search-box-wrapper.top-offset {

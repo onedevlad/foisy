@@ -1,4 +1,4 @@
-mixin header(title, subtitle, subtitle2, activeBg, bgArray, studio, studioMoveLeft, buttonText, buttonUrl, simpleNav, scrollDown, leftLinkText, leftLinkUrl)
+mixin header(title, subtitle, subtitle2, activeBg, bgArray, studio, studioMoveLeft, buttonText, buttonUrl, simpleNav, scrollDown, leftLinkText, leftLinkUrl, paddingBottom)
   .header.container-fluid
     .row.main-row.md-same-height-row
       a.nav-open-button
@@ -49,7 +49,7 @@ mixin header(title, subtitle, subtitle2, activeBg, bgArray, studio, studioMoveLe
               .item-desc
                 span Making hit music since forever...
           a(href='blog').more More stories
-      .col-md-8.header-main
+      .col-md-8.header-main(class= paddingBottom ? 'paddingBottom' : '')
         .row
           .col-xs-4.col-xs-offset-4.col-md-2.col-md-offset-2.logo-wrapper
             .logo-inner-wrapper

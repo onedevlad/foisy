@@ -1,0 +1,158 @@
+include ../assets/templates/mixins/header
+include ../assets/templates/mixins/slide
+include ../assets/templates/mixins/footer
+include ../assets/templates/mixins/travel-post
+
+- var mediaUrlPrefix = '../'
+
+doctype traditional
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title Home
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/styles/travel.css')
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/lib/slick/slick.css')
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/lib/slick/slick-theme.css')
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/lib/lightbox/css/lightbox.min.css')
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/lib/themify-icons/styles.css')
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/jquery/jquery.js')
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/scripts/common.js', defer)
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/slick/slick.min.js', defer)
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/lightbox/js/lightbox.min.js', defer)
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/gsap/TweenLite.min.js', defer)
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/gsap/CSSPlugin.min.js', defer)
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/bootstrap/js/dropdown.js', defer)
+    meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
+  body
+    +header('New York', 'Welcome to our new chapter. This time around, it is New York\'s time', 'to get it\'s spot in my Travel Blog.', 7, [7], 'Chapter:', false, null, null, false, false, null, null, true)
+    .main.container-fluid
+      .screen-1
+        .row.lower-part
+          .col-md-4.left-part
+            .screen-num
+              .dash
+              span 01
+          .col-md-8.right-part
+            .row
+              .col-md-5.col-md-offset-7.white-block
+        .row.upper-part
+          .images-wrapper
+            .img-wrapper.block-rounded-shadow.img-1
+              a(href= mediaUrlPrefix + 'assets/images/cafe.png', data-lightbox='screen-1', data-title='A cafe')
+                img.img(alt='A cafe', src= mediaUrlPrefix + 'assets/images/cafe.png')
+                .img-overlay
+                  img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
+            .img-wrapper.block-rounded-shadow.img-2
+              a(href= mediaUrlPrefix + 'assets/images/subway.png', data-lightbox='screen-1', data-title='A subway')
+                img.img(alt='A subway', src= mediaUrlPrefix + 'assets/images/subway.png')
+                .img-overlay
+                  img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
+            .img-wrapper.block-rounded-shadow.img-3
+              a(href= mediaUrlPrefix + 'assets/images/lake.png', data-lightbox='screen-1', data-title='A lake')
+                img.img(alt='A lake', src= mediaUrlPrefix + 'assets/images/lake.png')
+                .img-overlay
+                  img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
+      .screen-2
+        .row.lower-part
+          .row
+            .col-md-4.left-part
+              .row
+                .col-xs-12.grey-block
+            .col-md-8.right-part
+              .row
+                .col-xs-3.grey-block
+                .col-xs-5.col-xs-offset-4.white-block
+        .row.upper-part
+          .row
+            .col-md-8.col-md-offset-4.right-part
+              .row.title-wrapper
+                h2.title Days in New York
+                span.subtitle The days that follow my visit at the world's capital
+          .row.posts-wrapper
+            +travel-post('Brooklyn Bridge', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laborum error sapiente voluptatibus qui nihil labore, voluptatem, modi ullam explicabo.', 1, '', mediaUrlPrefix + 'assets/images/brooklyn.png', 'screen-2')
+            +travel-post('Statue of Liberty', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laborum error sapiente voluptatibus qui nihil labore, voluptatem, modi ullam explicabo.', 2, '', mediaUrlPrefix + 'assets/images/liberty.png', 'screen-2')
+            +travel-post('The center: Times Square', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laborum error sapiente voluptatibus qui nihil labore, voluptatem, modi ullam explicabo.', 3, '', mediaUrlPrefix + 'assets/images/times-square.png', 'screen-2')
+          .row
+            .col-md-8.col-md-offset-4.more-wrapper
+              button
+                a.more All days
+      .screen-3
+        .row.lower-part
+          .col-md-4.left-part
+            .screen-num
+              .dash
+              span 02
+          .col-md-8.right-part
+            .row
+              .col-md-2.col-md-offset-5.grey-block
+              .col-md-3.grey-block.line-block
+        .row.upper-part
+          .row
+            .col-md-8.col-md-offset-4.right-part
+              .row
+                .col-md-3.title-wrapper
+                  span.camera-icon.ti-camera
+                  h2.title Gallery
+                .col-md-6.block-rounded-shadow.img-wrapper-1.left-img-wrapper
+                  a(href= mediaUrlPrefix + 'assets/images/shop-window.png', data-lightbox='screen-3', data-title='A shop window')
+                    img.img(alt='A shop window', src= mediaUrlPrefix + 'assets/images/shop-window.png')
+                    .img-overlay
+                      img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
+                .col-md-3.block-rounded-shadow.img-wrapper-1.right-img-wrapper
+                  a(href= mediaUrlPrefix + 'assets/images/rooftops.png', data-lightbox='screen-3', data-title='Rooftops')
+                    img.img(alt='Rooftops', src= mediaUrlPrefix + 'assets/images/rooftops.png')
+                    .img-overlay
+                      img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
+          .row.images-wrapper-2
+            .col-md-5.block-rounded-shadow.img-wrapper-2.left-img-wrapper
+              a(href= mediaUrlPrefix + 'assets/images/downtown.png', data-lightbox='screen-3', data-title='Downtown')
+                img.img(alt='Downtown', src= mediaUrlPrefix + 'assets/images/downtown.png')
+                .img-overlay
+                  img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
+            .col-md-5.block-rounded-shadow.img-wrapper-2.center-img-wrapper
+              a(href= mediaUrlPrefix + 'assets/images/thin-building.png', data-lightbox='screen-3', data-title='A building')
+                img.img(alt='A building', src= mediaUrlPrefix + 'assets/images/thin-building.png')
+                .img-overlay
+                  img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
+            .col-md-2.block-rounded-shadow.img-wrapper-2
+              a(href= mediaUrlPrefix + 'assets/images/skyscraper.png', data-lightbox='screen-3', data-title='A skyscraper')
+                img.img(alt='A skyscraper', src= mediaUrlPrefix + 'assets/images/skyscraper.png')
+                .img-overlay
+                  img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
+          .row
+            .col-md-8.col-md-offset-4.more-wrapper
+              button
+                a.more Full album
+      .screen-4
+        .row.lower-part
+          .col-md-4.left-part
+            .screen-num
+              .dash
+              span 03
+          .col-md-8.right-part
+            .row
+              .col-md-2.col-md-offset-5.grey-block
+              .col-md-3.grey-block.line-block
+        .row.upper-part
+          .row
+            .col-md-8.col-md-offset-4.right-part
+              .row
+                .col-md-7.title-wrapper
+                  h2.title Past travel stories
+                  span.subtitle Meet my past
+                .col-md-5.view-blog-wrapper
+                  a.view-blog(href=mediaUrlPrefix + 'blog') View all
+          .row.slider-wrapper
+            .slider.col-md-8.col-md-offset-2
+              .row
+                +slide( mediaUrlPrefix + 'assets/images/canada.png', 'Canada',
+                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore',
+                  '2 July 2016')
+                +slide( mediaUrlPrefix + 'assets/images/spain.png', 'Spain',
+                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore',
+                  '2 July 2016')
+                +slide( mediaUrlPrefix + 'assets/images/japan-1.png', 'Japan',
+                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore',
+                  '2 July 2016')
+      +footer()
+    include ../assets/templates/nav
