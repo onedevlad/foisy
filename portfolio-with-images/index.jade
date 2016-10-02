@@ -1,15 +1,11 @@
-include ../assets/templates/mixins/header
-include ../assets/templates/mixins/next-step
-include ../assets/templates/mixins/footer
-
-- var mediaUrlPrefix = '../'
+include ../assets/templates/configs/portfolio-with-images
 
 doctype traditional
 html(lang="en")
   head
     meta(charset="UTF-8")
-    title Foisy
-    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/styles/portfolio2.css')
+    title Portfolio - Foisy
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/styles/portfolio-with-images.css')
     link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/lib/lightbox/css/lightbox.min.css')
     link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/lib/themify-icons/styles.css')
     script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/jquery/jquery.js')
@@ -19,7 +15,7 @@ html(lang="en")
     script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/gsap/CSSPlugin.min.js', defer)
     meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
   body
-    +header('Projects', 'We support our vision with a great variety of work.', '', 4, [0, 1, 2, 3, 4], 'Foisy work', true, 'Take me there', mediaUrlPrefix + 'blog-with-images', false, false, null, null)
+    +header(headerConfig)
     .main
       .screen-1
         .row.lower-part

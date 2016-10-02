@@ -1,0 +1,27 @@
+include ../mixins/header
+include ../mixins/next-step
+include ../mixins/footer
+
+- var mediaUrlPrefix = '../'
+
+-
+  var headerConfig = {
+    studioName: {
+      text: 'Foisy work',
+      moveLeft: true,
+    },
+    title: {
+      text: 'Projects',
+    },
+    subtitle: {
+      text: 'We support our vision with a great variety of work.',
+    },
+    button: {
+      text: 'Take me there',
+      url: mediaUrlPrefix + 'blog-with-images',
+    },
+    bg: {
+      all: [0, 1, 2 , 3 , 4],
+      start: 4,
+    },
+  }

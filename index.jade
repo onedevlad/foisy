@@ -1,15 +1,10 @@
-include assets/templates/mixins/header
-include assets/templates/mixins/slide
-include assets/templates/mixins/next-step
-include assets/templates/mixins/footer
-
-- var mediaUrlPrefix = ''
+include assets/templates/configs/index.jade
 
 doctype traditional
 html(lang="en")
   head
     meta(charset="UTF-8")
-    title Home
+    title Home - Foisy
     link(rel='stylesheet', type='text/css', href='assets/styles/index.css')
     link(rel='stylesheet', type='text/css', href='assets/lib/slick/slick.css')
     link(rel='stylesheet', type='text/css', href='assets/lib/slick/slick-theme.css')
@@ -24,7 +19,7 @@ html(lang="en")
     script(type='text/javascript', src='assets/lib/bootstrap/js/dropdown.js', defer)
     meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
   body
-    +header('Little Big Details', 'We are a creative design firm, aiming to give our users what they want;', 'an awesome experience.', 0, [0, 1, 2, 3, 4], 'Foisy studio', true, 'Our work', mediaUrlPrefix + 'portfolio', false, true, false, null)
+    +header(headerConfig)
     .main.container-fluid
       .screen-1
         .row

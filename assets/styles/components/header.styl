@@ -32,7 +32,7 @@
   .nav-open-button
     width 24px
     height 24px
-    absolute top 2vh right 5%
+    absolute top 30px right 5%
     z-index 9
     cursor pointer
     transition transform 0.2s ease
@@ -58,9 +58,12 @@
       .line-2
         display none
   .header-slider-controls
-    absolute top 2vh left 5%
+    absolute top 30px left 5%
     z-index 8
     display block
+    color grey-1
+    font-family SourceSansProBlack
+    font-weight bold
     .header-slider-control-box
       cursor pointer
       display block
@@ -78,7 +81,6 @@
       .middle-dots
         letter-spacing 0.25em
         margin 0 0.5em
-        font-weight bold
       .header-current-slide
         color white
   .header-simple-nav
@@ -124,14 +126,18 @@
       &:hover
         color grey
   .header-main
-    padding 2vh 0 0 0
+    padding 30px 0 0 0
     color white
     z-index 6
     border-left 1px solid rgba(grey, 0.2)
-    &.paddingBottom
+    &.reduced-logo-margin
       .logo-wrapper
         margin-bottom 100px
     .logo-wrapper
+      width 8%
+      margin-left 20%
+      display block
+      cursor pointer
       margin-bottom 200px
       .logo
         width 100%
@@ -145,6 +151,7 @@
       font-weight bold
       font-family SourceSansProBlack
       margin-bottom 48px
+      white-space nowrap
     .subtitle-wrapper
       margin-bottom 48px
       color dark-grey
@@ -162,7 +169,7 @@
         color dark-grey
         letter-spacing 0.25em
     .left-link-wrapper
-      margin-bottom 96px
+      margin 144px 0 200px 0
       .left-link
         cursor pointer
         text-decoration none
@@ -197,7 +204,7 @@
 @media(min-width $screen-md) // Desktop
   .header
     .header-main
-      &.paddingBottom
-        padding 2vh 0 300px 0
+      &.padding-bottom
+        padding 30px 0 300px 0
       .studio-name-wrapper.move-left
         margin-left -15%

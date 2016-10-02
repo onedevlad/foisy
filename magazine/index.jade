@@ -1,16 +1,10 @@
-include ../assets/templates/mixins/header
-include ../assets/templates/mixins/slide
-include ../assets/templates/mixins/tile-slide
-include ../assets/templates/mixins/next-step
-include ../assets/templates/mixins/footer
-
-- var mediaUrlPrefix = '../'
+include ../assets/templates/configs/magazine
 
 doctype traditional
 html(lang="en")
   head
     meta(charset="UTF-8")
-    title Home
+    title Magazine - Foisy
     link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/styles/magazine.css')
     link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/lib/slick/slick.css')
     link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/lib/slick/slick-theme.css')
@@ -25,7 +19,7 @@ html(lang="en")
     script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/bootstrap/js/dropdown.js', defer)
     meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
   body
-    +header('Dieter Rams <br/> Documentary', 'The world\'s first documentary on legendary designer Dieter Rams, and in', 'helping preserve his design archive.', 5, [5], null, false, 'Read more', mediaUrlPrefix + 'portfolio', true, false, null, null)
+    +header(headerConfig)
     .main.container-fluid
       .screen-1
         .row

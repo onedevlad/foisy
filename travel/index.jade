@@ -1,15 +1,10 @@
-include ../assets/templates/mixins/header
-include ../assets/templates/mixins/slide
-include ../assets/templates/mixins/footer
-include ../assets/templates/mixins/travel-post
-
-- var mediaUrlPrefix = '../'
+include ../assets/templates/configs/travel
 
 doctype traditional
 html(lang="en")
   head
     meta(charset="UTF-8")
-    title Home
+    title Travel - Foisy
     link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/styles/travel.css')
     link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/lib/slick/slick.css')
     link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/lib/slick/slick-theme.css')
@@ -24,7 +19,7 @@ html(lang="en")
     script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/bootstrap/js/dropdown.js', defer)
     meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
   body
-    +header('New York', 'Welcome to our new chapter. This time around, it is New York\'s time', 'to get it\'s spot in my Travel Blog.', 7, [7], 'Chapter:', false, null, null, false, false, null, null, true)
+    +header(headerConfig)
     .main.container-fluid
       .screen-1
         .row.lower-part

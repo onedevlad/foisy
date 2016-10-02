@@ -38,12 +38,17 @@
         color light-black
       .social-wrapper
         padding 0
+        text-align left
         margin-top 2em
         margin-bottom 1em
-        .icon-wrapper
+        .button-wrapper
+          margin-right 1vw
           padding 0
+          display inline-block
+          font-size 12px
+          line-height 12px
+          cursor pointer
           .icon
-            font-size 12px
             padding 0.5em
             border 1px solid light-grey
             border-radius 50%
@@ -55,13 +60,8 @@
             &.ti-new-window:hover
               background blue
               border-color blue
-        .date-wrapper
-          line-height 12px
-          font-size 12px
-          cursor pointer
-          position relative
           .date
-            margin-left 1em
+            padding-left 1em
 
 @media(max-width $screen-md) // Tablet
   .slide-wrapper
