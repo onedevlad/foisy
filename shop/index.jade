@@ -27,33 +27,27 @@ html(lang="en")
               .dash
               span 01
             .row
-              .col-md-7.col-md-push-5.best-sellers-title-wrapper
-                span.ti-heart.like-icon
-                h3.title Best-sellers
-                span.subtitle Sorted by popularity
+              .col-md-3.col-md-push-8.preview-wrapper
+                img.img.preview-1(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-4.jpg')
+                img.img.preview-2(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-5.jpg')
+                img.img.preview-3(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-6.jpg')
+                img.img.preview-4(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-7.jpg')
+                img.img.preview-5(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-2.jpg')
           .col-md-8.right-part
             .right-line
             .row.goods-wrapper
-              .col-md-4.goods
-                .img-wrapper
-                  a(href= mediaUrlPrefix + 'assets/images/coat-1.jpg', data-lightbox='screen-1', data-title='A coat')
-                    img.goods-img(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-1.jpg')
-                    .img-overlay
-                      img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
+              .col-md-8.main-preview
+                .slider-wrapper.one-slide-slick-slider.block-rounded-shadow
+                  img.goods-img(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-2.jpg')
+                  img.goods-img(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-4.jpg')
+                  img.goods-img(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-5.jpg')
+                  img.goods-img(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-6.jpg')
+                  img.goods-img(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-7.jpg')
                 .desc-wrapper
-                  h4.goods-title Coat
-                  span.goods-price $ 2499.00
-              .col-md-4.col-md-offset-1.goods
-                .img-wrapper
-                  a(href= mediaUrlPrefix + 'assets/images/jacket-1.jpg', data-lightbox='screen-1', data-title='A jacket')
-                    img.goods-img(alt='A jacket', src= mediaUrlPrefix + 'assets/images/jacket-1.jpg')
-                    .img-overlay
-                      img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
-                .desc-wrapper
-                  h4.goods-title Jacket
-                  span.goods-price $ 1999.00
+                  h4.goods-title Geometry Trench
+                  span.goods-price $ 2999.00
             .row.more-wrapper
-              a(href='portfolio').more Show more
+              a(href='portfolio').more Buy more
       .screen-2
         .row.lower-part
           .row

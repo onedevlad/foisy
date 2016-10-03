@@ -18,50 +18,34 @@
       padding-top block-top-offset + 144px
       .screen-num
         top "calc(%s + %s)" % (screen-margin block-top-offset)
-      .best-sellers-title-wrapper
-        margin-top 48px
-        padding 0
-        .like-icon
-          color light-black
-          border 1px solid light-grey
-          border-radius 50%
-          padding 0.5em
-        .title
-          margin 48px 0 12px 0
-          text-transform uppercase
+     .preview-wrapper
+       .img
+         display block
+         margin-bottom 24px
+         width 100%
+         cursor pointer
     .right-part
+      padding-top 144px
       position relative
       .right-line
         width 1px
         height 100%
-        absolute left 58.33333336%
+        absolute top left 58.33333336%
         background dark-grey
-      .goods-wrapper
-        margin-top 144px
-        .goods
-          padding 0
-          position relative
-          .img-wrapper
-            position relative
-            .goods-img
-              width 100%
-            &:after
-            &::after
-              content ""
-              width 80%
-              absolute bottom 2px left 10%
-              height 50px
-              background transparent
-              z-index -1
-              border-radius 100%
-              box-shadow 0 0 48px rgba(black, 0.8)
-          .desc-wrapper
-            margin-top 48px
-            .goods-title
-              text-transform uppercase
-            .goods-price
-              display inline-block
-              margin-top 12px
+      .main-preview
+        padding 0
+        .slider-wrapper
+          height 500px
+          .goods-img
+            width 100%
+            height 100%
+        .desc-wrapper
+          margin-top 48px
+          .goods-title
+            text-transform uppercase
+          .goods-price
+            display inline-block
+            margin-top 12px
       .more-wrapper
         margin 48px 0 0 0
         .more

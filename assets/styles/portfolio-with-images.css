@@ -2477,7 +2477,7 @@ h6 {
 .header .header-simple-nav .item-line {
   height: 1px;
   width: 60%;
-  background: #dcdcdc;
+  background: #3d3d3d;
   margin: 48px 10%;
 }
 .header .header-simple-nav .more {
@@ -2770,7 +2770,7 @@ h6 {
     padding: 96px 0 0 0;
   }
   .footer .right-part .nav-wrapper {
-    margin: 24px 0 96px 0;
+    margin: 24px 0 144px 0;
   }
   .footer .right-part .nav-wrapper ul li {
     padding: 0 2em;

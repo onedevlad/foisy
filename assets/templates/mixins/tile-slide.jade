@@ -9,13 +9,11 @@ mixin tile-slide(imgSrc, title, date, cat, condenseIcons)
             span.cat= cat
           .row.title-wrapper
             span.title= title
-          .row
-            .col-xs-12.social-wrapper
-              .row
-                .icon-wrapper(class= condenseIcons ? 'col-xs-1' : 'col-xs-2')
-                  span.icon.ti-heart
-                .icon-wrapper(class= condenseIcons ? 'col-xs-1' : 'col-xs-2')
-                  span.icon.ti-new-window
-                .col-xs-8.date-wrapper
-                  span.icon.ti-calendar
-                  span.date= date
+          .row.social-wrapper
+            .button-wrapper
+              span.icon.ti-heart
+            .button-wrapper
+              span.icon.ti-new-window
+            .button-wrapper
+              span.icon.ti-calendar
+              span.date= date
