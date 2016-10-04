@@ -1,0 +1,86 @@
+include ../assets/templates/configs/shop-with-images
+
+doctype traditional
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title Shop - Foisy
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/styles/shop-with-images.css')
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/lib/slick/slick.css')
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/lib/slick/slick-theme.css')
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/lib/lightbox/css/lightbox.min.css')
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/lib/themify-icons/styles.css')
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/jquery/jquery.js')
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/scripts/common.js', defer)
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/slick/slick.min.js', defer)
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/lightbox/js/lightbox.min.js', defer)
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/gsap/TweenLite.min.js', defer)
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/gsap/CSSPlugin.min.js', defer)
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/bootstrap/js/dropdown.js', defer)
+    meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
+  body
+    +header(headerConfig)
+    .main.container-fluid
+      .screen-1
+        .row
+          .col-md-4.left-part
+            .screen-num
+              .dash
+              span 01
+            .row
+              .col-md-6.col-md-push-6.selection-config-wrapper
+                .cat-wrapper.categories-cat
+                  span.title Categories
+                  span.cat Shop men
+                  span.cat Shop women
+                  span.cat Shop kids
+                .cat-wrapper
+                  span.title Tags
+                  span.cat Jeans
+                  span.cat Design
+                  span.cat Art
+                  span.cat T-shirts
+                .cat-wrapper
+                  span.title Price range
+                  input.range(type='range', min='0', max='3000', step='10')
+                  span.cat.output $95 - $200
+          .col-md-8.right-part
+            .right-line
+            .row.goods-wrapper
+              
+      .screen-2
+        .row.lower-part
+          .col-md-8.col-md-offset-4.right-part
+            .row
+              .col-md-1.col-md-offset-6.grey-block-wrapper
+                .grey-block
+              .col-md-5.line-wrapper
+                .grey-block
+        .row.upper-part
+          .row.title-wrapper
+            .col-md-8.col-md-push-4.title-inner-wrapper
+              h3.title Related products
+          .row.products-wrapper
+            .col-md-8.col-md-offset-2.products-inner-wrapper
+              .row
+                .col-md-4.product
+                  .img-wrapper
+                    img.img(alt='A coat', src=mediaUrlPrefix + 'assets/images/coat-1.jpg')
+                  h4.subtitle Coat
+                  span.price $2400.00
+                .col-md-4.product
+                  .img-wrapper
+                    img.img(alt='A jacket', src=mediaUrlPrefix + 'assets/images/jacket-1.jpg')
+                  h4.subtitle Jacket
+                  span.price $2500.00
+                .col-md-4.product
+                  .img-wrapper
+                    img.img(alt='A trench', src=mediaUrlPrefix + 'assets/images/coat-8.png')
+                  h4.subtitle Trench
+                  span.price $2300.00
+          .row
+            .col-md-8.col-md-offset-4.more-wrapper
+              button.more
+                a(href='') More products
+      +footer()
+    include ../assets/templates/nav

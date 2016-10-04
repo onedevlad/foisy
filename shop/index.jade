@@ -1,4 +1,5 @@
 include ../assets/templates/configs/shop
+
 doctype traditional
 html(lang="en")
   head
@@ -28,125 +29,81 @@ html(lang="en")
               span 01
             .row
               .col-md-3.col-md-push-8.preview-wrapper
-                img.img.preview-1(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-4.jpg')
-                img.img.preview-2(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-5.jpg')
-                img.img.preview-3(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-6.jpg')
-                img.img.preview-4(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-7.jpg')
-                img.img.preview-5(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-2.jpg')
+                img.img-preview(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-4.jpg')
+                img.img-preview(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-5.jpg')
+                img.img-preview(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-6.jpg')
+                img.img-preview(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-7.jpg')
+                img.img-preview(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-2.jpg')
+            .row.grey-block
           .col-md-8.right-part
             .right-line
             .row.goods-wrapper
               .col-md-8.main-preview
-                .slider-wrapper.one-slide-slick-slider.block-rounded-shadow
-                  img.goods-img(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-2.jpg')
-                  img.goods-img(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-4.jpg')
-                  img.goods-img(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-5.jpg')
-                  img.goods-img(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-6.jpg')
-                  img.goods-img(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-7.jpg')
+                .grey-block
+                .slider-wrapper.block-rounded-shadow
+                  .slider.fade-slick-slider
+                    img.goods-img(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-4.jpg')
+                    img.goods-img(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-5.jpg')
+                    img.goods-img(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-6.jpg')
+                    img.goods-img(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-7.jpg')
+                    img.goods-img(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-2.jpg')
                 .desc-wrapper
                   h4.goods-title Geometry Trench
                   span.goods-price $ 2999.00
+                .line-wrapper
             .row.more-wrapper
-              a(href='portfolio').more Buy more
+              button.more
+                a(href=mediaUrlPrefix + 'portfolio') Buy now
+            .row.desc-wrapper
+              .col-md-7.desc-inner-wrapper
+                span.desc Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias eaque doloremque culpa mollitia! Soluta explicabo ad velit rem. Omnis provident aperiam deserunt obcaecati aliquid architecto libero quia illum doloribus laudantium, ducimus error non qui magnam amet hic! Aliquam autem, explicabo veniam quaerat debitis ea, molestias facere dicta! Temporibus, in, accusamus!
+                .horizontal-line
+            .row.replies-wrapper
+              .title-wrapper
+                span.like-icon.ti-heart
+                h4.title Geometric trench's buyers
+                span.subtitle Tag your photo #Foisy_The_name_of_the_product
+              .row
+                .col-md-12.slider-wrapper-2
+                  .row
+                    .col-md-6.slider-inner-wrapper.one-slide-slick-slider
+                      +reply(mediaUrlPrefix + 'assets/images/crowd.png', mediaUrlPrefix + 'assets/images/icons/avatar-6.png', 'Jack_01', '"Gotta love this shirt man, can\'t wait for the new collection. #fall #2016"')
+                      +reply(mediaUrlPrefix + 'assets/images/crowd.png', mediaUrlPrefix + 'assets/images/icons/avatar-1.png', 'John_89', '"Gotta love this shirt man, can\'t wait for the new collection. #fall #2016"')
+                      +reply(mediaUrlPrefix + 'assets/images/crowd.png', mediaUrlPrefix + 'assets/images/icons/avatar-2.png', 'James', '"Gotta love this shirt man, can\'t wait for the new collection. #fall #2016"')
+                    .col-md-1.next-arrow
       .screen-2
         .row.lower-part
-          .row
-            .col-md-4.left-part
-              .row
-                .col-xs-12.grey-block
-              .row
-                .col-xs-5.women-sign-wrapper
-                  span.women-sign Women
-            .col-md-8.right-part
-              .row
-                .col-xs-3.grey-block
-                .col-xs-4.white-block
-                .col-xs-5.men-sign-wrapper
-                  span.men-sign Men
+          .col-md-8.col-md-offset-4.right-part
+            .row
+              .col-md-1.col-md-offset-6.grey-block-wrapper
+                .grey-block
+              .col-md-5.line-wrapper
+                .grey-block
         .row.upper-part
-          .row
-            .col-md-12.men-wrapper
-              .img-wrapper
-                .img-inner-wrapper
-                  a(href= mediaUrlPrefix + 'assets/images/men.png', data-lightbox='screen-2', data-title='Men')
-                    img.img(alt='Men', src= mediaUrlPrefix + 'assets/images/men.png')
-                    .img-overlay
-                      img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
-                .subimg-wrapper
-                  a(href= mediaUrlPrefix + 'assets/images/men-1.jpg', data-lightbox='screen-2', data-title='Men')
-                    img.subimg(alt='Men', src= mediaUrlPrefix + 'assets/images/men-1.jpg')
-                    .img-overlay
-                      img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
-              .desc-wrapper
-                h1.title Men
-                span.subtitle Fall 2016
-          .row
-            .col-md-12.women-wrapper
-              .img-wrapper
-                .img-inner-wrapper
-                  a(href= mediaUrlPrefix + 'assets/images/women.png', data-lightbox='screen-2', data-title='Women')
-                    img.img(alt='Women', src= mediaUrlPrefix + 'assets/images/women.png')
-                    .img-overlay
-                      img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
-                .subimg-wrapper
-                  a(href= mediaUrlPrefix + 'assets/images/women-1.jpg', data-lightbox='screen-2', data-title='Women')
-                    img.subimg(alt='Women', src= mediaUrlPrefix + 'assets/images/women-1.jpg')
-                    .img-overlay
-                      img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
-              .desc-wrapper
-                h1.title Women
-                span.subtitle Fall 2016
+          .row.title-wrapper
+            .col-md-8.col-md-push-4.title-inner-wrapper
+              h3.title Related products
+          .row.products-wrapper
+            .col-md-8.col-md-offset-2.products-inner-wrapper
+              .row
+                .col-md-4.product
+                  .img-wrapper
+                    img.img(alt='A coat', src=mediaUrlPrefix + 'assets/images/coat-1.jpg')
+                  h4.subtitle Coat
+                  span.price $2400.00
+                .col-md-4.product
+                  .img-wrapper
+                    img.img(alt='A jacket', src=mediaUrlPrefix + 'assets/images/jacket-1.jpg')
+                  h4.subtitle Jacket
+                  span.price $2500.00
+                .col-md-4.product
+                  .img-wrapper
+                    img.img(alt='A trench', src=mediaUrlPrefix + 'assets/images/coat-8.png')
+                  h4.subtitle Trench
+                  span.price $2300.00
           .row
             .col-md-8.col-md-offset-4.more-wrapper
-              button
-                a.more(href=mediaUrlPrefix + 'blog') Full collection
-      .screen-3
-        .row
-          .col-md-4.left-part
-            .screen-num
-              .dash
-              span 02
-            .row.designer-wrapper
-              .col-md-7.col-md-offset-5.person-wrapper
-                img.avatar(alt='Joshua Carl', src=mediaUrlPrefix + 'assets/images/icons/avatar-5.png')
-                .person-data
-                  span.person-name Joshua Carl
-                  span.person-position Fashion Designer
-            .row
-              .col-md-7.col-md-offset-5.title-wrapper
-                h2.title Geometric
-                  br
-                  |  trench
-                span.price $ 1499.00
-                .buy-wrapper
-                  button
-                    a.buy Buy it now
-          .col-md-8.col-md-offset-4.right-part
-            .line
-            .row.lower-part
-              .grey-block
-              .col-xs-5.pull-right.white-block
-            .row.upper-part
-              .slider-wrapper
-                .slider
-                  .row.one-slide-slick-slider
-                    .slide-wrapper
-                      a(href= mediaUrlPrefix + 'assets/images/coat-2.jpg', data-lightbox='screen-3', data-title='Coat')
-                        img.img(alt='Coat', src= mediaUrlPrefix + 'assets/images/coat-2.jpg')
-                        .img-overlay
-                          img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
-                    .slide-wrapper
-                      a(href= mediaUrlPrefix + 'assets/images/coat-3.jpg', data-lightbox='screen-3', data-title='Coat')
-                        img.img(alt='Coat', src= mediaUrlPrefix + 'assets/images/coat-3.jpg')
-                        .img-overlay
-                          img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
-              .row.slider-controls-wrapper
-                .col-md-8.slider-controls
-                  .slider-control-box.active
-                  .slider-control-box
-                  span.middle-dots ···
-                  span.page-num
-                    span.current-slide 01
-                    |  / 02
-      +footer('Fall \'16 collection', 'We strived. We worked. We created. Meet our long-awaited 2016\'s Fall Collection.')
+              button.more
+                a(href='') More products
+      +footer()
     include ../assets/templates/nav

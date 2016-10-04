@@ -1,0 +1,18 @@
+input[type="range"] {
+  height: 5px;
+  outline: none;
+  background: light-black;
+  -webkit-appearance: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  width: 1em;
+  height: 1em;
+  cursor: pointer;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  background: light-black;
+  -webkit-appearance: none;
+}
+input[type='range']:focus::-webkit-slider-thumb {
+  background: light-black;
+}

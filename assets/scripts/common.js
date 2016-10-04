@@ -2,13 +2,16 @@ var headerSliderTimeout = 5000
 var scrollDownSpeed = 400
 var lightboxMaxWidth = 2.5
 
-var sliderConfig = {
+var defaultSliderConfig = {
   autoplay: true,
   autoplaySpeed: 5000,
   infinite: true,
+  arrows: false,
+}
+
+var sliderConfig = Object.assign(defaultSliderConfig, {
   slidesToShow: 3,
   slidesToScroll: 3,
-  arrows: false,
   responsive: [{
     breakpoint: 992,
     settings: {
@@ -18,16 +21,23 @@ var sliderConfig = {
       dots: true,
     },
   }],
-}
+})
 
-var oneSlideSliderConfig = {
-  autoplay: true,
-  autoplaySpeed: 5000,
-  infinite: true,
-  slidesToShow: 1,
+var oneSlideSliderConfig = Object.assign({}, defaultSliderConfig, {
   slidesToScroll: 1,
-  arrows: false,
-}
+  slidesToShow: 1,
+})
+
+var fadeSliderConfig = Object.assign({}, oneSlideSliderConfig, {
+  fade: true,
+  responsive: [{
+    breakpoint: 992,
+    settings: {
+      fade: false,
+    },
+  }],
+})
+
 var lightboxConfig = {
   maxWidth: outerWidth / 2.5,
   maxHeight: outerHeight / 1.5
@@ -107,8 +117,27 @@ $(document).ready(function() { // Slick config module
       var index = $(this).index()
       $('.one-slide-slick-slider').slick('slickGoTo', index)
     })
-
+    $('.fade-slick-slider').slick(fadeSliderConfig)
+    .on('afterChange', function(slick, currentSlideObj){
+      var activeCheckbox = 0
+      if(currentSlideObj.currentSlide) activeCheckbox = 1
+      $('.slider-control-box.active').removeClass('active')
+      $('.slider-control-box:eq(' + activeCheckbox + ')').addClass('active')
+      $('.current-slide').html('0' + (activeCheckbox + 1))
+    })
+    $('.slider-control-box').click(function(){
+      var index = $(this).index()
+      $('.one-slide-slick-slider').slick('slickGoTo', index)
+    })
   }
+  $('.next-arrow').click(function(){
+    $('.one-slide-slick-slider').slick('slickNext')
+  })
+  $('.img-preview').each(function(i, el){
+    $(el).click(function(){
+      $('.fade-slick-slider').slick('slickGoTo', i)
+    })
+  })
 })
 
 $(document).ready(function() { // Header slider module

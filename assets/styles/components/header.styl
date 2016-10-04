@@ -29,6 +29,8 @@
       background-image url(../images/header-fashion.png)
     &.header-background-7
       background-image url(../images/header-downtown.png)
+    &.header-background-8
+      background-image url(../images/header-wardrobe.png)
   .nav-open-button
     width 24px
     height 24px
@@ -134,8 +136,6 @@
       .logo-wrapper
         margin-bottom 100px
     .logo-wrapper
-      width 8%
-      margin-left 20%
       display block
       cursor pointer
       margin-bottom 200px
@@ -151,7 +151,6 @@
       font-weight bold
       font-family SourceSansProBlack
       margin-bottom 48px
-      white-space nowrap
     .subtitle-wrapper
       margin-bottom 48px
       color dark-grey
@@ -194,6 +193,9 @@
     padding 5%
     .header-main
       border none
+      .logo-wrapper
+        width 30%
+        margin-left 30%
       .studio-name-wrapper
       .title-wrapper
         text-align center
@@ -204,7 +206,12 @@
 @media(min-width $screen-md) // Desktop
   .header
     .header-main
+      .logo-wrapper
+        width 8%
+        margin-left 20%
       &.padding-bottom
         padding 30px 0 300px 0
       .studio-name-wrapper.move-left
         margin-left -15%
+      .title
+        white-space nowrap

@@ -4,6 +4,7 @@
 @import 'components/header'
 @import 'components/slider'
 @import 'components/reply'
+@import 'components/input-range.styl'
 @import 'components/footer'
 
 .main
@@ -17,18 +18,23 @@
       padding-top block-top-offset + 144px
       .screen-num
         top "calc(%s + %s)" % (screen-margin block-top-offset)
-      .preview-wrapper
-        z-index 2
-        .img-preview
-          display block
-          margin-bottom 24px
-          width 100%
+      .cat-wrapper
+        margin-top 48px
+        .title
+          font-family SourceSansProBlack
+          font-weight bold
+          text-transform uppercase
+          margin-bottom 12px
+          display inline-block
+          font-size 16px
+        .cat
+          font-size 14px
+          padding 0.5em 0
           cursor pointer
-      .grey-block
-        absolute top 40% left
-        background grey
-        width 130%
-        height 60%
+          display block
+          text-transform uppercase
+      .categories-cat
+        margin-top 96px
     .right-part
       position relative
       .right-line
