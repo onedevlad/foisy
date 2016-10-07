@@ -38,6 +38,18 @@ var fadeSliderConfig = Object.assign({}, oneSlideSliderConfig, {
   }],
 })
 
+var lazySliderConfig = Object.assign({}, oneSlideSliderConfig, {
+  autoplay: false,
+  fade: false,
+  lazyLoad: 'progressive',
+  responsive: [{
+    breakpoint: 992,
+    settings: {
+      fade: false,
+    },
+  }],
+})
+
 var lightboxConfig = {
   maxWidth: outerWidth / 2.5,
   maxHeight: outerHeight / 1.5
@@ -104,7 +116,13 @@ $(document).ready(function() { // Slick config module
       }
       $('.slick-slider').slick('slickGoTo', indexToGo)
     })
-
+    $('.numbers-slider-controls .slider-control').each(function(i, el){
+      $(el).click(function(){
+        $('.shop-lazy-slick-slider').slick('slickGoTo', i)
+        $(el).parent().find('.active').removeClass('active')
+        $(el).addClass('active')
+      })
+    })
     $('.one-slide-slick-slider').slick(oneSlideSliderConfig)
     .on('afterChange', function(slick, currentSlideObj){
       var activeCheckbox = 0
@@ -112,6 +130,11 @@ $(document).ready(function() { // Slick config module
       $('.slider-control-box.active').removeClass('active')
       $('.slider-control-box:eq(' + activeCheckbox + ')').addClass('active')
       $('.current-slide').html('0' + (activeCheckbox + 1))
+    })
+    $('.shop-lazy-slick-slider').slick(lazySliderConfig)
+    .on('afterChange', function(slick, currentSlideObj){
+      $('.numbers-slider-controls .slider-control.active').removeClass('active')
+      $('.numbers-slider-controls .slider-control').eq(currentSlideObj.currentSlide).addClass('active')
     })
     $('.slider-control-box').click(function(){
       var index = $(this).index()

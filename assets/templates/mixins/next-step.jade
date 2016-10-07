@@ -1,4 +1,4 @@
-mixin nextStep(subtitle, button, src)
+mixin nextStep(title, subtitle, button, src, imgUrl)
   .next-step
     .row
       .col-md-4.left-part
@@ -8,7 +8,7 @@ mixin nextStep(subtitle, button, src)
         .row.next-step-wrapper
           .row
             .title
-              h2 Next step
+              h2= title
           .row.subtitle-wrapper
             .subtitle
               span= subtitle
@@ -19,6 +19,8 @@ mixin nextStep(subtitle, button, src)
           .col-md-5.blank-space.blank-space-white
             span.letter.i-letter i
             span.studio-name Foisy Studio
-          .col-md-7.pull-right.blank-space-grey
+          .col-md-7.blank-space-grey
             span.letter.y-letter y
+            .img-wrapper
+              img.img(alt='An image', src= imgUrl)
         .line

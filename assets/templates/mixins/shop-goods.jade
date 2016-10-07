@@ -1,0 +1,7 @@
+mixin shop-goods(name, price, imgUrl)
+  .goods
+    .goods-img-wrapper
+      img.goods-img(alt='Goods', data-lazy= imgUrl)
+    .goods-title-wrapper
+      h4.title= name
+      span.price= price

@@ -49,6 +49,7 @@
     .blank-space-grey
       background grey
       height 80%
+      padding 0
     .blank-space-white
       height 100%
       background white
@@ -79,6 +80,11 @@
         .title
           margin screen-margin 0 48px 0
       .blank-space-wrapper
+        .blank-space-white
+          display none
+        .blank-space-grey
+          .img
+            width 100%
       .line
         display none
 
@@ -92,3 +98,12 @@
         .title
           margin-top 40vh
           margin-bottom 48px
+      .blank-space-grey
+        .img-wrapper
+          width 50%
+          margin 40vh 0 0 -5%
+          position relative
+          z-index 2
+          box-shadow 0 24px 48px rgba(black, 0.5)
+          .img
+            width 100%

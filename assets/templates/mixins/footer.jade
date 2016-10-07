@@ -46,7 +46,7 @@ mixin footer(subheader, subheaderText)
           else
             +content()
           .col-xs-11.col-xs-offset-1.col-sm-5.col-sm-offset-0.search-box-wrapper(class= subheader ? 'top-offset' : '')
-              input.search-box(type='text', placeholder='TYPE YOUR EMAIL')
+              input.text-input.search-box(type='text', placeholder='TYPE YOUR EMAIL')
               button.go
                 a Go
         if(subheader)

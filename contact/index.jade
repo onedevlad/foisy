@@ -1,0 +1,51 @@
+include ../assets/templates/configs/contact
+
+doctype traditional
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title Contact - Foisy
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/styles/contact.css')
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/lib/slick/slick.css')
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/lib/slick/slick-theme.css')
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/lib/lightbox/css/lightbox.min.css')
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/lib/themify-icons/styles.css')
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/jquery/jquery.js')
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/scripts/common.js', defer)
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/slick/slick.min.js', defer)
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/lightbox/js/lightbox.min.js', defer)
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/gsap/TweenLite.min.js', defer)
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/gsap/CSSPlugin.min.js', defer)
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/bootstrap/js/dropdown.js', defer)
+    meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
+  body
+    +header(headerConfig)
+    .main.container-fluid
+      .screen-1
+        .row
+          .col-md-4.left-part
+            .screen-num
+              .dash
+              span 01
+          .col-md-8.right-part
+            .right-line
+            .row
+              .col-md-7.content-block
+                .title-wrapper
+                  h2.title Drop a line
+                  span.subtitle For any bussiness inqury or a simple hello.
+                form.form-wrapper
+                  input.text-input(type='text', name='name', placeholder='TYPE YOUR NAME')
+                  input.text-input(type='text', name='email', placeholder='TYPE YOUR EMAIL')
+                  textarea.text-input.textarea-input(placeholder='TYPE YOUR MESSAGE')
+                  button.send
+                    a Send message
+                .map-wrapper
+                  a(href= mediaUrlPrefix + 'assets/images/map.png', data-lightbox='screen-1', data-title='A map')
+                    img.map(alt='A map', src=mediaUrlPrefix+'assets/images/map.png')
+                    .img-overlay
+                      img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
+              .col-md-5.directions-link-wrapper
+                a.directions Map directions
+      +footer()
+    include ../assets/templates/nav

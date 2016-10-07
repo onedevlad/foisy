@@ -2109,6 +2109,12 @@ button a:hover {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+.text-input {
+  font-size: 12px;
+  background: url("../images/icons/email-pointer.png") no-repeat scroll 5px 50%;
+  padding: 0 30px;
+  outline: none;
+}
 .screen-num {
   position: absolute;
   left: 50%;
@@ -2127,6 +2133,9 @@ button a:hover {
   background: #3c3c3c;
   margin: 0 1.5em 0 0;
   vertical-align: middle;
+}
+.block-rounded-shadow {
+  position: relative;
 }
 .block-rounded-shadow:after,
 .block-rounded-shadow::after {
@@ -2331,6 +2340,12 @@ h6 {
 }
 .header .header-background.header-background-8 {
   background-image: url("../images/header-wardrobe.png");
+}
+.header .header-background.header-background-9 {
+  background-image: url("../images/header-desk.png");
+}
+.header .header-background.header-background-10 {
+  background-image: url("../images/header-app.png");
 }
 .header .nav-open-button {
   width: 24px;
@@ -2828,13 +2843,9 @@ h6 {
   color: #fff;
 }
 .footer .footer-wrapper .right-part .search-box-wrapper .search-box {
-  font-size: 12px;
   width: 70%;
   height: 100%;
-  background: url("../images/icons/email-pointer.png") no-repeat scroll 5px 50%;
-  padding: 0 30px;
   border: 1px solid #3c3c3c;
-  outline: none;
 }
 .footer .footer-wrapper .right-part .search-box-wrapper .go {
   width: 20%;
