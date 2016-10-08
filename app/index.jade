@@ -28,7 +28,7 @@ html(lang="en")
               .dash
               span 01
             .grey-block
-              span.word Make
+              span.word Own
               span.word Your
               span.word Moments
           .col-md-8.right-part
@@ -59,103 +59,65 @@ html(lang="en")
         .row.lower-part
           .row
             .col-md-4.left-part
-              .row
-                .col-xs-12.grey-block
             .col-md-8.right-part
-              .row
-                .col-xs-3.grey-block
-                .col-xs-5.col-xs-offset-4.white-block
+              .col-md-5.col-md-offset-7.desc-wrapper
+                .title-wrapper
+                  span.package-icon.ti-package
+                  h2.title Makes it
+                    br
+                    | easier
+                  span.subtitle With Preach app it is easier than ever to use an app. Take a look at the steps above.
+                  button.more
+                    a Learn more
         .row.upper-part
           .row
-            .col-md-8.col-md-offset-4.right-part
-              .row.title-wrapper
-                h2.title Days in New York
-                span.subtitle The days that follow my visit at the world's capital.
-          .row.posts-wrapper
-            +travel-post('Brooklyn Bridge', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laborum error sapiente voluptatibus qui nihil labore, voluptatem, modi ullam explicabo.', 1, '', mediaUrlPrefix + 'assets/images/brooklyn.png', 'screen-2')
-            +travel-post('Statue of Liberty', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laborum error sapiente voluptatibus qui nihil labore, voluptatem, modi ullam explicabo.', 2, '', mediaUrlPrefix + 'assets/images/liberty.png', 'screen-2')
-            +travel-post('The center: Times Square', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laborum error sapiente voluptatibus qui nihil labore, voluptatem, modi ullam explicabo.', 3, '', mediaUrlPrefix + 'assets/images/times-square.png', 'screen-2')
-          .row
-            .col-md-8.col-md-offset-4.more-wrapper
-              button
-                a.more All days
+            .col-md-8.app-slider
+                img.slide(alt='Slider image', src=mediaUrlPrefix+'assets/images/iphones/10.png')
+                img.slide(alt='Slider image', src=mediaUrlPrefix+'assets/images/iphones/11.png')
+                img.slide(alt='Slider image', src=mediaUrlPrefix+'assets/images/iphones/12.png')
+                img.slide(alt='Slider image', src=mediaUrlPrefix+'assets/images/iphones/13.png')
+                img.slide(alt='Slider image', src=mediaUrlPrefix+'assets/images/iphones/14.png')
+                img.slide(alt='Slider image', src=mediaUrlPrefix+'assets/images/iphones/15.png')
+                img.slide(alt='Slider image', src=mediaUrlPrefix+'assets/images/iphones/16.png')
+                img.slide(alt='Slider image', src=mediaUrlPrefix+'assets/images/iphones/17.png')
+          .row.slider-controls-wrapper
+            .col-md-8.col-md-offset-4.slider-controls
+              .slider-control-box.active
+              .slider-control-box
+              span.middle-dots ···
+              span.page-num
+                span.current-slide 01
+                |  / 02
       .screen-3
-        .row.lower-part
-          .col-md-4.left-part
-            .screen-num
-              .dash
-              span 02
-          .col-md-8.right-part
-            .row
-              .col-md-2.col-md-offset-5.grey-block
-              .col-md-3.grey-block.line-block
-        .row.upper-part
-          .row
-            .col-md-8.col-md-offset-4.right-part
-              .row.images-wrapper-1
-                .col-md-3.title-wrapper
-                  span.camera-icon.ti-camera
-                  h2.title Gallery
-                .col-md-6.block-rounded-shadow.img-wrapper-1.left-img-wrapper
-                  a(href= mediaUrlPrefix + 'assets/images/shop-window.png', data-lightbox='screen-3', data-title='A shop window')
-                    img.img(alt='A shop window', src= mediaUrlPrefix + 'assets/images/shop-window.png')
-                    .img-overlay
-                      img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
-                .col-md-3.block-rounded-shadow.img-wrapper-1.right-img-wrapper
-                  a(href= mediaUrlPrefix + 'assets/images/rooftops.png', data-lightbox='screen-3', data-title='Rooftops')
-                    img.img(alt='Rooftops', src= mediaUrlPrefix + 'assets/images/rooftops.png')
-                    .img-overlay
-                      img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
-          .row.images-wrapper-2
-            .col-md-5.block-rounded-shadow.img-wrapper-2.left-img-wrapper
-              a(href= mediaUrlPrefix + 'assets/images/downtown.png', data-lightbox='screen-3', data-title='Downtown')
-                img.img(alt='Downtown', src= mediaUrlPrefix + 'assets/images/downtown.png')
-                .img-overlay
-                  img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
-            .col-md-5.block-rounded-shadow.img-wrapper-2.center-img-wrapper
-              a(href= mediaUrlPrefix + 'assets/images/thin-building.png', data-lightbox='screen-3', data-title='A building')
-                img.img(alt='A building', src= mediaUrlPrefix + 'assets/images/thin-building.png')
-                .img-overlay
-                  img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
-            .col-md-2.block-rounded-shadow.img-wrapper-2
-              a(href= mediaUrlPrefix + 'assets/images/skyscraper.png', data-lightbox='screen-3', data-title='A skyscraper')
-                img.img(alt='A skyscraper', src= mediaUrlPrefix + 'assets/images/skyscraper.png')
-                .img-overlay
-                  img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
-          .row
-            .col-md-8.col-md-offset-4.more-wrapper
-              button
-                a.more Full album
-      .screen-4
-        .row.lower-part
+        .row
           .col-md-4.left-part
             .screen-num
               .dash
               span 03
+            .left-phone-wrapper
+              img.left-phone(alt='An iPhone', src=mediaUrlPrefix+'assets/images/iphones/18.png')
           .col-md-8.right-part
             .row
-              .col-md-2.col-md-offset-5.grey-block
-              .col-md-3.grey-block.line-block
-        .row.upper-part
-          .row
-            .col-md-8.col-md-offset-4.right-part
-              .row
-                .col-md-7.title-wrapper
-                  h2.title Past travel stories
-                  span.subtitle Meet my past
-                .col-md-5.view-blog-wrapper
-                  a.view-blog(href=mediaUrlPrefix + 'blog') View all
-          .row.slider-wrapper
-            .slider.col-md-8.col-md-offset-2
-              .row
-                +slide( mediaUrlPrefix + 'assets/images/canada.png', 'Canada',
-                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore',
-                  '2 July 2016')
-                +slide( mediaUrlPrefix + 'assets/images/spain.png', 'Spain',
-                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore',
-                  '2 July 2016')
-                +slide( mediaUrlPrefix + 'assets/images/japan-1.png', 'Japan',
-                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore',
-                  '2 July 2016')
+              .col-md-7.content-left
+                .title-wrapper
+                  span.title-icon.ti-heart
+                  h2.title 50MM+
+                  span.subtitle Downloads
+                .title-wrapper-2
+                  h5.title Be the next happy user
+                  span.subtitle Download our app absolutely free either from the AppStore or
+                    br
+                    | GooglePlay!
+                button.more
+                  a
+                    span.apple-icon.ti-apple
+                    span.button-text Download on iTunes!
+              .col-md-5.content-right
+                .title-wrapper
+                  span.title-icon.ti-user
+                  h2.title 750K+
+                  span.subtitle Daily unique users
+                .right-phone-wrapper
+                  img.right-phone(alt='An iPhone', src=mediaUrlPrefix+'assets/images/iphones/15.png')
       +footer()
     include ../assets/templates/nav

@@ -28,6 +28,11 @@ var oneSlideSliderConfig = Object.assign({}, defaultSliderConfig, {
   slidesToShow: 1,
 })
 
+var appSliderConfig = Object.assign({}, defaultSliderConfig, {
+  slidesToScroll: 4,
+  slidesToShow: 4,
+})
+
 var fadeSliderConfig = Object.assign({}, oneSlideSliderConfig, {
   fade: true,
   responsive: [{
@@ -116,6 +121,7 @@ $(document).ready(function() { // Slick config module
       }
       $('.slick-slider').slick('slickGoTo', indexToGo)
     })
+
     $('.numbers-slider-controls .slider-control').each(function(i, el){
       $(el).click(function(){
         $('.shop-lazy-slick-slider').slick('slickGoTo', i)
@@ -123,6 +129,7 @@ $(document).ready(function() { // Slick config module
         $(el).addClass('active')
       })
     })
+
     $('.one-slide-slick-slider').slick(oneSlideSliderConfig)
     .on('afterChange', function(slick, currentSlideObj){
       var activeCheckbox = 0
@@ -131,6 +138,7 @@ $(document).ready(function() { // Slick config module
       $('.slider-control-box:eq(' + activeCheckbox + ')').addClass('active')
       $('.current-slide').html('0' + (activeCheckbox + 1))
     })
+
     $('.shop-lazy-slick-slider').slick(lazySliderConfig)
     .on('afterChange', function(slick, currentSlideObj){
       $('.numbers-slider-controls .slider-control.active').removeClass('active')
@@ -140,6 +148,7 @@ $(document).ready(function() { // Slick config module
       var index = $(this).index()
       $('.one-slide-slick-slider').slick('slickGoTo', index)
     })
+
     $('.fade-slick-slider').slick(fadeSliderConfig)
     .on('afterChange', function(slick, currentSlideObj){
       var activeCheckbox = 0
@@ -148,10 +157,15 @@ $(document).ready(function() { // Slick config module
       $('.slider-control-box:eq(' + activeCheckbox + ')').addClass('active')
       $('.current-slide').html('0' + (activeCheckbox + 1))
     })
-    $('.slider-control-box').click(function(){
-      var index = $(this).index()
-      $('.one-slide-slick-slider').slick('slickGoTo', index)
+
+    $('.app-slider').slick(appSliderConfig)
+    .on('afterChange', function(slick, currentSlideObj){
+      var activeCheckbox = currentSlideObj.currentSlide === 0 ? 0 : 1
+      $('.slider-control-box.active').removeClass('active')
+      $('.slider-control-box:eq(' + activeCheckbox + ')').addClass('active')
+      $('.current-slide').html('0' + (activeCheckbox + 1))
     })
+
   }
   $('.next-arrow').click(function(){
     $('.one-slide-slick-slider').slick('slickNext')
