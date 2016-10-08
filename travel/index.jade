@@ -32,21 +32,12 @@ html(lang="en")
               .col-md-5.col-md-offset-7.white-block
         .row.upper-part
           .images-wrapper
-            .img-wrapper.block-rounded-shadow.img-1
-              a(href= mediaUrlPrefix + 'assets/images/cafe.png', data-lightbox='screen-1', data-title='A cafe')
-                img.img(alt='A cafe', src= mediaUrlPrefix + 'assets/images/cafe.png')
-                .img-overlay
-                  img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
-            .img-wrapper.block-rounded-shadow.img-2
-              a(href= mediaUrlPrefix + 'assets/images/subway.png', data-lightbox='screen-1', data-title='A subway')
-                img.img(alt='A subway', src= mediaUrlPrefix + 'assets/images/subway.png')
-                .img-overlay
-                  img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
-            .img-wrapper.block-rounded-shadow.img-3
-              a(href= mediaUrlPrefix + 'assets/images/lake.png', data-lightbox='screen-1', data-title='A lake')
-                img.img(alt='A lake', src= mediaUrlPrefix + 'assets/images/lake.png')
-                .img-overlay
-                  img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
+            .lightbox-wrapper.img-wrapper.block-rounded-shadow.img-1
+              +lightbox-img('screen-1', 'A cafe', 'assets/images/cafe.png')
+            .lightbox-wrapper.img-wrapper.block-rounded-shadow.img-2
+              +lightbox-img('screen-1', 'A subway', 'assets/images/subway.png')
+            .lightbox-wrapper.img-wrapper.block-rounded-shadow.img-3
+              +lightbox-img('screen-1', 'A lake', 'assets/images/lake.png')
       .screen-2
         .row.lower-part
           .row
@@ -64,9 +55,9 @@ html(lang="en")
                 h2.title Days in New York
                 span.subtitle The days that follow my visit at the world's capital.
           .row.posts-wrapper
-            +travel-post('Brooklyn Bridge', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laborum error sapiente voluptatibus qui nihil labore, voluptatem, modi ullam explicabo.', 1, '', mediaUrlPrefix + 'assets/images/brooklyn.png', 'screen-2')
-            +travel-post('Statue of Liberty', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laborum error sapiente voluptatibus qui nihil labore, voluptatem, modi ullam explicabo.', 2, '', mediaUrlPrefix + 'assets/images/liberty.png', 'screen-2')
-            +travel-post('The center: Times Square', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laborum error sapiente voluptatibus qui nihil labore, voluptatem, modi ullam explicabo.', 3, '', mediaUrlPrefix + 'assets/images/times-square.png', 'screen-2')
+            +travel-post('Brooklyn Bridge', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laborum error sapiente voluptatibus qui nihil labore, voluptatem, modi ullam explicabo.', 1, '', 'assets/images/brooklyn.png', 'screen-2')
+            +travel-post('Statue of Liberty', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laborum error sapiente voluptatibus qui nihil labore, voluptatem, modi ullam explicabo.', 2, '', 'assets/images/liberty.png', 'screen-2')
+            +travel-post('The center: Times Square', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laborum error sapiente voluptatibus qui nihil labore, voluptatem, modi ullam explicabo.', 3, '', 'assets/images/times-square.png', 'screen-2')
           .row
             .col-md-8.col-md-offset-4.more-wrapper
               button
@@ -88,32 +79,17 @@ html(lang="en")
                 .col-md-3.title-wrapper
                   span.camera-icon.ti-camera
                   h2.title Gallery
-                .col-md-6.block-rounded-shadow.img-wrapper-1.left-img-wrapper
-                  a(href= mediaUrlPrefix + 'assets/images/shop-window.png', data-lightbox='screen-3', data-title='A shop window')
-                    img.img(alt='A shop window', src= mediaUrlPrefix + 'assets/images/shop-window.png')
-                    .img-overlay
-                      img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
-                .col-md-3.block-rounded-shadow.img-wrapper-1.right-img-wrapper
-                  a(href= mediaUrlPrefix + 'assets/images/rooftops.png', data-lightbox='screen-3', data-title='Rooftops')
-                    img.img(alt='Rooftops', src= mediaUrlPrefix + 'assets/images/rooftops.png')
-                    .img-overlay
-                      img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
+                .col-md-6.lightbox-wrapper.block-rounded-shadow.img-wrapper-1.left-img-wrapper
+                  +lightbox-img('screen-3', 'A shop window', 'assets/images/shop-window.png')
+                .col-md-3.lightbox-wrapper.block-rounded-shadow.img-wrapper-1.right-img-wrapper
+                  +lightbox-img('screen-3', 'Rooftops', 'assets/images/rooftops.png')
           .row.images-wrapper-2
-            .col-md-5.block-rounded-shadow.img-wrapper-2.left-img-wrapper
-              a(href= mediaUrlPrefix + 'assets/images/downtown.png', data-lightbox='screen-3', data-title='Downtown')
-                img.img(alt='Downtown', src= mediaUrlPrefix + 'assets/images/downtown.png')
-                .img-overlay
-                  img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
-            .col-md-5.block-rounded-shadow.img-wrapper-2.center-img-wrapper
-              a(href= mediaUrlPrefix + 'assets/images/thin-building.png', data-lightbox='screen-3', data-title='A building')
-                img.img(alt='A building', src= mediaUrlPrefix + 'assets/images/thin-building.png')
-                .img-overlay
-                  img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
-            .col-md-2.block-rounded-shadow.img-wrapper-2
-              a(href= mediaUrlPrefix + 'assets/images/skyscraper.png', data-lightbox='screen-3', data-title='A skyscraper')
-                img.img(alt='A skyscraper', src= mediaUrlPrefix + 'assets/images/skyscraper.png')
-                .img-overlay
-                  img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
+            .col-md-5.lightbox-wrapper.block-rounded-shadow.img-wrapper-2.left-img-wrapper
+              +lightbox-img('screen-3', 'Downtown', 'assets/images/downtown.png')
+            .col-md-5.lightbox-wrapper.block-rounded-shadow.img-wrapper-2.center-img-wrapper
+              +lightbox-img('screen-3', 'A building', 'assets/images/thin-building.png')
+            .col-md-2.lightbox-wrapper.block-rounded-shadow.img-wrapper-2
+              +lightbox-img('screen-3', 'A skyscraper', 'assets/images/skyscraper.png')
           .row
             .col-md-8.col-md-offset-4.more-wrapper
               button

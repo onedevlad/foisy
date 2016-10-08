@@ -1,3 +1,4 @@
+include lightbox-img
 mixin travel-post(name, text, day, linkUrl, imgUrl, lightboxId)
   .row.post
     .col-md-4.day-wrapper
@@ -5,11 +6,8 @@ mixin travel-post(name, text, day, linkUrl, imgUrl, lightboxId)
     .col-md-8.post-wrapper
       .row
         .col-md-7.post-img
-          .img-wrapper.block-rounded-shadow
-            a(href= imgUrl, data-lightbox= lightboxId, data-title= name)
-              img.img(alt= name, src= imgUrl)
-              .img-overlay
-                img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
+          .lightbox-wrapper.img-wrapper.block-rounded-shadow
+            +lightbox-img(lightboxId, name, imgUrl)
           .img-desc-wrapper
             span.img-desc= name
         .col-md-4.post-text

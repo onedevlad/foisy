@@ -91,12 +91,13 @@ button
   .inner-wrapper
     position relative
     overflow-x hidden
-    .img-link
+    & > a
     .img-overlay
+      display block
       transition all animationSpeed ease
   &:hover .img-float-desc
     transform rotateY(0deg)
-  &:hover .img-link
+  &:hover .inner-wrapper > a
   &:hover .img-overlay
     margin-left 30%
   .img-float-desc
@@ -104,7 +105,7 @@ button
     height 100%
     absolute top left
     background rgba(blue, 0.75)
-    z-index 2
+    z-index 3
     transition transform animationSpeed, opacity 0.1s 0.3s
     transform-origin 0 0 0
     padding 5%
@@ -139,22 +140,6 @@ button
   .desc-img-wrapper
     .img-float-desc
       transform rotateY(-90deg)
-
-.img-overlay
-  absolute left top
-  width 100%
-  height 100%
-  opacity 0
-  transition all animationSpeed ease
-  background rgba(grey, 0.75)
-  cursor pointer
-  &:hover
-    opacity 1
-  .plus-sign
-    width 10% !important
-    height auto !important
-    absolute top 50% left 50%
-    transform translate(-50%, -50%)
 
 .text-input
   font-size 12px

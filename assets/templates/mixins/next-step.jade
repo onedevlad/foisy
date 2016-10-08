@@ -1,3 +1,4 @@
+include lightbox-img
 mixin nextStep(title, subtitle, button, src, imgUrl)
   .next-step
     .row
@@ -14,13 +15,14 @@ mixin nextStep(title, subtitle, button, src, imgUrl)
               span= subtitle
           .row.take-me-there-wrapper
             button.take-me-there
-              a(href= src)= button
+              a(href= mediaUrlPrefix + src)= button
         .row.blank-space-wrapper
           .col-md-5.blank-space.blank-space-white
             span.letter.i-letter i
             span.studio-name Foisy Studio
           .col-md-7.blank-space-grey
             span.letter.y-letter y
-            .img-wrapper
-              img.img(alt='An image', src= imgUrl)
+            if(imgUrl)
+              .lightbox-wrapper.img-wrapper
+                +lightbox-img('next-step', 'Goods', imgUrl)
         .line

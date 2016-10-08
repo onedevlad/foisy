@@ -47,11 +47,8 @@ html(lang="en")
                     span.date 2 July 2016
               .row
                 .col-md-9.post-img-wrapper
-                  .img-wrapper
-                    a(href= mediaUrlPrefix + 'assets/images/photographer.png', data-lightbox='screen-1', data-title='A photographer')
-                      img.team(alt='A photographer', src= mediaUrlPrefix + 'assets/images/photographer.png')
-                      .img-overlay
-                        img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
+                  .lightbox-wrapper.img-wrapper
+                    +lightbox-img('screen-1', 'A photographer', 'assets/images/photographer.png')
           .row.post-text-wrapper
             .col-md-4.quote-wrapper
               .quote-inner-wrapper

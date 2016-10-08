@@ -1,7 +1,9 @@
+include lightbox-img
 mixin shop-goods(name, price, imgUrl)
   .goods
     .goods-img-wrapper
-      img.goods-img(alt='Goods', data-lazy= imgUrl)
+      .lightbox-wrapper.goods-img(data-lazy = mediaUrlPrefix + imgUrl)
+        +lightbox-img('screen-1', name, imgUrl)
     .goods-title-wrapper
       h4.title= name
       span.price= price

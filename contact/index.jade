@@ -40,11 +40,8 @@ html(lang="en")
                   textarea.text-input.textarea-input(placeholder='TYPE YOUR MESSAGE')
                   button.send
                     a Send message
-                .map-wrapper
-                  a(href= mediaUrlPrefix + 'assets/images/map.png', data-lightbox='screen-1', data-title='A map')
-                    img.map(alt='A map', src=mediaUrlPrefix+'assets/images/map.png')
-                    .img-overlay
-                      img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')
+                .lightbox-wrapper.map-wrapper
+                  +lightbox-img('screen-1', 'A map', 'assets/images/map.png')
               .col-md-5.directions-link-wrapper
                 a.directions Map directions
       +footer()
