@@ -142,6 +142,7 @@
               color white
   .screen-3
     .left-part
+      overflow hidden
       padding 0
       .screen-num
         top "calc(%s + %s)" % (screen-margin block-top-offset)
@@ -155,7 +156,6 @@
       .content-left
       .content-right
         position relative
-        border-left 1px solid dark-grey
         padding 144px 0 0 0
         .title-wrapper
           .title-icon
@@ -170,6 +170,8 @@
             text-transform uppercase
             color dark-white
       .content-left
+        border-left 1px solid dark-grey
+        border-right 1px solid dark-grey
         .title-wrapper-2
           margin-top 96px
           .title
@@ -178,7 +180,7 @@
             display inline-block
             margin 24px 0
         .more
-          margin 96px 0
+          margin 48px 0
           a
             background grey-3
             .button-text
@@ -188,8 +190,11 @@
               background black
       .content-right
         overflow hidden
+        position relative
         .right-phone-wrapper
           width 100%
+          height 50%
+          absolute bottom 0
           margin 96px 0 0 25%
           .right-phone
             width 100%
@@ -232,9 +237,6 @@
       .title-wrapper
         margin-top -50%
   .screen-3
-    height 100%
-    .right-part
+    .content-left
+    .content-right
       height 100%
-      .content-left
-      .content-right
-        height 100%

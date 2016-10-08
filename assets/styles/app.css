@@ -2315,37 +2315,37 @@ h6 {
   filter: none;
 }
 .header .header-background.header-background-0 {
-  background-image: url("../images/header-texture.png");
+  background-image: url("../images/headers/texture.png");
 }
 .header .header-background.header-background-1 {
-  background-image: url("../images/header-poster.png");
+  background-image: url("../images/headers/poster.png");
 }
 .header .header-background.header-background-2 {
-  background-image: url("../images/header-city.png");
+  background-image: url("../images/headers/city.png");
 }
 .header .header-background.header-background-3 {
-  background-image: url("../images/header-buttons.png");
+  background-image: url("../images/headers/buttons.png");
 }
 .header .header-background.header-background-4 {
-  background-image: url("../images/header-wave.png");
+  background-image: url("../images/headers/wave.png");
 }
 .header .header-background.header-background-5 {
-  background-image: url("../images/header-book.png");
+  background-image: url("../images/headers/book.png");
 }
 .header .header-background.header-background-6 {
-  background-image: url("../images/header-fashion.png");
+  background-image: url("../images/headers/fashion.png");
 }
 .header .header-background.header-background-7 {
-  background-image: url("../images/header-downtown.png");
+  background-image: url("../images/headers/downtown.png");
 }
 .header .header-background.header-background-8 {
-  background-image: url("../images/header-wardrobe.png");
+  background-image: url("../images/headers/wardrobe.png");
 }
 .header .header-background.header-background-9 {
-  background-image: url("../images/header-desk.png");
+  background-image: url("../images/headers/desk.png");
 }
 .header .header-background.header-background-10 {
-  background-image: url("../images/header-app.png");
+  background-image: url("../images/headers/app.png");
 }
 .header .nav-open-button {
   width: 24px;
@@ -3165,6 +3165,7 @@ h6 {
   color: #fff;
 }
 .main .screen-3 .left-part {
+  overflow: hidden;
   padding: 0;
 }
 .main .screen-3 .left-part .screen-num {
@@ -3183,7 +3184,6 @@ h6 {
 .main .screen-3 .right-part .content-left,
 .main .screen-3 .right-part .content-right {
   position: relative;
-  border-left: 1px solid #bbb;
   padding: 144px 0 0 0;
 }
 .main .screen-3 .right-part .content-left .title-wrapper .title-icon,
@@ -3204,6 +3204,10 @@ h6 {
   text-transform: uppercase;
   color: #dcdcdc;
 }
+.main .screen-3 .right-part .content-left {
+  border-left: 1px solid #bbb;
+  border-right: 1px solid #bbb;
+}
 .main .screen-3 .right-part .content-left .title-wrapper-2 {
   margin-top: 96px;
 }
@@ -3215,7 +3219,7 @@ h6 {
   margin: 24px 0;
 }
 .main .screen-3 .right-part .content-left .more {
-  margin: 96px 0;
+  margin: 48px 0;
 }
 .main .screen-3 .right-part .content-left .more a {
   background: #3d3d3d;
@@ -3229,9 +3233,13 @@ h6 {
 }
 .main .screen-3 .right-part .content-right {
   overflow: hidden;
+  position: relative;
 }
 .main .screen-3 .right-part .content-right .right-phone-wrapper {
   width: 100%;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
   margin: 96px 0 0 25%;
 }
 .main .screen-3 .right-part .content-right .right-phone-wrapper .right-phone {
@@ -3282,14 +3290,8 @@ h6 {
   .screen-1 .upper-part .title-wrapper {
     margin-top: -50%;
   }
-  .screen-3 {
-    height: 100%;
-  }
-  .screen-3 .right-part {
-    height: 100%;
-  }
-  .screen-3 .right-part .content-left,
-  .screen-3 .right-part .content-right {
+  .screen-3 .content-left,
+  .screen-3 .content-right {
     height: 100%;
   }
 }

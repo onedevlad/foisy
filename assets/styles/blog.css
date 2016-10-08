@@ -2315,37 +2315,37 @@ h6 {
   filter: none;
 }
 .header .header-background.header-background-0 {
-  background-image: url("../images/header-texture.png");
+  background-image: url("../images/headers/texture.png");
 }
 .header .header-background.header-background-1 {
-  background-image: url("../images/header-poster.png");
+  background-image: url("../images/headers/poster.png");
 }
 .header .header-background.header-background-2 {
-  background-image: url("../images/header-city.png");
+  background-image: url("../images/headers/city.png");
 }
 .header .header-background.header-background-3 {
-  background-image: url("../images/header-buttons.png");
+  background-image: url("../images/headers/buttons.png");
 }
 .header .header-background.header-background-4 {
-  background-image: url("../images/header-wave.png");
+  background-image: url("../images/headers/wave.png");
 }
 .header .header-background.header-background-5 {
-  background-image: url("../images/header-book.png");
+  background-image: url("../images/headers/book.png");
 }
 .header .header-background.header-background-6 {
-  background-image: url("../images/header-fashion.png");
+  background-image: url("../images/headers/fashion.png");
 }
 .header .header-background.header-background-7 {
-  background-image: url("../images/header-downtown.png");
+  background-image: url("../images/headers/downtown.png");
 }
 .header .header-background.header-background-8 {
-  background-image: url("../images/header-wardrobe.png");
+  background-image: url("../images/headers/wardrobe.png");
 }
 .header .header-background.header-background-9 {
-  background-image: url("../images/header-desk.png");
+  background-image: url("../images/headers/desk.png");
 }
 .header .header-background.header-background-10 {
-  background-image: url("../images/header-app.png");
+  background-image: url("../images/headers/app.png");
 }
 .header .nav-open-button {
   width: 24px;
