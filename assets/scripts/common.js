@@ -65,10 +65,10 @@ $(document).ready(function() { // Header slider module
 
   var $activeBox = $('.header-slider-control-box.active')
   var currentHeaderSlide = $activeBox.index() - 1
-  var headerSlidesCount = $('.header-background').length -1
+  var headerSlidesCount = $('.header-background').length - 1
 
   var timeoutFunction = function(){
-    if(currentHeaderSlide >= headerSlidesCount) currentHeaderSlide = 0
+    if(currentHeaderSlide > headerSlidesCount) currentHeaderSlide = 0
     $('.header-slider-control-box').eq(currentHeaderSlide).click()
 
     currentHeaderSlide += 1
