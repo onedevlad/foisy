@@ -11,7 +11,7 @@ html(lang="en")
     link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/lib/lightbox/css/lightbox.min.css')
     link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/lib/themify-icons/styles.css')
     script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/jquery/jquery.js')
-    script(type='text/javascript', src= mediaUrlPrefix + 'assets/scripts/common.js', defer)
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/scripts/dist/shop.js', defer)
     script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/slick/slick.min.js', defer)
     script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/lightbox/js/lightbox.min.js', defer)
     script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/gsap/TweenLite.min.js', defer)
@@ -19,6 +19,7 @@ html(lang="en")
     script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/bootstrap/js/dropdown.js', defer)
     meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
   body
+    +preloader()
     +header(headerConfig)
     .main.container-fluid
       .screen-1
@@ -41,7 +42,7 @@ html(lang="en")
               .col-md-8.main-preview
                 .grey-block
                 .slider-wrapper.block-rounded-shadow
-                  .slider.fade-slick-slider
+                  .slider.shop-fade-slider
                     img.goods-img(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-4.jpg')
                     img.goods-img(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-5.jpg')
                     img.goods-img(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-6.jpg')
@@ -66,7 +67,7 @@ html(lang="en")
               .row
                 .col-md-12.slider-wrapper-2
                   .row
-                    .col-md-6.slider-inner-wrapper.one-slide-slick-slider
+                    .col-md-6.slider-inner-wrapper.shop-replies-slider
                       +reply(mediaUrlPrefix + 'assets/images/crowd.png', mediaUrlPrefix + 'assets/images/icons/avatar-6.png', 'Jack_01', '"Gotta love this shirt man, can\'t wait for the new collection. #fall #2016"')
                       +reply(mediaUrlPrefix + 'assets/images/crowd.png', mediaUrlPrefix + 'assets/images/icons/avatar-1.png', 'John_89', '"Gotta love this shirt man, can\'t wait for the new collection. #fall #2016"')
                       +reply(mediaUrlPrefix + 'assets/images/crowd.png', mediaUrlPrefix + 'assets/images/icons/avatar-2.png', 'James', '"Gotta love this shirt man, can\'t wait for the new collection. #fall #2016"')

@@ -11,7 +11,7 @@ html(lang="en")
     link(rel='stylesheet', type='text/css', href='assets/lib/lightbox/css/lightbox.min.css')
     link(rel='stylesheet', type='text/css', href='assets/lib/themify-icons/styles.css')
     script(type='text/javascript', src='assets/lib/jquery/jquery.js')
-    script(type='text/javascript', src='assets/scripts/common.js', defer)
+    script(type='text/javascript', src='assets/scripts/dist/index.js', defer)
     script(type='text/javascript', src='assets/lib/slick/slick.min.js', defer)
     script(type='text/javascript', src='assets/lib/lightbox/js/lightbox.min.js', defer)
     script(type='text/javascript', src='assets/lib/gsap/TweenLite.min.js', defer)
@@ -93,7 +93,7 @@ html(lang="en")
                   a.view-blog(href='blog') View blog
           .row.slider-wrapper
             .slider.col-md-8.col-md-offset-2
-              .row.slick-slider
+              .row.home-slick-slider
                 +slide( mediaUrlPrefix + 'assets/images/wave.jpg', 'Deep water',
                   'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore',
                   '2 July 2016')

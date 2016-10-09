@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="../assets/lib/lightbox/css/lightbox.min.css"/>
     <link rel="stylesheet" type="text/css" href="../assets/lib/themify-icons/styles.css"/>
     <script type="text/javascript" src="../assets/lib/jquery/jquery.js"></script>
-    <script type="text/javascript" src="../assets/scripts/common.js" defer="defer"></script>
+    <script type="text/javascript" src="../assets/scripts/dist/shop.js" defer="defer"></script>
     <script type="text/javascript" src="../assets/lib/slick/slick.min.js" defer="defer"></script>
     <script type="text/javascript" src="../assets/lib/lightbox/js/lightbox.min.js" defer="defer"></script>
     <script type="text/javascript" src="../assets/lib/gsap/TweenLite.min.js" defer="defer"></script>
@@ -18,6 +18,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
   </head>
   <body>
+    <div class="preloader">
+      <div class="preloader-circle"></div>
+    </div>
     <div class="header container-fluid">
       <div class="row main-row md-same-height-row"><a class="nav-open-button"><span class="line-0"></span><span class="line-1"></span><span class="line-2"></span></a>
         <div class="header-background header-background--1 active"></div>
@@ -61,7 +64,7 @@
               <div class="col-md-8 main-preview">
                 <div class="grey-block"></div>
                 <div class="slider-wrapper block-rounded-shadow">
-                  <div class="slider fade-slick-slider"><img alt="A coat" src="../assets/images/coat-4.jpg" class="goods-img"/><img alt="A coat" src="../assets/images/coat-5.jpg" class="goods-img"/><img alt="A coat" src="../assets/images/coat-6.jpg" class="goods-img"/><img alt="A coat" src="../assets/images/coat-7.jpg" class="goods-img"/><img alt="A coat" src="../assets/images/coat-2.jpg" class="goods-img"/></div>
+                  <div class="slider shop-fade-slider"><img alt="A coat" src="../assets/images/coat-4.jpg" class="goods-img"/><img alt="A coat" src="../assets/images/coat-5.jpg" class="goods-img"/><img alt="A coat" src="../assets/images/coat-6.jpg" class="goods-img"/><img alt="A coat" src="../assets/images/coat-7.jpg" class="goods-img"/><img alt="A coat" src="../assets/images/coat-2.jpg" class="goods-img"/></div>
                 </div>
                 <div class="desc-wrapper">
                   <h4 class="goods-title">Geometry Trench</h4><span class="goods-price">$ 2999.00</span>
@@ -84,7 +87,7 @@
               <div class="row">
                 <div class="col-md-12 slider-wrapper-2">
                   <div class="row">
-                    <div class="col-md-6 slider-inner-wrapper one-slide-slick-slider">
+                    <div class="col-md-6 slider-inner-wrapper shop-replies-slider">
                       <div class="slide-wrapper">
                         <div class="row slide"><img alt="A review image" src="../assets/images/crowd.png" class="img"/></div>
                         <div class="row comment-wrapper">
