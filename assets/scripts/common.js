@@ -56,7 +56,7 @@ $(document).ready(function(){ // Nav module
 
 
 $(document).ready(function() { // Lightbox config module
-  lightbox.option(lightboxConfig)
+  if(window.lightbox) lightbox.option(lightboxConfig)
 })
 
 
