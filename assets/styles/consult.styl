@@ -1,0 +1,133 @@
+@import 'common'
+
+@import 'components/nav'
+@import 'components/header'
+@import 'components/lightbox-img'
+@import 'components/footer'
+
+.main
+  z-index 6
+  position relative
+  padding 0
+  .screen-1
+    position relative
+    .lower-part
+      absolute left top
+      width 100%
+      height 100%
+      .business
+        display inline-block
+        width 100%
+        margin-top 0.35em
+        text-align center
+        color grey-2
+        font-size 12vw
+        font-weight bold
+        font-family SourceSansProBlack
+        text-transform uppercase
+    .upper-part
+      z-index 2
+      position relative
+      .desc-wrapper
+        .suit-img-wrapper
+          width 100%
+          margin -30% 0 0 0
+        .suit-img
+          width 100%
+        .title-wrapper
+          .title
+            text-align center
+            margin-top 48px
+            text-transform uppercase
+          .subtitle
+            color dark-grey
+            text-align center
+            display inline-block
+            width 70%
+            margin-top 24px
+            margin-left 15%
+        .stats-wrapper
+          .stats
+            padding 0
+            text-align center
+            .icon
+              display inline-block
+              margin-top 48px
+              border-radius 50%
+              border 1px solid dark-grey
+              padding 0.5em
+            .number
+              display block
+              color pink
+              font-weight bold
+              white-space nowrap
+              font-family SourceSansProBlack
+              font-size 4em
+              margin 12px 0
+            .stat-title
+              color dark-grey
+              font-weight dark-grey
+              font-family SourceSansProBlack
+              text-transform uppercase
+      .block-wrapper
+        &-1
+          margin-top 96px
+        .block-desc
+          padding 96px 0 0 0
+          .icon
+            padding 0.75em
+            border-radius 50%
+            border 1px solid dark-grey
+          .title
+            margin-top 48px
+            text-transform uppercase
+          .desc
+            width 80%
+            color dark-grey
+            margin 24px 0
+            display block
+          .more
+            color dark-grey
+            font-weight bold
+            text-transform uppercase
+            font-family SourceSansProBlack
+            cursor pointer
+            text-decoration none
+        .block-img-wrapper
+          padding 0
+          img
+            width 100%
+@media(max-width $screen-md) // Tablet
+  .screen-1
+    .left-part
+      padding 0 5%
+      text-align center
+      background grey
+      .grey-block
+        display none
+    .right-part
+      padding-top 0
+      text-align center
+      .right-line
+        display none
+      .title-wrapper
+        margin-top 48px
+      .form-wrapper
+        margin-left 15%
+      .map-wrapper
+        width 100%
+      .directions-link-wrapper
+        display none
+
+
+@media(min-width $screen-md) // Desktop
+  .screen-1
+    .left-part
+      margin-top - block-top-offset
+      padding-top block-top-offset + 144px
+      background white
+    .right-part
+      padding 144px 0 0 0
+      border-left 1px solid dark-grey
+      .map-wrapper
+        width 120%
