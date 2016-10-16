@@ -1,0 +1,8 @@
+mixin tile-img(title, imgUrl, button)
+  .tile-img-wrapper.desc-img-wrapper.poster-1
+    .img-float-desc
+      span.heading=title
+      if(button)
+        a.link(href=button.url)= button.text
+    .inner-wrapper
+      img.img(alt=title, src=mediaUrlPrefix+imgUrl)
