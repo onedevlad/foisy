@@ -25,11 +25,14 @@ html(lang="en")
       .screen-1
         .row.lower-part
           span.business Business
+          .col-md-8.col-md-offset-4.right-part
+            .row
+              .col-md-5.col-md-offset-7.right-line
         .row.upper-part
           .row
             .col-md-6.col-md-offset-3.desc-wrapper
-              .suit-img-wrapper.block-rounded-shadow
-                img.suit-img(alt='A man in a suit', src=mediaUrlPrefix + 'assets/images/suit.png')
+              .lightbox-wrapper.suit-img-wrapper.block-rounded-shadow
+                  +lightbox-img('screen-1', 'A man in a suit', 'assets/images/suit.png')
               .title-wrapper
                 h3.title Consulting Firm
                 span.subtitle Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore culpa blanditiis libero dolor deleniti minima, expedita mollitia quo provident dolore.
@@ -37,7 +40,7 @@ html(lang="en")
                 .row
                   .col-md-4.stats
                     span.icon.ti-id-badge
-                    span.number.cases-count 9321
+                    span.number.cases-count 9.321
                     span.stat-title Cases
                   .col-md-4.stats
                     span.icon.ti-heart
@@ -54,16 +57,60 @@ html(lang="en")
                 h3.title Advanced Partners
                 span.desc Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas in veritatis dignissimos odio iste delectus.
                 a.more Learn more
-            .col-md-6.block-img-wrapper
+            .col-md-6.block-img-wrapper.block-rounded-shadow
               img.block-img(alt='Partners', src=mediaUrlPrefix + 'assets/images/partners.png')
-          .row.block-wrapper
-            .col-md-6.block-img-wrapper
+          .row.block-wrapper.block-wrapper-2
+            .col-md-6.block-img-wrapper.block-rounded-shadow
               img.block-img(alt='Partners', src=mediaUrlPrefix + 'assets/images/network.png')
-            .col-md-5.col-md-offset-1.block-desc
+            .col-md-4.col-md-offset-1.block-desc
               .title-wrapper
                 span.icon.ti-announcement
                 h3.title 5-star network
                 span.desc Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas in veritatis dignissimos odio iste delectus.
                 a.more Learn more
+      .screen-2
+        .row.lower-part
+          span.stories Success stories
+          .col-md-8.col-md-offset-4.right-part
+            .col-md-5.col-md-offset-7.right-line
+        .row.upper-part
+          .col-md-4.left-part
+            .lightbox-wrapper.img-wrapper.img-wrapper-1.block-rounded-shadow
+              +lightbox-img('screen-2', 'A table', 'assets/images/desk-1.jpg')
+            .lightbox-wrapper.img-wrapper.img-wrapper-2.block-rounded-shadow
+              +lightbox-img('screen-2', 'A council', 'assets/images/council.jpg')
+            .lightbox-wrapper.img-wrapper.img-wrapper-3.block-rounded-shadow
+              +lightbox-img('screen-2', 'A tablet', 'assets/images/tablet.jpg')
+          .col-md-8.right-part
+            .row
+              .lightbox-wrapper.img-wrapper.img-wrapper-1.block-rounded-shadow
+                +lightbox-img('screen-2', 'A skyscraper', 'assets/images/skyscraper-1.jpg')
+              .img-outer-wrapper
+                .lightbox-wrapper.img-wrapper.img-wrapper-2.block-rounded-shadow
+                  +lightbox-img('screen-2', 'A laptop', 'assets/images/laptop.jpg')
+                .lightbox-wrapper.img-wrapper.img-wrapper-3.block-rounded-shadow
+                  +lightbox-img('screen-2', 'A box', 'assets/images/box.jpg')
+            .row
+              .col-md-7.title-wrapper
+                h3.title 2016 success stories
+                button.more
+                  a View them
+      .screen-3
+        .row.lower-part
+          .grey-block
+          .col-md-8.col-md-offset-4.right-part
+            .row
+              .col-md-5.col-md-offset-7.right-line
+        .row.upper-part
+          .row
+            .col-md-6.col-md-offset-3.desc-wrapper
+              .lightbox-wrapper.car-img-wrapper.block-rounded-shadow
+                +lightbox-img('screen-3', 'A self-driving car', 'assets/images/car-1.jpg')
+              .title-wrapper
+                span.icon.ti-pencil-alt2
+                h3.title Self-driving cars: the future
+                span.subtitle Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque aliquid error laudantium tempora iste dolores voluptate sit eum quia nesciunt soluta quis nisi culpa, consequuntur, laborum. Pariatur assumenda officiis iusto.
+              button.more
+                a Learn more
       +footer()
     include ../assets/templates/nav
