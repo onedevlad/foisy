@@ -33,7 +33,7 @@ $(document).ready(function(){ // Nav module
     function anim(cur) {
       TweenLite.delayedCall(0.1, function() {
         TweenLite.to($('.nav-link-'+cur), 0.2, { left: 0, opacity: 1 })
-        if(cur <= 4) anim(++cur)
+        if(cur <= 12) anim(++cur)
       })
     }
     anim(0)
@@ -49,7 +49,7 @@ $(document).ready(function(){ // Nav module
           $('.nav').removeClass('nav-opened')
       })
     }
-    anim(4)
+    anim(12)
   }
   $('.nav-open-button').click(openNav)
 })

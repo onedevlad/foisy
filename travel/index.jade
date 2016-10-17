@@ -33,12 +33,12 @@ html(lang="en")
               .col-md-5.col-md-offset-7.white-block
         .row.upper-part
           .images-wrapper
-            .lightbox-wrapper.img-wrapper.block-rounded-shadow.img-1
-              +lightbox-img('screen-1', 'A cafe', 'assets/images/cafe.png')
-            .lightbox-wrapper.img-wrapper.block-rounded-shadow.img-2
-              +lightbox-img('screen-1', 'A subway', 'assets/images/subway.png')
-            .lightbox-wrapper.img-wrapper.block-rounded-shadow.img-3
-              +lightbox-img('screen-1', 'A lake', 'assets/images/lake.png')
+            .img-wrapper.block-rounded-shadow.img-1
+              +tile-cross-img('screen-1', 'A cafe', '', 'assets/images/cafe.png')
+            .img-wrapper.block-rounded-shadow.img-2
+              +tile-cross-img('screen-1', 'A subway', '', 'assets/images/subway.png')
+            .img-wrapper.block-rounded-shadow.img-3
+              +tile-cross-img('screen-1', 'A lake', '', 'assets/images/lake.png')
       .screen-2
         .row.lower-part
           .row
@@ -80,17 +80,17 @@ html(lang="en")
                 .col-md-3.title-wrapper
                   span.camera-icon.ti-camera
                   h2.title Gallery
-                .col-md-6.lightbox-wrapper.block-rounded-shadow.img-wrapper-1.left-img-wrapper
-                  +lightbox-img('screen-3', 'A shop window', 'assets/images/shop-window.png')
+                .col-md-6.block-rounded-shadow.img-wrapper-1.left-img-wrapper
+                  +tile-cross-img('screen-3', 'A shop window', '', 'assets/images/shop-window.png')
                 .col-md-3.lightbox-wrapper.block-rounded-shadow.img-wrapper-1.right-img-wrapper
-                  +lightbox-img('screen-3', 'Rooftops', 'assets/images/rooftops.png')
+                  +tile-cross-img('screen-3', 'Rooftops', '', 'assets/images/rooftops.png')
           .row.images-wrapper-2
-            .col-md-5.lightbox-wrapper.block-rounded-shadow.img-wrapper-2.left-img-wrapper
-              +lightbox-img('screen-3', 'Downtown', 'assets/images/downtown.png')
-            .col-md-5.lightbox-wrapper.block-rounded-shadow.img-wrapper-2.center-img-wrapper
-              +lightbox-img('screen-3', 'A building', 'assets/images/thin-building.png')
+            .col-md-5.block-rounded-shadow.img-wrapper-2.left-img-wrapper
+              +tile-cross-img('screen-3', 'Downtown', '', 'assets/images/downtown.png')
+            .col-md-5.block-rounded-shadow.img-wrapper-2.center-img-wrapper
+              +tile-cross-img('screen-3', 'A building', '', 'assets/images/thin-building.png')
             .col-md-2.lightbox-wrapper.block-rounded-shadow.img-wrapper-2
-              +lightbox-img('screen-3', 'A skyscraper', 'assets/images/skyscraper.png')
+              +tile-cross-img('screen-3', 'A skyscraper', '', 'assets/images/skyscraper.png')
           .row
             .col-md-8.col-md-offset-4.more-wrapper
               button

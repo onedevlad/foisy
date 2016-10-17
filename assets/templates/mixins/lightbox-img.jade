@@ -1,5 +1,3 @@
 mixin lightbox-img(group, title, url)
   a(href= mediaUrlPrefix + url, data-lightbox=group, data-title=title)
     img.img(alt=title, src=mediaUrlPrefix + url)
-    .img-overlay
-      img.plus-sign(alt='Show in a popup', src= mediaUrlPrefix + 'assets/images/plus.png')

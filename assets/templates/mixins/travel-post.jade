@@ -1,4 +1,4 @@
-include lightbox-img
+include tile-cross-img
 mixin travel-post(name, text, day, linkUrl, imgUrl, lightboxId)
   .row.post
     .col-md-4.day-wrapper
@@ -6,8 +6,8 @@ mixin travel-post(name, text, day, linkUrl, imgUrl, lightboxId)
     .col-md-8.post-wrapper
       .row
         .col-md-7.post-img
-          .lightbox-wrapper.img-wrapper.block-rounded-shadow
-            +lightbox-img(lightboxId, name, imgUrl)
+          .img-wrapper.block-rounded-shadow
+            +tile-cross-img(lightboxId, name, 'Day ' + day, imgUrl)
           .img-desc-wrapper
             span.img-desc= name
         .col-md-4.post-text

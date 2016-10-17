@@ -6,17 +6,20 @@
   .inner-wrapper
     position relative
     overflow-x hidden
-    & > a
-    & .img
-    .img-overlay
+    .lightbox-link
+    .img
+      width 100%
       display block
       transition all animationSpeed ease
+      cursor url(../../images/icons/plus.svg) 30 30, crosshair
+    .img.staticHeight
+      height 100%
+      width auto !important
   &:hover .img-float-desc
     transform rotateY(0deg)
-  &:hover .inner-wrapper > a
   &:hover .img
-  &:hover .img-overlay
-    margin-left 30%
+  &:hover .lightbox-link
+    margin-left 15%
   .img-float-desc
     width 60%
     height 100%

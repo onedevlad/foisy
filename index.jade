@@ -47,12 +47,12 @@ html(lang="en")
                       span Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui numquam facilis ipsum recusandae dolores necessitatibus est earum fuga, rerum illo!
             .row.upper-part
               .images-wrapper
-                .lightbox-wrapper.img-wrapper.desk-wrapper
-                  +lightbox-img('screen-1', 'A desktop', 'assets/images/desk.jpg')
-                .lightbox-wrapper.img-wrapper.building-wrapper
-                  +lightbox-img('screen-1', 'A building', 'assets/images/building.jpg')
-                .lightbox-wrapper.img-wrapper.sand-wrapper
-                  +lightbox-img('screen-1', 'Sand', 'assets/images/sand.jpg')
+                .img-wrapper.desk-wrapper
+                  +tile-cross-img('screen-1', 'A desktop', '', 'assets/images/desk.jpg')
+                .img-wrapper.building-wrapper
+                  +tile-cross-img('screen-1', 'A building', '', 'assets/images/building.jpg')
+                .img-wrapper.sand-wrapper
+                  +tile-cross-img('screen-1', 'Sand', '', 'assets/images/sand.jpg')
                 button.keep-reading
                   a(href= mediaUrlPrefix + 'portfolio-with-images') Keep reading
       .screen-2
@@ -67,8 +67,8 @@ html(lang="en")
           .col-md-8.col-md-offset-4.right-part
             .row.team-wrapper
               .col-md-8.col-md-offset-4.team-inner-wrapper
-                .lightbox-wrapper.team-img-wrapper
-                  +lightbox-img('screen-2', 'Our team', 'assets/images/team.png')
+                .team-img-wrapper
+                  +tile-cross-img('screen-2', 'Our team', '', 'assets/images/team.png')
               .line
               button.learn-more
                 a(href='blog') Learn more

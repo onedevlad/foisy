@@ -37,17 +37,17 @@ html(lang="en")
             .right-line
             .row.goods-wrapper
               .col-md-4.goods
-                .lightbox-wrapper.img-wrapper
-                  +lightbox-img('screen-1', 'A coat', 'assets/images/coat-1.jpg')
+                .img-wrapper
+                  +tile-cross-img('screen-1', 'Coat', '$ 2499.00', 'assets/images/coat-1.jpg')
                 .desc-wrapper
                   h4.goods-title Coat
-                  span.goods-price $  2499.00
+                  span.goods-price $ 2499.00
               .col-md-4.col-md-offset-1.goods
-                .lightbox-wrapper.img-wrapper
-                  +lightbox-img('screen-1', 'A jacket', 'assets/images/jacket-1.jpg')
+                .img-wrapper
+                  +tile-cross-img('screen-1', 'A jacket', '$ 1999.00', 'assets/images/jacket-1.jpg')
                 .desc-wrapper
                   h4.goods-title Jacket
-                  span.goods-price $  1999.00
+                  span.goods-price $ 1999.00
             .row.more-wrapper
               a(href='portfolio').more Show more
       .screen-2
@@ -69,20 +69,20 @@ html(lang="en")
           .row
             .col-md-12.men-wrapper
               .img-wrapper
-                .lightbox-wrapper.img-inner-wrapper
-                  +lightbox-img('screen-2', 'Men', 'assets/images/men.png')
-                .lightbox-wrapper.subimg-wrapper
-                  +lightbox-img('screen-2', 'Men', 'assets/images/men-1.jpg')
+                .img-inner-wrapper
+                  +tile-cross-img('screen-2', 'Men', '', 'assets/images/men.png')
+                .subimg-wrapper
+                  +tile-cross-img('screen-2', 'Men', '', 'assets/images/men-1.jpg')
               .desc-wrapper
                 h1.title Men
                 span.subtitle Fall 2016
           .row
             .col-md-12.women-wrapper
               .img-wrapper
-                .lightbox-wrapper.img-inner-wrapper
-                  +lightbox-img('screen-2', 'Women', 'assets/images/women.png')
+                .img-inner-wrapper
+                  +tile-cross-img('screen-2', 'Women', '', 'assets/images/women.png')
                 .lightbox-wrapper.subimg-wrapper
-                  +lightbox-img('screen-2', 'Women', 'assets/images/women-1.jpg')
+                  +tile-cross-img('screen-2', 'Women', '', 'assets/images/women-1.jpg')
               .desc-wrapper
                 h1.title Women
                 span.subtitle Fall 2016
@@ -120,10 +120,10 @@ html(lang="en")
               .slider-wrapper
                 .slider
                   .row.home-shop-slider
-                    .lightbox-wrapper.slide-wrapper
-                      +lightbox-img('screen-3', 'Coat', 'assets/images/coat-2.jpg')
-                    .lightbox-wrapper.slide-wrapper
-                      +lightbox-img('screen-3', 'Coat', 'assets/images/coat-3.jpg')
+                    .slide-wrapper
+                      +tile-cross-img('screen-3', 'Coat', '', 'assets/images/coat-2.jpg')
+                    .slide-wrapper
+                      +tile-cross-img('screen-3', 'Coat', '', 'assets/images/coat-3.jpg')
               .row.slider-controls-wrapper
                 .col-md-8.slider-controls
                   .slider-control-box.active

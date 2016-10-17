@@ -51,45 +51,15 @@ html(lang="en")
               .col-md-7.blank-space
         .row.upper-part
           .row.images-wrapper.images-row-1
-            .img-wrapper.desc-img-wrapper.poster-1
-              .img-float-desc
-                span.heading Project Title
-                a.link(href='#') Learn more
-              .lightbox-wrapper.inner-wrapper
-                +lightbox-img('screen-2', 'Poster 1', 'assets/images/poster-1.png')
-            .img-wrapper.desc-img-wrapper.poster-2
-              .img-float-desc
-                span.heading Project Title
-                a.link(href='#') Learn more
-              .lightbox-wrapper.inner-wrapper
-                +lightbox-img('screen-2', 'Poster 2', 'assets/images/poster-2.png')
+            +tile-img('screen-2', 'Poster 1', 'assets/images/poster-1.png', {text: 'Learn more'}, true)
+            +tile-img('screen-2', 'Poster 2', 'assets/images/poster-2.png', {text: 'Learn more'}, true)
           .row.images-wrapper.images-row-2
-            .img-wrapper.desc-img-wrapper.poster-1
-              .img-float-desc
-                span.heading Project Title
-                a.link(href='#') Learn more
-              .lightbox-wrapper.inner-wrapper
-                +lightbox-img('screen-2', 'Poster 3', 'assets/images/poster-3.png')
+            +tile-img('screen-2', 'Poster 3', 'assets/images/poster-3.png', {text: 'Learn more'}, true)
           .row.images-wrapper.images-row-3
-            .img-wrapper.desc-img-wrapper.poster-1
-              .img-float-desc
-                span.heading Project Title
-                a.link(href='#') Learn more
-              .lightbox-wrapper.inner-wrapper
-                +lightbox-img('screen-2', 'Poster 4', 'assets/images/poster-4.png')
+            +tile-img('screen-2', 'Poster 4', 'assets/images/poster-4.png', {text: 'Learn more'}, true)
           .row.images-wrapper.images-row-4
-            .img-wrapper.desc-img-wrapper.poster-1
-              .img-float-desc
-                span.heading Project Title
-                a.link(href='#') Learn more
-              .lightbox-wrapper.inner-wrapper
-                +lightbox-img('screen-2', 'Poster 5', 'assets/images/poster-5.png')
-            .img-wrapper.desc-img-wrapper.poster-2
-              .img-float-desc
-                span.heading Project Title
-                a.link(href='#') Learn more
-              .lightbox-wrapper.inner-wrapper
-                +lightbox-img('screen-2', 'Poster 6', 'assets/images/poster-6.png')
+            +tile-img('screen-2', 'Poster 5', 'assets/images/poster-5.png', {text: 'Learn more'}, true)
+            +tile-img('screen-2', 'Poster 6', 'assets/images/poster-6.png', {text: 'Learn more'}, true)
       .screen-3
         .row.lower-part
           .col-md-4.left-part
@@ -103,11 +73,11 @@ html(lang="en")
               h2.title Related projects
               span.subtitle More of the same
           .row.images-wrapper
-            .lightbox-wrapper.col-md-4.col-md-offset-2.img-wrapper
-              +lightbox-img('screen-3', 'Related 1', 'assets/images/related-1.png')
+            .col-md-4.col-md-offset-2.img-wrapper
+              +tile-cross-img('screen-3', 'Illustration', '', 'assets/images/related-1.png')
               span.img-desc Illustration
-            .lightbox-wrapper.col-md-4.img-wrapper
-              +lightbox-img('screen-3', 'Related 2', 'assets/images/related-2.png')
+            .col-md-4.img-wrapper
+              +tile-cross-img('screen-3', 'Visual identity', '', 'assets/images/related-2.png')
               span.img-desc Visual identity
           .row
             .col-md-3.col-md-offset-4.more-wrapper

@@ -3,9 +3,9 @@
 @import 'components/nav'
 @import 'components/header'
 @import 'components/next-step'
-@import 'components/shop-goods'
+@import 'components/tile-cross-img'
 @import 'components/input-range'
-@import 'components/lightbox-img'
+// @import 'components/lightbox-img'
 @import 'components/footer'
 
 .main
@@ -41,6 +41,16 @@
         background dark-grey
       .goods-wrapper
         padding 0
+        .goods
+          position relative
+          padding 0
+          float left
+          width 40%
+          margin-bottom 96px
+          &:nth-child(even)
+            margin-left 10%
+          &:nth-child(odd)
+            margin-right 10%
         .slider
           .slide
             outline none

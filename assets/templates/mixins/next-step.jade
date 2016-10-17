@@ -1,4 +1,4 @@
-include lightbox-img
+include tile-cross-img
 mixin nextStep(title, subtitle, button, src, imgUrl)
   .next-step
     .row
@@ -23,6 +23,6 @@ mixin nextStep(title, subtitle, button, src, imgUrl)
           .col-md-7.blank-space-grey
             span.letter.y-letter y
             if(imgUrl)
-              .lightbox-wrapper.img-wrapper
-                +lightbox-img('next-step', 'Goods', imgUrl)
+              .img-wrapper
+                +tile-cross-img('next-step', 'Goods', '', imgUrl)
         .line

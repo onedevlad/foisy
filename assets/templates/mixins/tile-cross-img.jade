@@ -1,0 +1,14 @@
+mixin tile-cross-img(group, name, subtitle, imgUrl, lazy)
+  .goods
+    a(href=mediaUrlPrefix+imgUrl, data-lightbox=group, data-title=name)
+      .goods-img-wrapper
+        .goods-img
+            if(lazy)
+              img(alt=name, data-lazy=mediaUrlPrefix + imgUrl)
+            else
+              img(alt=name, src= mediaUrlPrefix + imgUrl)
+      .goods-overlay
+        .bg-line
+        .goods-title-wrapper
+          h4.title= name
+          span.subtitle= subtitle
