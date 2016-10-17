@@ -27,13 +27,14 @@ $(document).ready(function(){
 })
 
 $(document).ready(function(){ // Nav module
+  var linksCount = $('.nav-link').length
   var openNav = function() {
     $('.nav-open-button').addClass('nav-open-button-active').unbind('click').click(closeNav)
     $('.nav').addClass('nav-opened')
     function anim(cur) {
       TweenLite.delayedCall(0.1, function() {
         TweenLite.to($('.nav-link-'+cur), 0.2, { left: 0, opacity: 1 })
-        if(cur <= 12) anim(++cur)
+        if(cur < linksCount) anim(++cur)
       })
     }
     anim(0)
@@ -44,12 +45,12 @@ $(document).ready(function(){ // Nav module
     function anim(cur) {
       TweenLite.delayedCall(0.1, function() {
         TweenLite.to($('.nav-link-'+cur), 0.2, { left: '50%', opacity: 0 })
-        if(cur > 0) anim(--cur)
-        if(cur === 0)
+        if(cur > 1) anim(--cur)
+        if(cur === 1)
           $('.nav').removeClass('nav-opened')
       })
     }
-    anim(12)
+    anim(linksCount)
   }
   $('.nav-open-button').click(openNav)
 })

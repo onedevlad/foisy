@@ -17,6 +17,7 @@
       opacity 0
       relative left 50%
       a
+      span
         color white
         line-height 4em
         cursor pointer
@@ -24,9 +25,16 @@
         text-transform uppercase
         font-weight bold
         font-family MontserratBold
-        &:hover
-          color blue
-
+    .dropdown
+      .dropdown-menu
+        background light-black
+        li
+          padding 0
+          cursor pointer
+          a
+            background transparent
+            &:hover
+              color blue
 @media(max-width $screen-md) // Tablet
   .nav
     width 60%

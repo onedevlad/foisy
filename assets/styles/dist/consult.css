@@ -2249,7 +2249,8 @@ h6 {
   position: relative;
   left: 50%;
 }
-.nav .nav-wrapper .nav-link a {
+.nav .nav-wrapper .nav-link a,
+.nav .nav-wrapper .nav-link span {
   color: #fff;
   line-height: 4em;
   cursor: pointer;
@@ -2258,7 +2259,17 @@ h6 {
   font-weight: bold;
   font-family: MontserratBold;
 }
-.nav .nav-wrapper .nav-link a:hover {
+.nav .nav-wrapper .dropdown .dropdown-menu {
+  background: #3c3c3c;
+}
+.nav .nav-wrapper .dropdown .dropdown-menu li {
+  padding: 0;
+  cursor: pointer;
+}
+.nav .nav-wrapper .dropdown .dropdown-menu li a {
+  background: transparent;
+}
+.nav .nav-wrapper .dropdown .dropdown-menu li a:hover {
   color: #00aff0;
 }
 @media (max-width: 992px) {
