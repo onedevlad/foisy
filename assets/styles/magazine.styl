@@ -1,13 +1,10 @@
-@import 'common'
+@require 'common'
 
-@import 'components/nav'
-@import 'components/header'
-@import 'components/slider'
-@import 'components/tile-slider'
-@import 'components/footer'
-@import 'components/next-step'
+@require 'components/slider'
+@require 'components/tile-slider'
+@require 'components/footer'
 
-.main
+.main-magazine
   z-index 6
   position relative
   padding 0
@@ -268,79 +265,81 @@
           color grey-1
 
 @media(max-width $screen-md) // Tablet
-  .screen-1
-    .left-part
+  .main-magazine
+    .screen-1
+      .left-part
+        padding 0 5%
+        .post-wrapper
+          margin-top 48px
+      .right-part
+        padding 0 5%
+        .right-line
+          display none
+        .title
+          margin-top 48px
+    .screen-2
+      background black
       padding 0 5%
-      .post-wrapper
-        margin-top 48px
-    .right-part
-      padding 0 5%
-      .right-line
-        display none
-      .title
-        margin-top 48px
-  .screen-2
-    background black
-    padding 0 5%
-    margin-top screen-margin
-    height auto
-    .left-part
+      margin-top screen-margin
       height auto
-      margin-top 5%
-      .title-wrapper
-        margin-left 25%
-        position static
-        text-align center
-    .right-part
-      height auto
-      padding 96px 0
-      .slider-controls-wrapper
-        display none
-      .line
-        display none
-    .upper-part
-      height auto
-      position static
-      .slider
+      .left-part
         height auto
-  .screen-3
-    .lower-part
-      display none
-    .upper-part
-      padding 5%
-      .keep-reading-wrapper
-        margin-top 48px
-        margin-bottom 48px
-    .slider-wrapper
-      margin screen-sub-margin 0
+        margin-top 5%
+        .title-wrapper
+          margin-left 25%
+          position static
+          text-align center
+      .right-part
+        height auto
+        padding 96px 0
+        .slider-controls-wrapper
+          display none
+        .line
+          display none
+      .upper-part
+        height auto
+        position static
+        .slider
+          height auto
+    .screen-3
+      .lower-part
+        display none
+      .upper-part
+        padding 5%
+        .keep-reading-wrapper
+          margin-top 48px
+          margin-bottom 48px
+      .slider-wrapper
+        margin screen-sub-margin 0
 
 @media(min-width $screen-md) // Desktop
-  .screen-1
-    .left-part
-      padding 312px 0 screen-sub-margin 0
-    .right-part
-      padding-left 0
-      padding-right 0
-      border-left 1px solid dark-grey
-      .title
-        margin-top 150px
-      .big-slide-wrapper
-        width 61.5%
-  .screen-2
-    position relative
-    .left-part
-      absolute left top
-      height 100%
-      margin-top - block-top-offset
-      border-right 1px solid light-black
-      .title-wrapper
-        margin-left 50%
-    .right-part
-      padding 150px 0
-      .tile-slider-wrapper
-        width 125%
-  .screen-3
-    .upper-part
-      .keep-reading-wrapper
-        margin-top 96px
-        margin-bottom 96px
+  .main-magazine
+    .screen-1
+      .left-part
+        padding 312px 0 screen-sub-margin 0
+      .right-part
+        padding-left 0
+        padding-right 0
+        border-left 1px solid dark-grey
+        .title
+          margin-top 150px
+        .big-slide-wrapper
+          width 61.5%
+    .screen-2
+      position relative
+      .left-part
+        absolute left top
+        height 100%
+        margin-top - block-top-offset
+        border-right 1px solid light-black
+        .title-wrapper
+          margin-left 50%
+      .right-part
+        padding 150px 0
+        .tile-slider-wrapper
+          width 125%
+    .screen-3
+      .upper-part
+        .keep-reading-wrapper
+          margin-top 96px
+          margin-bottom 96px

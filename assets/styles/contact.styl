@@ -1,11 +1,8 @@
-@import 'common'
+@require 'common'
 
-@import 'components/nav'
-@import 'components/header'
-@import 'components/tile-cross-img'
-@import 'components/footer'
+@require 'components/tile-cross-img'
 
-.main
+.main-contact
   z-index 6
   position relative
   padding 0
@@ -62,36 +59,38 @@
 
 
 @media(max-width $screen-md) // Tablet
-  .screen-1
-    .left-part
-      padding 0 5%
-      text-align center
-      background grey
-      .grey-block
-        display none
-    .right-part
-      padding-top 0
-      text-align center
-      .right-line
-        display none
-      .title-wrapper
-        margin-top 48px
-      .form-wrapper
-        margin-left 15%
-      .map-wrapper
-        width 100%
-      .directions-link-wrapper
-        display none
+  .main-contact
+    .screen-1
+      .left-part
+        padding 0 5%
+        text-align center
+        background grey
+        .grey-block
+          display none
+      .right-part
+        padding-top 0
+        text-align center
+        .right-line
+          display none
+        .title-wrapper
+          margin-top 48px
+        .form-wrapper
+          margin-left 15%
+        .map-wrapper
+          width 100%
+        .directions-link-wrapper
+          display none
 
 
 @media(min-width $screen-md) // Desktop
-  .screen-1
-    .left-part
-      margin-top - block-top-offset
-      padding-top block-top-offset + 144px
-      background white
-    .right-part
-      padding 144px 0 0 0
-      border-left 1px solid dark-grey
-      .map-wrapper
-        width 120%
+  .main-contact
+    .screen-1
+      .left-part
+        margin-top - block-top-offset
+        padding-top block-top-offset + 144px
+        background white
+      .right-part
+        padding 144px 0 0 0
+        border-left 1px solid dark-grey
+        .map-wrapper
+          width 120%

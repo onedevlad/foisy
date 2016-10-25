@@ -1,14 +1,10 @@
-@import 'common'
+@require 'common'
 
-@import 'components/nav'
-@import 'components/header'
-@import 'components/next-step'
-@import 'components/tile-cross-img'
-@import 'components/input-range'
-// @import 'components/lightbox-img'
-@import 'components/footer'
+@require 'components/next-step'
+@require 'components/tile-cross-img'
+@require 'components/input-range'
 
-.main
+.main-shop-with-images
   z-index 6
   position relative
   padding 0
@@ -103,49 +99,51 @@
         margin-bottom 96px
 
 @media(max-width $screen-md) // Tablet
-  .screen-1
-    .left-part
-      padding 0 5%
-      text-align center
-      background grey
-      .grey-block
-        display none
-    .right-part
-      padding-top 0
-      text-align center
-      .right-line
-        display none
-      .main-preview
+  .main-shop-with-images
+    .screen-1
+      .left-part
+        padding 0 5%
+        text-align center
+        background grey
         .grey-block
-        .slider-wrapper
           display none
-      .slider-wrapper-2
-        .next-arrow
+      .right-part
+        padding-top 0
+        text-align center
+        .right-line
           display none
-        .comment
-          text-align left
-  .screen-2
-    .lower-part
-      display none
-    .upper-part
-      padding 0 5%
-      .product
-        margin-bottom 96px
+        .main-preview
+          .grey-block
+          .slider-wrapper
+            display none
+        .slider-wrapper-2
+          .next-arrow
+            display none
+          .comment
+            text-align left
+    .screen-2
+      .lower-part
+        display none
+      .upper-part
+        padding 0 5%
+        .product
+          margin-bottom 96px
 
 @media(min-width $screen-md) // Desktop
-  .screen-1
-    .left-part
-      margin-top - block-top-offset
-      padding-top block-top-offset + 144px
-      background white
-      // padding 312px 0 screen-sub-margin 0
-      .categories-cat
-        margin-top 96px
-    .right-part
-      padding 144px 0 0 0
-      border-left 1px solid dark-grey
-      .goods-wrapper
-        margin-top 96px
-  .screen-2
-    .right-part
-      border-left 1px solid dark-grey
+  .main-shop-with-images
+    .screen-1
+      .left-part
+        margin-top - block-top-offset
+        padding-top block-top-offset + 144px
+        background white
+        // padding 312px 0 screen-sub-margin 0
+        .categories-cat
+          margin-top 96px
+      .right-part
+        padding 144px 0 0 0
+        border-left 1px solid dark-grey
+        .goods-wrapper
+          margin-top 96px
+    .screen-2
+      .right-part
+        border-left 1px solid dark-grey

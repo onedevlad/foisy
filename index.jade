@@ -5,22 +5,13 @@ html(lang="en")
   head
     meta(charset="UTF-8")
     title Home - Foisy
-    link(rel='stylesheet', type='text/css', href='assets/styles/dist/index.css')
-    link(rel='stylesheet', type='text/css', href='assets/lib/slick/slick.css')
-    link(rel='stylesheet', type='text/css', href='assets/lib/slick/slick-theme.css')
-    link(rel='stylesheet', type='text/css', href='assets/lib/lightbox/css/lightbox.min.css')
-    link(rel='stylesheet', type='text/css', href='assets/lib/themify-icons/styles.css')
-    script(type='text/javascript', src='assets/lib/jquery/jquery.js')
+    link(rel='stylesheet', type='text/css', href='assets/styles/dist/all.css')
     script(type='text/javascript', src='assets/scripts/dist/index.js', defer)
-    script(type='text/javascript', src='assets/lib/slick/slick.min.js', defer)
-    script(type='text/javascript', src='assets/lib/lightbox/js/lightbox.min.js', defer)
-    script(type='text/javascript', src='assets/lib/gsap/TweenLite.min.js', defer)
-    script(type='text/javascript', src='assets/lib/gsap/CSSPlugin.min.js', defer)
-    script(type='text/javascript', src='assets/lib/bootstrap/js/dropdown.js', defer)
     meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
   body
+    +preloader()
     +header(headerConfig)
-    .main.container-fluid
+    .main-index.container-fluid
       .screen-1
         .row
           .col-md-4.left-part

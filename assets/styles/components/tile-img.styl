@@ -1,3 +1,6 @@
+@require '../lib/lightbox/css/lightbox'
+
+
 .desc-img-wrapper
   transform-style preserve-3d
   perspective 900px
@@ -6,7 +9,6 @@
   .inner-wrapper
     position relative
     overflow-x hidden
-    .lightbox-link
     .img
       width 100%
       display block
@@ -18,7 +20,6 @@
   &:hover .img-float-desc
     transform rotateY(0deg)
   &:hover .img
-  &:hover .lightbox-link
     margin-left 15%
   .img-float-desc
     width 60%

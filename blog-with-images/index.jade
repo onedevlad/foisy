@@ -5,17 +5,13 @@ html(lang="en")
   head
     meta(charset="UTF-8")
     title Blog - Foisy
-    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/styles/dist/blog-with-images.css')
-    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/lib/themify-icons/styles.css')
-    script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/jquery/jquery.js')
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/styles/dist/all.css')
     script(type='text/javascript', src= mediaUrlPrefix + 'assets/scripts/dist/blog-with-images.js', defer)
-    script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/gsap/TweenLite.min.js', defer)
-    script(type='text/javascript', src= mediaUrlPrefix + 'assets/lib/gsap/CSSPlugin.min.js', defer)
     meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
   body
     +preloader()
     +header(headerConfig)
-    .main
+    .main-blog-with-images
       .screen-1
         .row.lower-part
           .col-md-4.left-part

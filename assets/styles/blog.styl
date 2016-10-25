@@ -1,12 +1,9 @@
-@import 'common'
+@require 'common'
 
-@import 'components/nav'
-@import 'components/header'
-@import 'components/tile-cross-img'
-@import 'components/slider'
-@import 'components/footer'
+@require 'components/tile-cross-img'
+@require 'components/slider'
 
-.main
+.main-blog
   .screen-1
     position relative
     .screen-num
@@ -149,39 +146,41 @@
           box-shadow 0 20px 20px dark-grey
 
 @media(max-width $screen-md) // Tablet
-  .screen-1
-    padding 5%
-    .lower-part
-      .left-part
+  .main-blog
+    .screen-1
+      padding 5%
+      .lower-part
+        .left-part
+          display none
+      .upper-part
+        .person-wrapper
+          margin-top 0
+        .date-wrapper
+          margin-top 8vh
+        .quote-wrapper
+          display none
+    .screen-2
+      padding 20vh 5% 5% 5%
+      .lower-part
         display none
-    .upper-part
-      .person-wrapper
-        margin-top 0
-      .date-wrapper
-        margin-top 8vh
-      .quote-wrapper
-        display none
-  .screen-2
-    padding 20vh 5% 5% 5%
-    .lower-part
-      display none
-    .upper-part
-      text-align center
-      .slider
-        .slide-wrapper
-          margin-bottom screen-margin
-      .more-wrapper
-        margin 0 0 screen-sub-margin 0
+      .upper-part
+        text-align center
+        .slider
+          .slide-wrapper
+            margin-bottom screen-margin
+        .more-wrapper
+          margin 0 0 screen-sub-margin 0
 
 @media(min-width $screen-md) // Desktop
-  .screen-1
-    .upper-part
-      .person-wrapper
-        margin-top 16vh
-      .date-wrapper
-        margin-top 16vh
-  .screen-2
-    padding screen-margin 0 0 0
-    .more-wrapper
-      padding 0
-      margin screen-sub-margin 0
+  .main-blog
+    .screen-1
+      .upper-part
+        .person-wrapper
+          margin-top 16vh
+        .date-wrapper
+          margin-top 16vh
+    .screen-2
+      padding screen-margin 0 0 0
+      .more-wrapper
+        padding 0
+        margin screen-sub-margin 0

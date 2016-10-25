@@ -1,13 +1,10 @@
-@import 'common'
+@require 'common'
 
-@import 'components/nav'
-@import 'components/header'
-@import 'components/slider'
-@import 'components/footer'
-@import 'components/travel-post'
+@require 'components/slider'
+@require 'components/travel-post'
 
 
-.main
+.main-app
   z-index 6
   position relative
   padding 0
@@ -199,44 +196,46 @@
             width 100%
 
 @media(max-width $screen-md) // Tablet
-  .screen-1
-    .images-wrapper
-      margin 96px 0 0 0
-    .lower-part
-      display none
-    .upper-part
-      padding 0 5%
-      .title-wrapper
-        display block
-        width 80%
-        text-align center
-        margin 96px 10%
-  .screen-2
-    .lower-part
-      display none
-    .slider-controls-wrapper
-      display none
-  .screen-3
-    .left-part
-      display none
-    .right-part
-      .content-right
+  .main-app
+    .screen-1
+      .images-wrapper
+        margin 96px 0 0 0
+      .lower-part
         display none
-      .content-left
-        text-align center
+      .upper-part
+        padding 0 5%
+        .title-wrapper
+          display block
+          width 80%
+          text-align center
+          margin 96px 10%
+    .screen-2
+      .lower-part
+        display none
+      .slider-controls-wrapper
+        display none
+    .screen-3
+      .left-part
+        display none
+      .right-part
+        .content-right
+          display none
+        .content-left
+          text-align center
 
 @media(min-width $screen-md) // Desktop
-  .screen-1
-    .upper-part
-      .images-wrapper
-        margin-top -40%
-        .img-1
-          margin-top 150%
-        .img-5
-          margin-top 100%
-      .title-wrapper
-        margin-top -50%
-  .screen-3
-    .content-left
-    .content-right
-      height 100%
+  .main-app
+    .screen-1
+      .upper-part
+        .images-wrapper
+          margin-top -40%
+          .img-1
+            margin-top 150%
+          .img-5
+            margin-top 100%
+        .title-wrapper
+          margin-top -50%
+    .screen-3
+      .content-left
+      .content-right
+        height 100%

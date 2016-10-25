@@ -1,5 +1,3 @@
-@import '../lib/bootstrap/bootstrap/index.styl'
-@import 'components/preloader'
 // VARIABLES BLOCK
 
 grey = #f9f9f9
@@ -21,6 +19,17 @@ animationSpeed = 0.4s
 screen-margin = 100px
 screen-sub-margin = 48px
 block-top-offset = 24px
+
+// IMPORTS BLOCK
+
+@require '../lib/bootstrap/bootstrap/index'
+@require '../lib/themify-icons/styles'
+
+@require 'components/nav'
+@require 'components/header'
+@require 'components/footer'
+@require 'components/preloader'
+
 
 // FONTS BLOCK
 

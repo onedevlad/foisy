@@ -1,14 +1,11 @@
-@import 'common'
+@require 'common'
 
-@import 'components/nav'
-@import 'components/header'
-@import 'components/slider'
-@import 'components/tile-slider'
-@import 'components/footer'
-@import 'components/next-step'
-@import 'components/tile-cross-img'
+@require 'components/slider'
+@require 'components/tile-slider'
+@require 'components/next-step'
+@require 'components/tile-cross-img'
 
-.main
+.main-home-shop
   z-index 6
   position relative
   padding 0
@@ -260,80 +257,82 @@
                 color black
 
 @media(max-width $screen-md) // Tablet
-  .screen-1
-    .left-part
+  .main-home-shop
+    .screen-1
+      .left-part
+        padding 0 5%
+        text-align center
+      .right-part
+        text-align center
+        .right-line
+          display none
+        .goods-wrapper
+          .goods
+            margin-bottom 48px
+    .screen-2
       padding 0 5%
-      text-align center
-    .right-part
-      text-align center
-      .right-line
-        display none
-      .goods-wrapper
-        .goods
-          margin-bottom 48px
-  .screen-2
-    padding 0 5%
-    height auto
-    .lower-part
-      display none
-    .upper-part
-      .men-wrapper
-      .women-wrapper
-        .img-wrapper
-          width 100%
-          margin 0
-          .subimg-wrapper
-            margin 10% 0 0 0
-      .men-wrapper
-        .desc-wrapper
-          right 0
-      .women-wrapper
-        .desc-wrapper
-          left 0
-  .screen-3
-    .left-part
-      padding 0 5% !important
-    .right-part
+      height auto
       .lower-part
         display none
       .upper-part
-        padding 0 !important
-        .slider
-          margin 0 0 0 16.666667%
+        .men-wrapper
+        .women-wrapper
+          .img-wrapper
+            width 100%
+            margin 0
+            .subimg-wrapper
+              margin 10% 0 0 0
+        .men-wrapper
+          .desc-wrapper
+            right 0
+        .women-wrapper
+          .desc-wrapper
+            left 0
+    .screen-3
+      .left-part
+        padding 0 5% !important
+      .right-part
+        .lower-part
+          display none
+        .upper-part
+          padding 0 !important
+          .slider
+            margin 0 0 0 16.666667%
 
 @media(min-width $screen-md) // Desktop
-  .screen-1
-    .left-part
-      padding 312px 0 screen-sub-margin 0
-    .right-part
-      padding-left 0
-      padding-right 0
-      border-left 1px solid dark-grey
-  .screen-2
-    position relative
-    .upper-part
-      .men-wrapper
-      .women-wrapper
-        .img-wrapper
-          width 55%
-        .desc-wrapper
-          z-index 3
-      .men-wrapper
-        .img-wrapper
-          margin-left 17.333334%
-          .subimg-wrapper
-            margin -10% -10% 0 0
-            float right
-        .desc-wrapper
-          left 70%
-      .women-wrapper
-        .img-wrapper
-          margin 0 0 0 33.33334%
-          .subimg-wrapper
-            margin -10% 0 0 -10%
-        .desc-wrapper
-          left 22%
-  .screen-3
-    .left-part
-      height 100%
-      absolute left top
+  .main-home-shop
+    .screen-1
+      .left-part
+        padding 312px 0 screen-sub-margin 0
+      .right-part
+        padding-left 0
+        padding-right 0
+        border-left 1px solid dark-grey
+    .screen-2
+      position relative
+      .upper-part
+        .men-wrapper
+        .women-wrapper
+          .img-wrapper
+            width 55%
+          .desc-wrapper
+            z-index 3
+        .men-wrapper
+          .img-wrapper
+            margin-left 17.333334%
+            .subimg-wrapper
+              margin -10% -10% 0 0
+              float right
+          .desc-wrapper
+            left 70%
+        .women-wrapper
+          .img-wrapper
+            margin 0 0 0 33.33334%
+            .subimg-wrapper
+              margin -10% 0 0 -10%
+          .desc-wrapper
+            left 22%
+    .screen-3
+      .left-part
+        height 100%
+        absolute left top

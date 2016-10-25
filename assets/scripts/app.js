@@ -1,5 +1,6 @@
 //@prepros-prepend common.js
 //@prepros-prepend components/numbers-counter.js
+//@prepros-prepend ../lib/slick/slick.min.js
 
 var sliderConfig = Object.assign({}, defaultSliderConfig, {
   slidesToScroll: 4,

@@ -1,13 +1,10 @@
-@import 'common'
+@require 'common'
 
-@import 'components/nav'
-@import 'components/header'
-@import 'components/slider'
-@import 'components/next-step'
-@import 'components/tile-cross-img'
-@import 'components/footer'
+@require 'components/slider'
+@require 'components/next-step'
+@require 'components/tile-cross-img'
 
-.main
+.main-index
   z-index 6
   position relative
   padding 0
@@ -188,152 +185,154 @@
               color black
 
 @media(max-width $screen-md) // Tablet
-  .screen-1
-    height auto
-    .left-part
-      .blank-box
-       display none
-      .quote-box
-        width 100%
-        text-align center
-    .right-part
-      padding 0 5%
-      .lower-part
-        height auto
-        .article-wrapper
-          height auto
-        .article-inner-wrapper
-          .heading
-            margin screen-margin 0 0 0
-            text-align center
-          .article
-            margin screen-sub-margin 0
-      .upper-part
-        position static
-        .images-wrapper
-          height auto
+  .main-index
+    .screen-1
+      height auto
+      .left-part
+        .blank-box
+         display none
+        .quote-box
           width 100%
-          .img-wrapper
-          .keep-reading
-            margin-top 5%
-            position static
-          .img-wrapper
+          text-align center
+      .right-part
+        padding 0 5%
+        .lower-part
+          height auto
+          .article-wrapper
+            height auto
+          .article-inner-wrapper
+            .heading
+              margin screen-margin 0 0 0
+              text-align center
+            .article
+              margin screen-sub-margin 0
+        .upper-part
+          position static
+          .images-wrapper
+            height auto
+            width 100%
+            .img-wrapper
+            .keep-reading
+              margin-top 5%
+              position static
+            .img-wrapper
+              width 100%
+              height auto
+              a
+              img
+                height auto
+              .img-overlay
+                display none
+            .keep-reading
+              relative left 50%
+              margin-top screen-sub-margin
+              transform translate(-50%, 0)
+    .screen-2
+      background black
+      padding 0 5%
+      margin-top screen-margin
+      height auto
+      .left-part
+        height auto
+        margin-top 5%
+        .title-wrapper
+          position static
+          text-align center
+      .right-part
+        height auto
+        .line
+          display none
+        .learn-more
+          relative left 50%
+          margin screen-sub-margin 0
+          transform translate(-50%, 0)
+        .team-wrapper
+          .team-img-wrapper
             width 100%
             height auto
+            margin-top 10vh
             a
             img
               height auto
-            .img-overlay
-              display none
-          .keep-reading
-            relative left 50%
-            margin-top screen-sub-margin
-            transform translate(-50%, 0)
-  .screen-2
-    background black
-    padding 0 5%
-    margin-top screen-margin
-    height auto
-    .left-part
-      height auto
-      margin-top 5%
-      .title-wrapper
-        position static
-        text-align center
-    .right-part
-      height auto
-      .line
-        display none
-      .learn-more
-        relative left 50%
-        margin screen-sub-margin 0
-        transform translate(-50%, 0)
-      .team-wrapper
-        .team-img-wrapper
-          width 100%
-          height auto
-          margin-top 10vh
-          a
-          img
-            height auto
-    .upper-part
-      height auto
-      position static
-      .slider
+      .upper-part
         height auto
-  .screen-3
-    .lower-part
-      display none
-    .upper-part
-      padding 5%
-      text-align center
-      .view-blog-wrapper
-        padding 0
-    .slider-wrapper
-      margin screen-sub-margin 0
+        position static
+        .slider
+          height auto
+    .screen-3
+      .lower-part
+        display none
+      .upper-part
+        padding 5%
+        text-align center
+        .view-blog-wrapper
+          padding 0
+      .slider-wrapper
+        margin screen-sub-margin 0
 
 @media(min-width $screen-md) // Desktop
-  .screen-1
-    .left-part
-      .quote-box
-        width 150%
-    .right-part
-      padding-left 0
-      padding-right 0
-      border-left 1px solid dark-grey
-      .lower-part
-        height 100%
-        .article-wrapper
+  .main-index
+    .screen-1
+      .left-part
+        .quote-box
+          width 150%
+      .right-part
+        padding-left 0
+        padding-right 0
+        border-left 1px solid dark-grey
+        .lower-part
+          height 100%
+          .article-wrapper
+            padding screen-margin 0 0 0
+            height 100%
+            border-right 1px solid dark-grey
+            .article-inner-wrapper
+              z-index 5
+              overflow hidden
+        .upper-part
+          width 100%
+          height 100%
           padding screen-margin 0 0 0
-          height 100%
-          border-right 1px solid dark-grey
-          .article-inner-wrapper
-            z-index 5
-            overflow hidden
-      .upper-part
-        width 100%
+          absolute top left
+          .images-wrapper
+            height 100%
+            .img-wrapper
+              a
+              img
+                height 100%
+            .desk-wrapper
+              width 45%
+              height 60%
+              absolute right 5%
+            .building-wrapper
+              width 30%
+              height 30%
+              absolute right 15% top 45%
+            .sand-wrapper
+              width 35%
+              height 30%
+              absolute right 25% top 60%
+            .keep-reading
+              absolute top 85% left 58.333334%
+    .screen-2
+      position relative
+      .left-part
+        absolute left top
         height 100%
-        padding screen-margin 0 0 0
-        absolute top left
-        .images-wrapper
-          height 100%
-          .img-wrapper
-            a
-            img
-              height 100%
-          .desk-wrapper
-            width 45%
-            height 60%
-            absolute right 5%
-          .building-wrapper
-            width 30%
-            height 30%
-            absolute right 15% top 45%
-          .sand-wrapper
-            width 35%
-            height 30%
-            absolute right 25% top 60%
-          .keep-reading
-            absolute top 85% left 58.333334%
-  .screen-2
-    position relative
-    .left-part
-      absolute left top
-      height 100%
-      border-right 1px solid light-black
-      margin-top - block-top-offset
-      .title-wrapper
-        relative top 200px left 60%
-    .right-part
-      .learn-more
-        absolute left 58.333333334% top 60%
-      .team-wrapper
-        .team-img-wrapper
-          margin-top 100px
-          margin-bottom 150px
-          width 55%
-          height auto
-  .screen-3
-    .upper-part
-      .view-blog-wrapper
-          padding 200px 0 0 0
+        border-right 1px solid light-black
+        margin-top - block-top-offset
+        .title-wrapper
+          relative top 200px left 60%
+      .right-part
+        .learn-more
+          absolute left 58.333333334% top 60%
+        .team-wrapper
+          .team-img-wrapper
+            margin-top 100px
+            margin-bottom 150px
+            width 55%
+            height auto
+    .screen-3
+      .upper-part
+        .view-blog-wrapper
+            padding 200px 0 0 0

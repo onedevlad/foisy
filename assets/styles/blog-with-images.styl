@@ -1,12 +1,9 @@
-@import 'common'
+@require 'common'
 
-@import 'components/nav'
-@import 'components/header'
-@import 'components/slider'
-@import 'components/footer'
-@import 'components/next-step'
+@require 'components/slider'
+@require 'components/next-step'
 
-.main
+.main-blog-with-images
   .screen-1
     position relative
     .lower-part
@@ -78,31 +75,33 @@
           color white
           text-transform uppercase
 @media(max-width $screen-md) // Tablet
-  .screen-1
-    .upper-part
-      .featured-wrapper
-        padding 0 5%
-  .screen-2
-    padding 0 5%
-    .lower-part
-      .left-part
-        display none
-    .upper-part
-      .slider
-        height auto
-        .slide-wrapper
-          margin-top screen-margin
-      .more-wrapper
-        .more
-          relative left 50%
-          transform translate(-50%, 0)
+  .main-blog-with-images
+    .screen-1
+      .upper-part
+        .featured-wrapper
+          padding 0 5%
+    .screen-2
+      padding 0 5%
+      .lower-part
+        .left-part
+          display none
+      .upper-part
+        .slider
+          height auto
+          .slide-wrapper
+            margin-top screen-margin
+        .more-wrapper
+          .more
+            relative left 50%
+            transform translate(-50%, 0)
 
 @media(min-width $screen-md) // Desktop
-  .screen-1
-    .upper-part
-      .featured-wrapper
-        padding 0
-  .screen-2
-    .upper-part
-      .more-wrapper
-        padding 0
+  .main-blog-with-images
+    .screen-1
+      .upper-part
+        .featured-wrapper
+          padding 0
+    .screen-2
+      .upper-part
+        .more-wrapper
+          padding 0

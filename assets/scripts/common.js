@@ -1,6 +1,7 @@
 var headerSliderTimeout = 5000
 var scrollDownSpeed = 400
 var lightboxMaxWidth = 2.5
+var lightboxMaxHeight = 1.5
 
 var defaultSliderConfig = {
   autoplay: true,
@@ -9,21 +10,29 @@ var defaultSliderConfig = {
   arrows: false,
 }
 
-var lightboxConfig = {
-  maxWidth: outerWidth / 2.5,
-  maxHeight: outerHeight / 1.5
-}
-
-
 // DO NOT EDIT BELOW THIS POINT
 
 
+//@prepros-prepend ../lib/jquery/jquery.js
 //@prepros-prepend ../lib/imagesloaded/imagesloaded.min.js
+//@prepros-prepend ../lib/bootstrap/js/dropdown.js
+//@prepros-prepend ../lib/gsap/TweenLite.min.js
+//@prepros-prepend ../lib/gsap/CSSPlugin.min.js
+
+var lightboxConfig = {
+  maxWidth: outerWidth / lightboxMaxWidth,
+  maxHeight: outerHeight / lightboxMaxHeight
+}
+
 
 $(document).ready(function(){
-  $('body').imagesLoaded().always(function(){
+  function removePreloader(){
     $('.preloader').addClass('loaded')
-  })
+  }
+
+  $('body').imagesLoaded().always(removePreloader)
+
+  setTimeout(removePreloader, 3000)
 })
 
 $(document).ready(function(){ // Nav module

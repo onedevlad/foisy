@@ -1,12 +1,8 @@
-@import 'common'
+@require 'common'
 
-@import 'components/nav'
-@import 'components/header'
-@import 'components/lightbox-img'
-@import 'components/tile-img'
-@import 'components/footer'
+@require 'components/tile-img'
 
-.main
+.main-consult
   z-index 6
   position relative
   padding 0
@@ -197,67 +193,69 @@
           margin 48px 0 144px 50%
           transform translate(-50%, 0)
 @media(max-width $screen-md) // Tablet
-  .screen-1
-    .lower-part
-      display none
-    .upper-part
-      .block-wrapper
-        text-align center
-        &-1
-          .desc
-            margin 0 0 24px 10%
-          .block-img-wrapper
-            margin-top 48px
-        &-2
-          .desc
-            margin 48px 0 24px 10%
-          .block-img-wrapper
-            margin 48px 0
-  .screen-2
-    padding 0 5%
-    .lower-part
-      display none
-    .upper-part
-      .img-wrapper
-        width 48%
-        margin 1%
-        float left
-  .screen-3
-    .lower-part
-      display none
+  .main-consult
+    .screen-1
+      .lower-part
+        display none
+      .upper-part
+        .block-wrapper
+          text-align center
+          &-1
+            .desc
+              margin 0 0 24px 10%
+            .block-img-wrapper
+              margin-top 48px
+          &-2
+            .desc
+              margin 48px 0 24px 10%
+            .block-img-wrapper
+              margin 48px 0
+    .screen-2
+      padding 0 5%
+      .lower-part
+        display none
+      .upper-part
+        .img-wrapper
+          width 48%
+          margin 1%
+          float left
+    .screen-3
+      .lower-part
+        display none
 
 @media(min-width $screen-md) // Desktop
-  .screen-1
-    .block-wrapper
-      .block-desc
-        padding 96px 0 0 0
-        .desc
-          margin 24px 0
-  .screen-2
-    .upper-part
-      .left-part
-        .img-wrapper-1
-          width 55%
-          margin-left 30%
-        .img-wrapper-2
-          z-index 3 !important
-          position relative
-          width 50%
-          margin-left 85%
-        .img-wrapper-3
-          width 40%
-          margin-left 15%
-      .right-part
-        .img-wrapper-1
-          width 70%
-          margin 0 0 0 10%
-        .img-outer-wrapper
-          width 100%
-          position relative
+  .main-consult
+    .screen-1
+      .block-wrapper
+        .block-desc
+          padding 96px 0 0 0
+          .desc
+            margin 24px 0
+    .screen-2
+      .upper-part
+        .left-part
+          .img-wrapper-1
+            width 55%
+            margin-left 30%
           .img-wrapper-2
-            absolute top
-            width 17.5%
-            margin-left -7.5%
+            z-index 3 !important
+            position relative
+            width 50%
+            margin-left 85%
           .img-wrapper-3
-            width 30%
-            margin-left 80%
+            width 40%
+            margin-left 15%
+        .right-part
+          .img-wrapper-1
+            width 70%
+            margin 0 0 0 10%
+          .img-outer-wrapper
+            width 100%
+            position relative
+            .img-wrapper-2
+              absolute top
+              width 17.5%
+              margin-left -7.5%
+            .img-wrapper-3
+              width 30%
+              margin-left 80%

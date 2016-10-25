@@ -1,5 +1,8 @@
 //@prepros-prepend common.js
 
+//@prepros-prepend ../lib/slick/slick.min.js
+
+
 var sliderConfig = Object.assign(defaultSliderConfig, {
   slidesToShow: 3,
   slidesToScroll: 3,

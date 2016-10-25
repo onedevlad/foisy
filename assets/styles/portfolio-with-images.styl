@@ -1,12 +1,9 @@
-@import 'common'
+@require 'common'
 
-@import 'components/nav'
-@import 'components/header'
-@import 'components/tile-cross-img'
-@import 'components/footer'
-@import 'components/next-step'
+@require 'components/tile-cross-img'
+@require 'components/next-step'
 
-.main
+.main-portfolio-with-images
   .screen-1
     position relative
     .screen-num
@@ -102,23 +99,25 @@
 
 
 @media(max-width $screen-md) // Tablet
-  .screen-1
-    padding 5%
-    .lower-part
-      display none
-    .upper-part
-      .related-wrapper
-        margin-top 10vh
-      .images-wrapper
-        margin-top 0
-        .img-wrapper
+  .main-portfolio-with-images
+    .screen-1
+      padding 5%
+      .lower-part
+        display none
+      .upper-part
+        .related-wrapper
           margin-top 10vh
-          padding 0
+        .images-wrapper
+          margin-top 0
+          .img-wrapper
+            margin-top 10vh
+            padding 0
 
 @media(min-width $screen-md) // Desktop
-  .screen-1
-    .upper-part
-      .related-wrapper
-        margin-top screen-margin
-      .images-wrapper
-        margin-top 96px
+  .main-portfolio-with-images
+    .screen-1
+      .upper-part
+        .related-wrapper
+          margin-top screen-margin
+        .images-wrapper
+          margin-top 96px

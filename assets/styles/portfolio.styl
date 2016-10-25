@@ -1,12 +1,9 @@
-@import 'common'
+@require 'common'
 
-@import 'components/nav'
-@import 'components/header'
-@import 'components/tile-img'
-@import 'components/tile-cross-img'
-@import 'components/footer'
+@require 'components/tile-img'
+@require 'components/tile-cross-img'
 
-.main
+.main-portfolio
   z-index 6
   position relative
   .screen-1
@@ -146,10 +143,11 @@
           .subtitle
             display block
       .images-wrapper
-        .inner-wrapper
-        .img-link
-        img
-          width 100%
+        // .inner-wrapper
+        // .img-link
+        // img
+        //   // width 100%
+        //   width auto
         .img-desc
           absolute bottom 10% right 5%
           z-index 2
@@ -167,119 +165,121 @@
 
 
 @media(max-width $screen-md) // Tablet
-  .screen-1
-    height auto
-    .lower-part
-      display none
-    .upper-part
-      .left-part
+  .main-portfolio
+    .screen-1
+      height auto
+      .lower-part
         display none
-      .right-part
-        padding 0 5%
-        .saying-wrapper
-          padding screen-sub-margin 0
-  .screen-2
-    .upper-part
-      .images-wrapper
-        .img-wrapper
-          height 30vh
-          margin-top 10vh
-          .inner-wrapper
-          .img-link
-          img
-            width 100%
-        &.images-row-1
-          .tile-img-wrapper:nth-child(1)
-            width 50%
-            margin-left 25%
-          .tile-img-wrapper:nth-child(2)
-            width 80%
-            margin-left 10%
-        &.images-row-2
-          .tile-img-wrapper:nth-child(1)
-            width 80%
-            margin-left 10%
-        &.images-row-3
-          .tile-img-wrapper:nth-child(1)
-            width 80%
-            margin-left 10%
-        &.images-row-4
-          .tile-img-wrapper:nth-child(1)
-            width 80%
-            margin-left 10%
-          .tile-img-wrapper:nth-child(2)
-            width 80%
-            margin-left 10%
-  .screen-3
-    padding 0 5%
-    .lower-part
-      display none
-    .upper-part
-      .related-wrapper
-        margin-top screen-margin
-      .images-wrapper
-        margin-top 0
-        .img-wrapper
+      .upper-part
+        .left-part
+          display none
+        .right-part
+          padding 0 5%
+          .saying-wrapper
+            padding screen-sub-margin 0
+    .screen-2
+      .upper-part
+        .images-wrapper
+          .img-wrapper
+            height 30vh
+            margin-top 10vh
+            .inner-wrapper
+            .img-link
+            img
+              width 100%
+          &.images-row-1
+            .tile-img-wrapper:nth-child(1)
+              width 50%
+              margin-left 25%
+            .tile-img-wrapper:nth-child(2)
+              width 80%
+              margin-left 10%
+          &.images-row-2
+            .tile-img-wrapper:nth-child(1)
+              width 80%
+              margin-left 10%
+          &.images-row-3
+            .tile-img-wrapper:nth-child(1)
+              width 80%
+              margin-left 10%
+          &.images-row-4
+            .tile-img-wrapper:nth-child(1)
+              width 80%
+              margin-left 10%
+            .tile-img-wrapper:nth-child(2)
+              width 80%
+              margin-left 10%
+    .screen-3
+      padding 0 5%
+      .lower-part
+        display none
+      .upper-part
+        .related-wrapper
           margin-top screen-margin
-          padding 0
-      .more-wrapper
-        margin-bottom screen-sub-margin
-        .more
-          relative left 50%
-          transform translate(-50%, 0)
+        .images-wrapper
+          margin-top 0
+          .img-wrapper
+            margin-top screen-margin
+            padding 0
+        .more-wrapper
+          margin-bottom screen-sub-margin
+          .more
+            relative left 50%
+            transform translate(-50%, 0)
 
 @media(min-width $screen-md) // Desktop
-  .screen-1
-    height 80vh
-    .upper-part
-      height 100%
-      .left-part
-      .right-part
-        padding 0
+  .main-portfolio
+    .screen-1
+      height 80vh
+      .upper-part
         height 100%
-        border-left 1px solid dark-grey
-        .saying-wrapper
+        .left-part
+        .right-part
+          padding 0
           height 100%
-          padding 16vh 0 0 0
           border-left 1px solid dark-grey
-        .row
-          height 100%
-  .screen-2
-    .upper-part
-      .images-wrapper
-        margin-top 10vh
-        .tile-img-wrapper
-          float left
-          height 100%
-        &.images-row-1
-          height 30vh
-          .tile-img-wrapper:nth-child(1)
-            max-width 45%
-            absolute left 20%
-          .tile-img-wrapper:nth-child(2)
-            max-width 45%
-            absolute right 20%
-        &.images-row-2
-          height 60vh
-          .tile-img-wrapper:nth-child(1)
-            absolute left 20%
-        &.images-row-3
-          height 30vh
-          .tile-img-wrapper:nth-child(1)
-            absolute right 20%
-        &.images-row-4
-          height 30vh
-          .tile-img-wrapper:nth-child(1)
-            max-width 45%
-            absolute left 20%
-          .tile-img-wrapper:nth-child(2)
-            max-width 45%
-            absolute right 20%
-  .screen-3
-    .upper-part
-      .related-wrapper
-        margin-top 40vh
-        .subtitle
-          margin screen-sub-margin 0
-      .more-wrapper
-        margin-bottom screen-margin
+          .saying-wrapper
+            height 100%
+            padding 16vh 0 0 0
+            border-left 1px solid dark-grey
+          .row
+            height 100%
+    .screen-2
+      .upper-part
+        .images-wrapper
+          margin-top 10vh
+          .tile-img-wrapper
+            float left
+            height 100%
+          &.images-row-1
+            height 30vh
+            .tile-img-wrapper:nth-child(1)
+              max-width 45%
+              absolute left 20%
+            .tile-img-wrapper:nth-child(2)
+              max-width 45%
+              absolute right 20%
+          &.images-row-2
+            height 60vh
+            .tile-img-wrapper:nth-child(1)
+              absolute left 20%
+          &.images-row-3
+            height 30vh
+            .tile-img-wrapper:nth-child(1)
+              absolute right 20%
+          &.images-row-4
+            height 30vh
+            .tile-img-wrapper:nth-child(1)
+              max-width 45%
+              absolute left 20%
+            .tile-img-wrapper:nth-child(2)
+              max-width 45%
+              absolute right 20%
+    .screen-3
+      .upper-part
+        .related-wrapper
+          margin-top 40vh
+          .subtitle
+            margin screen-sub-margin 0
+        .more-wrapper
+          margin-bottom screen-margin
