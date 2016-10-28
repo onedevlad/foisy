@@ -3246,6 +3246,7 @@ pre code {
   z-index: 2;
 }
 .header .header-simple-nav .simple-nav-item-wrapper {
+  cursor: pointer;
   position: relative;
 }
 .header .header-simple-nav .simple-nav-item-wrapper .simple-nav-active-bar {
@@ -3274,6 +3275,7 @@ pre code {
   display: block;
 }
 .header .header-simple-nav .simple-nav-item-wrapper.active .item-title,
+.header .header-simple-nav .simple-nav-item-wrapper.active .item-subtitle,
 .header .header-simple-nav .simple-nav-item-wrapper.active .item-desc {
   color: #dcdcdc;
 }

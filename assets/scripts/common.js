@@ -105,7 +105,6 @@ $(document).ready(function() { // Header slider module
   $activeBox.click()
 })
 
-
 $(document).ready(function(){ // Scrolldown module
   $('.scroll-down').click(function(){
     $('html, body').animate({ scrollTop: $('.header').height() }, scrollDownSpeed)

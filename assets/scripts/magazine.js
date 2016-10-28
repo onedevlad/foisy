@@ -43,3 +43,38 @@ $(document).ready(function() { // Slick config module
     })
   }
 })
+
+
+
+$(document).ready(function() { // Header slider module
+  var timeout = null
+
+  var $activeBox = $('.simple-nav-item-wrapper.active')
+  var currentHeaderSlide = $activeBox.index() - 1
+  var headerSlidesCount = $('.header-background').length - 1
+
+  var timeoutFunction = function(){
+    if(currentHeaderSlide > headerSlidesCount) currentHeaderSlide = 0
+    
+    $('.simple-nav-item-wrapper').eq(currentHeaderSlide).click()
+    currentHeaderSlide += 1
+  }
+
+  $('.simple-nav-item-wrapper').click(function(){
+    var $this = $(this)
+    var index = $this.index('.simple-nav-item-wrapper')
+
+    currentHeaderSlide = index
+    console.log(index, currentHeaderSlide)
+
+    $('.simple-nav-item-wrapper.active').removeClass('active')
+    $this.addClass('active')
+
+    $('.header-background').removeClass('active')
+    $('.header-background').eq(currentHeaderSlide).addClass('active')
+
+    clearTimeout(timeout)
+    timeout = setTimeout(timeoutFunction, headerSliderTimeout)
+  })
+
+})
