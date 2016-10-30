@@ -76,5 +76,19 @@ $(document).ready(function() { // Header slider module
     clearTimeout(timeout)
     timeout = setTimeout(timeoutFunction, headerSliderTimeout)
   })
+})
 
+$(document).ready(function(){
+  var playingVideo = false
+  $('.video-wrapper').click(function(){
+    if(playingVideo){
+      $(this).find('.video-overlay').show(0)
+      $(this).find('.video').removeAttr('controls').get(0).pause()
+    }
+    else{
+      $(this).find('.video').attr('controls', 'controls').get(0).play()
+      $(this).find('.video-overlay').hide(0)
+    }
+    playingVideo = !playingVideo
+  })
 })

@@ -3,6 +3,7 @@
 @require 'components/next-step'
 @require 'components/tile-cross-img'
 @require 'components/input-range'
+@require 'components/slider'
 
 .main-shop-with-images
   z-index 6
@@ -23,11 +24,16 @@
           display block
           font-size 16px
         .cat
+        .tag
+        .output
           font-size 14px
           padding 0.5em 0
           cursor pointer
           display block
           text-transform uppercase
+          &.active
+            color blue
+            font-weight bold
     .right-part
       position relative
       .right-line
@@ -38,11 +44,14 @@
       .goods-wrapper
         padding 0
         .goods
+          transition opacity 0.2s ease
           position relative
           padding 0
           float left
           width 40%
           margin-bottom 96px
+          &.disabled
+            opacity 0.5
           &:nth-child(even)
             margin-left 10%
           &:nth-child(odd)

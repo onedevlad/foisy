@@ -41,8 +41,10 @@ html(lang="en")
             .row.picks-wrapper
               .col-md-8.pull-right.picks-inner-wrapper
                 .video-wrapper
-                  img.video-preview(alt='Drone', src=mediaUrlPrefix + 'assets/images/drone.jpg')
-                  .overlay
+                  video.video(poster=mediaUrlPrefix + 'assets/images/drone.jpg', preload)
+                    source(src=mediaUrlPrefix + 'assets/videos/drone-experience.mp4')
+                    source(src=mediaUrlPrefix + 'assets/videos/drone-experience.avi')
+                  .video-overlay
                     span.play-btn-wrapper
                       span.play-btn.ti-control-play
                     br
@@ -96,16 +98,16 @@ html(lang="en")
                 .col-md-8.big-slide-wrapper
                   +slide(mediaUrlPrefix + 'assets/images/japan.jpg', 'Japanese culture',
                     'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
-                    '3 September 2016', 'Lifestyle', true)
+                    '3 September 2016', 'Lifestyle', 'blog')
               .row
                 .col-md-8.big-slide-wrapper
                   +slide(mediaUrlPrefix + 'assets/images/fitness.jpg', 'The power of fitness',
                     'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
-                    '3 September 2016', 'Lifestyle', true)
+                    '3 September 2016', 'Lifestyle', 'blog')
                 .col-md-8.big-slide-wrapper
                   +slide(mediaUrlPrefix + 'assets/images/smart-watch.jpg', 'Smart-watch apps',
                     'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore, deserunt quibusdam beatae magni officia.',
-                    '3 September 2016', 'Technology', true)
+                    '3 September 2016', 'Technology', 'blog')
               .row
                 button.keep-reading
                   a(href='blog') Keep reading
@@ -124,29 +126,29 @@ html(lang="en")
             .row.tile-slider-wrapper
               .row.slick-slider
                 +tile-slide(mediaUrlPrefix + 'assets/images/yee-zy-360x.jpg', 'Yee-zy 360x',
-                  '3 September 2016', 'Fashion', false)
+                  '3 September 2016', 'Fashion', 'blog')
                 +tile-slide(mediaUrlPrefix + 'assets/images/experiment.jpg', 'National experiment',
-                  '3 September 2016', 'Earth', false)
+                  '3 September 2016', 'Earth', 'blog')
                 +tile-slide(mediaUrlPrefix + 'assets/images/car.jpg', 'Majestic cars',
-                  '3 September 2016', 'Design', false)
+                  '3 September 2016', 'Design', 'blog')
                 +tile-slide(mediaUrlPrefix + 'assets/images/yee-zy-360x.jpg', 'Yee-zy 360x',
-                  '3 September 2016', 'Fashion', false)
+                  '3 September 2016', 'Fashion', 'blog')
                 +tile-slide(mediaUrlPrefix + 'assets/images/experiment.jpg', 'National experiment',
-                  '3 September 2016', 'Earth', false)
+                  '3 September 2016', 'Earth', 'blog')
                 +tile-slide(mediaUrlPrefix + 'assets/images/car.jpg', 'Majestic cars',
-                  '3 September 2016', 'Design', false)
+                  '3 September 2016', 'Design', 'blog')
                 +tile-slide(mediaUrlPrefix + 'assets/images/yee-zy-360x.jpg', 'Yee-zy 360x',
-                  '3 September 2016', 'Fashion', false)
+                  '3 September 2016', 'Fashion', 'blog')
                 +tile-slide(mediaUrlPrefix + 'assets/images/experiment.jpg', 'National experiment',
-                  '3 September 2016', 'Earth', false)
+                  '3 September 2016', 'Earth', 'blog')
                 +tile-slide(mediaUrlPrefix + 'assets/images/car.jpg', 'Majestic cars',
-                  '3 September 2016', 'Design', false)
+                  '3 September 2016', 'Design', 'blog')
                 +tile-slide(mediaUrlPrefix + 'assets/images/yee-zy-360x.jpg', 'Yee-zy 360x',
-                  '3 September 2016', 'Fashion', false)
+                  '3 September 2016', 'Fashion', 'blog')
                 +tile-slide(mediaUrlPrefix + 'assets/images/experiment.jpg', 'National experiment',
-                  '3 September 2016', 'Earth', false)
+                  '3 September 2016', 'Earth', 'blog')
                 +tile-slide(mediaUrlPrefix + 'assets/images/car.jpg', 'Majestic cars',
-                  '3 September 2016', 'Design', false)
+                  '3 September 2016', 'Design', 'blog')
             .row.slider-data-wrapper
               .col-md-7.slider-controls-wrapper
                 .slider-controls
@@ -182,23 +184,23 @@ html(lang="en")
               .row
                 +slide( mediaUrlPrefix + 'assets/images/water.jpg', 'Deep water',
                   'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore',
-                  '2 July 2016')
+                  '2 July 2016', '', 'blog')
                 +slide( mediaUrlPrefix + 'assets/images/wolf.jpg', 'Art is like a mountain',
                   'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore',
-                  '2 July 2016')
+                  '2 July 2016', '', 'blog')
                 +slide( mediaUrlPrefix + 'assets/images/cliffs.jpg', '"Bussiness design"',
                   'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore',
-                  '2 July 2016')
+                  '2 July 2016', '', 'blog')
               .row
                 +slide( mediaUrlPrefix + 'assets/images/tower.jpg', 'Long time',
                   'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore',
-                  '2 July 2016')
+                  '2 July 2016', '', 'blog')
                 +slide( mediaUrlPrefix + 'assets/images/food.jpg', 'Making -- programs',
                   'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore',
-                  '2 July 2016')
+                  '2 July 2016', '', 'blog')
                 +slide( mediaUrlPrefix + 'assets/images/jump.jpg', 'Who are you?!',
                   'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore',
-                  '2 July 2016')
+                  '2 July 2016', '', 'blog')
           .row
             .col-md-8.col-md-offset-4.keep-reading-wrapper
               a(href= mediaUrlPrefix + 'portfolio').keep-reading Keep reading

@@ -14,9 +14,6 @@
     <div class="header container-fluid">
       <div class="row main-row md-same-height-row"><a class="nav-open-button"><span class="line-0"></span><span class="line-1"></span><span class="line-2"></span></a>
         <div class="header-background header-background-8 active"></div>
-        <div class="header-slider-controls"><span class="header-page-num"><span class="middle-dots">···</span><span class="header-current-slide">01</span> / 01</span>
-          <div class="header-slider-control-box active"></div>
-        </div>
         <div class="header-simple-nav col-md-4 hidden-sm hidden-xs">
         </div>
         <div class="col-md-8 header-main padding-bottom reduced-logo-margin">
@@ -45,10 +42,10 @@
             </div>
             <div class="row">
               <div class="col-md-6 col-md-push-6 selection-config-wrapper">
-                <div class="cat-wrapper categories-cat"><span class="title">Categories</span><span class="cat">Shop men</span><span class="cat">Shop women</span><span class="cat">Shop kids</span></div>
-                <div class="cat-wrapper"><span class="title">Tags</span><span class="cat">Jeans</span><span class="cat">Design</span><span class="cat">Art</span><span class="cat">T-shirts</span></div>
+                <div class="cat-wrapper categories-cat"><span class="title">Categories</span><span data-cat-name="men" class="cat">Shop men</span><span data-cat-name="women" class="cat">Shop women</span><span data-cat-name="kids" class="cat">Shop kids</span></div>
+                <div class="cat-wrapper"><span class="title">Tags</span><span data-tag-name="jeans" class="tag">Jeans</span><span data-tag-name="design" class="tag">Design</span><span data-tag-name="art" class="tag">Art</span><span data-tag-name="t-shirts" class="tag">T-shirts</span></div>
                 <div class="cat-wrapper"><span class="title">Price range</span>
-                  <input type="range" min="0" max="3000" step="10" class="range"/><span class="cat output">$95 - $200</span>
+                  <input type="range" min="0" max="3500" step="10" value="3500" class="range"/><span class="output">$ 0 - $  <span class="range-output">3500</span></span>
                 </div>
               </div>
             </div>
@@ -59,7 +56,7 @@
               <div class="col-md-8 goods-wrapper">
                 <div class="row slider shop-lazy-slider">
                   <div class="slide">
-                    <div class="goods"><a href="../assets/images/jeans.png" data-lightbox="screen-1" data-title="Jeans">
+                    <div data-cats="men" data-tags="jeans,art" data-price="1000" class="goods"><a href="../assets/images/jeans.png" data-lightbox="screen-1" data-title="Jeans">
                         <div class="goods-img-wrapper">
                           <div class="goods-img"><img alt="Jeans" data-lazy="../assets/images/jeans.png"/>
                           </div>
@@ -67,10 +64,10 @@
                         <div class="goods-overlay">
                           <div class="bg-line"></div>
                           <div class="goods-title-wrapper">
-                            <h4 class="title">Jeans</h4><span class="subtitle">$ 2500.00</span>
+                            <h4 class="title">Jeans</h4><span class="subtitle">$ 1000.00</span>
                           </div>
                         </div></a></div>
-                    <div class="goods"><a href="../assets/images/coat-1.jpg" data-lightbox="screen-1" data-title="Coat">
+                    <div data-cats="women" data-tags="jeans" data-price="1500" class="goods"><a href="../assets/images/coat-1.jpg" data-lightbox="screen-1" data-title="Coat">
                         <div class="goods-img-wrapper">
                           <div class="goods-img"><img alt="Coat" data-lazy="../assets/images/coat-1.jpg"/>
                           </div>
@@ -78,10 +75,10 @@
                         <div class="goods-overlay">
                           <div class="bg-line"></div>
                           <div class="goods-title-wrapper">
-                            <h4 class="title">Coat</h4><span class="subtitle">$ 2500.00</span>
+                            <h4 class="title">Coat</h4><span class="subtitle">$ 1500.00</span>
                           </div>
                         </div></a></div>
-                    <div class="goods"><a href="../assets/images/jacket-1.jpg" data-lightbox="screen-1" data-title="Coat">
+                    <div data-cats="kids" data-tags="art" data-price="2000" class="goods"><a href="../assets/images/jacket-1.jpg" data-lightbox="screen-1" data-title="Coat">
                         <div class="goods-img-wrapper">
                           <div class="goods-img"><img alt="Coat" data-lazy="../assets/images/jacket-1.jpg"/>
                           </div>
@@ -89,10 +86,10 @@
                         <div class="goods-overlay">
                           <div class="bg-line"></div>
                           <div class="goods-title-wrapper">
-                            <h4 class="title">Coat</h4><span class="subtitle">$ 2500.00</span>
+                            <h4 class="title">Coat</h4><span class="subtitle">$ 2000.00</span>
                           </div>
                         </div></a></div>
-                    <div class="goods"><a href="../assets/images/coat-8.png" data-lightbox="screen-1" data-title="Trench">
+                    <div data-cats="men" data-tags="jeans,art" data-price="2500" class="goods"><a href="../assets/images/coat-8.png" data-lightbox="screen-1" data-title="Trench">
                         <div class="goods-img-wrapper">
                           <div class="goods-img"><img alt="Trench" data-lazy="../assets/images/coat-8.png"/>
                           </div>
@@ -103,7 +100,7 @@
                             <h4 class="title">Trench</h4><span class="subtitle">$ 2500.00</span>
                           </div>
                         </div></a></div>
-                    <div class="goods"><a href="../assets/images/uniform.png" data-lightbox="screen-1" data-title="Uniform">
+                    <div data-cats="kids" data-tags="t-shirts,art" data-price="3000" class="goods"><a href="../assets/images/uniform.png" data-lightbox="screen-1" data-title="Uniform">
                         <div class="goods-img-wrapper">
                           <div class="goods-img"><img alt="Uniform" data-lazy="../assets/images/uniform.png"/>
                           </div>
@@ -111,10 +108,10 @@
                         <div class="goods-overlay">
                           <div class="bg-line"></div>
                           <div class="goods-title-wrapper">
-                            <h4 class="title">Uniform</h4><span class="subtitle">$ 2500.00</span>
+                            <h4 class="title">Uniform</h4><span class="subtitle">$ 3000.00</span>
                           </div>
                         </div></a></div>
-                    <div class="goods"><a href="../assets/images/coat-2-full.png" data-lightbox="screen-1" data-title="Jacket">
+                    <div data-cats="men" data-tags="jeans,art" data-price="3500" class="goods"><a href="../assets/images/coat-2-full.png" data-lightbox="screen-1" data-title="Jacket">
                         <div class="goods-img-wrapper">
                           <div class="goods-img"><img alt="Jacket" data-lazy="../assets/images/coat-2-full.png"/>
                           </div>
@@ -122,12 +119,12 @@
                         <div class="goods-overlay">
                           <div class="bg-line"></div>
                           <div class="goods-title-wrapper">
-                            <h4 class="title">Jacket</h4><span class="subtitle">$ 2500.00</span>
+                            <h4 class="title">Jacket</h4><span class="subtitle">$ 3500.00</span>
                           </div>
                         </div></a></div>
                   </div>
                   <div class="slide">
-                    <div class="goods"><a href="../assets/images/jeans.png" data-lightbox="screen-1" data-title="Jeans">
+                    <div data-cats="men" data-tags="jeans,art" data-price="1000" class="goods"><a href="../assets/images/jeans.png" data-lightbox="screen-1" data-title="Jeans">
                         <div class="goods-img-wrapper">
                           <div class="goods-img"><img alt="Jeans" data-lazy="../assets/images/jeans.png"/>
                           </div>
@@ -135,10 +132,10 @@
                         <div class="goods-overlay">
                           <div class="bg-line"></div>
                           <div class="goods-title-wrapper">
-                            <h4 class="title">Jeans</h4><span class="subtitle">$ 2500.00</span>
+                            <h4 class="title">Jeans</h4><span class="subtitle">$ 1000.00</span>
                           </div>
                         </div></a></div>
-                    <div class="goods"><a href="../assets/images/coat-1.jpg" data-lightbox="screen-1" data-title="Coat">
+                    <div data-cats="women" data-tags="jeans" data-price="1500" class="goods"><a href="../assets/images/coat-1.jpg" data-lightbox="screen-1" data-title="Coat">
                         <div class="goods-img-wrapper">
                           <div class="goods-img"><img alt="Coat" data-lazy="../assets/images/coat-1.jpg"/>
                           </div>
@@ -146,10 +143,10 @@
                         <div class="goods-overlay">
                           <div class="bg-line"></div>
                           <div class="goods-title-wrapper">
-                            <h4 class="title">Coat</h4><span class="subtitle">$ 2500.00</span>
+                            <h4 class="title">Coat</h4><span class="subtitle">$ 1500.00</span>
                           </div>
                         </div></a></div>
-                    <div class="goods"><a href="../assets/images/jacket-1.jpg" data-lightbox="screen-1" data-title="Coat">
+                    <div data-cats="kids" data-tags="art" data-price="2000" class="goods"><a href="../assets/images/jacket-1.jpg" data-lightbox="screen-1" data-title="Coat">
                         <div class="goods-img-wrapper">
                           <div class="goods-img"><img alt="Coat" data-lazy="../assets/images/jacket-1.jpg"/>
                           </div>
@@ -157,10 +154,10 @@
                         <div class="goods-overlay">
                           <div class="bg-line"></div>
                           <div class="goods-title-wrapper">
-                            <h4 class="title">Coat</h4><span class="subtitle">$ 2500.00</span>
+                            <h4 class="title">Coat</h4><span class="subtitle">$ 2000.00</span>
                           </div>
                         </div></a></div>
-                    <div class="goods"><a href="../assets/images/coat-8.png" data-lightbox="screen-1" data-title="Trench">
+                    <div data-cats="men" data-tags="jeans,art" data-price="2500" class="goods"><a href="../assets/images/coat-8.png" data-lightbox="screen-1" data-title="Trench">
                         <div class="goods-img-wrapper">
                           <div class="goods-img"><img alt="Trench" data-lazy="../assets/images/coat-8.png"/>
                           </div>
@@ -171,7 +168,7 @@
                             <h4 class="title">Trench</h4><span class="subtitle">$ 2500.00</span>
                           </div>
                         </div></a></div>
-                    <div class="goods"><a href="../assets/images/uniform.png" data-lightbox="screen-1" data-title="Uniform">
+                    <div data-cats="kids" data-tags="t-shirts,art" data-price="3000" class="goods"><a href="../assets/images/uniform.png" data-lightbox="screen-1" data-title="Uniform">
                         <div class="goods-img-wrapper">
                           <div class="goods-img"><img alt="Uniform" data-lazy="../assets/images/uniform.png"/>
                           </div>
@@ -179,10 +176,10 @@
                         <div class="goods-overlay">
                           <div class="bg-line"></div>
                           <div class="goods-title-wrapper">
-                            <h4 class="title">Uniform</h4><span class="subtitle">$ 2500.00</span>
+                            <h4 class="title">Uniform</h4><span class="subtitle">$ 3000.00</span>
                           </div>
                         </div></a></div>
-                    <div class="goods"><a href="../assets/images/coat-2-full.png" data-lightbox="screen-1" data-title="Jacket">
+                    <div data-cats="men" data-tags="jeans,art" data-price="3500" class="goods"><a href="../assets/images/coat-2-full.png" data-lightbox="screen-1" data-title="Jacket">
                         <div class="goods-img-wrapper">
                           <div class="goods-img"><img alt="Jacket" data-lazy="../assets/images/coat-2-full.png"/>
                           </div>
@@ -190,12 +187,12 @@
                         <div class="goods-overlay">
                           <div class="bg-line"></div>
                           <div class="goods-title-wrapper">
-                            <h4 class="title">Jacket</h4><span class="subtitle">$ 2500.00</span>
+                            <h4 class="title">Jacket</h4><span class="subtitle">$ 3500.00</span>
                           </div>
                         </div></a></div>
                   </div>
                   <div class="slide">
-                    <div class="goods"><a href="../assets/images/jeans.png" data-lightbox="screen-1" data-title="Jeans">
+                    <div data-cats="men" data-tags="jeans,art" data-price="1000" class="goods"><a href="../assets/images/jeans.png" data-lightbox="screen-1" data-title="Jeans">
                         <div class="goods-img-wrapper">
                           <div class="goods-img"><img alt="Jeans" data-lazy="../assets/images/jeans.png"/>
                           </div>
@@ -203,10 +200,10 @@
                         <div class="goods-overlay">
                           <div class="bg-line"></div>
                           <div class="goods-title-wrapper">
-                            <h4 class="title">Jeans</h4><span class="subtitle">$ 2500.00</span>
+                            <h4 class="title">Jeans</h4><span class="subtitle">$ 1000.00</span>
                           </div>
                         </div></a></div>
-                    <div class="goods"><a href="../assets/images/coat-1.jpg" data-lightbox="screen-1" data-title="Coat">
+                    <div data-cats="women" data-tags="jeans" data-price="1500" class="goods"><a href="../assets/images/coat-1.jpg" data-lightbox="screen-1" data-title="Coat">
                         <div class="goods-img-wrapper">
                           <div class="goods-img"><img alt="Coat" data-lazy="../assets/images/coat-1.jpg"/>
                           </div>
@@ -214,10 +211,10 @@
                         <div class="goods-overlay">
                           <div class="bg-line"></div>
                           <div class="goods-title-wrapper">
-                            <h4 class="title">Coat</h4><span class="subtitle">$ 2500.00</span>
+                            <h4 class="title">Coat</h4><span class="subtitle">$ 1500.00</span>
                           </div>
                         </div></a></div>
-                    <div class="goods"><a href="../assets/images/jacket-1.jpg" data-lightbox="screen-1" data-title="Coat">
+                    <div data-cats="kids" data-tags="art" data-price="2000" class="goods"><a href="../assets/images/jacket-1.jpg" data-lightbox="screen-1" data-title="Coat">
                         <div class="goods-img-wrapper">
                           <div class="goods-img"><img alt="Coat" data-lazy="../assets/images/jacket-1.jpg"/>
                           </div>
@@ -225,10 +222,10 @@
                         <div class="goods-overlay">
                           <div class="bg-line"></div>
                           <div class="goods-title-wrapper">
-                            <h4 class="title">Coat</h4><span class="subtitle">$ 2500.00</span>
+                            <h4 class="title">Coat</h4><span class="subtitle">$ 2000.00</span>
                           </div>
                         </div></a></div>
-                    <div class="goods"><a href="../assets/images/coat-8.png" data-lightbox="screen-1" data-title="Trench">
+                    <div data-cats="men" data-tags="jeans,art" data-price="2500" class="goods"><a href="../assets/images/coat-8.png" data-lightbox="screen-1" data-title="Trench">
                         <div class="goods-img-wrapper">
                           <div class="goods-img"><img alt="Trench" data-lazy="../assets/images/coat-8.png"/>
                           </div>
@@ -239,7 +236,7 @@
                             <h4 class="title">Trench</h4><span class="subtitle">$ 2500.00</span>
                           </div>
                         </div></a></div>
-                    <div class="goods"><a href="../assets/images/uniform.png" data-lightbox="screen-1" data-title="Uniform">
+                    <div data-cats="kids" data-tags="t-shirts,art" data-price="3000" class="goods"><a href="../assets/images/uniform.png" data-lightbox="screen-1" data-title="Uniform">
                         <div class="goods-img-wrapper">
                           <div class="goods-img"><img alt="Uniform" data-lazy="../assets/images/uniform.png"/>
                           </div>
@@ -247,10 +244,10 @@
                         <div class="goods-overlay">
                           <div class="bg-line"></div>
                           <div class="goods-title-wrapper">
-                            <h4 class="title">Uniform</h4><span class="subtitle">$ 2500.00</span>
+                            <h4 class="title">Uniform</h4><span class="subtitle">$ 3000.00</span>
                           </div>
                         </div></a></div>
-                    <div class="goods"><a href="../assets/images/coat-2-full.png" data-lightbox="screen-1" data-title="Jacket">
+                    <div data-cats="men" data-tags="jeans,art" data-price="3500" class="goods"><a href="../assets/images/coat-2-full.png" data-lightbox="screen-1" data-title="Jacket">
                         <div class="goods-img-wrapper">
                           <div class="goods-img"><img alt="Jacket" data-lazy="../assets/images/coat-2-full.png"/>
                           </div>
@@ -258,12 +255,12 @@
                         <div class="goods-overlay">
                           <div class="bg-line"></div>
                           <div class="goods-title-wrapper">
-                            <h4 class="title">Jacket</h4><span class="subtitle">$ 2500.00</span>
+                            <h4 class="title">Jacket</h4><span class="subtitle">$ 3500.00</span>
                           </div>
                         </div></a></div>
                   </div>
                   <div class="slide">
-                    <div class="goods"><a href="../assets/images/jeans.png" data-lightbox="screen-1" data-title="Jeans">
+                    <div data-cats="men" data-tags="jeans,art" data-price="1000" class="goods"><a href="../assets/images/jeans.png" data-lightbox="screen-1" data-title="Jeans">
                         <div class="goods-img-wrapper">
                           <div class="goods-img"><img alt="Jeans" data-lazy="../assets/images/jeans.png"/>
                           </div>
@@ -271,10 +268,10 @@
                         <div class="goods-overlay">
                           <div class="bg-line"></div>
                           <div class="goods-title-wrapper">
-                            <h4 class="title">Jeans</h4><span class="subtitle">$ 2500.00</span>
+                            <h4 class="title">Jeans</h4><span class="subtitle">$ 1000.00</span>
                           </div>
                         </div></a></div>
-                    <div class="goods"><a href="../assets/images/coat-1.jpg" data-lightbox="screen-1" data-title="Coat">
+                    <div data-cats="women" data-tags="jeans" data-price="1500" class="goods"><a href="../assets/images/coat-1.jpg" data-lightbox="screen-1" data-title="Coat">
                         <div class="goods-img-wrapper">
                           <div class="goods-img"><img alt="Coat" data-lazy="../assets/images/coat-1.jpg"/>
                           </div>
@@ -282,10 +279,10 @@
                         <div class="goods-overlay">
                           <div class="bg-line"></div>
                           <div class="goods-title-wrapper">
-                            <h4 class="title">Coat</h4><span class="subtitle">$ 2500.00</span>
+                            <h4 class="title">Coat</h4><span class="subtitle">$ 1500.00</span>
                           </div>
                         </div></a></div>
-                    <div class="goods"><a href="../assets/images/jacket-1.jpg" data-lightbox="screen-1" data-title="Coat">
+                    <div data-cats="kids" data-tags="art" data-price="2000" class="goods"><a href="../assets/images/jacket-1.jpg" data-lightbox="screen-1" data-title="Coat">
                         <div class="goods-img-wrapper">
                           <div class="goods-img"><img alt="Coat" data-lazy="../assets/images/jacket-1.jpg"/>
                           </div>
@@ -293,10 +290,10 @@
                         <div class="goods-overlay">
                           <div class="bg-line"></div>
                           <div class="goods-title-wrapper">
-                            <h4 class="title">Coat</h4><span class="subtitle">$ 2500.00</span>
+                            <h4 class="title">Coat</h4><span class="subtitle">$ 2000.00</span>
                           </div>
                         </div></a></div>
-                    <div class="goods"><a href="../assets/images/coat-8.png" data-lightbox="screen-1" data-title="Trench">
+                    <div data-cats="men" data-tags="jeans,art" data-price="2500" class="goods"><a href="../assets/images/coat-8.png" data-lightbox="screen-1" data-title="Trench">
                         <div class="goods-img-wrapper">
                           <div class="goods-img"><img alt="Trench" data-lazy="../assets/images/coat-8.png"/>
                           </div>
@@ -307,7 +304,7 @@
                             <h4 class="title">Trench</h4><span class="subtitle">$ 2500.00</span>
                           </div>
                         </div></a></div>
-                    <div class="goods"><a href="../assets/images/uniform.png" data-lightbox="screen-1" data-title="Uniform">
+                    <div data-cats="kids" data-tags="t-shirts,art" data-price="3000" class="goods"><a href="../assets/images/uniform.png" data-lightbox="screen-1" data-title="Uniform">
                         <div class="goods-img-wrapper">
                           <div class="goods-img"><img alt="Uniform" data-lazy="../assets/images/uniform.png"/>
                           </div>
@@ -315,10 +312,10 @@
                         <div class="goods-overlay">
                           <div class="bg-line"></div>
                           <div class="goods-title-wrapper">
-                            <h4 class="title">Uniform</h4><span class="subtitle">$ 2500.00</span>
+                            <h4 class="title">Uniform</h4><span class="subtitle">$ 3000.00</span>
                           </div>
                         </div></a></div>
-                    <div class="goods"><a href="../assets/images/coat-2-full.png" data-lightbox="screen-1" data-title="Jacket">
+                    <div data-cats="men" data-tags="jeans,art" data-price="3500" class="goods"><a href="../assets/images/coat-2-full.png" data-lightbox="screen-1" data-title="Jacket">
                         <div class="goods-img-wrapper">
                           <div class="goods-img"><img alt="Jacket" data-lazy="../assets/images/coat-2-full.png"/>
                           </div>
@@ -326,7 +323,7 @@
                         <div class="goods-overlay">
                           <div class="bg-line"></div>
                           <div class="goods-title-wrapper">
-                            <h4 class="title">Jacket</h4><span class="subtitle">$ 2500.00</span>
+                            <h4 class="title">Jacket</h4><span class="subtitle">$ 3500.00</span>
                           </div>
                         </div></a></div>
                   </div>
@@ -358,7 +355,7 @@
               <div class="col-md-5 blank-space blank-space-white"><span class="letter i-letter">i</span><span class="studio-name">Foisy Studio</span></div>
               <div class="col-md-7 blank-space-grey"><span class="letter y-letter">y</span>
                 <div class="img-wrapper">
-                  <div class="goods"><a href="../assets/images/jacket-2.png" data-lightbox="next-step" data-title="Goods">
+                  <div data-cats="" data-tags="" data-price="" class="goods"><a href="../assets/images/jacket-2.png" data-lightbox="next-step" data-title="Goods">
                       <div class="goods-img-wrapper">
                         <div class="goods-img"><img alt="Goods" src="../assets/images/jacket-2.png"/>
                         </div>
@@ -386,9 +383,9 @@
               <div class="row">
                 <div class="col-md-3 col-md-offset-7 social-wrapper">
                   <div class="row">
-                    <div class="col-xs-4 social-icon icon-wrapper-0"><span class="icon ti-instagram"></span></div>
-                    <div class="col-xs-4 social-icon icon-wrapper-1"><span class="icon ti-twitter"></span></div>
-                    <div class="col-xs-4 social-icon icon-wrapper-2"><span class="icon ti-dribbble"></span></div>
+                    <div class="col-xs-4 social-icon icon-wrapper-0"><a class="icon ti-instagram"></a></div>
+                    <div class="col-xs-4 social-icon icon-wrapper-1"><a class="icon ti-twitter"></a></div>
+                    <div class="col-xs-4 social-icon icon-wrapper-2"><a class="icon ti-dribbble"></a></div>
                   </div>
                 </div>
               </div>
@@ -396,9 +393,15 @@
           </div>
           <div class="col-xs-8 right-part">
             <div class="row">
-              <div class="col-xs-11 col-xs-offset-1 col-sm-5 col-sm-offset-0 nav-wrapper">
+              <div class="col-xs-11 col-xs-offset-1 col-sm-5 col-sm-offset-0 nav-wrapper nav-upper-wrapper">
                 <ul>
-                  <li><a href="../">Home</a></li>
+                  <li class="dropdown"><span data-toggle="dropdown" class="dropdown-toggle">Home
+                      <div class="caret"></div></span>
+                    <ul class="dropdown-menu">
+                      <li><a href="../">Home</a></li>
+                      <li><a href="../app">Home App</a></li>
+                    </ul>
+                  </li>
                   <li class="dropdown"><span data-toggle="dropdown" class="dropdown-toggle">Portfolio
                       <div class="caret"></div></span>
                     <ul class="dropdown-menu">
@@ -421,6 +424,29 @@
               </div>
             </div>
             <div class="row">
+              <div class="col-xs-11 col-xs-offset-1 col-sm-12 col-sm-offset-0 nav-wrapper nav-lower-wrapper">
+                <ul>
+                  <li class="dropdown"><span data-toggle="dropdown" class="dropdown-toggle">Shop
+                      <div class="caret"></div></span>
+                    <ul class="dropdown-menu">
+                      <li><a href="../shop">Shop</a></li>
+                      <li><a href="../home-shop">Home Shop</a></li>
+                      <li><a href="../shop-with-images">Shop W/ Images</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown"><span data-toggle="dropdown" class="dropdown-toggle">Other
+                      <div class="caret"></div></span>
+                    <ul class="dropdown-menu">
+                      <li><a href="../travel">Travel</a></li>
+                      <li><a href="../magazine">Magazine</a></li>
+                      <li><a href="../consult">Consult</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="../contact">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="row">
               <div class="col-xs-12 copyright-wrapper"><span>Foisy 2016 · All rights reserved.</span></div>
             </div>
             <div class="line"></div>
@@ -430,39 +456,40 @@
     </div>
     <div class="nav">
       <ul class="nav-wrapper">
-        <li class="nav-link nav-link-0 dropdown"><span data-toggle="dropdown" class="dropdown-toggle">Home
-            <div class="caret"></div></span>
-          <ul class="dropdown-menu">
-            <li><a href="../Home">Home</a></li>
-            <li><a href="../app">Home app</a></li>
-          </ul>
-        </li>
-        <li class="nav-link nav-link-1 dropdown"><span data-toggle="dropdown" class="dropdown-toggle">Blog
-            <div class="caret"></div></span>
-          <ul class="dropdown-menu">
-            <li><a href="../blog">Blog</a></li>
-            <li><a href="../blog-with-images">Blog w/ images</a></li>
-          </ul>
-        </li>
-        <li class="nav-link nav-link-2 dropdown"><span data-toggle="dropdown" class="dropdown-toggle">Portfolio
-            <div class="caret"></div></span>
-          <ul class="dropdown-menu">
-            <li><a href="../portfolio">Portfolio</a></li>
-            <li><a href="../portfolio-with-images">Portfolio w/ images</a></li>
-          </ul>
-        </li>
-        <li class="nav-link nav-link-3 dropdown"><span data-toggle="dropdown" class="dropdown-toggle">Shop
-            <div class="caret"></div></span>
-          <ul class="dropdown-menu">
-            <li><a href="../home-shop">Home shop</a></li>
-            <li><a href="../shop">Shop</a></li>
-            <li><a href="../shop-with-images">Shop w/ images</a></li>
-          </ul>
-        </li>
-        <li class="nav-link nav-link-4"><a href="../travel">Travel</a></li>
-        <li class="nav-link nav-link-5"><a href="../consult">Consult</a></li>
-        <li class="nav-link nav-link-6"><a href="../magazine">Magazine</a></li>
-        <li class="nav-link nav-link-7"><a href="../contact">Contact</a></li>
+            <li class="nav-link nav-link-0"><span class="title">Home <span class="caret"></span></span>
+              <ul class="link-subs">
+                <li><a href="../">Home</a></li>
+                <li><a href="../app">Home App</a></li>
+              </ul>
+            </li>
+            <li class="nav-link nav-link-1"><span class="title">Blog <span class="caret"></span></span>
+              <ul class="link-subs">
+                <li><a href="../blog">Blog</a></li>
+                <li><a href="../blog-with-images">Blog w/ images</a></li>
+              </ul>
+            </li>
+            <li class="nav-link nav-link-2"><span class="title">Portfolio <span class="caret"></span></span>
+              <ul class="link-subs">
+                <li><a href="../portfolio">Portfolio</a></li>
+                <li><a href="../portfolio-with-images">Portfolio w/ images</a></li>
+              </ul>
+            </li>
+            <li class="nav-link nav-link-3"><span class="title">Shop <span class="caret"></span></span>
+              <ul class="link-subs">
+                <li><a href="../shop">Shop</a></li>
+                <li><a href="../home-shop">Home Shop</a></li>
+                <li><a href="../shop-with-images">Shop W/ Images</a></li>
+              </ul>
+            </li>
+            <li class="nav-link nav-link-4"><span class="title">Other <span class="caret"></span></span>
+              <ul class="link-subs">
+                <li><a href="../travel">Travel</a></li>
+                <li><a href="../magazine">Magazine</a></li>
+                <li><a href="../consult">Consult</a></li>
+              </ul>
+            </li>
+            <li class="nav-link nav-link-5"><a href="" class="title">Contact</a>
+            </li>
       </ul>
     </div>
   </body>

@@ -8,7 +8,7 @@ mixin header(header)
       if(header.bg.all)
         -for(var i=0; i < header.bg.all.length; i++)
          .header-background(class='header-background-' + header.bg.all[i], class= header.bg.start === header.bg.all[i] ? 'active' : '')
-      if(!header.simpleNav && !header.bg.hideSlider)
+      if(!header.simpleNav && !header.bg.hideSlider && header.bg.length > 1)
         .header-slider-controls
           span.header-page-num
             span.middle-dots ···

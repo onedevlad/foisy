@@ -20,7 +20,7 @@ mixin nextStep(title, subtitle, button, src, imgUrl)
           .col-md-5.blank-space.blank-space-white
             span.letter.i-letter i
             span.studio-name Foisy Studio
-          .col-md-7.blank-space-grey
+          .col-md-7.blank-space-grey(class = imgUrl ? '' : 'hidden-xs')
             span.letter.y-letter y
             if(imgUrl)
               .img-wrapper

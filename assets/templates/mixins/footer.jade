@@ -1,24 +1,29 @@
-mixin content()
-  .col-xs-11.col-xs-offset-1.col-sm-5.col-sm-offset-0.nav-wrapper
+mixin link(config)
+  li
+    a(href= mediaUrlPrefix + config.main.url)= config.main.text
+
+mixin dropdown-link(config)
+  li.dropdown
+    span.dropdown-toggle(data-toggle='dropdown')= config.main.text
+      .caret
+    ul.dropdown-menu
+      -for(var i = 0; i < config.subs.length; i++)
+        li
+          a(href= mediaUrlPrefix + config.subs[i].url)= config.subs[i].text
+
+mixin content-upper()
+  .col-xs-11.col-xs-offset-1.col-sm-5.col-sm-offset-0.nav-wrapper.nav-upper-wrapper
     ul
-      li
-        a(href= mediaUrlPrefix) Home
-      li.dropdown
-        span.dropdown-toggle(data-toggle='dropdown') Portfolio
-          .caret
-        ul.dropdown-menu
-          li
-            a(href= mediaUrlPrefix + 'portfolio') Portfolio
-          li
-            a(href= mediaUrlPrefix + 'portfolio-with-images') Portfolio w/ images
-      li.dropdown
-        span.dropdown-toggle(data-toggle='dropdown') Blog
-          .caret
-        ul.dropdown-menu
-          li
-            a(href= mediaUrlPrefix + 'blog') Blog
-          li
-            a(href= mediaUrlPrefix + 'blog-with-images') Blog w/ images
+      +dropdown-link({main: {text: 'Home'}, subs: [{text: 'Home', url: ''}, {text: 'Home App', url: 'app'}]})
+      +dropdown-link({main: {text: 'Portfolio'}, subs: [{text: 'Portfolio', url: 'portfolio'}, {text: 'Portfolio w/ images', url: 'portfolio-with-images'}]})
+      +dropdown-link({main: {text: 'Blog'}, subs: [{text: 'Blog', url: 'blog'}, {text: 'Blog w/ images', url: 'blog-with-images'}]})
+
+mixin content-lower()
+  .col-xs-11.col-xs-offset-1.col-sm-12.col-sm-offset-0.nav-wrapper.nav-lower-wrapper
+    ul
+      +dropdown-link({main: {text: 'Shop'}, subs: [{text: 'Shop', url: 'shop'}, {text: 'Home Shop', url: 'home-shop'}, {text: 'Shop W/ Images', url: 'shop-with-images'}]})
+      +dropdown-link({main: {text: 'Other'}, subs: [{text: 'Travel', url: 'travel'}, {text: 'Magazine', url: 'magazine'}, {text: 'Consult', url: 'consult'}]})
+      +link({main: {text: 'Contact', url: 'contact'}})
 
 mixin footer(subheader, subheaderText)
   .footer
@@ -32,11 +37,11 @@ mixin footer(subheader, subheaderText)
             .col-md-3.col-md-offset-7.social-wrapper
               .row
                 .col-xs-4.social-icon.icon-wrapper-0
-                  span.icon.ti-instagram
+                  a.icon.ti-instagram
                 .col-xs-4.social-icon.icon-wrapper-1
-                  span.icon.ti-twitter
+                  a.icon.ti-twitter
                 .col-xs-4.social-icon.icon-wrapper-2
-                  span.icon.ti-dribbble
+                  a.icon.ti-dribbble
       .col-xs-8.right-part
         .row
           if(subheader)
@@ -44,14 +49,19 @@ mixin footer(subheader, subheaderText)
               h2.subheader= subheader
               span.subheader-text= subheaderText
           else
-            +content()
+            +content-upper()
           .col-xs-11.col-xs-offset-1.col-sm-5.col-sm-offset-0.search-box-wrapper(class= subheader ? 'top-offset' : '')
               input.text-input.search-box(type='text', placeholder='TYPE YOUR EMAIL')
               button.go
                 a Go
         if(subheader)
           .row
-            +content()
+            +content-upper()
+          .row
+            +content-lower()
+        else
+          .row
+            +content-lower()
         .row
           .col-xs-12.copyright-wrapper
             span Foisy 2016 · All rights reserved.

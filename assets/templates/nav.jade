@@ -1,44 +1,25 @@
+-var currentLink = 0
+
+mixin link(config)
+  li.nav-link(class = 'nav-link-' + currentLink)
+    if(config.subs)
+      span.title= config.main.text
+        |  
+        span.caret
+    else
+      a(href='').title= config.main.text
+    if(config.subs)
+      ul.link-subs
+        -for(var i = 0; i < config.subs.length; i++)
+          li
+            a(href= mediaUrlPrefix + config.subs[i].url)= config.subs[i].text
+  -currentLink++
+
 .nav
   ul.nav-wrapper
-    li.nav-link.nav-link-0.dropdown
-      span.dropdown-toggle(data-toggle='dropdown') Home
-        .caret
-      ul.dropdown-menu
-        li
-          a(href= mediaUrlPrefix + 'Home') Home
-        li
-          a(href= mediaUrlPrefix + 'app') Home app
-    li.nav-link.nav-link-1.dropdown
-      span.dropdown-toggle(data-toggle='dropdown') Blog
-        .caret
-      ul.dropdown-menu
-        li
-          a(href= mediaUrlPrefix + 'blog') Blog
-        li
-          a(href= mediaUrlPrefix + 'blog-with-images') Blog w/ images
-    li.nav-link.nav-link-2.dropdown
-      span.dropdown-toggle(data-toggle='dropdown') Portfolio
-        .caret
-      ul.dropdown-menu
-        li
-          a(href= mediaUrlPrefix + 'portfolio') Portfolio
-        li
-          a(href= mediaUrlPrefix + 'portfolio-with-images') Portfolio w/ images
-    li.nav-link.nav-link-3.dropdown
-      span.dropdown-toggle(data-toggle='dropdown') Shop
-        .caret
-      ul.dropdown-menu
-        li
-          a(href= mediaUrlPrefix + 'home-shop') Home shop
-        li
-          a(href= mediaUrlPrefix + 'shop') Shop
-        li
-          a(href= mediaUrlPrefix + 'shop-with-images') Shop w/ images
-    li.nav-link.nav-link-4
-      a(href= mediaUrlPrefix + 'travel') Travel
-    li.nav-link.nav-link-5
-      a(href= mediaUrlPrefix + 'consult') Consult
-    li.nav-link.nav-link-6
-      a(href= mediaUrlPrefix + 'magazine') Magazine
-    li.nav-link.nav-link-7
-      a(href= mediaUrlPrefix + 'contact') Contact
+    +link({main: {text: 'Home'}, subs: [{text: 'Home', url: ''}, {text: 'Home App', url: 'app'}]})
+    +link({main: {text: 'Blog'}, subs: [{text: 'Blog', url: 'blog'}, {text: 'Blog w/ images', url: 'blog-with-images'}]})
+    +link({main: {text: 'Portfolio'}, subs: [{text: 'Portfolio', url: 'portfolio'}, {text: 'Portfolio w/ images', url: 'portfolio-with-images'}]})
+    +link({main: {text: 'Shop'}, subs: [{text: 'Shop', url: 'shop'}, {text: 'Home Shop', url: 'home-shop'}, {text: 'Shop W/ Images', url: 'shop-with-images'}]})
+    +link({main: {text: 'Other'}, subs: [{text: 'Travel', url: 'travel'}, {text: 'Magazine', url: 'magazine'}, {text: 'Consult', url: 'consult'}]})
+    +link({main: {text: 'Contact', url: 'contact'}})

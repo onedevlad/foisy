@@ -4,7 +4,8 @@
     <meta charset="UTF-8"/>
     <title>Contact - Foisy</title>
     <link rel="stylesheet" type="text/css" href="../assets/styles/dist/all.css"/>
-    <script type="text/javascript" src="../assets/scripts/dist/contact.js" defer="defer"></script>
+    <script type="text/javascript" src="../assets/scripts/dist/contact.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1YXCcA__mjwCoEGgLylRt5hFiaskYphQ&amp;callback=initMap" async="async" defer="defer"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
   </head>
   <body>
@@ -14,9 +15,6 @@
     <div class="header container-fluid">
       <div class="row main-row md-same-height-row"><a class="nav-open-button"><span class="line-0"></span><span class="line-1"></span><span class="line-2"></span></a>
         <div class="header-background header-background-9 active"></div>
-        <div class="header-slider-controls"><span class="header-page-num"><span class="middle-dots">···</span><span class="header-current-slide">01</span> / 01</span>
-          <div class="header-slider-control-box active"></div>
-        </div>
         <div class="header-simple-nav col-md-4 hidden-sm hidden-xs">
         </div>
         <div class="col-md-8 header-main padding-bottom reduced-logo-margin">
@@ -54,21 +52,11 @@
                 <form class="form-wrapper">
                   <input type="text" name="name" placeholder="TYPE YOUR NAME" class="text-input"/>
                   <input type="text" name="email" placeholder="TYPE YOUR EMAIL" class="text-input"/>
-                  <textarea placeholder="TYPE YOUR MESSAGE" class="text-input textarea-input"></textarea>
+                  <textarea name="message" placeholder="TYPE YOUR MESSAGE" class="text-input textarea-input"></textarea>
                   <button class="send"><a>Send message</a></button>
                 </form>
                 <div class="map-wrapper">
-                  <div class="goods"><a href="../assets/images/map.png" data-lightbox="screen-1" data-title="A map">
-                      <div class="goods-img-wrapper">
-                        <div class="goods-img"><img alt="A map" src="../assets/images/map.png"/>
-                        </div>
-                      </div>
-                      <div class="goods-overlay">
-                        <div class="bg-line"></div>
-                        <div class="goods-title-wrapper">
-                          <h4 class="title">A map</h4><span class="subtitle"></span>
-                        </div>
-                      </div></a></div>
+                  <div id="map"></div>
                 </div>
               </div>
               <div class="col-md-5 directions-link-wrapper"><a class="directions">Map directions</a></div>
@@ -86,9 +74,9 @@
               <div class="row">
                 <div class="col-md-3 col-md-offset-7 social-wrapper">
                   <div class="row">
-                    <div class="col-xs-4 social-icon icon-wrapper-0"><span class="icon ti-instagram"></span></div>
-                    <div class="col-xs-4 social-icon icon-wrapper-1"><span class="icon ti-twitter"></span></div>
-                    <div class="col-xs-4 social-icon icon-wrapper-2"><span class="icon ti-dribbble"></span></div>
+                    <div class="col-xs-4 social-icon icon-wrapper-0"><a class="icon ti-instagram"></a></div>
+                    <div class="col-xs-4 social-icon icon-wrapper-1"><a class="icon ti-twitter"></a></div>
+                    <div class="col-xs-4 social-icon icon-wrapper-2"><a class="icon ti-dribbble"></a></div>
                   </div>
                 </div>
               </div>
@@ -96,9 +84,15 @@
           </div>
           <div class="col-xs-8 right-part">
             <div class="row">
-              <div class="col-xs-11 col-xs-offset-1 col-sm-5 col-sm-offset-0 nav-wrapper">
+              <div class="col-xs-11 col-xs-offset-1 col-sm-5 col-sm-offset-0 nav-wrapper nav-upper-wrapper">
                 <ul>
-                  <li><a href="../">Home</a></li>
+                  <li class="dropdown"><span data-toggle="dropdown" class="dropdown-toggle">Home
+                      <div class="caret"></div></span>
+                    <ul class="dropdown-menu">
+                      <li><a href="../">Home</a></li>
+                      <li><a href="../app">Home App</a></li>
+                    </ul>
+                  </li>
                   <li class="dropdown"><span data-toggle="dropdown" class="dropdown-toggle">Portfolio
                       <div class="caret"></div></span>
                     <ul class="dropdown-menu">
@@ -121,6 +115,29 @@
               </div>
             </div>
             <div class="row">
+              <div class="col-xs-11 col-xs-offset-1 col-sm-12 col-sm-offset-0 nav-wrapper nav-lower-wrapper">
+                <ul>
+                  <li class="dropdown"><span data-toggle="dropdown" class="dropdown-toggle">Shop
+                      <div class="caret"></div></span>
+                    <ul class="dropdown-menu">
+                      <li><a href="../shop">Shop</a></li>
+                      <li><a href="../home-shop">Home Shop</a></li>
+                      <li><a href="../shop-with-images">Shop W/ Images</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown"><span data-toggle="dropdown" class="dropdown-toggle">Other
+                      <div class="caret"></div></span>
+                    <ul class="dropdown-menu">
+                      <li><a href="../travel">Travel</a></li>
+                      <li><a href="../magazine">Magazine</a></li>
+                      <li><a href="../consult">Consult</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="../contact">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="row">
               <div class="col-xs-12 copyright-wrapper"><span>Foisy 2016 · All rights reserved.</span></div>
             </div>
             <div class="line"></div>
@@ -130,39 +147,40 @@
     </div>
     <div class="nav">
       <ul class="nav-wrapper">
-        <li class="nav-link nav-link-0 dropdown"><span data-toggle="dropdown" class="dropdown-toggle">Home
-            <div class="caret"></div></span>
-          <ul class="dropdown-menu">
-            <li><a href="../Home">Home</a></li>
-            <li><a href="../app">Home app</a></li>
-          </ul>
-        </li>
-        <li class="nav-link nav-link-1 dropdown"><span data-toggle="dropdown" class="dropdown-toggle">Blog
-            <div class="caret"></div></span>
-          <ul class="dropdown-menu">
-            <li><a href="../blog">Blog</a></li>
-            <li><a href="../blog-with-images">Blog w/ images</a></li>
-          </ul>
-        </li>
-        <li class="nav-link nav-link-2 dropdown"><span data-toggle="dropdown" class="dropdown-toggle">Portfolio
-            <div class="caret"></div></span>
-          <ul class="dropdown-menu">
-            <li><a href="../portfolio">Portfolio</a></li>
-            <li><a href="../portfolio-with-images">Portfolio w/ images</a></li>
-          </ul>
-        </li>
-        <li class="nav-link nav-link-3 dropdown"><span data-toggle="dropdown" class="dropdown-toggle">Shop
-            <div class="caret"></div></span>
-          <ul class="dropdown-menu">
-            <li><a href="../home-shop">Home shop</a></li>
-            <li><a href="../shop">Shop</a></li>
-            <li><a href="../shop-with-images">Shop w/ images</a></li>
-          </ul>
-        </li>
-        <li class="nav-link nav-link-4"><a href="../travel">Travel</a></li>
-        <li class="nav-link nav-link-5"><a href="../consult">Consult</a></li>
-        <li class="nav-link nav-link-6"><a href="../magazine">Magazine</a></li>
-        <li class="nav-link nav-link-7"><a href="../contact">Contact</a></li>
+            <li class="nav-link nav-link-0"><span class="title">Home <span class="caret"></span></span>
+              <ul class="link-subs">
+                <li><a href="../">Home</a></li>
+                <li><a href="../app">Home App</a></li>
+              </ul>
+            </li>
+            <li class="nav-link nav-link-1"><span class="title">Blog <span class="caret"></span></span>
+              <ul class="link-subs">
+                <li><a href="../blog">Blog</a></li>
+                <li><a href="../blog-with-images">Blog w/ images</a></li>
+              </ul>
+            </li>
+            <li class="nav-link nav-link-2"><span class="title">Portfolio <span class="caret"></span></span>
+              <ul class="link-subs">
+                <li><a href="../portfolio">Portfolio</a></li>
+                <li><a href="../portfolio-with-images">Portfolio w/ images</a></li>
+              </ul>
+            </li>
+            <li class="nav-link nav-link-3"><span class="title">Shop <span class="caret"></span></span>
+              <ul class="link-subs">
+                <li><a href="../shop">Shop</a></li>
+                <li><a href="../home-shop">Home Shop</a></li>
+                <li><a href="../shop-with-images">Shop W/ Images</a></li>
+              </ul>
+            </li>
+            <li class="nav-link nav-link-4"><span class="title">Other <span class="caret"></span></span>
+              <ul class="link-subs">
+                <li><a href="../travel">Travel</a></li>
+                <li><a href="../magazine">Magazine</a></li>
+                <li><a href="../consult">Consult</a></li>
+              </ul>
+            </li>
+            <li class="nav-link nav-link-5"><a href="" class="title">Contact</a>
+            </li>
       </ul>
     </div>
   </body>

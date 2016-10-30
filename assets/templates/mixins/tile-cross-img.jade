@@ -1,5 +1,5 @@
-mixin tile-cross-img(group, name, subtitle, imgUrl, lazy)
-  .goods
+mixin tile-cross-img(group, name, subtitle, imgUrl, lazy, config)
+  .goods(data-cats=config ? config.cats : '', data-tags= config ? config.tags : '', data-price = config ? config.price : '')
     a(href=mediaUrlPrefix+imgUrl, data-lightbox=group, data-title=name)
       .goods-img-wrapper
         .goods-img

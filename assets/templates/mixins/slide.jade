@@ -1,6 +1,6 @@
-mixin slide(imgSrc, heading, descText, date, cat, condenseIcons)
+mixin slide(imgSrc, heading, descText, date, cat, url)
   .slide-wrapper.col-md-4
-    .slide
+    a(href=mediaUrlPrefix + url).slide
       .img-wrapper
         img(alt= heading, src= imgSrc)
       .row

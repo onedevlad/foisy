@@ -22,52 +22,53 @@ html(lang="en")
               .col-md-6.col-md-push-6.selection-config-wrapper
                 .cat-wrapper.categories-cat
                   span.title Categories
-                  span.cat Shop men
-                  span.cat Shop women
-                  span.cat Shop kids
+                  span.cat(data-cat-name='men') Shop men
+                  span.cat(data-cat-name='women') Shop women
+                  span.cat(data-cat-name='kids') Shop kids
                 .cat-wrapper
                   span.title Tags
-                  span.cat Jeans
-                  span.cat Design
-                  span.cat Art
-                  span.cat T-shirts
+                  span.tag(data-tag-name='jeans') Jeans
+                  span.tag(data-tag-name='design') Design
+                  span.tag(data-tag-name='art') Art
+                  span.tag(data-tag-name='t-shirts') T-shirts
                 .cat-wrapper
                   span.title Price range
-                  input.range(type='range', min='0', max='3000', step='10')
-                  span.cat.output $95 - $200
+                  input.range(type='range', min='0', max='3500', step='10', value='3500')
+                  span.output $ 0 - $  
+                    span.range-output 3500
           .col-md-8.right-part
             .right-line
             .row
               .col-md-8.goods-wrapper
                 .row.slider.shop-lazy-slider
                   .slide
-                    +tile-cross-img('screen-1', 'Jeans',   '$ 2500.00', 'assets/images/jeans.png', true)
-                    +tile-cross-img('screen-1', 'Coat',    '$ 2500.00', 'assets/images/coat-1.jpg', true)
-                    +tile-cross-img('screen-1', 'Coat',    '$ 2500.00', 'assets/images/jacket-1.jpg', true)
-                    +tile-cross-img('screen-1', 'Trench',  '$ 2500.00', 'assets/images/coat-8.png', true)
-                    +tile-cross-img('screen-1', 'Uniform', '$ 2500.00', 'assets/images/uniform.png', true)
-                    +tile-cross-img('screen-1', 'Jacket',  '$ 2500.00', 'assets/images/coat-2-full.png', true)
+                    +tile-cross-img('screen-1', 'Jeans',   '$ 1000.00', 'assets/images/jeans.png', true, {cats: 'men', tags: 'jeans,art', price: '1000'})
+                    +tile-cross-img('screen-1', 'Coat',    '$ 1500.00', 'assets/images/coat-1.jpg', true, {cats: 'women', tags: 'jeans', price: '1500'})
+                    +tile-cross-img('screen-1', 'Coat',    '$ 2000.00', 'assets/images/jacket-1.jpg', true, {cats: 'kids', tags: 'art', price: '2000'})
+                    +tile-cross-img('screen-1', 'Trench',  '$ 2500.00', 'assets/images/coat-8.png', true, {cats: 'men', tags: 'jeans,art', price: '2500'})
+                    +tile-cross-img('screen-1', 'Uniform', '$ 3000.00', 'assets/images/uniform.png', true, {cats: 'kids', tags: 't-shirts,art', price: '3000'})
+                    +tile-cross-img('screen-1', 'Jacket',  '$ 3500.00', 'assets/images/coat-2-full.png', true, {cats: 'men', tags: 'jeans,art', price: '3500'})
                   .slide
-                    +tile-cross-img('screen-1', 'Jeans',   '$ 2500.00', 'assets/images/jeans.png', true)
-                    +tile-cross-img('screen-1', 'Coat',    '$ 2500.00', 'assets/images/coat-1.jpg', true)
-                    +tile-cross-img('screen-1', 'Coat',    '$ 2500.00', 'assets/images/jacket-1.jpg', true)
-                    +tile-cross-img('screen-1', 'Trench',  '$ 2500.00', 'assets/images/coat-8.png', true)
-                    +tile-cross-img('screen-1', 'Uniform', '$ 2500.00', 'assets/images/uniform.png', true)
-                    +tile-cross-img('screen-1', 'Jacket',  '$ 2500.00', 'assets/images/coat-2-full.png', true)
+                    +tile-cross-img('screen-1', 'Jeans',   '$ 1000.00', 'assets/images/jeans.png', true, {cats: 'men', tags: 'jeans,art', price: '1000'})
+                    +tile-cross-img('screen-1', 'Coat',    '$ 1500.00', 'assets/images/coat-1.jpg', true, {cats: 'women', tags: 'jeans', price: '1500'})
+                    +tile-cross-img('screen-1', 'Coat',    '$ 2000.00', 'assets/images/jacket-1.jpg', true, {cats: 'kids', tags: 'art', price: '2000'})
+                    +tile-cross-img('screen-1', 'Trench',  '$ 2500.00', 'assets/images/coat-8.png', true, {cats: 'men', tags: 'jeans,art', price: '2500'})
+                    +tile-cross-img('screen-1', 'Uniform', '$ 3000.00', 'assets/images/uniform.png', true, {cats: 'kids', tags: 't-shirts,art', price: '3000'})
+                    +tile-cross-img('screen-1', 'Jacket',  '$ 3500.00', 'assets/images/coat-2-full.png', true, {cats: 'men', tags: 'jeans,art', price: '3500'})
                   .slide
-                    +tile-cross-img('screen-1', 'Jeans',   '$ 2500.00', 'assets/images/jeans.png', true)
-                    +tile-cross-img('screen-1', 'Coat',    '$ 2500.00', 'assets/images/coat-1.jpg', true)
-                    +tile-cross-img('screen-1', 'Coat',    '$ 2500.00', 'assets/images/jacket-1.jpg', true)
-                    +tile-cross-img('screen-1', 'Trench',  '$ 2500.00', 'assets/images/coat-8.png', true)
-                    +tile-cross-img('screen-1', 'Uniform', '$ 2500.00', 'assets/images/uniform.png', true)
-                    +tile-cross-img('screen-1', 'Jacket',  '$ 2500.00', 'assets/images/coat-2-full.png', true)
+                    +tile-cross-img('screen-1', 'Jeans',   '$ 1000.00', 'assets/images/jeans.png', true, {cats: 'men', tags: 'jeans,art', price: '1000'})
+                    +tile-cross-img('screen-1', 'Coat',    '$ 1500.00', 'assets/images/coat-1.jpg', true, {cats: 'women', tags: 'jeans', price: '1500'})
+                    +tile-cross-img('screen-1', 'Coat',    '$ 2000.00', 'assets/images/jacket-1.jpg', true, {cats: 'kids', tags: 'art', price: '2000'})
+                    +tile-cross-img('screen-1', 'Trench',  '$ 2500.00', 'assets/images/coat-8.png', true, {cats: 'men', tags: 'jeans,art', price: '2500'})
+                    +tile-cross-img('screen-1', 'Uniform', '$ 3000.00', 'assets/images/uniform.png', true, {cats: 'kids', tags: 't-shirts,art', price: '3000'})
+                    +tile-cross-img('screen-1', 'Jacket',  '$ 3500.00', 'assets/images/coat-2-full.png', true, {cats: 'men', tags: 'jeans,art', price: '3500'})
                   .slide
-                    +tile-cross-img('screen-1', 'Jeans',   '$ 2500.00', 'assets/images/jeans.png', true)
-                    +tile-cross-img('screen-1', 'Coat',    '$ 2500.00', 'assets/images/coat-1.jpg', true)
-                    +tile-cross-img('screen-1', 'Coat',    '$ 2500.00', 'assets/images/jacket-1.jpg', true)
-                    +tile-cross-img('screen-1', 'Trench',  '$ 2500.00', 'assets/images/coat-8.png', true)
-                    +tile-cross-img('screen-1', 'Uniform', '$ 2500.00', 'assets/images/uniform.png', true)
-                    +tile-cross-img('screen-1', 'Jacket',  '$ 2500.00', 'assets/images/coat-2-full.png', true)
+                    +tile-cross-img('screen-1', 'Jeans',   '$ 1000.00', 'assets/images/jeans.png', true, {cats: 'men', tags: 'jeans,art', price: '1000'})
+                    +tile-cross-img('screen-1', 'Coat',    '$ 1500.00', 'assets/images/coat-1.jpg', true, {cats: 'women', tags: 'jeans', price: '1500'})
+                    +tile-cross-img('screen-1', 'Coat',    '$ 2000.00', 'assets/images/jacket-1.jpg', true, {cats: 'kids', tags: 'art', price: '2000'})
+                    +tile-cross-img('screen-1', 'Trench',  '$ 2500.00', 'assets/images/coat-8.png', true, {cats: 'men', tags: 'jeans,art', price: '2500'})
+                    +tile-cross-img('screen-1', 'Uniform', '$ 3000.00', 'assets/images/uniform.png', true, {cats: 'kids', tags: 't-shirts,art', price: '3000'})
+                    +tile-cross-img('screen-1', 'Jacket',  '$ 3500.00', 'assets/images/coat-2-full.png', true, {cats: 'men', tags: 'jeans,art', price: '3500'})
             .row.slider-controls-wrapper.numbers-slider-controls
               span.slider-control.active 1
               span.slider-control 2

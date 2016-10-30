@@ -1,5 +1,5 @@
-mixin tile-slide(imgSrc, title, date, cat, condenseIcons)
-  .tile-slide-wrapper.col-md-4
+mixin tile-slide(imgSrc, title, date, cat, url)
+  a(href=mediaUrlPrefix+url).tile-slide-wrapper.col-md-4
     .tile-slide
       .img-wrapper
         img(alt= heading, src= imgSrc)

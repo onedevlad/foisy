@@ -35,7 +35,9 @@ $(document).ready(function(){
   setTimeout(removePreloader, 3000)
 })
 
+
 $(document).ready(function(){ // Nav module
+  $('.preloader').addClass('loaded')
   var linksCount = $('.nav-link').length
   var openNav = function() {
     $('.nav-open-button').addClass('nav-open-button-active').unbind('click').click(closeNav)
@@ -62,6 +64,13 @@ $(document).ready(function(){ // Nav module
     anim(linksCount)
   }
   $('.nav-open-button').click(openNav)
+
+  $('.nav-link .title').click(function(){
+    if(!$(this).next().hasClass('open')){
+      $('.nav-link .link-subs').removeClass('open').slideUp(200)
+      $(this).next().addClass('open').slideDown(200)
+    } else $(this).next().removeClass('open').slideUp(200)
+  })
 })
 
 
