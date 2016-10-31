@@ -22,7 +22,7 @@ html(lang="en")
           .row
             .col-md-6.col-md-offset-3.desc-wrapper
               .suit-img-wrapper.block-rounded-shadow
-                +tile-img('screen-1', 'A man in a suit', 'assets/images/suit.png')
+                +tile-img('screen-1', 'A man in a suit', 'assets/images/suit.png', null, false, 'blog')
               .title-wrapper
                 h3.title Consulting Firm
                 span.subtitle Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore culpa blanditiis libero dolor deleniti minima, expedita mollitia quo provident dolore.
@@ -68,25 +68,25 @@ html(lang="en")
         .row.upper-part
           .col-md-4.left-part
             .img-wrapper.img-wrapper-1.block-rounded-shadow
-              +tile-img('screen-2', 'A table', 'assets/images/desk-1.jpg')
+              +tile-img('screen-2', 'A table', 'assets/images/desk-1.jpg', null, false, 'blog')
             .img-wrapper.img-wrapper-2.block-rounded-shadow
-              +tile-img('screen-2', 'A council', 'assets/images/council.jpg')
+              +tile-img('screen-2', 'A council', 'assets/images/council.jpg', null, false, 'blog')
             .img-wrapper.img-wrapper-3.block-rounded-shadow
-              +tile-img('screen-2', 'A tablet', 'assets/images/tablet.jpg')
+              +tile-img('screen-2', 'A tablet', 'assets/images/tablet.jpg', null, false, 'blog')
           .col-md-8.right-part
             .row
               .img-wrapper.img-wrapper-1.block-rounded-shadow
-                +tile-img('screen-2', 'A skyscraper', 'assets/images/skyscraper-1.jpg')
+                +tile-img('screen-2', 'A skyscraper', 'assets/images/skyscraper-1.jpg', null, false, 'blog')
               .img-outer-wrapper
                 .img-wrapper.img-wrapper-2.block-rounded-shadow
-                  +tile-img('screen-2', 'A laptop', 'assets/images/laptop.jpg')
+                  +tile-img('screen-2', 'A laptop', 'assets/images/laptop.jpg', null, false, 'blog')
                 .img-wrapper.img-wrapper-3.block-rounded-shadow
-                  +tile-img('screen-2', 'A box', 'assets/images/box.jpg')
+                  +tile-img('screen-2', 'A box', 'assets/images/box.jpg', null, false, 'blog')
             .row
               .col-md-7.title-wrapper
                 h3.title 2016 success stories
                 button.more
-                  a View them
+                  a(href=mediaUrlPrefix+'blog-with-images') View them
       .screen-3
         .row.lower-part
           .grey-block
@@ -97,12 +97,12 @@ html(lang="en")
           .row
             .col-md-6.col-md-offset-3.desc-wrapper
               .car-img-wrapper.block-rounded-shadow
-                +tile-img('screen-3', 'A self-driving car', 'assets/images/car-1.jpg')
+                +tile-img('screen-3', 'A self-driving car', 'assets/images/car-1.jpg', null, false, 'blog')
               .title-wrapper
                 span.icon.ti-pencil-alt2
                 h3.title Self-driving cars: the future
                 span.subtitle Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque aliquid error laudantium tempora iste dolores voluptate sit eum quia nesciunt soluta quis nisi culpa, consequuntur, laborum. Pariatur assumenda officiis iusto.
               button.more
-                a Learn more
+                a(href=mediaUrlPrefix+'portfolio') Learn more
       +footer()
     include ../assets/templates/nav

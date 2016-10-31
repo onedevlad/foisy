@@ -69,15 +69,15 @@ mixin header(header)
           .row.work-samples-wrapper
             .col-xs-4.col-md-2.col-md-offset-7.row-inner-wrapper
               button.work-samples
-                a(href= header.button.url)= header.button.text
+                a(href= mediaUrlPrefix+header.button.url)= header.button.text
         if(header.leftLink)
           .row.left-link-wrapper
             .col-md-7.row-inner-wrapper
-              a(href= header.leftLink.url).left-link= header.leftLink.text
+              a(href= mediaUrlPrefix+header.leftLink.url).left-link= header.leftLink.text
         if(header.centerLink)
           .row.center-link-wrapper
             .col-md-7.row-inner-wrapper
-              a(href= header.centerLink.url).center-link= header.centerLink.text
+              a(href= mediaUrlPrefix+header.centerLink.url).center-link= header.centerLink.text
         if(header.scrollDown)
           .row.scroll-down-wrapper
             .col-md-7.row-inner-wrapper
