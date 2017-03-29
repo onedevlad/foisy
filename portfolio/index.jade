@@ -1,0 +1,81 @@
+include ../assets/templates/configs/portfolio
+
+doctype traditional
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title Portfolio - Foisy
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/styles/dist/all.css')
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/scripts/dist/portfolio.js', defer)
+    meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
+  body
+    +preloader()
+    +header(headerConfig)
+    .main-portfolio
+      .screen-1
+        .row.lower-part
+          .col-md-7.blank-space
+            span.visual Visual
+          .col-md-4.grey-space
+        .row.upper-part
+          .col-md-4.left-part
+            .screen-num
+              .dash
+              span 01
+          .col-md-8.right-part
+            .row
+              .col-md-7.concept-wrapper
+                h2.heading Concept
+                span.concept-desc  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti sapiente explicabo beatae repudiandae vitae vero modi reiciendis nobis, repellendus culpa possimus architecto praesentium, aspernatur, voluptates unde. Velit quam quis laudantium.
+              .col-md-5.saying-wrapper
+                .person-wrapper
+                  img.person-photo(alt='Joshua Atkins', src= mediaUrlPrefix + 'assets/images/icons/avatar.png')
+                  .person-data
+                    .person-name Joshua Atkins
+                    .person-position Project manager
+                .quote-wrapper
+                  span.quote "It was a fun and challenging project, both
+                    br
+                    | from design and aesthetic perspective."
+      .screen-2
+        .row.lower-part
+          .col-md-4.left-part
+          .col-md-8.right-part
+            .row
+              .col-md-7.blank-space
+        .row.upper-part
+          .row.images-wrapper.images-row-1
+            +tile-img('screen-2', 'Poster 1', 'assets/images/poster-1.png', {text: 'Learn more'}, true)
+            +tile-img('screen-2', 'Poster 2', 'assets/images/poster-2.png', {text: 'Learn more'}, true)
+          .row.images-wrapper.images-row-2
+            +tile-img('screen-2', 'Poster 3', 'assets/images/poster-3.png', {text: 'Learn more'}, true)
+          .row.images-wrapper.images-row-3
+            +tile-img('screen-2', 'Poster 4', 'assets/images/poster-4.png', {text: 'Learn more'}, true)
+          .row.images-wrapper.images-row-4
+            +tile-img('screen-2', 'Poster 5', 'assets/images/poster-5.png', {text: 'Learn more'}, true)
+            +tile-img('screen-2', 'Poster 6', 'assets/images/poster-6.png', {text: 'Learn more'}, true)
+      .screen-3
+        .row.lower-part
+          .col-md-4.left-part
+          .col-md-8.right-part
+            .row
+              .col-md-7.blank-space
+              .grey-space
+        .row.upper-part
+          .row
+            .col-md-3.col-md-offset-4.related-wrapper
+              h2.title Related projects
+              span.subtitle More of the same
+          .row.images-wrapper
+            .col-md-4.col-md-offset-2.img-wrapper
+              +tile-cross-img('screen-3', 'Illustration', '', 'assets/images/related-1.png')
+              span.img-desc Illustration
+            .col-md-4.img-wrapper
+              +tile-cross-img('screen-3', 'Visual identity', '', 'assets/images/related-2.png')
+              span.img-desc Visual identity
+          .row
+            .col-md-3.col-md-offset-4.more-wrapper
+              button.more
+                a(href= mediaUrlPrefix + 'portfolio-with-images') More projects
+      +footer()
+    include ../assets/templates/nav

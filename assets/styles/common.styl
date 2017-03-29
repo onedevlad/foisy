@@ -1,0 +1,177 @@
+// VARIABLES BLOCK
+
+grey = #f9f9f9
+light-grey = #eee
+grey-1 = #929292
+grey-2 = #f3f3f3
+grey-3 = #3d3d3d
+blue = #00aff0
+dark-blue = darken(#00aff0, 10)
+dark-grey = #bbb
+light-black = #3c3c3c
+black = #262626
+dark-white = #dcdcdc
+white-1 = #eaeaea
+pink = #fc8dad
+
+
+
+animationSpeed = 0.4s
+screen-margin = 100px
+screen-sub-margin = 48px
+block-top-offset = 24px
+
+// IMPORTS BLOCK
+
+@require '../lib/bootstrap/bootstrap/index'
+@require '../lib/themify-icons/styles'
+
+@require 'components/nav'
+@require 'components/header'
+@require 'components/footer'
+@require 'components/preloader'
+
+
+// FONTS BLOCK
+
+@font-face
+  font-family 'SourceSansProRegular'
+  src url('../../fonts/SourceSansPro-Regular/font.eot')
+  src url('../../fonts/SourceSansPro-Regular/font.eot?#iefix') format('embedded-opentype'),
+      url('../../fonts/SourceSansPro-Regular/font.woff') format('woff'),
+      url('../../fonts/SourceSansPro-Regular/font.ttf') format('truetype'),
+      url('../../fonts/SourceSansPro-Regular/font.svg#SourceSansPro-Black') format('svg')
+  font-style normal
+  font-weight normal
+
+@font-face
+  font-family 'SourceSansProBlack'
+  src url('../../fonts/SourceSansPro-Black/font.eot')
+  src url('../../fonts/SourceSansPro-Black/font.eot?#iefix') format('embedded-opentype'),
+      url('../../fonts/SourceSansPro-Black/font.woff') format('woff'),
+      url('../../fonts/SourceSansPro-Black/font.ttf') format('truetype'),
+      url('../../fonts/SourceSansPro-Black/font.svg#SourceSansPro-Black') format('svg')
+  font-style normal
+  font-weight normal
+
+@font-face
+  font-family 'MontserratBold'
+  src url('../../fonts/Montserrat-Bold/font.eot')
+  src url('../../fonts/Montserrat-Bold/font.eot?#iefix') format('embedded-opentype'),
+      url('../../fonts/Montserrat-Bold/font.woff') format('woff'),
+      url('../../fonts/Montserrat-Bold/font.ttf') format('truetype'),
+      url('../../fonts/Montserrat-Bold/font.svg#SourceSansPro-Black') format('svg')
+  font-style normal
+  font-weight normal
+
+// STYLES BLOCK
+
+body
+  font-family SourceSansProRegular
+  font-size 16px
+  overflow-x hidden
+
+a, a:hover
+  text-decoration none
+
+button
+  border none
+  outline none
+  padding 0
+  a
+    background blue
+    padding 18px 24px
+    font-size 14px
+    display inline-block
+    width 100%
+    color white
+    font-weight bold
+    white-space nowrap
+    text-transform uppercase
+    &:hover
+      color white
+      text-decoration none
+      background dark-blue
+
+.row
+  margin 0
+
+.text-input
+  font-size 12px
+  background url(../../images/icons/email-pointer.png) no-repeat scroll 5px 50%
+  padding 0 30px
+  outline none
+
+.screen-num
+  absolute left 50%
+  transform translate(-50%, 0)
+  font-weight bold
+  z-index 5
+  .dash
+    display inline-block
+    width 3em
+    height 2px
+    background light-black
+    margin 0 1.5em 0 0
+    vertical-align middle
+
+.block-rounded-shadow
+  position relative
+  &:after
+  &::after
+    content ""
+    width 80%
+    absolute bottom 2px left 10%
+    height 50px
+    background transparent
+    z-index -1
+    border-radius 100%
+    box-shadow 0 0 48px rgba(black, 0.8)
+
+@media(max-width $screen-md) // Tablet
+  .screen-num
+    display none
+
+@media(min-width $screen-sm) // Desktop
+  // Show BS dropdown on hover
+  .dropdown:hover .dropdown-menu
+    display block
+  .md-same-height-row
+    width 100%
+    display table
+    & > [class*="col-"]
+      float none
+      display table-cell
+      vertical-align top
+
+h1, h2, h3, h4, h5, h6
+  margin 0
+  font-family SourceSansProBlack
+
+@media(min-width $screen-md) // Desktop headers sizes
+  h1
+    font-size 4.3vw
+  h2
+    font-size 40px
+  h3
+    font-size 32px
+  h4
+    font-size 24px
+  h5
+    font-size 20px
+  h6
+    font-size 18px
+
+@media(max-width $screen-md) // Tablet headers sizes
+  h1
+    font-size 62px
+  h2
+    font-size 32px
+  h3
+    font-size 26px
+  h4
+    font-size 22px
+  h5
+    font-size 20px
+  h6
+    font-size 18px

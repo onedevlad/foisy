@@ -1,0 +1,94 @@
+include ../assets/templates/configs/shop
+
+doctype traditional
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title Shop - Foisy
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/styles/dist/all.css')
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/scripts/dist/shop.js', defer)
+    meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
+  body
+    +preloader()
+    +header(headerConfig)
+    .main-shop.container-fluid
+      .screen-1
+        .row
+          .col-md-4.left-part
+            .screen-num
+              .dash
+              span 01
+            .row
+              .col-md-3.col-md-push-8.preview-wrapper
+                img.img-preview(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-4.jpg')
+                img.img-preview(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-5.jpg')
+                img.img-preview(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-6.jpg')
+                img.img-preview(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-7.jpg')
+                img.img-preview(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-2.jpg')
+            .row.grey-block
+          .col-md-8.right-part
+            .right-line
+            .row.goods-wrapper
+              .col-md-8.main-preview
+                .grey-block
+                .slider-wrapper.block-rounded-shadow
+                  .slider.shop-fade-slider
+                    img.goods-img(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-4.jpg')
+                    img.goods-img(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-5.jpg')
+                    img.goods-img(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-6.jpg')
+                    img.goods-img(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-7.jpg')
+                    img.goods-img(alt='A coat', src= mediaUrlPrefix + 'assets/images/coat-2.jpg')
+                .desc-wrapper
+                  h4.goods-title Geometry Trench
+                  span.goods-price $ 2999.00
+                .line-wrapper
+            .row.more-wrapper
+              button.more
+                a(href=mediaUrlPrefix + 'shop-with-images') Buy now
+            .row.desc-wrapper
+              .col-md-7.desc-inner-wrapper
+                span.desc Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias eaque doloremque culpa mollitia! Soluta explicabo ad velit rem. Omnis provident aperiam deserunt obcaecati aliquid architecto libero quia illum doloribus laudantium, ducimus error non qui magnam amet hic! Aliquam autem, explicabo veniam quaerat debitis ea, molestias facere dicta! Temporibus, in, accusamus!
+                .horizontal-line
+            .row.replies-wrapper
+              .title-wrapper
+                span.like-icon.ti-heart
+                h4.title Geometric trench's buyers
+                span.subtitle Tag your photo #Foisy_The_name_of_the_product
+              .row
+                .col-md-12.slider-wrapper-2
+                  .row
+                    .col-md-6.slider-inner-wrapper.shop-replies-slider
+                      +reply(mediaUrlPrefix + 'assets/images/crowd.png', mediaUrlPrefix + 'assets/images/icons/avatar-6.png', 'Jack_01', '"Gotta love this shirt man, can\'t wait for the new collection. #fall #2016"')
+                      +reply(mediaUrlPrefix + 'assets/images/crowd.png', mediaUrlPrefix + 'assets/images/icons/avatar-1.png', 'John_89', '"Gotta love this shirt man, can\'t wait for the new collection. #fall #2016"')
+                      +reply(mediaUrlPrefix + 'assets/images/crowd.png', mediaUrlPrefix + 'assets/images/icons/avatar-2.png', 'James', '"Gotta love this shirt man, can\'t wait for the new collection. #fall #2016"')
+                    .col-md-1.next-arrow
+      .screen-2
+        .row.lower-part
+          .col-md-8.col-md-offset-4.right-part
+            .row
+              .col-md-1.col-md-offset-6.grey-block-wrapper
+                .grey-block
+              .col-md-5.line-wrapper
+                .grey-block
+        .row.upper-part
+          .row.title-wrapper
+            .col-md-8.col-md-push-4.title-inner-wrapper
+              h3.title Related products
+          .row.products-wrapper
+            .col-md-8.col-md-offset-2.products-inner-wrapper
+              .row
+                .col-md-4.product
+                  .img-wrapper
+                    +tile-cross-img('screen-2', 'Coat', '$2400.00', 'assets/images/coat-1.jpg')
+                .col-md-4.product
+                  .img-wrapper
+                    +tile-cross-img('screen-2', 'Jacket', '$2500.00', 'assets/images/jacket-1.jpg')
+                .col-md-4.product
+                  .img-wrapper
+                    +tile-cross-img('screen-2', 'Trench', '$2300.00', 'assets/images/coat-8.png')
+          .row
+            .col-md-8.col-md-offset-4.more-wrapper
+              button.more
+                a(href= mediaUrlPrefix+'shop-with-images') More products
+      +footer()
+    include ../assets/templates/nav

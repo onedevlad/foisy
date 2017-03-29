@@ -1,0 +1,93 @@
+@require '../lib/slick/slick'
+@require '../lib/slick/slick-theme'
+
+
+.slide-wrapper
+  outline none !important
+  height auto !important
+  padding-bottom 1px // Is vital for bottom border
+  .slide
+    display block
+    position relative
+    .img-wrapper
+      position relative
+      width 100%
+      img
+        width 100%
+    .desc-wrapper
+      border 1px solid light-grey
+      width 95%
+      margin-top -15%
+      position relative
+      z-index 2
+      background white
+      .cat-wrapper
+        padding 0
+        .cat
+          color dark-grey
+          font-family SourceSansProBlack
+          text-transform uppercase
+      .heading-wrapper
+        padding 0
+        .heading
+          color black
+          width 100%
+          display inline-block
+          text-overflow ellipsis
+          font-weight bold
+          font-family SourceSansProBlack
+          text-transform uppercase
+      .desc-text-wrapper
+        padding 0
+        margin-top 1em
+        overflow hidden
+        color light-black
+      .social-wrapper
+        padding 0
+        text-align left
+        margin-top 2em
+        margin-bottom 1em
+        .button-wrapper
+          margin-right 1vw
+          padding 0
+          display inline-block
+          font-size 12px
+          line-height 12px
+          cursor pointer
+          .icon
+            padding 0.5em
+            border 1px solid light-grey
+            border-radius 50%
+            text-align center
+            cursor pointer
+            color black
+            &.ti-heart:hover
+              background #fc8dad
+              border-color #fc8dad
+            &.ti-new-window:hover
+              background blue
+              border-color blue
+          .date
+            color black
+            padding-left 1em
+
+@media(max-width $screen-md) // Tablet
+  .slide-wrapper
+    overflow hidden
+    padding 0
+    height auto !important // Is used to override natural slick behaviour.
+    .slide
+      .desc-wrapper
+        padding-bottom 0
+        .desc-text-wrapper
+          margin-top 2%
+
+@media(min-width $screen-md) // Desktop
+  .slide-wrapper
+    .slide
+      .desc-wrapper
+        padding 1em
+        .heading
+          font-size 1.4vw
+      .desc-text-wrapper
+        margin-top 5%

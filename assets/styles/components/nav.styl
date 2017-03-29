@@ -1,0 +1,46 @@
+.nav
+  background black
+  height 100%
+  fixed top
+  z-index 8
+  overflow-x hidden
+  transition right animationSpeed ease
+  &-opened
+    right 0 !important
+  .nav-wrapper
+    margin 0
+    overflow-y hidden
+    height 100%
+    padding-top 15vh
+    list-style none
+    font-weight bold
+    text-transform uppercase
+    .nav-link
+      opacity 0
+      relative left 50%
+      a
+      span
+        color white
+        line-height 3em
+        cursor pointer
+        text-decoration none
+        text-transform uppercase
+        font-weight bold
+        font-family MontserratBold
+      a:hover
+        color blue
+      .link-subs
+        padding-left 12px
+        display none
+        li
+          list-style none
+
+@media(max-width $screen-md) // Tablet
+  .nav
+    width 60%
+    right -@width
+
+@media(min-width $screen-md) // Desktop
+  .nav
+    width 25%
+    right -@width

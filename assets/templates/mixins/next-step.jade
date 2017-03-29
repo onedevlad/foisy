@@ -1,0 +1,28 @@
+include tile-cross-img
+mixin nextStep(title, subtitle, button, src, imgUrl)
+  .next-step
+    .row
+      .col-md-4.left-part
+        span.letter.f-letter F
+        span.letter.o-letter o
+      .col-md-8.right-part
+        .row.next-step-wrapper
+          .row
+            .title
+              h2= title
+          .row.subtitle-wrapper
+            .subtitle
+              span= subtitle
+          .row.take-me-there-wrapper
+            button.take-me-there
+              a(href= mediaUrlPrefix + src)= button
+        .row.blank-space-wrapper
+          .col-md-5.blank-space.blank-space-white
+            span.letter.i-letter i
+            span.studio-name Foisy Studio
+          .col-md-7.blank-space-grey(class = imgUrl ? '' : 'hidden-xs')
+            span.letter.y-letter y
+            if(imgUrl)
+              .img-wrapper
+                +tile-cross-img('next-step', 'Goods', '', imgUrl)
+        .line

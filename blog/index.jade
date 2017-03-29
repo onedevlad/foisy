@@ -1,0 +1,90 @@
+include ../assets/templates/configs/blog.jade
+
+doctype traditional
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title Blog - Foisy
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/styles/dist/all.css')
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/scripts/dist/blog.js', defer)
+    meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
+  body
+    +preloader()
+    +header(headerConfig)
+    .main-blog
+      .screen-1
+        .row.lower-part
+          .col-md-4.left-part
+            .screen-num
+              .dash
+              span 01
+          .col-md-8.right-part
+            .row
+              .col-md-7.blank-space
+              .grey-space
+          .grey-space-small
+        .row.upper-part
+          .row
+            .col-md-4.person-wrapper
+              .row
+                .col-md-6.col-md-push-6.person-inner-wrapper
+                  img.person-photo(alt='Joshua Atkins', src= mediaUrlPrefix + 'assets/images/icons/avatar.png')
+                  .person-data
+                    .person-name Joshua Atkins
+                    .person-position Foisy CEO
+            .col-md-8.post-wrapper
+              .row
+                .col-md-7.title-wrapper
+                  h2.title Marketing experts
+                  span.subtitle Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur odio pariatur iusto a ab dolores voluptatum debitis ullam ea iure.
+                .col-md-5.date-wrapper
+                    span.icon.ti-calendar
+                    span.date 2 July 2016
+              .row
+                .col-md-9.post-img-wrapper
+                  .img-wrapper
+                    +tile-cross-img('screen-1', 'A photographer', '', 'assets/images/photographer.png')
+          .row.post-text-wrapper
+            .col-md-4.quote-wrapper
+              .quote-inner-wrapper
+                span.quote When they thought "These people were crazy,
+                  br
+                  | for sure"
+            .col-md-8.post-text-inner-wrapper
+              .col-md-7.post-text
+                span Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt vero aliquam sapiente quia illum eos, ratione ex quibusdam, ut aspernatur cupiditate velit nesciunt minima sequi! Aliquid impedit nemo rem iusto quo. Consequatur fugit odio illum distinctio rem quo numquam similique, beatae. Debitis blanditiis harum soluta asperiores. Cum at nulla sapiente corporis consequuntur, necessitatibus, soluta esse repellendus neque ab vel, placeat aliquid expedita fugit harum quos similique eius aut accusantium hic ipsam dolorum corrupti laboriosam molestias? Beatae quasi, sapiente repellat totam magnam fuga voluptatem unde similique quisquam id suscipit enim tempore sit, minima fugiat molestiae modi voluptate. Tempore sed, temporibus esse.
+                span Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga et ducimus alias vitae dolore error numquam reiciendis ratione veritatis blanditiis laudantium, porro velit. Optio nihil maiores eveniet quod harum voluptatum.
+                span.subtitle But it's important to keep going
+                span Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt vero aliquam sapiente quia illum eos, ratione ex quibusdam, ut aspernatur cupiditate velit nesciunt minima sequi! Aliquid impedit nemo rem iusto quo. Consequatur fugit odio illum distinctio rem quo numquam similique, beatae. Debitis blanditiis harum soluta asperiores. Cum at nulla sapiente corporis consequuntur, necessitatibus, soluta esse repellendus neque ab vel, placeat aliquid expedita fugit harum quos similique eius aut accusantium hic ipsam dolorum corrupti laboriosam molestias? Beatae quasi, sapiente repellat totam magnam fuga voluptatem unde similique quisquam id suscipit enim tempore sit, minima fugiat molestiae modi voluptate. Tempore sed, temporibus esse.
+                .share-wrapper
+                  span.share Share this story
+                  span.icon.ti-new-window
+      .screen-2
+        .row
+          .lower-part
+            .col-md-4.left-part
+            .col-md-8.right-part
+              .row
+                .col-md-7.blank-space
+          .upper-part
+            .row
+              .col-md-8.col-md-push-4.title-wrapper
+                h2.title Related views
+            .row
+              .slider.col-md-8.col-md-offset-2
+                .row
+                  +slide( mediaUrlPrefix + 'assets/images/wave.jpg', 'Deep water',
+                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat.',
+                    '2 July 2016', '', 'blog')
+                  +slide( mediaUrlPrefix + 'assets/images/landscape.jpg', 'Art is like a mountain',
+                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat.',
+                    '2 July 2016', '', 'blog')
+                  +slide( mediaUrlPrefix + 'assets/images/bussiness.jpg', '"Bussiness design"',
+                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat.',
+                    '2 July 2016', '', 'blog')
+            .row
+              .col-md-8.col-md-push-4.more-wrapper
+                button.more
+                  a(href= mediaUrlPrefix + 'blog-with-images') More views
+      +footer()
+    include ../assets/templates/nav

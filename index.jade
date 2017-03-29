@@ -1,0 +1,116 @@
+include assets/templates/configs/index.jade
+
+doctype traditional
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title Home - Foisy
+    link(rel='stylesheet', type='text/css', href='assets/styles/dist/all.css')
+    script(type='text/javascript', src='assets/scripts/dist/index.js', defer)
+    meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
+  body
+    +preloader()
+    +header(headerConfig)
+    .main-index.container-fluid
+      .screen-1
+        .row
+          .col-md-4.left-part
+            .screen-num
+              .dash
+              span 01
+            .blank-box
+            .quote-box
+              .row
+                .col-md-7.col-md-offset-1
+                  span.quote "Our vision is to make the biggest and more
+                    br
+                    | effective design firm"
+          .col-md-8.right-part
+            .row.lower-part
+              .col-md-7.article-wrapper
+                .row
+                  .col-md-8.article-inner-wrapper
+                    .heading
+                      h2 Vision
+                    .article
+                      span Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora eveniet delectus, magnam dignissimos consequuntur aut autem nobis deleniti. Illo a animi sed consectetur iusto vel voluptate dignissimos repellendus error molestiae mollitia repudiandae hic quasi, excepturi, fugiat eaque ratione quisquam cum quas.
+                    .article
+                      span Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui numquam facilis ipsum recusandae dolores necessitatibus est earum fuga, rerum illo!
+            .row.upper-part
+              .images-wrapper
+                .img-wrapper.desk-wrapper
+                  +tile-cross-img('screen-1', 'A desktop', '', 'assets/images/desk.jpg')
+                .img-wrapper.building-wrapper
+                  +tile-cross-img('screen-1', 'A building', '', 'assets/images/building.jpg')
+                .img-wrapper.sand-wrapper
+                  +tile-cross-img('screen-1', 'Sand', '', 'assets/images/sand.jpg')
+                button.keep-reading
+                  a(href= mediaUrlPrefix + 'portfolio-with-images') Keep reading
+      .screen-2
+        .row
+          .col-md-4.left-part
+            .screen-num
+              .dash
+              span 02
+            .row.title-wrapper
+              h1.title The team
+              span.subtitle Go to meet our extraordinary team
+          .col-md-8.col-md-offset-4.right-part
+            .row.team-wrapper
+              .col-md-8.col-md-offset-4.team-inner-wrapper
+                .team-img-wrapper
+                  +tile-cross-img('screen-2', 'Our team', '', 'assets/images/team.png')
+              .line
+              button.learn-more
+                a(href='blog') Learn more
+      .screen-3
+        .row.lower-part
+          .col-md-4.left-part
+            .screen-num
+              .dash
+              span 03
+          .col-md-8.right-part
+            .row
+              .col-md-5.col-md-offset-7.line-wrapper
+              .col-md-7.blank-space-wrapper
+        .row.upper-part
+          .row
+            .col-md-8.col-md-offset-4.right-part
+              .row
+                .col-md-7.title-wrapper
+                  h2.title Featured stories
+                  span.subtitle Views from the Foisy.
+                .col-md-5.view-blog-wrapper
+                  a.view-blog(href='blog') View blog
+          .row.slider-wrapper
+            .slider.col-md-8.col-md-offset-2
+              .row.home-slick-slider
+                +slide( mediaUrlPrefix + 'assets/images/wave.jpg', 'Deep water',
+                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore',
+                  '2 July 2016', '', 'blog')
+                +slide( mediaUrlPrefix + 'assets/images/landscape.jpg', 'Art is like a mountain',
+                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore',
+                  '2 July 2016', '', 'blog')
+                +slide( mediaUrlPrefix + 'assets/images/bussiness.jpg', '"Bussiness design"',
+                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore',
+                  '2 July 2016', '', 'blog')
+                +slide( mediaUrlPrefix + 'assets/images/wave.jpg', 'Deep water',
+                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore',
+                  '2 July 2016', '', 'blog')
+                +slide( mediaUrlPrefix + 'assets/images/landscape.jpg', 'Art is like a mountain',
+                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore',
+                  '2 July 2016', '', 'blog')
+                +slide( mediaUrlPrefix + 'assets/images/bussiness.jpg', '"Bussiness design"',
+                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore',
+                  '2 July 2016', '', 'blog')
+          .row.slider-controls-wrapper
+            .col-md-8.col-md-offset-4.slider-controls
+              .slider-control-box.active
+              .slider-control-box
+              span.middle-dots ···
+              span.page-num
+                span.current-slide 01
+                |  / 02
+      +nextStep('Next step', 'Meet out curated collection of projects - of all kinds - to taste our aesthetic.', 'Take me there!', 'portfolio')
+    +footer()
+    include assets/templates/nav

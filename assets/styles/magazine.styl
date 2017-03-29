@@ -1,0 +1,351 @@
+@require 'common'
+
+@require 'components/slider'
+@require 'components/tile-slider'
+@require 'components/footer'
+
+.main-magazine
+  z-index 6
+  position relative
+  padding 0
+  .screen-1
+    .left-part
+      text-align center
+      margin-top - block-top-offset
+      background white
+      .screen-num
+        top "calc(%s + %s)" % (screen-margin block-top-offset)
+      .posts-wrapper
+        .post-wrapper
+          text-align left
+          padding 0 24px 0 0
+          .title
+            text-transform uppercase
+            margin-bottom 24px
+          .post-img
+            width 100%
+          .post-nav
+            .post-nav-line
+              margin 30px 0
+              background white-1
+              width 100%
+              height 1px
+            .post-nav-item
+              cursor pointer
+              span
+                display block
+              .item-cat
+                margin-top 12px
+                color dark-grey
+                font-family SourceSansProBlack
+                text-transform uppercase
+                font-weight bold
+              .item-title
+                color black
+                margin 0 0 12px 0
+                font-family SourceSansProBlack
+                text-transform uppercase
+                font-weight bold
+              .item-date
+                color dark-grey
+      .picks-wrapper
+        margin-top 48px
+        .picks-inner-wrapper
+          text-align left
+          padding 0 24px 0 0
+          .video-wrapper
+            width 100%
+            position relative
+            cursor pointer
+            video
+              width 100%
+            .video-preview
+              width 100%
+            .video-overlay
+              absolute left top
+              width 100%
+              height 100%
+              z-index 2
+              background rgba(black, 0.5)
+              &:hover
+                background rgba(black, 0.25)
+              .play-btn
+                color white
+                font-size 2em
+                padding 5px 2.5px 5px 5px
+                border 2px solid white
+                border-radius 50%
+                margin 10% 0 5% 40%
+                display inline-block
+              .video-desc
+                text-align center
+                display inline-block
+                width 100%
+                text-transform uppercase
+                font-weight bold
+                color white
+          .title
+            font-weight bold
+            font-family SourceSansProBlack
+            text-transform uppercase
+            margin 48px 0 24px 0
+          .pick-wrapper
+            margin 48px 0 0 0
+            .editor-avatar-wrapper
+              padding 0
+              .editor-avatar
+                display inline-block
+                width 75%
+            .desc-wrapper
+              padding 0
+              display inline-block
+              .pick-title
+                display block
+                margin-left 12px
+                font-family SourceSansProBlack
+                font-weight bold
+                text-transform uppercase
+                font-size 14px
+              .editor-name
+                font-size 12px
+                display block
+                margin 6px 0 0 12px
+                font-size 0.75em
+                font-style italic
+                color dark-grey
+      .categories-wrapper
+        text-align left
+        padding 0
+        padding 48px 0 0 0
+        .title
+          margin 0 0 24px 0
+        .cat
+          margin 12px 0
+          .cat-name
+            text-transform uppercase
+            margin-left 1em
+    .right-part
+      position relative
+      .right-line
+        width 1px
+        height 100%
+        absolute left 58.33333336%
+        background dark-grey
+      .title
+        text-transform uppercase
+      .subtitle
+        display block
+        margin 24px 0
+      .big-slide-wrapper
+        margin-top 24px
+        padding 0
+        .slide-wrapper
+          padding 0
+          width 100%
+      .keep-reading
+        margin 48px 0 96px 0
+        box-shadow 0 20px 20px dark-grey
+  .screen-2
+    color white
+    .left-part
+      padding 0
+      background black
+      padding-bottom block-top-offset
+      .screen-num
+        top 11.5vh
+        .dash
+          background white
+      .title-wrapper
+        margin-top 200px
+        width 50%
+        .stats-icon
+          border 1px solid grey-1
+          border-radius 50%
+          padding 0.75em
+        .title
+          margin-top 48px
+          font-weight bold
+          text-transform uppercase
+          font-family SourceSansProBlack
+          color grey
+        .subtitle
+          font-size 12px
+          color grey
+          margin-top 24px
+          display block
+    .right-part
+      background black
+      overflow hidden
+      .slider-data-wrapper
+        margin-top 96px
+        .slider-controls-wrapper
+          padding 0
+          .slider-controls
+            padding 0
+            cursor default
+            .slider-control-box
+              cursor pointer
+              display inline-block
+              margin-right 0.8em
+              width 0.8em
+              height 0.8em
+              margin-top 0.1em
+              background light-black
+              &.active
+                background blue
+            .middle-dots
+              color light-black
+              font-weight bold
+              margin 0 1em
+              letter-spacing 0.25em
+            .page-num
+              font-weight bold
+              color light-black
+              .current-slide
+                color grey
+        .more-wrapper
+          padding 0
+          .more
+            cursor pointer
+            text-transform uppercase
+            font-weight bold
+            text-decoration none
+            font-family SourceSansProBlack
+            color grey
+      .line
+        width 1px
+        height 100%
+        absolute left 58.333333334%
+        background light-black
+  .screen-3
+    position relative
+    .screen-num
+      top "calc(%s + %s)" % (screen-margin block-top-offset)
+    .lower-part
+      absolute left top
+      width 100%
+      height 100%
+      .left-part
+        background white
+        margin-top - block-top-offset
+        height "calc(100% + %s)" % block-top-offset
+        border-right 1px solid dark-grey
+      .right-part
+        padding 0
+        height 100%
+        .line-wrapper
+          position relative
+          z-index 2
+          height 100%
+          border-left 1px solid dark-grey
+      .blank-space-wrapper
+        background grey
+        height 100%
+        absolute top right
+    .upper-part
+      position relative
+      z-index 2
+      .right-part
+        padding 0
+        position relative
+        .title-wrapper
+          padding 150px 0 0 0
+          .title
+            font-weight bold
+            font-family SourceSansProBlack
+            text-transform uppercase
+          .subtitle
+            display block
+            margin 24px 0 0 0
+      .slider-wrapper
+        .slider
+          padding 0
+          .slide-wrapper
+            margin-top 24px
+      .keep-reading-wrapper
+        padding 0
+        .keep-reading
+          font-family SourceSansProBlack
+          text-transform uppercase
+          font-weight bold
+          color grey-1
+
+@media(max-width $screen-md) // Tablet
+  .main-magazine
+    .screen-1
+      .left-part
+        padding 0 5%
+        .post-wrapper
+          margin-top 48px
+      .right-part
+        padding 0 5%
+        .right-line
+          display none
+        .title
+          margin-top 48px
+    .screen-2
+      background black
+      padding 0 5%
+      margin-top screen-margin
+      height auto
+      .left-part
+        height auto
+        margin-top 5%
+        .title-wrapper
+          margin-left 25%
+          position static
+          text-align center
+      .right-part
+        height auto
+        padding 96px 0
+        .slider-controls-wrapper
+          display none
+        .line
+          display none
+      .upper-part
+        height auto
+        position static
+        .slider
+          height auto
+    .screen-3
+      .lower-part
+        display none
+      .upper-part
+        padding 5%
+        .keep-reading-wrapper
+          margin-top 48px
+          margin-bottom 48px
+      .slider-wrapper
+        margin screen-sub-margin 0
+
+@media(min-width $screen-md) // Desktop
+  .main-magazine
+    .screen-1
+      .left-part
+        padding 312px 0 screen-sub-margin 0
+      .right-part
+        padding-left 0
+        padding-right 0
+        border-left 1px solid dark-grey
+        .title
+          margin-top 150px
+        .big-slide-wrapper
+          width 61.5%
+    .screen-2
+      position relative
+      .left-part
+        absolute left top
+        height 100%
+        margin-top - block-top-offset
+        border-right 1px solid light-black
+        .title-wrapper
+          margin-left 50%
+      .right-part
+        padding 150px 0
+        .tile-slider-wrapper
+          width 125%
+    .screen-3
+      .upper-part
+        .keep-reading-wrapper
+          margin-top 96px
+          margin-bottom 96px

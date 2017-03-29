@@ -1,0 +1,241 @@
+@require 'common'
+
+@require 'components/slider'
+@require 'components/travel-post'
+
+
+.main-app
+  z-index 6
+  position relative
+  padding 0
+  .screen-1
+    position relative
+    .lower-part
+      width 100%
+      height 100%
+      absolute top left
+      .left-part
+        height 100%
+        padding 0
+        position relative
+        margin-top - block-top-offset
+        background white
+        padding-top block-top-offset + 144px
+        .screen-num
+          top "calc(%s + %s)" % (screen-margin block-top-offset)
+        .grey-block
+          absolute bottom 0
+          background grey
+          width 150%
+          height 60%
+          .word
+            text-transform uppercase
+            color grey-2
+            font-family SourceSansProBlack
+            font-size 10vw
+            display block
+      .right-part
+        padding 0
+        height 100%
+        border-left 1px solid dark-grey
+        position relative
+        .white-block
+          height 100%
+          border-left 1px solid dark-grey
+    .upper-part
+      position relative
+      z-index 2
+      .images-wrapper
+        padding 0
+        position relative
+        .img
+          width 100%
+          margin-bottom 48px
+      .title-wrapper
+        padding 0
+        .title-inner-wrapper
+          padding 0
+          .logo
+            width 48px
+            border-radius 12px
+          .title
+            display block
+            margin-top 48px
+            text-transform uppercase
+          .subtitle
+            font-size 12px
+            display block
+            margin-top 24px
+  .screen-2
+    position relative
+    .lower-part
+      absolute top left
+      width 100%
+      height 100%
+      .left-part
+      .right-part
+        background black
+        height 100%
+        padding 0
+      .left-part
+        margin-top - block-top-offset
+      .right-part
+        border-left 1px solid light-black
+        .desc-wrapper
+          z-index 3
+          padding 0
+          height 100%
+          border-left 1px solid light-black
+          .title-wrapper
+            margin-top 144px
+            color grey
+            .package-icon
+              border-radius 50%
+              padding 0.5em
+              margin-bottom 24px
+              display inline-block
+              border 1px solid dark-grey
+            .title
+              text-transform uppercase
+            .subtitle
+              display inline-block
+              margin-top 24px
+            .more
+              display inline-block
+              margin-top 72px
+    .upper-part
+      z-index 2
+      .slick-slider
+        padding 0
+        margin 48px 0
+        .slide
+          margin-right 30px
+          height auto
+      .slider-controls-wrapper
+        margin-bottom 96px
+        padding 0
+        .slider-controls
+          padding 0
+          .slider-control-box
+            cursor pointer
+            display inline-block
+            margin-right 0.8em
+            width 0.8em
+            height 0.8em
+            margin-top 0.1em
+            background grey-3
+            &.active
+              background blue
+          .middle-dots
+            color grey-3
+            font-weight bold
+            margin 0 1em
+            letter-spacing 0.25em
+          .page-num
+            font-weight bold
+            color grey-3
+            .current-slide
+              color white
+  .screen-3
+    .left-part
+      overflow hidden
+      padding 0
+      .screen-num
+        top "calc(%s + %s)" % (screen-margin block-top-offset)
+      .left-phone-wrapper
+        height 100%
+        margin-left -45%
+        .left-phone
+          height 100%
+    .right-part
+      padding 0
+      .content-left
+      .content-right
+        position relative
+        padding 144px 0 0 0
+        .title-wrapper
+          .title-icon
+            padding 0.5em
+            border-radius 50%
+            border 1px solid light-grey
+          .title
+            display block
+            margin 24px 0 12px 0
+          .subtitle
+            font-family SourceSansProBlack
+            text-transform uppercase
+            color dark-white
+      .content-left
+        border-left 1px solid dark-grey
+        border-right 1px solid dark-grey
+        .title-wrapper-2
+          margin-top 96px
+          .title
+            text-transform uppercase
+          .subtitle
+            display inline-block
+            margin 24px 0
+        .more
+          margin 48px 0
+          a
+            background grey-3
+            .button-text
+              display inline-block
+              padding-left 0.5em
+            &:hover
+              background black
+      .content-right
+        overflow hidden
+        position relative
+        .right-phone-wrapper
+          width 100%
+          height 50%
+          absolute bottom 0
+          margin 96px 0 0 25%
+          .right-phone
+            width 100%
+
+@media(max-width $screen-md) // Tablet
+  .main-app
+    .screen-1
+      .images-wrapper
+        margin 96px 0 0 0
+      .lower-part
+        display none
+      .upper-part
+        padding 0 5%
+        .title-wrapper
+          display block
+          width 80%
+          text-align center
+          margin 96px 10%
+    .screen-2
+      .lower-part
+        display none
+      .slider-controls-wrapper
+        display none
+    .screen-3
+      .left-part
+        display none
+      .right-part
+        .content-right
+          display none
+        .content-left
+          text-align center
+
+@media(min-width $screen-md) // Desktop
+  .main-app
+    .screen-1
+      .upper-part
+        .images-wrapper
+          margin-top -40%
+          .img-1
+            margin-top 150%
+          .img-5
+            margin-top 100%
+        .title-wrapper
+          margin-top -50%
+    .screen-3
+      .content-left
+      .content-right
+        height 100%

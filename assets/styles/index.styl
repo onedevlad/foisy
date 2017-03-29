@@ -1,0 +1,338 @@
+@require 'common'
+
+@require 'components/slider'
+@require 'components/next-step'
+@require 'components/tile-cross-img'
+
+.main-index
+  z-index 6
+  position relative
+  padding 0
+  .screen-1
+    .left-part
+      padding 0
+      text-align center
+      margin-top - block-top-offset
+      .screen-num
+        top "calc(%s + %s)" % (screen-margin block-top-offset)
+      .blank-box
+        height 45vh
+        background white
+      .quote-box
+        background grey
+        height calc(100% - 41vh)
+        padding-top 25vh
+        .quote
+          font-style italic
+    .right-part
+      position relative
+      .lower-part
+        .article-wrapper
+          .article-inner-wrapper
+            padding 0
+            .heading
+              margin-top 40px
+              font-weight bold
+              text-transform uppercase
+              font-family SourceSansProBlack
+            .article
+              margin-top screen-sub-margin
+      .upper-part
+        .images-wrapper
+          position relative
+          .img-wrapper
+            &.desk-wrapper
+              z-index 1
+              .img-overlay
+                z-index 2
+            &.building-wrapper
+              z-index 3
+              .img-overlay
+                z-index 4
+            &.sand-wrapper
+              z-index 2
+              .img-overlay
+                z-index 3
+            a
+            img
+              position relative
+              display block
+              width 100%
+          .keep-reading
+            color white
+            z-index 4
+            box-shadow 0 20px 20px dark-grey
+  .screen-2
+    color white
+    .left-part
+      padding 0
+      background black
+      .screen-num
+        top 11.5vh
+        .dash
+          background white
+      .title-wrapper
+        width 100%
+        z-index 2
+        .title
+          text-transform uppercase
+          font-weight bold
+          font-size 5em
+          font-family SourceSansProBlack
+        .subtitle
+          margin-top 32px
+          display block
+    .right-part
+      background black
+      .team-inner-wrapper
+        position relative
+        padding 0
+        z-index 2
+        .team-img-wrapper
+          position relative
+          a
+          img
+            display block
+            position relative
+            width 100%
+            z-index 2
+          .img-overlay
+            z-index 3
+            width 100%
+            height 100%
+      .line
+        width 1px
+        height 100%
+        absolute left 58.333333334%
+        background light-black
+      .learn-more
+        z-index 3
+  .screen-3
+    .screen-num
+      top "calc(%s + %s)" % (screen-margin block-top-offset)
+    position relative
+    .lower-part
+      absolute left top
+      width 100%
+      height 100%
+      .left-part
+        margin-top - block-top-offset
+        height "calc(100% + %s)" % block-top-offset
+        border-right 1px solid dark-grey
+      .right-part
+        padding 0
+        height 100%
+        .line-wrapper
+          position relative
+          z-index 2
+          height 100%
+          border-left 1px solid dark-grey
+      .blank-space-wrapper
+        background grey
+        height 100%
+        absolute top right
+    .upper-part
+      position relative
+      z-index 2
+      .right-part
+        padding 0
+        position relative
+        .title-wrapper
+          padding 150px 0 0 0
+          .title
+            font-weight bold
+            font-family SourceSansProBlack
+            text-transform uppercase
+          .subtitle
+            display block
+            margin screen-sub-margin 0
+        .view-blog-wrapper
+          .view-blog
+            color dark-grey
+            cursor pointer
+            text-transform uppercase
+            font-weight bold
+            text-decoration none
+            &:hover
+              color light-black
+      .slider-wrapper
+        .slider
+          padding 0
+      .slider-controls-wrapper
+        margin-top 24px
+        padding 0
+        .slider-controls
+          padding 0
+          .slider-control-box
+            cursor pointer
+            display inline-block
+            margin-right 0.8em
+            width 0.8em
+            height 0.8em
+            margin-top 0.1em
+            background dark-grey
+            &.active
+              background blue
+          .middle-dots
+            color dark-grey
+            font-weight bold
+            margin 0 1em
+            letter-spacing 0.25em
+          .page-num
+            font-weight bold
+            color dark-grey
+            .current-slide
+              color black
+
+@media(max-width $screen-md) // Tablet
+  .main-index
+    .screen-1
+      height auto
+      .left-part
+        .blank-box
+         display none
+        .quote-box
+          width 100%
+          text-align center
+      .right-part
+        padding 0 5%
+        .lower-part
+          height auto
+          .article-wrapper
+            height auto
+          .article-inner-wrapper
+            .heading
+              margin screen-margin 0 0 0
+              text-align center
+            .article
+              margin screen-sub-margin 0
+        .upper-part
+          position static
+          .images-wrapper
+            height auto
+            width 100%
+            .img-wrapper
+            .keep-reading
+              margin-top 5%
+              position static
+            .img-wrapper
+              width 100%
+              height auto
+              a
+              img
+                height auto
+              .img-overlay
+                display none
+            .keep-reading
+              relative left 50%
+              margin-top screen-sub-margin
+              transform translate(-50%, 0)
+    .screen-2
+      background black
+      padding 0 5%
+      margin-top screen-margin
+      height auto
+      .left-part
+        height auto
+        margin-top 5%
+        .title-wrapper
+          position static
+          text-align center
+      .right-part
+        height auto
+        .line
+          display none
+        .learn-more
+          relative left 50%
+          margin screen-sub-margin 0
+          transform translate(-50%, 0)
+        .team-wrapper
+          .team-img-wrapper
+            width 100%
+            height auto
+            margin-top 10vh
+            a
+            img
+              height auto
+      .upper-part
+        height auto
+        position static
+        .slider
+          height auto
+    .screen-3
+      .lower-part
+        display none
+      .upper-part
+        padding 5%
+        text-align center
+        .view-blog-wrapper
+          padding 0
+      .slider-wrapper
+        margin screen-sub-margin 0
+
+@media(min-width $screen-md) // Desktop
+  .main-index
+    .screen-1
+      .left-part
+        .quote-box
+          width 150%
+      .right-part
+        padding-left 0
+        padding-right 0
+        border-left 1px solid dark-grey
+        .lower-part
+          height 100%
+          .article-wrapper
+            padding screen-margin 0 0 0
+            height 100%
+            border-right 1px solid dark-grey
+            .article-inner-wrapper
+              z-index 5
+              overflow hidden
+        .upper-part
+          width 100%
+          height 100%
+          padding screen-margin 0 0 0
+          absolute top left
+          .images-wrapper
+            height 100%
+            .img-wrapper
+              a
+              img
+                height 100%
+            .desk-wrapper
+              width 45%
+              height 60%
+              absolute right 5%
+            .building-wrapper
+              width 30%
+              height 30%
+              absolute right 15% top 45%
+            .sand-wrapper
+              width 35%
+              height 30%
+              absolute right 25% top 60%
+            .keep-reading
+              absolute top 85% left 58.333334%
+    .screen-2
+      position relative
+      .left-part
+        absolute left top
+        height 100%
+        border-right 1px solid light-black
+        margin-top - block-top-offset
+        .title-wrapper
+          relative top 200px left 60%
+      .right-part
+        .learn-more
+          absolute left 58.333333334% top 60%
+        .team-wrapper
+          .team-img-wrapper
+            margin-top 100px
+            margin-bottom 150px
+            width 55%
+            height auto
+    .screen-3
+      .upper-part
+        .view-blog-wrapper
+            padding 200px 0 0 0

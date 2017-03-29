@@ -1,0 +1,57 @@
+include ../assets/templates/configs/portfolio-with-images
+
+doctype traditional
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title Portfolio - Foisy
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/styles/dist/all.css')
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/scripts/dist/portfolio-with-images.js', defer)
+    meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
+  body
+    +preloader()
+    +header(headerConfig)
+    .main-portfolio-with-images
+      .screen-1
+        .row.lower-part
+          .col-md-4.left-part
+            .screen-num
+              .dash
+              span 01
+          .col-md-8.right-part
+            .row
+              .col-md-7.blank-space
+              .col-md-3.filters-wrapper
+                a.filters-link(href='#') Filters
+              .grey-space
+          .grey-space-small
+          .featured-wrapper
+            span.featured Featured
+        .row.upper-part
+          .row
+            .col-md-3.col-md-offset-4.related-wrapper
+              h2.title Featured projects
+              span.subtitle Selected projects
+          .row.images-wrapper
+            .col-md-5.col-md-offset-3.img-wrapper
+              +tile-cross-img('screen-1', 'Visual identity', '', 'assets/images/related-2.png')
+              span.img-desc Visual identity
+          .row.images-wrapper
+            .col-md-5.col-md-offset-3.img-wrapper
+              +tile-cross-img('screen-1', 'Festival', '', 'assets/images/related-3.png')
+              span.img-desc Festival
+          .row.images-wrapper
+            .col-md-5.col-md-offset-3.img-wrapper
+              +tile-cross-img('screen-1', 'Concert', '', 'assets/images/related-4.png')
+              span.img-desc Concert
+          .row.images-wrapper
+            .col-md-5.col-md-offset-3.img-wrapper
+              +tile-cross-img('screen-1', 'Illustration', '', 'assets/images/related-1.png')
+              span.img-desc Illustration
+          .row
+            .col-md-3.col-md-offset-4.more-wrapper
+              button.more
+                a(href= mediaUrlPrefix + 'blog') Learn more
+      +nextStep('Next step', 'Drop us a line about any bussiness inquiry or just say "hello".', 'Take me there', 'contact')
+      +footer()
+    include ../assets/templates/nav

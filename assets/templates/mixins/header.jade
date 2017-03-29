@@ -1,0 +1,85 @@
+mixin header(header)
+  .header.container-fluid
+    .row.main-row.md-same-height-row
+      a.nav-open-button
+        span.line-0
+        span.line-1
+        span.line-2
+      if(header.bg.all)
+        -for(var i=0; i < header.bg.all.length; i++)
+         .header-background(class='header-background-' + header.bg.all[i], class= header.bg.start === header.bg.all[i] ? 'active' : '')
+      if(!header.simpleNav && !header.bg.hideSlider && header.bg.length > 1)
+        .header-slider-controls
+          span.header-page-num
+            span.middle-dots ···
+            span.header-current-slide 01
+            |  / 0#{header.bg.all ? header.bg.all.length : ''}
+          if(header.bg)
+            -for(var i=0; i < header.bg.all.length; i++)
+              .header-slider-control-box(class= header.bg.start === header.bg.all[i] ? 'active' : '')
+      .header-simple-nav.col-md-4.hidden-sm.hidden-xs
+        if(header.simpleNav)
+          .simple-nav-item-wrapper.active
+            .simple-nav-active-bar
+            .simple-nav-item
+              .item-subtitle
+                h6 Design
+              .item-title
+                h5 Dieter Rams Documentary
+              .item-desc
+                span The world's first feature documentary...
+          .item-line
+          .simple-nav-item-wrapper
+            .simple-nav-active-bar
+            .simple-nav-item
+              .item-subtitle
+                 h6 Design
+              .item-title
+                h5 What's about living
+              .item-desc
+                span 10 researches explaining which are the best...
+          .item-line
+          .simple-nav-item-wrapper
+            .simple-nav-active-bar
+            .simple-nav-item
+              .item-subtitle
+                 h6 Music
+              .item-title
+                h5 90120
+              .item-desc
+                span Making hit music since forever...
+          a(href='blog').more More stories
+      .col-md-8.header-main(class= header.paddingBottom ? 'padding-bottom' : '', class= header.reducedLogoMargin ? 'reduced-logo-margin' : '')
+        .row
+          a(href=mediaUrlPrefix).logo-wrapper
+            img.logo(alt='Logo', src= mediaUrlPrefix + 'assets/images/icons/logo.png')
+        if(header.studioName)
+          .row.studio-name-wrapper(class= header.studioName.moveLeft ? 'move-left' : '')
+            .col-md-7.row-inner-wrapper
+              span.studio-name= header.studioName.text
+        .row.title-wrapper
+          .col-md-7.row-inner-wrapper
+            h1.title!= header.title.text
+        .row.subtitle-wrapper
+          .col-md-7.row-inner-wrapper
+            span.subtitle(class=header.subtitle.centered ? 'centered' : '')= header.subtitle.text
+              br
+              span.subtitle-line-2= header.subtitle.text2
+        if(header.button)
+          .row.work-samples-wrapper
+            .col-xs-4.col-md-2.col-md-offset-7.row-inner-wrapper
+              button.work-samples
+                a(href= mediaUrlPrefix+header.button.url)= header.button.text
+        if(header.leftLink)
+          .row.left-link-wrapper
+            .col-md-7.row-inner-wrapper
+              a(href= mediaUrlPrefix+header.leftLink.url).left-link= header.leftLink.text
+        if(header.centerLink)
+          .row.center-link-wrapper
+            .col-md-7.row-inner-wrapper
+              a(href= mediaUrlPrefix+header.centerLink.url).center-link= header.centerLink.text
+        if(header.scrollDown)
+          .row.scroll-down-wrapper
+            .col-md-7.row-inner-wrapper
+              span.scroll-down Scroll down
+        .right-line

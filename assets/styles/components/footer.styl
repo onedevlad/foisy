@@ -1,0 +1,149 @@
+.footer
+  .footer-wrapper
+    background black
+    .left-part
+      padding 0
+      position relative
+      .contacts-wrapper
+        .logo-wrapper
+          margin-top 96px
+          padding 0
+          .logo
+            width 100%
+        .social-wrapper
+          padding 0
+          margin-top 2em
+          .social-icon
+            padding 0
+            &.icon-wrapper-0
+              text-align left
+            &.icon-wrapper-1
+              text-align center
+            &.icon-wrapper-2
+              text-align right
+            .icon
+              cursor pointer
+              color white
+              font-size 14px
+              border 1px solid light-black
+              border-radius 50%
+              padding 0.5em
+              &.ti-instagram:hover
+                background #6fa8d4
+                border-color #6fa8d4
+              &.ti-twitter:hover
+                background #31c7f2
+                border-color #31c7f2
+              &.ti-dribbble:hover
+                background #e679f6
+                border-color #e679f6
+    .right-part
+      border-left 1px solid light-black
+      position relative
+      font-size 0.75em
+      .nav-wrapper
+        padding 0
+        &>ul
+          padding 0
+          margin 0
+          list-style none
+          &>li
+            float left
+            &:first-child
+              padding-left 0
+            a
+            span
+              font-size 14px
+              font-family MontserratBold
+              color white
+              cursor pointer
+              text-transform uppercase
+              text-decoration none
+              font-weight bold
+              &:hover
+                color blue
+            .dropdown-menu
+              background light-black
+              li
+                padding 0
+                cursor pointer
+                a
+                  background transparent
+      .subheader-wrapper
+        .subheader
+          color grey
+          text-transform uppercase
+          font-weight bold
+          font-family SourceSansProBlack
+        .subheader-text
+          font-size 1.25em
+          margin-top 24px
+          display block
+          color light-grey
+      .search-box-wrapper
+        height 8vh
+        background black
+        z-index 2
+        padding 0
+        color white
+        .search-box
+          width 70%
+          height 100%
+          border 1px solid light-black
+        .go
+          width 20%
+          absolute right 20%
+          margin-top 1vh
+          height 6vh
+          text-transform uppercase
+          a
+            padding 0
+            line-height 6vh
+            height 100%
+      .copyright-wrapper
+        padding-left 0.75em
+        padding-bottom 0.5em
+        absolute bottom
+        text-transform uppercase
+        color light-black
+      .line
+        width 1px
+        height 100%
+        absolute left 58.3333334% top
+        background light-black
+
+@media(max-width $screen-md) // Tablet
+  .footer
+    .left-part
+      .contacts-wrapper
+        .logo-wrapper
+          text-align center
+    .right-part
+      padding 96px 0 96px 0
+      .line
+        display none
+      .nav-wrapper
+        ul
+          li
+            padding 0.5em
+    .search-box-wrapper
+      margin-top 24px
+      margin-bottom 48px
+
+@media(min-width $screen-md) // Desktop
+  .footer
+    .right-part
+      padding 96px 0 0 0
+      .nav-wrapper
+        ul
+          li
+            padding 0 2em
+      .nav-upper-wrapper
+        margin 24px 0 0 0
+      .nav-lower-wrapper
+        margin 72px 0 144px 0
+      .subheader-wrapper
+        padding 0 30px 0 0
+        margin 0 0 48px 0
+      .search-box-wrapper.top-offset
+        margin-top 48px

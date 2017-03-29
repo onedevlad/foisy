@@ -1,0 +1,64 @@
+@require '../lib/lightbox/css/lightbox'
+
+
+.desc-img-wrapper
+  transform-style preserve-3d
+  perspective 900px
+  perspective-origin 0 50%
+  background white
+  .inner-wrapper
+    position relative
+    overflow-x hidden
+    .img
+      width 100%
+      display block
+      transition all animationSpeed ease
+      cursor url(../../images/icons/plus.svg) 30 30, crosshair
+    .img.staticHeight
+      height 100%
+      width auto !important
+  &:hover .img-float-desc
+    transform rotateY(0deg)
+  &:hover .img
+    margin-left 15%
+  .img-float-desc
+    width 60%
+    height 100%
+    absolute top left
+    background rgba(blue, 0.75)
+    z-index 3
+    transition transform animationSpeed, opacity 0.1s 0.3s
+    transform-origin 0 0 0
+    padding 5%
+    .heading
+      color white
+      text-align center
+      display inline-block
+      width 100%
+      font-size 1.25em
+      text-transform uppercase
+      font-weight bold
+    .link
+      absolute bottom 5% left 5%
+      display inline-block
+      width 90%
+      text-align center
+      color blue
+      cursor pointer
+      background grey-2
+      padding 0.5em 0
+      text-transform uppercase
+      text-decoration none
+      font-weight bold
+      &:hover
+        background white
+
+@media(max-width $screen-md) // Tablet
+  .desc-img-wrapper
+    .img-float-desc
+      transform rotateY(0deg)
+
+@media(min-width $screen-md) // Desktop
+  .desc-img-wrapper
+    .img-float-desc
+      transform rotateY(-90deg)

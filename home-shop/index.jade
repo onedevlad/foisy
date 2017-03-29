@@ -1,0 +1,126 @@
+include ../assets/templates/configs/home-shop
+
+doctype traditional
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title Shop - Foisy
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/styles/dist/all.css')
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/scripts/dist/home-shop.js', defer)
+    meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
+  body
+    +preloader()
+    +header(headerConfig)
+    .main-home-shop.container-fluid
+      .screen-1
+        .row
+          .col-md-4.left-part
+            .screen-num
+              .dash
+              span 01
+            .row
+              .col-md-7.col-md-push-5.best-sellers-title-wrapper
+                span.ti-heart.like-icon
+                h3.title Best-sellers
+                span.subtitle Sorted by popularity
+          .col-md-8.right-part
+            .right-line
+            .row.goods-wrapper
+              .col-md-4.goods
+                .img-wrapper
+                  +tile-cross-img('screen-1', 'Coat', '$ 2499.00', 'assets/images/coat-1.jpg')
+                .desc-wrapper
+                  h4.goods-title Coat
+                  span.goods-price $ 2499.00
+              .col-md-4.col-md-offset-1.goods
+                .img-wrapper
+                  +tile-cross-img('screen-1', 'A jacket', '$ 1999.00', 'assets/images/jacket-1.jpg')
+                .desc-wrapper
+                  h4.goods-title Jacket
+                  span.goods-price $ 1999.00
+            .row.more-wrapper
+              a(href='portfolio').more Show more
+      .screen-2
+        .row.lower-part
+          .row
+            .col-md-4.left-part
+              .row
+                .col-xs-12.grey-block
+              .row
+                .col-xs-5.women-sign-wrapper
+                  span.women-sign Women
+            .col-md-8.right-part
+              .row
+                .col-xs-3.grey-block
+                .col-xs-4.white-block
+                .col-xs-5.men-sign-wrapper
+                  span.men-sign Men
+        .row.upper-part
+          .row
+            .col-md-12.men-wrapper
+              .img-wrapper
+                .img-inner-wrapper
+                  +tile-cross-img('screen-2', 'Men', '', 'assets/images/men.png')
+                .subimg-wrapper
+                  +tile-cross-img('screen-2', 'Men', '', 'assets/images/men-1.jpg')
+              .desc-wrapper
+                h1.title Men
+                span.subtitle Fall 2016
+          .row
+            .col-md-12.women-wrapper
+              .img-wrapper
+                .img-inner-wrapper
+                  +tile-cross-img('screen-2', 'Women', '', 'assets/images/women.png')
+                .lightbox-wrapper.subimg-wrapper
+                  +tile-cross-img('screen-2', 'Women', '', 'assets/images/women-1.jpg')
+              .desc-wrapper
+                h1.title Women
+                span.subtitle Fall 2016
+          .row
+            .col-md-8.col-md-offset-4.more-wrapper
+              button
+                a.more(href=mediaUrlPrefix + 'blog') Full collection
+      .screen-3
+        .row
+          .col-md-4.left-part
+            .screen-num
+              .dash
+              span 02
+            .row.designer-wrapper
+              .col-md-7.col-md-offset-5.person-wrapper
+                img.avatar(alt='Joshua Carl', src=mediaUrlPrefix + 'assets/images/icons/avatar-5.png')
+                .person-data
+                  span.person-name Joshua Carl
+                  span.person-position Fashion Designer
+            .row
+              .col-md-7.col-md-offset-5.title-wrapper
+                h2.title Geometric
+                  br
+                  |  trench
+                span.price $ 1499.00
+                .buy-wrapper
+                  button
+                    a(href=mediaUrlPrefix+'shop-with-images').buy Buy it now
+          .col-md-8.col-md-offset-4.right-part
+            .line
+            .row.lower-part
+              .grey-block
+              .col-xs-5.pull-right.white-block
+            .row.upper-part
+              .slider-wrapper
+                .slider
+                  .row.home-shop-slider
+                    .slide-wrapper
+                      +tile-cross-img('screen-3', 'Coat', '', 'assets/images/coat-2.jpg')
+                    .slide-wrapper
+                      +tile-cross-img('screen-3', 'Coat', '', 'assets/images/coat-3.jpg')
+              .row.slider-controls-wrapper
+                .col-md-8.slider-controls
+                  .slider-control-box.active
+                  .slider-control-box
+                  span.middle-dots ···
+                  span.page-num
+                    span.current-slide 01
+                    |  / 02
+      +footer('Fall \'16 collection', 'We strived. We worked. We created. Meet our long-awaited 2016\'s Fall Collection.')
+    include ../assets/templates/nav

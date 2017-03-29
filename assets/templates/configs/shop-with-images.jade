@@ -1,0 +1,28 @@
+include ../mixins/preloader
+include ../mixins/header
+include ../mixins/tile-cross-img
+include ../mixins/next-step
+include ../mixins/reply
+include ../mixins/footer
+
+- var mediaUrlPrefix = '../'
+
+-
+  var headerConfig = {
+    studioName: {
+      text: 'Foisy shop',
+      moveLeft: true,
+    },
+    title: {
+      text: 'Products',
+    },
+    subtitle: {
+      text: 'We support our vision with a great variety of products.',
+    },
+    reducedLogoMargin: true,
+    paddingBottom: true,
+    bg: {
+      all: [8],
+      start: 8,
+    },
+  }

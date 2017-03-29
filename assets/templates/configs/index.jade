@@ -1,0 +1,32 @@
+include ../mixins/preloader
+include ../mixins/header
+include ../mixins/slide
+include ../mixins/next-step
+include ../mixins/tile-cross-img
+include ../mixins/footer
+
+- var mediaUrlPrefix = ''
+
+-
+  var headerConfig = {
+    studioName: {
+      text: 'Foisy studio',
+      moveLeft: true,
+    },
+    title: {
+      text: 'Little Big Details',
+    },
+    subtitle: {
+      text: 'We are a creative design firm, aiming to give our users what they want;',
+      text2: 'an awesome experience.',
+    },
+    button: {
+      text: 'Our work',
+      url: mediaUrlPrefix + 'portfolio',
+    },
+    scrollDown: true,
+    bg: {
+      all: [0, 1, 2 , 3 , 4],
+      start: 0,
+    },
+  }

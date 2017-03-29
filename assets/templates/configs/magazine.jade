@@ -1,0 +1,27 @@
+include ../mixins/preloader
+include ../mixins/header
+include ../mixins/slide
+include ../mixins/tile-slide
+include ../mixins/footer
+
+- var mediaUrlPrefix = '../'
+
+-
+  var headerConfig = {
+    title: {
+      text: 'Dieter Rams <br/> Documentary',
+    },
+    subtitle: {
+      text: 'The world\'s first documentary on legendary designer Dieter Rams, and in',
+      text2: 'helping preserve his design archive.',
+    },
+    button: {
+      text: 'Read more',
+      url: mediaUrlPrefix + 'portfolio',
+    },
+    simpleNav: true,
+    bg: {
+      all: [5, 6, 7],
+      start: 5,
+    },
+  }

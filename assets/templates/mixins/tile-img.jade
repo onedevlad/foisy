@@ -1,0 +1,9 @@
+mixin tile-img(group, title, imgUrl, button, staticHeight, linkUrl)
+  .tile-img-wrapper.desc-img-wrapper
+    .img-float-desc
+      span.heading=title
+      if(button)
+        a.link(href=button.url)= button.text
+    .inner-wrapper
+      a.lightbox-link(href= linkUrl ? mediaUrlPrefix + linkUrl : mediaUrlPrefix + imgUrl, data-lightbox= linkUrl ? '' : group, data-title=title)
+        img.img(alt=title, src=mediaUrlPrefix+imgUrl, class= staticHeight ? 'staticHeight' : '')

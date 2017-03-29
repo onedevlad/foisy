@@ -1,0 +1,118 @@
+include ../assets/templates/configs/app
+
+doctype traditional
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title App - Foisy
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/styles/dist/all.css')
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/scripts/dist/app.js')
+    meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
+  body
+    +preloader()
+    +header(headerConfig)
+    .main-app.container-fluid
+      .screen-1
+        .row.lower-part
+          .col-md-4.left-part
+            .screen-num
+              .dash
+              span 01
+            .grey-block
+              span.word Own
+              span.word Your
+              span.word Moments
+          .col-md-8.right-part
+            .row
+              .col-md-5.col-md-offset-7.white-block
+        .row.upper-part
+          .row
+            .col-md-6.col-md-offset-6.images-wrapper
+              .row
+                .col-md-4
+                  img.img.img-1(alt='An app', src=mediaUrlPrefix+'assets/images/iphones/1.png')
+                .col-md-4
+                  img.img.img-2(alt='An app', src=mediaUrlPrefix+'assets/images/iphones/2.png')
+                  img.img.img-3(alt='An app', src=mediaUrlPrefix+'assets/images/iphones/3.png')
+                  img.img.img-4(alt='An app', src=mediaUrlPrefix+'assets/images/iphones/4.png')
+                .col-md-4
+                  img.img.img-5(alt='An app', src=mediaUrlPrefix+'assets/images/iphones/5.png')
+                  img.img.img-6(alt='An app', src=mediaUrlPrefix+'assets/images/iphones/6.png')
+                  img.img.img-7(alt='An app', src=mediaUrlPrefix+'assets/images/iphones/7.png')
+          .row
+            .col-md-8.col-md-offset-4.title-wrapper
+              .row
+                .col-md-4.title-inner-wrapper
+                  img.logo(alt='logo', src=mediaUrlPrefix+'assets/images/iphones/logo.png')
+                  h3.title Preach app
+                  span.subtitle Designed with passion about every detail. Making it easy to use - as well as addicting and useful.
+      .screen-2
+        .row.lower-part
+          .row
+            .col-md-4.left-part
+            .col-md-8.right-part
+              .col-md-5.col-md-offset-7.desc-wrapper
+                .title-wrapper
+                  span.package-icon.ti-package
+                  h2.title Makes it
+                    br
+                    | easier
+                  span.subtitle With Preach app it is easier than ever to use an app. Take a look at the steps above.
+                  button.more
+                    a(href=mediaUrlPrefix+'blog-with-images') Learn more
+        .row.upper-part
+          .row
+            .col-md-8.app-slider
+                img.slide(alt='Slider image', src=mediaUrlPrefix+'assets/images/iphones/10.png')
+                img.slide(alt='Slider image', src=mediaUrlPrefix+'assets/images/iphones/11.png')
+                img.slide(alt='Slider image', src=mediaUrlPrefix+'assets/images/iphones/12.png')
+                img.slide(alt='Slider image', src=mediaUrlPrefix+'assets/images/iphones/13.png')
+                img.slide(alt='Slider image', src=mediaUrlPrefix+'assets/images/iphones/14.png')
+                img.slide(alt='Slider image', src=mediaUrlPrefix+'assets/images/iphones/15.png')
+                img.slide(alt='Slider image', src=mediaUrlPrefix+'assets/images/iphones/16.png')
+                img.slide(alt='Slider image', src=mediaUrlPrefix+'assets/images/iphones/17.png')
+          .row.slider-controls-wrapper
+            .col-md-8.col-md-offset-4.slider-controls
+              .slider-control-box.active
+              .slider-control-box
+              span.middle-dots ···
+              span.page-num
+                span.current-slide 01
+                |  / 02
+      .screen-3
+        .row
+          .col-md-4.left-part
+            .screen-num
+              .dash
+              span 03
+            .left-phone-wrapper
+              img.left-phone(alt='An iPhone', src=mediaUrlPrefix+'assets/images/iphones/18.png')
+          .col-md-8.right-part
+            .row
+              .col-md-7.content-left
+                .title-wrapper
+                  span.title-icon.ti-heart
+                  h2.title
+                    span.number-to-count 50
+                    | MM+
+                  span.subtitle Downloads
+                .title-wrapper-2
+                  h5.title Be the next happy user
+                  span.subtitle Download our app absolutely free either from the AppStore or
+                    br
+                    | GooglePlay!
+                button.more
+                  a
+                    span.apple-icon.ti-apple
+                    span.button-text Download on iTunes!
+              .col-md-5.content-right
+                .title-wrapper
+                  span.title-icon.ti-user
+                  h2.title
+                    span.number-to-count 750
+                    | K+
+                  span.subtitle Daily unique users
+                .right-phone-wrapper
+                  img.right-phone(alt='An iPhone', src=mediaUrlPrefix+'assets/images/iphones/15.png')
+      +footer()
+    include ../assets/templates/nav

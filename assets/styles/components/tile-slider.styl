@@ -1,0 +1,63 @@
+@require '../lib/slick/slick'
+@require '../lib/slick/slick-theme'
+
+
+.tile-slide-wrapper
+  display block
+  padding 0 15px 0 0
+  height auto !important
+  .tile-slide
+    position relative
+    .img-wrapper
+      img
+        width 100%
+    .desc-wrapper
+      absolute top
+      width 100%
+      height 100%
+      padding-left 15px
+      background rgba(black, 0.5)
+      .desc
+        absolute bottom
+        padding 0
+        .cat-wrapper
+          .cat
+            text-transform uppercase
+            font-weight bold
+            font-family SourceSansProBlack
+            color grey-1
+        .title-wrapper
+          .title
+            font-family SourceSansProBlack
+            font-size 1.25em
+            font-weight bold
+            text-transform uppercase
+            color grey
+        .social-wrapper
+          padding 0
+          text-align left
+          margin-top 2em
+          margin-bottom 1em
+          .button-wrapper
+            margin-right 1vw
+            padding 0
+            display inline-block
+            font-size 12px
+            line-height 12px
+            cursor pointer
+            .icon
+              padding 0.5em
+              border 1px solid light-grey
+              border-radius 50%
+              text-align center
+              cursor pointer
+              color light-grey
+              &.ti-heart:hover
+                background pink
+                border-color pink
+              &.ti-new-window:hover
+                background blue
+                border-color blue
+            .date
+              color light-grey
+              padding-left 1em

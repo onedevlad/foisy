@@ -1,0 +1,25 @@
+include ../mixins/preloader
+include ../mixins/header
+include ../mixins/slide
+include ../mixins/tile-cross-img
+include ../mixins/footer
+
+- var mediaUrlPrefix = '../'
+
+-
+  var headerConfig = {
+    title: {
+      text: 'Marketing experts',
+    },
+    subtitle: {
+      text: 'We support our vision with a great variety of views.',
+    },
+    button: {
+      text: 'Take me there',
+      url: mediaUrlPrefix + 'portfolio-with-images',
+    },
+    bg: {
+      all: [0, 1, 2 , 3 , 4],
+      start: 2,
+    },
+  }

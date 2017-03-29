@@ -1,0 +1,49 @@
+@require '../lib/lightbox/css/lightbox'
+
+.goods
+  position relative
+  .goods-img-wrapper
+    position relative
+    box-shadow 0 12px 48px rgba(black, 0.5)
+    .goods-img
+      position relative
+      z-index 2
+      width 100%
+      img
+        width 100%
+  .goods-overlay
+    width 100%
+    height 100%
+    absolute top left
+    z-index 3
+    background rgba(blue, 0.75)
+    transition all 0.4s ease
+    opacity 0
+    cursor url(../../images/icons/plus.svg) 30 30, crosshair
+    &:hover
+      opacity 1
+      .goods-title-wrapper
+        transform translate(-50%, -50%)
+        opacity 1
+      .bg-line
+        height 150px
+    .bg-line
+      width 10px
+      height 0
+      absolute left 50% top 50%
+      background rgba(white, 0.35)
+      transition all 0.4s ease 0.4s
+      transform-origin 50% 50%
+      transform translate(-50%, -50%) rotate(45deg)
+    .goods-title-wrapper
+      color white
+      absolute top 50% left 50%
+      transform translate(-100%, -50%)
+      opacity 0
+      transition all 0.4s ease 0.1s
+      text-align center
+      .title
+        text-transform uppercase
+      .subtitle
+        margin-top 6px
+        display inline-block

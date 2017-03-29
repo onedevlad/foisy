@@ -1,0 +1,10 @@
+mixin reply(imgUrl, avatarUrl, name, text)
+  .reply-slide-wrapper
+    .row.slide
+      img.img(alt='A review image', src= imgUrl)
+    .row.comment-wrapper
+      .col-xs-1.avatar-wrapper
+        img.avatar(alt='Avatar', src= avatarUrl)
+      .col-xs-11.comment
+        span.name= name
+        span.comment-text= text

@@ -1,0 +1,120 @@
+include ../assets/templates/configs/travel
+
+doctype traditional
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title Travel - Foisy
+    link(rel='stylesheet', type='text/css', href= mediaUrlPrefix + 'assets/styles/dist/all.css')
+    script(type='text/javascript', src= mediaUrlPrefix + 'assets/scripts/dist/travel.js', defer)
+    meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
+  body
+    +preloader()
+    +header(headerConfig)
+    .main-travel.container-fluid
+      .screen-1
+        .row.lower-part
+          .col-md-4.left-part
+            .screen-num
+              .dash
+              span 01
+          .col-md-8.right-part
+            .row
+              .col-md-5.col-md-offset-7.white-block
+        .row.upper-part
+          .images-wrapper
+            .img-wrapper.block-rounded-shadow.img-1
+              +tile-cross-img('screen-1', 'A cafe', '', 'assets/images/cafe.png')
+            .img-wrapper.block-rounded-shadow.img-2
+              +tile-cross-img('screen-1', 'A subway', '', 'assets/images/subway.png')
+            .img-wrapper.block-rounded-shadow.img-3
+              +tile-cross-img('screen-1', 'A lake', '', 'assets/images/lake.png')
+      .screen-2
+        .row.lower-part
+          .row
+            .col-md-4.left-part
+              .row
+                .col-xs-12.grey-block
+            .col-md-8.right-part
+              .row
+                .col-xs-3.grey-block
+                .col-xs-5.col-xs-offset-4.white-block
+        .row.upper-part
+          .row
+            .col-md-8.col-md-offset-4.right-part
+              .row.title-wrapper
+                h2.title Days in New York
+                span.subtitle The days that follow my visit at the world's capital.
+          .row.posts-wrapper
+            +travel-post('Brooklyn Bridge', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laborum error sapiente voluptatibus qui nihil labore, voluptatem, modi ullam explicabo.', 1, '', 'assets/images/brooklyn.png', 'screen-2')
+            +travel-post('Statue of Liberty', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laborum error sapiente voluptatibus qui nihil labore, voluptatem, modi ullam explicabo.', 2, '', 'assets/images/liberty.png', 'screen-2')
+            +travel-post('The center: Times Square', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laborum error sapiente voluptatibus qui nihil labore, voluptatem, modi ullam explicabo.', 3, '', 'assets/images/times-square.png', 'screen-2')
+          .row
+            .col-md-8.col-md-offset-4.more-wrapper
+              button
+                a(href=mediaUrlPrefix+'blog').more All days
+      .screen-3
+        .row.lower-part
+          .col-md-4.left-part
+            .screen-num
+              .dash
+              span 02
+          .col-md-8.right-part
+            .row
+              .col-md-2.col-md-offset-5.grey-block
+              .col-md-3.grey-block.line-block
+        .row.upper-part
+          .row
+            .col-md-8.col-md-offset-4.right-part
+              .row.images-wrapper-1
+                .col-md-3.title-wrapper
+                  span.camera-icon.ti-camera
+                  h2.title Gallery
+                .col-md-6.block-rounded-shadow.img-wrapper-1.left-img-wrapper
+                  +tile-cross-img('screen-3', 'A shop window', '', 'assets/images/shop-window.png')
+                .col-md-3.lightbox-wrapper.block-rounded-shadow.img-wrapper-1.right-img-wrapper
+                  +tile-cross-img('screen-3', 'Rooftops', '', 'assets/images/rooftops.png')
+          .row.images-wrapper-2
+            .col-md-5.block-rounded-shadow.img-wrapper-2.left-img-wrapper
+              +tile-cross-img('screen-3', 'Downtown', '', 'assets/images/downtown.png')
+            .col-md-5.block-rounded-shadow.img-wrapper-2.center-img-wrapper
+              +tile-cross-img('screen-3', 'A building', '', 'assets/images/thin-building.png')
+            .col-md-2.lightbox-wrapper.block-rounded-shadow.img-wrapper-2
+              +tile-cross-img('screen-3', 'A skyscraper', '', 'assets/images/skyscraper.png')
+          .row
+            .col-md-8.col-md-offset-4.more-wrapper
+              button
+                a(href=mediaUrlPrefix+'magazine').more Full album
+      .screen-4
+        .row.lower-part
+          .col-md-4.left-part
+            .screen-num
+              .dash
+              span 03
+          .col-md-8.right-part
+            .row
+              .col-md-2.col-md-offset-5.grey-block
+              .col-md-3.grey-block.line-block
+        .row.upper-part
+          .row
+            .col-md-8.col-md-offset-4.right-part
+              .row
+                .col-md-7.title-wrapper
+                  h2.title Past travel stories
+                  span.subtitle Meet my past
+                .col-md-5.view-blog-wrapper
+                  a.view-blog(href=mediaUrlPrefix + 'blog') View all
+          .row.slider-wrapper
+            .slider.col-md-8.col-md-offset-2
+              .row
+                +slide( mediaUrlPrefix + 'assets/images/canada.png', 'Canada',
+                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore',
+                  '2 July 2016', '', 'blog')
+                +slide( mediaUrlPrefix + 'assets/images/spain.png', 'Spain',
+                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore',
+                  '2 July 2016', '', 'blog')
+                +slide( mediaUrlPrefix + 'assets/images/japan-1.png', 'Japan',
+                  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates necessitatibus, assumenda placeat odio iure dolore',
+                  '2 July 2016', '', 'blog')
+      +footer()
+    include ../assets/templates/nav

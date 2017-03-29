@@ -1,0 +1,29 @@
+include ../mixins/preloader
+include ../mixins/header
+include ../mixins/tile-img
+include ../mixins/tile-cross-img
+include ../mixins/footer
+
+- var mediaUrlPrefix = '../'
+
+-
+  var headerConfig = {
+    studioName: {
+      text: 'Foisy studio',
+      moveLeft: true,
+    },
+    title: {
+      text: 'Festival',
+    },
+    subtitle: {
+      text: 'A challenging and fun project',
+    },
+    button: {
+      text: 'Take me there',
+      url: mediaUrlPrefix + 'blog',
+    },
+    bg: {
+      all: [0, 1, 2 , 3 , 4],
+      start: 1,
+    },
+  }
