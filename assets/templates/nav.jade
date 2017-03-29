@@ -7,7 +7,7 @@ mixin link(config)
         |  
         span.caret
     else
-      a(href='').title= config.main.text
+      a(href= mediaUrlPrefix + config.main.url).title= config.main.text
     if(config.subs)
       ul.link-subs
         -for(var i = 0; i < config.subs.length; i++)
